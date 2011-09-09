@@ -1,5 +1,8 @@
-# Interface to the VertNet collections database. 
+Interface to the VertNet collections database. 
 
-## NOTE THAT THIS IS NOT PACKAGED YET, BUT YOU CAN STILL USE THE FUNCTIONS OF COURSE. 
+NOTE THAT THIS IS NOT PACKAGED YET, BUT YOU CAN STILL USE THE FUNCTIONS OF COURSE. 
 
-## See the Wiki for examples of use cases for functions. 
+See the Wiki for examples of use cases for functions. 
+
+VertNet API documentation here: 
+https://github.com/VertNet/Darwin-Core-Engine/wiki/Prototype-Search-API
