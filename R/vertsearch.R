@@ -3,10 +3,10 @@
 vertsearch <- 
 # Args:
 #   cl: taxonomic search term (character)
-#   sp: state (character)
+#   sp: state or province (character)
 #   limit: search return limit (numeric)
 # Examples:
-#   vertsearch("aves", "california", 1)
+#   vertsearch("aves", "california", 10)
 # Returns:
 #   dataframe of search results OR prints "no search match" if no matches
 
@@ -26,8 +26,9 @@ function(cl = NA, sp = NA, limit = NA,
     .params = args,
     ...,
     curl = curl)
-#   out <- fromJSON(I(temp))
-  return(temp)
+  out <- fromJSON(I(temp))
+  dfout <- ldply(out$records, function(x) as.data.frame(x))
+  return(dfout)
 }
 
 # http://canary.vert-net.appspot.com/api/search?cl=aves&sp=california&limit=1
