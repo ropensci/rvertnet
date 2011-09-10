@@ -5,4 +5,8 @@ NOTE THAT THIS IS NOT PACKAGED YET, BUT YOU CAN STILL USE THE FUNCTIONS OF COURS
 See the Wiki for examples of use cases for functions. 
 
 VertNet API documentation here: 
-https://github.com/VertNet/Darwin-Core-Engine/wiki/Prototype-Search-API
+-> https://github.com/VertNet/Darwin-Core-Engine/wiki/Prototype-Search-API
+
+Documentation for Darwin Core Names and their short names
+-> https://github.com/VertNet/Darwin-Core-Engine/wiki/Darwin-Core-short-names
+-> Look up short names in rvertnet by typing: dcnames()
