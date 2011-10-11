@@ -27,8 +27,7 @@ function(cl = NA, sp = NA, limit = NA,
     ...,
     curl = curl)
   out <- fromJSON(I(temp))
-  dfout <- ldply(out$records, function(x) as.data.frame(x))
-  return(dfout)
+  ldply(out$records, function(x) as.data.frame(x))
 }
 
 # http://canary.vert-net.appspot.com/api/search?cl=aves&sp=california&limit=1
