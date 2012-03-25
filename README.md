@@ -1,7 +1,5 @@
 Interface to the VertNet collections database. 
 
-NOTE THAT THIS IS NOT PACKAGED YET, BUT YOU CAN STILL USE THE FUNCTIONS OF COURSE. 
-
 See the Wiki for examples of use cases for functions. 
 
 VertNet API documentation here: 
@@ -11,3 +9,12 @@ Documentation for Darwin Core Names and their short names
 -> https://github.com/VertNet/Darwin-Core-Engine/wiki/Darwin-Core-short-names
 -> Look up short names in rvertnet by typing: dcnames()
 -> Darwin Core terms examples, etc.: http://rs.tdwg.org/dwc/terms/index.htm
+
+Install rvertnet:
+
+```R 
+install.packages("devtools")
+require(devtools)
+install_github("rvertnet", "ropensci")
+require(rvertnet)
+```

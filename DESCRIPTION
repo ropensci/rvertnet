@@ -1,8 +1,13 @@
 Package: rvertnet
-Description: A wrapper to the VertNet collections database API.  
+Description: A wrapper to the VertNet collections database API.
 Title: Search VertNet database from R.
 Version: 0.0-1
 License: BSD
 Author: Scott Chamberlain, Carl Boettiger
-Maintainer: Scott Chamberlain <myrmecocystus@gmail.com> 
-Imports: XML, RCurl (>= 1.6), plyr, RJSONIO
+Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
+Imports:
+    RCurl (>= 1.6),
+    plyr,
+    RJSONIO
+Collate:
+    'vertsearch.R'

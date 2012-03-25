@@ -1,6 +1,4 @@
-import(XML)
-import(RCurl)
-import(plyr)
-import(RJSONIO)
-
 export(vertsearch)
+import(RCurl)
+import(RJSONIO)
+import(plyr)
