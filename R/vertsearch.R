@@ -12,12 +12,9 @@
 #' @examples \dontrun{
 #' vertsearch("aves", "california", 10)
 #' }
-vertsearch <- 
-  
-function(cl = NA, sp = NA, limit = NA,
+vertsearch <- function(cl = NA, sp = NA, limit = NA,
   url = "http://canary.vert-net.appspot.com/api/search",
-  ...,
-  curl = getCurlHandle()) 
+  ..., curl = getCurlHandle()) 
 {
   args <- list()
   if(!is.na(cl))
@@ -33,5 +30,4 @@ function(cl = NA, sp = NA, limit = NA,
   out <- fromJSON(I(temp))
   ldply(out$records, function(x) as.data.frame(x))
 }
-
 # http://canary.vert-net.appspot.com/api/search?cl=aves&sp=california&limit=1
