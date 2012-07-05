@@ -11,3 +11,4 @@ Imports:
     RJSONIO
 Collate:
     'vertsearch.R'
+    'vertoccurrence.R'
