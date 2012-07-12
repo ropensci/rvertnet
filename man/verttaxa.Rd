@@ -1,6 +1,6 @@
 \name{verttaxa}
 \alias{verttaxa}
-\title{Retrieve scientific names, and the number of occurences of the scientific name from VertNet v2 portals.}
+\title{Retrieve scientific names and the number of occurences of the scientific name from VertNet v2 portals.}
 \usage{
   verttaxa(key = "r_B68F3", grp = "fish", t = NA, l = NA,
     c = NA, d = NA, q = NA, p = NA, m = NA,
@@ -48,8 +48,8 @@
   if no matches.
 }
 \description{
-  Retrieve scientific names, and the number of occurences
-  of the scientific name from VertNet v2 portals.
+  Retrieve scientific names and the number of occurences of
+  the scientific name from VertNet v2 portals.
 }
 \examples{
 \dontrun{

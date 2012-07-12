@@ -1,6 +1,6 @@
 \name{vertoccurrence}
 \alias{vertoccurrence}
-\title{Retrieve occurrence records for an organism from VertNet v2 portals.}
+\title{Retrieve occurrence records from VertNet v2 portals.}
 \usage{
   vertoccurrence(key = "r_B68F3", grp = "fish", t = NA,
     l = NA, c = NA, d = NA, q = NA, p = NA, m = NA,
@@ -69,8 +69,7 @@
   if no matches.
 }
 \description{
-  Retrieve occurrence records for an organism from VertNet
-  v2 portals.
+  Retrieve occurrence records from VertNet v2 portals.
 }
 \examples{
 \dontrun{

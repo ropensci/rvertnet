@@ -1,4 +1,4 @@
-#' Retrieve scientific names, and the number of occurences of the scientific name from VertNet v2 portals.
+#' Retrieve scientific names and the number of occurences of the scientific name from VertNet v2 portals.
 #' 
 #' @param key API Key is required to run any query
 #' @param grp VertNet group to query. Currently available oprions fish, bird and herp. Default fish.

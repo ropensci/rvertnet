@@ -1,4 +1,4 @@
-#' Retrieve institution, institution code, and the number of occurences of the institution from VertNet v2 portals.
+#' Retrieve institution and the number of occurences served by institution from VertNet v2 portals.
 #' 
 #' @param key API Key is required to run any query
 #' @param grp VertNet group to query. Currently available oprions fish, bird and herp. Default fish.
