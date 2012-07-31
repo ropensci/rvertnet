@@ -1,6 +1,6 @@
 Package: rvertnet
 Description: A wrapper to the VertNet collections database API.
-Title: Search VertNet database from R.
+Title: Search VertNet database from R
 Version: 0.0-5
 License: BSD
 Date: 2012-7-11
