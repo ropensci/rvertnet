@@ -20,3 +20,4 @@ Collate:
     'vertoccurrencecount.R'
     'vertproviders.R'
     'verttaxa.R'
+    'rvertnet.R'

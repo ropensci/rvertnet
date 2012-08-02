@@ -5,5 +5,5 @@
 #   dc()
 #   dc()[dc()$name == 'county',] # for Darwin Core name 'county'
 dc <- function() {
-  read.csv("darwincore_namestypes.csv")
+  out <- read.csv("darwincore_namestypes.csv")
 }
