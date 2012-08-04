@@ -1,7 +1,7 @@
 \docType{data}
 \name{darwincorenames}
 \alias{darwincorenames}
-\title{#' Darwin core terms names}
+\title{Darwin core terms names}
 \format{A data frame with 156 rows and 2 variables}
 \description{
   A dataset containing the listing of names and short names

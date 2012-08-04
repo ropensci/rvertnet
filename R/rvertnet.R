@@ -16,7 +16,7 @@
 #' @format A data frame with 156 rows and 3 variables
 NULL
 
-#' #' Darwin core terms names
+#' Darwin core terms names
 #' 
 #' A dataset containing the listing of names and short names
 #' of all 150+ terms are as follows:
@@ -30,23 +30,5 @@ NULL
 #' @keywords datasets
 #' @name darwincorenames
 #' @usage dcnames
-#' @format A data frame with 156 rows and 2 variables
-NULL
-
-
-#' #' Darwin core terms names
-#' 
-#' A dataset containing the listing of names and data types
-#' of all 150+ terms are as follows:
-#' 
-#' \itemize{
-#'   \item name. name of the term 
-#'   \item type. data type of the term like sttring, int etc.
-#' }
-#' 
-#' @docType data
-#' @keywords datasets
-#' @name darwincore_datatypes
-#' @usage dcdatatypes
 #' @format A data frame with 156 rows and 2 variables
 NULL

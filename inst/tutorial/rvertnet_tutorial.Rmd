@@ -1,0 +1,77 @@
+The `rvertnet` package interacts with the API services of [VertNet](http://vertnet.org/index.php). No API key is needed. 
+
+This tutorial will go through three use cases to demonstrate the kinds of things possible in `rvertnet`.
+
++ 
++ 
++ 
++ 
++ 
+
+***
+### Load package from GitHub
+```{r loadpacakge}
+# install_github("rvertnet", "ropensci")
+library(rvertnet)
+```
+
+***
+
+#### Get genotype data for all users at a particular snp.
+```{r allgensnp}
+
+```
+
+***
+
+#### Get genotype data for one or multiple users.
+```{r genotypes}
+
+```
+
+***
+
+### Get phenotype data for one or multiple users.
+```{r phenotypes}
+
+```
+
+
+***
+
+### Get openSNP user information.
+```{r users}
+
+```
+
+
+***
+
+### Download genotype data for a user from 23andme or other repo.
+```{r fetch_genotypes}
+
+```
+
+
+***
+
+### Get all known variations and all users sharing that phenotype for one phenotype(-ID).
+```{r phenotypes_byid}
+
+```
+
+
+***
+
+### Get all SNPedia/PLos/Mendeley-annotations for a specific SNP.
+```{r annotations}
+
+```
+
+
+***
+
+### Get all phenotypes, their variations, and how many users have data available for a given phenotype.
+```{r allphenotypes}
+
+```
