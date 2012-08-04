@@ -1,13 +1,23 @@
 Package: rvertnet
 Description: A wrapper to the VertNet collections database API.
-Title: Search VertNet database from R.
-Version: 0.0-1
+Title: Search VertNet database from R
+Version: 0.0-5
 License: BSD
-Author: Scott Chamberlain, Carl Boettiger
-Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
+Date: 2012-7-11
+Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
+    email = "myrmecocystus@gmail.com"),
+    person("Vijay", "Barve", role = "aut",
+    email = "vijay.barve@gmail.com"))
 Imports:
     RCurl (>= 1.6),
     plyr,
     RJSONIO
 Collate:
     'vertsearch.R'
+    'vertoccurrence.R'
+    'vertavailablemaps.R'
+    'vertlocations.R'
+    'vertoccurrencecount.R'
+    'vertproviders.R'
+    'verttaxa.R'
+    'rvertnet.R'
