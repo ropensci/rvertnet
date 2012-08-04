@@ -4,5 +4,5 @@
 #   setwd("/Users/ScottMac/rvertnet/Data")
 #   dcdatatypes()
 dcdatatypes <- function() {
-  out <- read.csv("darwincore_datatypes.csv")
+  read.csv("darwincore_datatypes.csv")
 }

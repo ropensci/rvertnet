@@ -4,5 +4,5 @@
 #   setwd("/Users/ScottMac/rvertnet/Data")
 #   dcnames()
 dcnames <- function() {
-  out <- read.csv("darwincorenames.csv")
+  read.csv("darwincorenames.csv")
 }
