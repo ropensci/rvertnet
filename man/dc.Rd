@@ -1,6 +1,6 @@
 \docType{data}
-\name{darwincore_namestypes}
-\alias{darwincore_namestypes}
+\name{dc}
+\alias{dc}
 \title{Darwin core terms names and types}
 \format{A data frame with 156 rows and 3 variables}
 \description{
@@ -11,11 +11,6 @@
   \itemize{ \item name. name of the term \item short_name.
   short name of the term \item type. data type of the term
   like sttring, int etc. }
-}
-\examples{
-\dontrun{
-dc()
-}
 }
 \keyword{datasets}
 

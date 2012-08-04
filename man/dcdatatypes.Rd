@@ -1,6 +1,6 @@
 \docType{data}
-\name{darwincore_datatypes}
-\alias{darwincore_datatypes}
+\name{dcdatatypes}
+\alias{dcdatatypes}
 \title{Darwin core data types}
 \format{A data frame with 156 rows and 2 variables}
 \description{
@@ -10,11 +10,6 @@
 \details{
   \itemize{ \item name. name of the term \item type. data
   type of the term like sttring, int etc. }
-}
-\examples{
-\dontrun{
-dcdatatypes()
-}
 }
 \keyword{datasets}
 

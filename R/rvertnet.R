@@ -11,12 +11,9 @@
 #' 
 #' @docType data
 #' @keywords datasets
-#' @name darwincore_namestypes
-#' @usage dc
+#' @name dc
+#' @usage data(dc)
 #' @format A data frame with 156 rows and 3 variables
-#' @examples \dontrun{
-#' dc()
-#' }
 NULL
 
 #' Darwin core term names
@@ -31,12 +28,9 @@ NULL
 #' 
 #' @docType data
 #' @keywords datasets
-#' @name darwincorenames
-#' @usage dcnames
+#' @name dcnames
+#' @usage data(dcnames)
 #' @format A data frame with 156 rows and 2 variables
-#' @examples \dontrun{
-#' dcnames()
-#' }
 NULL
 
 #' Darwin core data types
@@ -51,10 +45,7 @@ NULL
 #' 
 #' @docType data
 #' @keywords datasets
-#' @name darwincore_datatypes
-#' @usage dcdatatypes
+#' @name dcdatatypes
+#' @usage data(dcdatatypes)
 #' @format A data frame with 156 rows and 2 variables
-#' @examples \dontrun{
-#' dcdatatypes()
-#' }
 NULL

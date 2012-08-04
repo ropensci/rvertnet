@@ -1,6 +1,6 @@
 \docType{data}
-\name{darwincorenames}
-\alias{darwincorenames}
+\name{dcnames}
+\alias{dcnames}
 \title{Darwin core term names}
 \format{A data frame with 156 rows and 2 variables}
 \description{
@@ -10,11 +10,6 @@
 \details{
   \itemize{ \item name. name of the term \item short_name.
   short name of the term }
-}
-\examples{
-\dontrun{
-dcnames()
-}
 }
 \keyword{datasets}
 
