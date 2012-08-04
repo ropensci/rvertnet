@@ -12,5 +12,10 @@
   short name of the term \item type. data type of the term
   like sttring, int etc. }
 }
+\examples{
+\dontrun{
+dc()
+}
+}
 \keyword{datasets}
 

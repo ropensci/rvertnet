@@ -14,9 +14,13 @@
 #' @name darwincore_namestypes
 #' @usage dc
 #' @format A data frame with 156 rows and 3 variables
+#' @examples \dontrun{
+#' dc()
+#' }
+#' @export
 NULL
 
-#' Darwin core terms names
+#' Darwin core term names
 #' 
 #' A dataset containing the listing of names and short names
 #' of all 150+ terms are as follows:
@@ -31,4 +35,29 @@ NULL
 #' @name darwincorenames
 #' @usage dcnames
 #' @format A data frame with 156 rows and 2 variables
+#' @examples \dontrun{
+#' dcnames()
+#' }
+#' @export
+NULL
+
+#' Darwin core data types
+#' 
+#' A dataset containing the listing of names and data types
+#' of all 150+ terms are as follows:
+#' 
+#' \itemize{
+#'   \item name. name of the term 
+#'   \item type. data type of the term like sttring, int etc.
+#' }
+#' 
+#' @docType data
+#' @keywords datasets
+#' @name darwincore_datatypes
+#' @usage dcdatatypes
+#' @format A data frame with 156 rows and 2 variables
+#' @examples \dontrun{
+#' dcdatatypes()
+#' }
+#' @export
 NULL
