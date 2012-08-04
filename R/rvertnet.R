@@ -17,7 +17,6 @@
 #' @examples \dontrun{
 #' dc()
 #' }
-#' @export
 NULL
 
 #' Darwin core term names
@@ -38,7 +37,6 @@ NULL
 #' @examples \dontrun{
 #' dcnames()
 #' }
-#' @export
 NULL
 
 #' Darwin core data types
@@ -59,5 +57,4 @@ NULL
 #' @examples \dontrun{
 #' dcdatatypes()
 #' }
-#' @export
 NULL

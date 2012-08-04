@@ -1,6 +1,3 @@
-export(darwincore_datatypes)
-export(darwincore_namestypes)
-export(darwincorenames)
 export(vertavailablemaps)
 export(vertlocations)
 export(vertoccurrence)
