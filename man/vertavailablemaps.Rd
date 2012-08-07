@@ -3,7 +3,7 @@
 \title{Retrieve metadata about the maps currently available for querying against the &m= parameter from VertNet v2 portals.}
 \usage{
   vertavailablemaps(key = "r_B68F3", grp = "fish", q = NA,
-    url = "http://www.fishnet2.net/api/v1/availablemaps/?")
+    url = NULL)
 }
 \arguments{
   \item{key}{API Key is required to run any query}

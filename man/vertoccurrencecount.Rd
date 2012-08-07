@@ -3,8 +3,8 @@
 \title{Retrieve locations and number of occurrence records from VertNet v2 portals.}
 \usage{
   vertoccurrencecount(key = "r_B68F3", grp = "fish",
-    t = NA, l = NA, c = NA, d = NA, q = NA, p = NA, m = NA,
-    url = "http://www.fishnet2.net/api/v1/occurrencecount/?")
+    t = NULL, l = NULL, c = NULL, d = NULL, q = NULL,
+    p = NULL, m = NULL, url = NULL)
 }
 \arguments{
   \item{key}{API Key is required to run any query}
