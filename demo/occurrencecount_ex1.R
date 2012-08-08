@@ -5,7 +5,7 @@ a3 = vertoccurrencecount(t="Blenniidae")
 # Location
 a4 = vertoccurrencecount(l="country:india")
 a5 = vertoccurrencecount(l="alabama or gulf of mexico")
-a6 = vertoccurrencecount(l="africa")
+a6 = vertoccurrencecount(l="africa", grp="bird")
 # Catalog Number/Institution Code
 a7 = vertoccurrencecount(c="TU 1")
 a8 = vertoccurrencecount(c="mnhn or usnm")
@@ -13,7 +13,7 @@ a9 = vertoccurrencecount(c="ku 29288 or tu 66762")
 # Date Range
 a10 = vertoccurrencecount(d="2000-2000")
 a11 = vertoccurrencecount(d="1950-1975")
-# Othere
+# Other keywords
 a12 = vertoccurrencecount(q="larva")
 a13 = vertoccurrencecount(q="ethanol or EtOH")
 # Geometry

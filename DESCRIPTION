@@ -11,7 +11,8 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
 Imports:
     RCurl (>= 1.6),
     plyr,
-    RJSONIO
+    RJSONIO,
+    httr
 Collate:
     'vertsearch.R'
     'vertoccurrence.R'

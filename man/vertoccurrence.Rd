@@ -2,10 +2,10 @@
 \alias{vertoccurrence}
 \title{Retrieve occurrence records from VertNet v2 portals.}
 \usage{
-  vertoccurrence(key = "r_B68F3", grp = "fish", t = NA,
-    l = NA, c = NA, d = NA, q = NA, p = NA, m = NA,
-    cols = NA, num = NA, set = NA,
-    url = "http://www.fishnet2.net/api/v1/occurrence/?")
+  vertoccurrence(key = "r_B68F3", grp = "fish", t = NULL,
+    l = NULL, c = NULL, d = NULL, q = NULL, p = NULL,
+    m = NULL, cols = NULL, num = NULL, set = NULL,
+    url = NULL)
 }
 \arguments{
   \item{key}{API Key is required to run any query}

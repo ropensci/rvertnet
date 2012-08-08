@@ -11,21 +11,26 @@
 #' vertavailablemaps(q="May or June")
 #' }
 vertavailablemaps <- function(key="r_B68F3", grp="fish", q = NA, 
-                          url = "http://www.fishnet2.net/api/v1/availablemaps/?") 
+                          url = NULL) 
 {
-  if(grp=="bird")
-    url = "http://ornis2.ornisnet.org/api/v1/availablemaps/?"
-  if(grp=="herp")
-    url = "http://herpnet2.org/api/v1/availablemaps/?"
-  if((grp!="fish") && (grp!="bird") && (grp!="herp")) {
-    print("grp has to be fish, bird or herp")
-    return
+  if(is.na(pmatch(grp, c("bird", "herp", "fish")))){
+    message("Group has to be Bird, Herp or Fish")
+    return(NULL)
   }
+  url <- c(
+    bird = "http://ornis2.ornisnet.org/api/v1/availablemaps/?",
+    herp = "http://herpnet2.org/api/v1/availablemaps/?",
+    fish = "http://www.fishnet2.net/api/v1/availablemaps/?"
+  )[grp]
   qstr <- paste("api=",key,sep="")
   if(!is.na(q))
     qstr <- paste(qstr,"&q=",q,sep="")
-  qstr=gsub(" ","%20",qstr)
+  qstr<-gsub(" ","%20",qstr)
   qurl <- paste(url,qstr,sep="")
   out <- read.csv(qurl)
+  if (nrow(out) == 0){
+    out <- NULL
+    message("No records found")
+  }
   out
 }

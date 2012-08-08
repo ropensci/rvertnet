@@ -1,5 +1,6 @@
 #' Retrieve occurrence records from VertNet v2 portals.
 #' 
+#' @import httr
 #' @param key API Key is required to run any query
 #' @param grp VertNet group to query. Currently available oprions fish, bird and herp. Default fish.
 #' @param t Taxon scientific and family names. It supports the 'OR' operator.
@@ -31,45 +32,34 @@
 #' @examples \dontrun{
 #' vertoccurrence(t="notropis",num=100)
 #' }
-vertoccurrence <- function(key="r_B68F3", grp="fish", t = NA, l = NA, c = NA, d = NA, 
-                           q = NA, p = NA, m = NA, cols = NA, num = NA, set = NA,  
-                           url = "http://www.fishnet2.net/api/v1/occurrence/?") 
+vertoccurrence <- function(key="r_B68F3", grp="fish", t = NULL, l = NULL, 
+                           c = NULL, d = NULL, q = NULL, p = NULL, m = NULL, cols = NULL, num = NULL,
+                           set = NULL, url = NULL) 
 {
-  if(grp=="bird")
-    url = "http://ornis2.ornisnet.org/api/v1/occurrence/?"
-  if(grp=="herp")
-    url = "http://herpnet2.org/api/v1/occurrence/?"
-  if((grp!="fish") && (grp!="bird") && (grp!="herp")) {
-    print("grp has to be fish, bird or herp")
-    return
+  if(is.na(pmatch(grp, c("bird", "herp", "fish")))){
+    message("Group has to be Bird, Herp or Fish")
+    return(NULL)
   }
-  qstr <- paste("api=",key,sep="")
-  if(!is.na(t))
-    qstr <- paste(qstr,"&t=",t,sep="")
-  if(!is.na(l))
-    qstr <- paste(qstr,"&l=",l,sep="")
-  if(!is.na(c))
-    qstr <- paste(qstr,"&c=",c,sep="")
-  if(!is.na(d))
-    qstr <- paste(qstr,"&d=",d,sep="")
-  if(!is.na(q))
-    qstr <- paste(qstr,"&q=",q,sep="")
-  if(!is.na(p))
-    qstr <- paste(qstr,"&p=",p,sep="")
-  if(!is.na(m))
-    qstr <- paste(qstr,"&m=",m,sep="")
-  if(!is.na(cols))
-    qstr <- paste(qstr,"&cols=",cols,sep="")
-  if(!is.na(num))
-    qstr <- paste(qstr,"&num=",num,sep="")
-  if(!is.na(set))
-    qstr <- paste(qstr,"&set=",set,sep="")
-  qstr=gsub(" ","%20",qstr)
-  qurl <- paste(url,qstr,sep="")
-  out <- read.csv(qurl)
-  if(dim(out)[1]==0){
+  url <- c(
+    bird = "http://ornis2.ornisnet.org/api/v1/occurrence/",
+    herp = "http://herpnet2.org/api/v1/occurrence/",
+    fish = "http://www.fishnet2.net/api/v1/occurrence/"
+  )[grp]
+  
+  query <- as.list(c(api = key, t = t, l = l, c = c, d = d, q = q, p = p, 
+                     m = m, cols = cols, num = num, set = set))
+  
+  # Server is misconfigured, so you must only use HTTP 1, not 1.1
+  resp <- GET(url = url, query = query, config(http.version = 1L))
+  
+  # This will give informative error messages for http errors
+  stop_for_status(resp)
+  
+  out <- read.csv(text = text_content(resp))
+  if (nrow(out) == 0){
     out <- NULL
-    cat("No records found")
+    message("No records found")
   }
   out
+  
 }

@@ -3,9 +3,9 @@ a1 = verttaxa(t="notropis")
 a2 = verttaxa(t="notropis or nezumia")
 a3 = verttaxa(t="Blenniidae")
 # Location
-a4 = verttaxa(l="country:canada")
+a4 = verttaxa(l="country:india",grp="bird")
 a5 = verttaxa(l="alabama or gulf of mexico")
-a6 = verttaxa(l="africa")
+a6 = verttaxa(l="africa",grp="herp")
 # Catalog Number/Institution Code
 a7 = verttaxa(c="TU 1")
 a8 = verttaxa(c="mnhn or usnm")
@@ -13,7 +13,7 @@ a9 = verttaxa(c="ku 29288 or tu 66762")
 # Date Range
 a10 = verttaxa(d="2000-2000")
 a11 = verttaxa(d="1950-1975")
-# Othere
+# Other keywords
 a12 = verttaxa(q="larva")
 a13 = verttaxa(q="ethanol or EtOH")
 # Geometry

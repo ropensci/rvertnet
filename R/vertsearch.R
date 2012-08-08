@@ -1,4 +1,5 @@
-#' Retrieve all taxa names or TSNs downstream in hierarchy from given TSN.
+#' Search for occurrences for a given taxonomic name.
+#' 
 #' @import RJSONIO RCurl plyr
 #' @param cl Taxonomic search term (character).
 #' @param sp State or province (character).

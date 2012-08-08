@@ -5,7 +5,7 @@ a3 = vertlocations(t="Blenniidae")
 # Location
 a4 = vertlocations(l="country:india")
 a5 = vertlocations(l="alabama or gulf of mexico")
-a6 = vertlocations(l="africa")
+a6 = vertlocations(l="africa", grp="bird")
 # Catalog Number/Institution Code
 a7 = vertlocations(c="TU 1")
 a8 = vertlocations(c="mnhn or usnm")
@@ -13,7 +13,7 @@ a9 = vertlocations(c="ku 29288 or tu 66762")
 # Date Range
 a10 = vertlocations(d="2000-2000")
 a11 = vertlocations(d="1950-1975")
-# Othere
+# Other keywords
 a12 = vertlocations(q="larva")
 a13 = vertlocations(q="ethanol or EtOH")
 # Geometry

@@ -3,9 +3,9 @@ a1 = vertproviders(t="notropis")
 a2 = vertproviders(t="notropis or nezumia")
 a3 = vertproviders(t="Blenniidae")
 # Location
-a4 = vertproviders(l="country:india")
+a4 = vertproviders(l="country:canada")
 a5 = vertproviders(l="alabama or gulf of mexico")
-a6 = vertproviders(l="africa")
+a6 = vertproviders(l="africa",grp="bird")
 # Catalog Number/Institution Code
 a7 = vertproviders(c="TU 1")
 a8 = vertproviders(c="mnhn or usnm")
@@ -13,7 +13,7 @@ a9 = vertproviders(c="ku 29288 or tu 66762")
 # Date Range
 a10 = vertproviders(d="2000-2000")
 a11 = vertproviders(d="1950-1975")
-# Othere
+# Other keywords
 a12 = vertproviders(q="larva")
 a13 = vertproviders(q="ethanol or EtOH")
 # Geometry

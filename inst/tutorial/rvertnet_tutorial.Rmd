@@ -17,61 +17,80 @@ library(rvertnet)
 
 ***
 
-#### Get genotype data for all users at a particular snp.
-```{r allgensnp}
+#### Get Darwin Core terms.
+```{r loaddata}
+data(dcnames)
+head(dcnames)
 
+data(dc)
+head(dc)
 ```
 
 ***
 
-#### Get genotype data for one or multiple users.
-```{r genotypes}
-
+#### Get metadata about maps currently available for querying against.
+```{r vertavailablemaps}
+head( vertavailablemaps()[,-4] )
 ```
 
 ***
 
-### Get phenotype data for one or multiple users.
-```{r phenotypes}
-
-```
-
-
-***
-
-### Get openSNP user information.
-```{r users}
-
+### Get locations and number of occurrence records for an organism.
+```{r vertlocations}
+out <- vertlocations(t="notropis", d=2009)
+head( out[,c(1,2,5,6,7)] )
 ```
 
 
 ***
 
-### Download genotype data for a user from 23andme or other repo.
-```{r fetch_genotypes}
+### Get occurrence records.
+```{r vertoccurrence}
+# A simple example
+vertoccurrence(t="notropis",num=5)[,1:5]
 
+# More complicatd example visualizing results
+library(rvertnet)
+bluej1=vertoccurrence(t="Cyanocitta cristata",grp="bird")
+bluej2=subset(bluej1,Latitude !=0 & Longitude != 0)
+scrubj1=vertoccurrence(t="Aphelocoma",grp="bird")
+scrubj2=subset(scrubj1,Latitude !=0 & Longitude != 0)
+
+library(maps)
+library(ggplot2)
+world = map_data("world")
+ggplot(world, aes(long, lat)) +
+  geom_polygon(aes(group = group), fill = "white", color = "gray40",
+               size = .2) +
+  geom_jitter(data = bluej2,
+              aes(Longitude, Latitude), alpha=0.6, size = 1,
+              color = "blue") +
+                opts(title = "Blue Jay and Scrub Jay") +
+  geom_jitter(data = scrubj2,
+              aes(Longitude, Latitude), alpha=0.6, size = 1,
+              color = "brown")
 ```
 
 
 ***
 
-### Get all known variations and all users sharing that phenotype for one phenotype(-ID).
-```{r phenotypes_byid}
-
+### Get number of occurrence records.
+```{r vertoccurrencecount}
+vertoccurrencecount(t="notropis", d=2009)
 ```
 
 
 ***
 
-### Get all SNPedia/PLos/Mendeley-annotations for a specific SNP.
-```{r annotations}
-
+### Get data providers for an organism.
+```{r }
+head( vertproviders(t="notropis")[,-1] ) # not showing institution name for brevity
 ```
 
 
 ***
 
-### Get all phenotypes, their variations, and how many users have data available for a given phenotype.
-```{r allphenotypes}
-
+### Search for occurrences for a given taxonomic name.
+```{r }
+head( vertsearch("aves", "california", 10)[,c(11,14)] ) # just lat/long for brevity
 ```
