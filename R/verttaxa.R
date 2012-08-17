@@ -21,28 +21,9 @@
 #' @examples \dontrun{
 #' verttaxa(t="notropis")
 #' }
-verttaxa <- function(key="r_B68F3", grp="fish",  t = NULL, l = NULL, 
+verttaxa <- function(key = "r_B68F3", grp = "fish",  t = NULL, l = NULL,
                      c = NULL, d = NULL, q = NULL, p = NULL, m = NULL, url = NULL)
-{  
-  if(is.na(pmatch(grp, c("bird", "herp", "fish")))){
-    message("Group has to be Bird, Herp or Fish")
-    return(NULL)
-  }
-  url <- c(
-    bird = "http://ornis2.ornisnet.org/api/v1/taxa/",
-    herp = "http://herpnet2.org/api/v1/taxa/",
-    fish = "http://www.fishnet2.net/api/v1/taxa/"
-  )[grp]
-  
-  query <- as.list(c(api = key, t = t, l = l, c = c, d = d, q = q, p = p, m = m))
-  # must only use HTTP 1, HTTP 1.1 not working
-  resp <- GET(url = url, query = query, config(http.version = 1L))
-  stop_for_status(resp)
-  
-  out <- read.csv(text = text_content(resp))
-  if (nrow(out) == 0){
-    out <- NULL
-    message("No records found")
-  }
-  out
+{
+  vertwrapper(fxn = "taxa", key = key, t = t, l = l, c = c, d = d, q = q, p = p,
+              m = m )
 }
