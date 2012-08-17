@@ -1,6 +1,6 @@
 \name{vertsearch}
 \alias{vertsearch}
-\title{Retrieve all taxa names or TSNs downstream in hierarchy from given TSN.}
+\title{Search for occurrences for a given taxonomic name.}
 \usage{
   vertsearch(cl = NA, sp = NA, limit = NA,
     url = "http://canary.vert-net.appspot.com/api/search",
@@ -28,8 +28,7 @@
   if no matches.
 }
 \description{
-  Retrieve all taxa names or TSNs downstream in hierarchy
-  from given TSN.
+  Search for occurrences for a given taxonomic name.
 }
 \examples{
 \dontrun{
