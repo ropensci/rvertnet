@@ -1,3 +1,7 @@
+## ! THIS IS NOT THE MOST UP TO DATE BRANCH OF `rvertnet`. GO [HERE](https://github.com/vijaybarve/rvertnet) ! 
+
+# `rvertnet`
+
 Interface to the VertNet collections database. 
 
 See the Wiki for examples of use cases for functions. 
