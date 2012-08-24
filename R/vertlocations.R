@@ -24,6 +24,6 @@
 vertlocations <- function(key = "r_B68F3", grp = "fish",  t = NULL, l = NULL,
                           c = NULL, d = NULL, q = NULL, p = NULL, m = NULL, url = NULL)
 {
-  vertwrapper(fxn = "locations", key = key, t = t, l = l, c = c, d = d, q = q, p = p,
+  vertwrapper(fxn = "locations", key = key, grp = grp, t = t, l = l, c = c, d = d, q = q, p = p,
               m = m)
 }
