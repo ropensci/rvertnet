@@ -6,6 +6,7 @@
 #' @export
 #' @examples \dontrun{
 #' vertlocations(t="notropis")
+#' vertlocations(t="notropis", d=2009) # only year 2009
 #' }
 vertlocations <- function(key = "r_B68F3", grp = "fish",  t = NULL, l = NULL,
              c = NULL, d = NULL, q = NULL, p = NULL, m = NULL, url = NULL)
