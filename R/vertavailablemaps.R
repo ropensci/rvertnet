@@ -10,8 +10,14 @@
 #' @return Dataframe of search results empty if no matches.
 #' @export
 #' @examples \dontrun{
-#' vertavailablemaps()
+#' # Search for maps with keywords
 #' vertavailablemaps(q="May or June")
+#' vertavailablemaps(q="Fishery Closure")
+#' 
+#' # List all 
+#' vertavailablemaps()
+#' vertavailablemaps(grp="bird")
+#' vertavailablemaps(grp="herp")
 #' }
 vertavailablemaps <- function(key="r_B68F3", grp="fish", q = NA, url = NULL) 
 {

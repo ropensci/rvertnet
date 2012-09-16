@@ -28,8 +28,14 @@
 }
 \examples{
 \dontrun{
-vertavailablemaps()
+# Search for maps with keywords
 vertavailablemaps(q="May or June")
+vertavailablemaps(q="Fishery Closure")
+
+# List all
+vertavailablemaps()
+vertavailablemaps(grp="bird")
+vertavailablemaps(grp="herp")
 }
 }
 
