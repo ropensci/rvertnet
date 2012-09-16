@@ -1,6 +1,7 @@
 \name{verttaxa}
 \alias{verttaxa}
-\title{Retrieve scientific names and the number of occurences of the scientific name from VertNet v2 portals.}
+\title{Retrieve scientific names and the number of occurences of the scientific
+		name from VertNet v2 portals.}
 \usage{
   verttaxa(key = "r_B68F3", grp = "fish", t = NULL,
     l = NULL, c = NULL, d = NULL, q = NULL, p = NULL,

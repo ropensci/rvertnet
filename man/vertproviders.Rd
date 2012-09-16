@@ -1,6 +1,7 @@
 \name{vertproviders}
 \alias{vertproviders}
-\title{Retrieve institution and the number of occurences served by institution from VertNet v2 portals.}
+\title{Retrieve institution and the number of occurences served by institution from
+		VertNet v2 portals.}
 \usage{
   vertproviders(key = "r_B68F3", grp = "fish", t = NULL,
     l = NULL, c = NULL, d = NULL, q = NULL, p = NULL,
