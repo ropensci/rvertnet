@@ -1,6 +1,7 @@
 \name{vertavailablemaps}
 \alias{vertavailablemaps}
-\title{Retrieve metadata about the maps currently available for querying against the &m= parameter from VertNet v2 portals.}
+\title{Retrieve metadata about the maps currently available for querying against
+		the &m= parameter from VertNet v2 portals.}
 \usage{
   vertavailablemaps(key = "r_B68F3", grp = "fish", q = NA,
     url = NULL)
@@ -27,8 +28,14 @@
 }
 \examples{
 \dontrun{
-vertavailablemaps()
+# Search for maps with keywords
 vertavailablemaps(q="May or June")
+vertavailablemaps(q="Fishery Closure")
+
+# List all
+vertavailablemaps()
+vertavailablemaps(grp="bird")
+vertavailablemaps(grp="herp")
 }
 }
 

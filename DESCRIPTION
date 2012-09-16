@@ -2,7 +2,7 @@ Package: rvertnet
 Description: A wrapper to the VertNet collections database API.
 Title: Search VertNet database from R
 Version: 0.0-5
-License: BSD
+License: CC0
 Date: 2012-7-11
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"),
@@ -22,3 +22,4 @@ Collate:
     'vertproviders.R'
     'verttaxa.R'
     'rvertnet.R'
+    'zzz.R'
