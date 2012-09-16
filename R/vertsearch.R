@@ -31,4 +31,3 @@ vertsearch <- function(cl = NA, sp = NA, limit = NA,
   out <- fromJSON(I(temp))
   ldply(out$records, function(x) as.data.frame(x))
 }
-# http://canary.vert-net.appspot.com/api/search?cl=aves&sp=california&limit=1
