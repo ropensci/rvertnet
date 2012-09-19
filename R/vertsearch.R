@@ -11,23 +11,12 @@
 #' @return Dataframe of search results OR prints "no search match" if no matches.
 #' @export
 #' @examples \dontrun{
-#' vertsearch("aves", "california", 10)
+#' vertsearch(cl = "aves", sp = "california", limit = 10)
 #' }
-vertsearch <- function(cl = NA, sp = NA, limit = NA,
-  url = "http://canary.vert-net.appspot.com/api/search",
-  ..., curl = getCurlHandle()) 
+vertsearch <- function(cl = NULL, sp = NULL, limit = NULL,
+  url = "http://canary.vert-net.appspot.com/api/search") 
 {
-  args <- list()
-  if(!is.na(cl))
-    args$cl <- cl
-  if(!is.na(sp))
-    args$sp <- sp
-  if(!is.na(limit))
-    args$limit <- limit
-  temp <- getForm(url,
-    .params = args,
-    ...,
-    curl = curl)
-  out <- fromJSON(I(temp))
+  args <- compact(list(cl = cl, sp = sp, limit = limit))
+  out <- content(GET(url, query = args))
   ldply(out$records, function(x) as.data.frame(x))
 }

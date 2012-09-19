@@ -2,9 +2,8 @@
 \alias{vertsearch}
 \title{Search for occurrences for a given taxonomic name.}
 \usage{
-  vertsearch(cl = NA, sp = NA, limit = NA,
-    url = "http://canary.vert-net.appspot.com/api/search",
-    ..., curl = getCurlHandle())
+  vertsearch(cl = NULL, sp = NULL, limit = NULL,
+    url = "http://canary.vert-net.appspot.com/api/search")
 }
 \arguments{
   \item{cl}{Taxonomic search term (character).}
@@ -32,7 +31,7 @@
 }
 \examples{
 \dontrun{
-vertsearch("aves", "california", 10)
+vertsearch(cl = "aves", sp = "california", limit = 10)
 }
 }
 
