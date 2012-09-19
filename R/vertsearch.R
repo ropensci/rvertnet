@@ -1,13 +1,10 @@
 #' Search for occurrences for a given taxonomic name.
 #' 
-#' @import RJSONIO RCurl plyr
+#' @import httr plyr
 #' @param cl Taxonomic search term (character).
 #' @param sp State or province (character).
 #' @param limit Search return limit (numeric).
 #' @param url The VertNet url for the function (should be left to default).
-#' @param ... optional additional curl options (debugging tools mostly).
-#' @param curl If using in a loop, call getCurlHandle() first and pass 
-#'  the returned value in here (avoids unnecessary footprint)
 #' @return Dataframe of search results OR prints "no search match" if no matches.
 #' @export
 #' @examples \dontrun{
