@@ -17,7 +17,7 @@ vertwrapper <- function(fxn = "", key = "r_B68F3", grp = "fish",  t = NULL,
 	# must only use HTTP 1, HTTP 1.1 not working
 	resp <- GET(url = url, query = query, config(http.version = 1L))
 	stop_for_status(resp)
-	out <- read.csv(text = content(resp))
+	out <- read.csv(text = text_content(resp))
 	if (nrow(out) == 0){
 		out <- NULL
 		message("No records found")
