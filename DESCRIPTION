@@ -3,7 +3,7 @@ Description: A wrapper to the VertNet collections database API.
 Title: Search VertNet database from R
 Version: 0.0-5
 License: CC0
-Date: 2012-7-11
+Date: 2012-11-22
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"),
     person("Vijay", "Barve", role = "aut",
@@ -15,6 +15,8 @@ Imports:
     httr (>= 0.1.1),
     ggplot2,
     maps
+Suggests:
+    roxygen2
 Collate:
     'vertsearch.R'
     'vertoccurrence.R'

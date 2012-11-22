@@ -16,7 +16,7 @@
 #' 
 #' # List all 
 #' vertavailablemaps()
-#' vertavailablemaps(grp="bird")
+#' vertavailablemaps(grp="Bird")
 #' vertavailablemaps(grp="herp")
 #' }
 vertavailablemaps <- function(key="r_B68F3", grp="fish", q = NA, url = NULL) 
@@ -35,6 +35,7 @@ vertavailablemaps <- function(key="r_B68F3", grp="fish", q = NA, url = NULL)
     qstr <- paste(qstr,"&q=",q,sep="")
   qstr<-gsub(" ","%20",qstr)
   qurl <- paste(url,qstr,sep="")
+  message(qurl)
   out <- read.csv(qurl)
   if (nrow(out) == 0){
     out <- NULL
