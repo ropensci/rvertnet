@@ -12,7 +12,7 @@ Imports:
     RCurl (>= 1.6),
     plyr,
     RJSONIO,
-    httr (>= 0.1.1),
+    httr (>= 0.2),
     ggplot2,
     maps
 Suggests:

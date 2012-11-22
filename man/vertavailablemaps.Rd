@@ -34,8 +34,6 @@ vertavailablemaps(q="Fishery Closure")
 
 # List all
 vertavailablemaps()
-vertavailablemaps(grp="bird")
-vertavailablemaps(grp="herp")
 }
 }
 

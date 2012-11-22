@@ -16,8 +16,6 @@
 #' 
 #' # List all 
 #' vertavailablemaps()
-#' vertavailablemaps(grp="Bird")
-#' vertavailablemaps(grp="herp")
 #' }
 vertavailablemaps <- function(key="r_B68F3", grp="fish", q = NA, url = NULL) 
 {
