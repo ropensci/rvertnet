@@ -1,4 +1,4 @@
-![](/inst/vertnetorg_ropensci2.png) rvertnet
+![](inst/vertnetorg_ropensci2.png) rvertnet
 ============================================================================
 
 Interface to the VertNet collections database. 
