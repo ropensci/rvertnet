@@ -7,13 +7,13 @@
 #' @param l Location country, continent, county, ocean, island, state, province and locality.
 #'  It supports the 'OR' operator.
 #' @param c Catalog Number and/or Institution Code. It supports the 'OR' operator.
-#' @param d year or years the occurrence was collected. Date Ranges must be in yyyy-yyyy format.
-#' @param q terms of interest that may be in the remarks, notes, scientific name, collector, 
+#' @param d Year or years the occurrence was collected. Date Ranges must be in yyyy-yyyy format.
+#' @param q Terms of interest that may be in the remarks, notes, scientific name, collector, 
 #'  preparation type, location fields or elsewhere in the occurrence. It supports the 'OR' operator.
-#' @param p geometric query in well-known text (WKT) format. Limited to 250 vertices or 10,000 characters. 
+#' @param p Geometric query in well-known text (WKT) format. Limited to 250 vertices or 10,000 characters. 
 #'	Note that the Map parameter and the Geometry paramter are mutually exclusive. 
 #'	If both are submitted, the Map parameter will be ignored.
-#' @param m geographic area defined by one of the available maps. 
+#' @param m Geographic area defined by one of the available maps. 
 #' Maps are designated by MapIDs ref AvailableMaps function
 #' @param cols Columns comma-delimited list of column names, 
 #'	to specify the columns and order of columns to be returned. 
@@ -23,7 +23,7 @@
 #'	CoordinateUncertaintyInMeters, HorizontalDatum, Country, StateProvince, County, Island, 
 #'	IslandGroup, Locality, VerbatimElevation, VerbatimDepth, YearCollected, MonthCollected, 
 #'	DayCollected, Collector, GeorefMethod, LatLongComments, BasisOfRecord, Remarks, DateLastModified
-#' @param num limit the number of occurrences returned. A maximum value of 10000 is permitted. 
+#' @param num Limit the number of occurrences returned. A maximum value of 10000 is permitted. 
 #'	By default all results will be returned, even if exceeds 10,000. 
 #' @param set Start value for records. Default is 1. Can be used to control paging. 
 #' @param url The VertNet url for the function (should be left to default).

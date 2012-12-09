@@ -6,7 +6,7 @@
 #' @param input A data.frame, e.g. from calling vertoccurrence. The data.frame
 #' 		has to have columns named "Latitude" and "Longitude".
 #' @return Map (using ggplot2 package) of points on a world map.
-#' @details vertmap takes care of cleaning up the data.frame (removing NA's, etc.) 
+#' @details vertmap Takes care of cleaning up the data.frame (removing NA's, etc.) 
 #' 		returned from other rvernet functions, and creating the map. This function
 #' 		gives a simple map of your data.  You can look at the code behing the 
 #' 		function itself if you want to build on it to make a map according 

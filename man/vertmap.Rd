@@ -16,7 +16,7 @@
   Basic function to plot your lat/long data on a map.
 }
 \details{
-  vertmap takes care of cleaning up the data.frame
+  vertmap Takes care of cleaning up the data.frame
   (removing NA's, etc.)  returned from other rvernet
   functions, and creating the map. This function gives a
   simple map of your data.  You can look at the code behing

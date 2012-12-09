@@ -22,21 +22,21 @@
   \item{c}{Catalog Number and/or Institution Code. It
   supports the 'OR' operator.}
 
-  \item{d}{year or years the occurrence was collected. Date
+  \item{d}{Year or years the occurrence was collected. Date
   Ranges must be in yyyy-yyyy format.}
 
-  \item{q}{terms of interest that may be in the remarks,
+  \item{q}{Terms of interest that may be in the remarks,
   notes, scientific name, collector, preparation type,
   location fields or elsewhere in the occurrence. It
   supports the 'OR' operator.}
 
-  \item{p}{geometric query in well-known text (WKT) format.
+  \item{p}{Geometric query in well-known text (WKT) format.
   Limited to 250 vertices or 10,000 characters.  Note that
   the Map parameter and the Geometry paramter are mutually
   exclusive.  If both are submitted, the Map parameter will
   be ignored.}
 
-  \item{m}{geographic area defined by one of the available
+  \item{m}{Geographic area defined by one of the available
   maps. Maps are designated by MapIDs ref AvailableMaps
   function}
 
