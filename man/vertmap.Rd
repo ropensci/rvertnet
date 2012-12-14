@@ -2,12 +2,31 @@
 \alias{vertmap}
 \title{Make a simple map to visualize VertNet data.}
 \usage{
-  vertmap(input = NULL)
+  vertmap(input = NULL, mapdatabase = "world",
+    region = ".", geom = geom_point, jitter = NULL)
 }
 \arguments{
   \item{input}{A data.frame, e.g. from calling
   vertoccurrence. The data.frame has to have columns named
   "Latitude" and "Longitude".}
+
+  \item{mapdatabase}{The map database to use in mapping.
+  What you choose here determines what you can choose in
+  the region parameter. One of: county, state, usa, world,
+  world2, france, italy, or nz.}
+
+  \item{region}{The region of the world to map. From the
+  maps package, run
+  \code{sort(unique(map_data("world")$region))} to see
+  region names for the world database layer, or e.g.,
+  \code{sort(unique(map_data("state")$region))} for the
+  state layer.}
+
+  \item{geom}{The geom to use, one of geom_point or
+  geom_jitter. Don't quote them.}
+
+  \item{jitter}{If you use jitter, the amount by which to
+  jitter points in width, height, or both.}
 }
 \value{
   Map (using ggplot2 package) of points on a world map.
@@ -26,12 +45,18 @@
 \examples{
 \dontrun{
 # example 1
-out <- vertoccurrence(t="Aquila", num=100) # get some data on golden
+out <- vertoccurrence(t="Junco hyemalis", grp="bird", num=100)
 vertmap(input = out) # make a map using vertmap
 
 # example 2
-out <- vertoccurrence(q="larva",num=100) # get some data
+out <- vertoccurrence(q="larva",num=100)
 vertmap(input = out) # make a map using vertmap
+
+# Many species
+splist <- splist <- c("Accipiter erythronemius", "Junco hyemalis", "Aix sponsa", "Haliaeetus leucocephalus",
+		"Corvus corone", "Threskiornis molucca", "Merops malimbicus")
+out <- lapply(splist, function(x) vertoccurrence(t=x, grp="bird", num=500))
+vertmap(out)
 }
 }
 
