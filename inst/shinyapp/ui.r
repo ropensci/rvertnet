@@ -34,7 +34,7 @@ shinyUI(pageWithSidebar(
   
     HTML("<br><br>"),
   
-    downloadButton('downloadData', 'Download ouput as .csv')
+    downloadButton('downloadData', 'Download ouput as .csv', class='btn-success')
     
   ),
   
