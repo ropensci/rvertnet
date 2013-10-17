@@ -33,3 +33,8 @@ You might need:
 		+ from the app store
 		+ Linux: apt-get install r-base-dev 
 		+ or similar
+
+
+
+[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+        
