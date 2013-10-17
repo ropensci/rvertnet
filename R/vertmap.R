@@ -48,14 +48,20 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".", geom = ge
 	if(inherits(input$Longitude, "NULL")){
 		stop("need columns named 'Latitude' and 'Longitude'")} else {NULL}
 	
+  input$Latitude <- as.numeric(as.character(input$Latitude))
+	input$Longitude <- as.numeric(as.character(input$Longitude))
+	input$ScientificName <- as.character(input$ScientificName)
+	input$ScientificName <- do.call(c, lapply(input$ScientificName, function(x) paste(strsplit(x, " ")[[1]][1:2],collapse=" ")))
+  
 	tomap <- input[complete.cases(input$Latitude, input$Longitude), ]
-	tomap <- input[-(which(tomap$Latitude <=90 || tomap$Longitude <=180)), ]
+	tomap <- tomap[tomap$Latitude < 90, ]
+	tomap <- tomap[tomap$Longitude < 180, ]
 	world <- map_data(map=mapdatabase, region=region) # get world map data	
 	world <- map_data("world") # get world map data
 	message(paste("Rendering map...plotting ", nrow(tomap), " points", sep=""))
 	ggplot(world, aes(long, lat)) + # make the plot
 		geom_polygon(aes(group=group), fill="white", color="gray40", size=0.2) +
-		geom(data=tomap, aes(Longitude, Latitude, colour=spqueried), 
+		geom(data=tomap, aes(Longitude, Latitude, colour=ScientificName),
 				 alpha=0.4, size=3, position=jitter) +
 		labs(x="", y="") +
 		theme_bw(base_size=14)
