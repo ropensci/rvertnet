@@ -18,14 +18,3 @@ Imports:
 Suggests:
     roxygen2,
     knitr
-Collate:
-    'vertsearch.R'
-    'vertoccurrence.R'
-    'vertavailablemaps.R'
-    'vertlocations.R'
-    'vertoccurrencecount.R'
-    'vertproviders.R'
-    'verttaxa.R'
-    'rvertnet.R'
-    'zzz.R'
-    'vertmap.R'
