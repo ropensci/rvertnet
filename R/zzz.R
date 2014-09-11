@@ -25,3 +25,5 @@ vertwrapper <- function(fxn = "", key = "r_B68F3", grp = "fish",  t = NULL,
 	}
 	out
 }
+
+vn_compact <- function (l) Filter(Negate(is.null), l)

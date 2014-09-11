@@ -1,9 +1,12 @@
 ![](https://raw.github.com/ropensci/rvertnet/master/inst/vertnetorg_ropensci2.png) rvertnet
 ============================================================================
 
-Interface to the VertNet collections database. 
+[![Build Status](https://api.travis-ci.org/ropensci/rvertnet.png)](https://travis-ci.org/ropensci/rvertnet)
+[![Build status](https://ci.appveyor.com/api/projects/status/duyrffhdrstu840v/branch/master)](https://ci.appveyor.com/project/sckott/rvertnet/branch/master)
 
-VertNet API documentation here: 
+Interface to the VertNet collections database.
+
+VertNet API documentation here:
 -> https://github.com/VertNet/Darwin-Core-Engine/wiki/Prototype-Search-API
 (This applies to vertsearch function)
 
@@ -18,7 +21,7 @@ Documentation for Darwin Core Names and their short names
 
 Install rvertnet from this developmental repository:
 
-```R 
+```R
 install.packages("devtools")
 require(devtools)
 install_github("rvertnet", "ropensci")
@@ -26,10 +29,10 @@ require(rvertnet)
 ```
 
 You might need:
-+ Windows: 
++ Windows:
 	+ [Rtools](http://cran.r-project.org/bin/windows/Rtools/)
-+ OS X: 
++ OS X:
 	+ xcode
 		+ from the app store
-		+ Linux: apt-get install r-base-dev 
+		+ Linux: apt-get install r-base-dev
 		+ or similar
