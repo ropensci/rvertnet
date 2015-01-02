@@ -12,7 +12,7 @@ vertsumwrapper <- function(input = NULL)
 
   # coords <- number of records with viable lat and long data
   # errest <- number of "coords" records with viable coordinate uncertainty estimate
-	if(inherits(input$decimallatitude, "NULL") & 
+  if(inherits(input$decimallatitude, "NULL") & 
     inherits(input$decimallongitude, "NULL")){coords <- 0} else{coords <- NULL}
   if(inherits(input$coordinateuncertaintyinmeters, "NULL")){errest <- 0} else{errest <- NULL}
   if(is.null(coords)){
@@ -38,7 +38,7 @@ vertsumwrapper <- function(input = NULL)
       if((errest <- nrow(mappable)) < coords){bad <- coords - errest}
     }
   }
-	cat("\n\nRecords with decimal lat/long ($coords): ", coords, sep = "")
+  cat("\n\nRecords with decimal lat/long ($coords): ", coords, sep = "")
   message("(-90<lat<90, -180<long<180)")
   cat("\n\nRecords with lat/long and coordinate uncertainty estimate ($errest): ", errest)
   message("(0<errest<20020000)")
