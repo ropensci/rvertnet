@@ -1,0 +1,6 @@
+.Rproj.user
+.Rhistory
+.RData
+rvertnet2.Rproj
+^.*\.Rproj$
+^\.Rproj\.user$
