@@ -22,11 +22,11 @@ A data frame of search results
 }
 \description{
 Searches by decimal latitude and longitude to return any occurrence record
-within the input distance of the input point.
+within the input distance (radius) of the input point.
 }
 \details{
 \code{spatialsearch} finds all records of any taxa having decimal lat/long
-   coordinates within a given radius of the coordinates input.
+   coordinates within a given radius (in meters) of your coordinates.
 }
 \examples{
 \dontrun{

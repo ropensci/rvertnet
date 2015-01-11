@@ -15,9 +15,9 @@
 #' @export
 #' @examples \dontrun{
 #'
-#' # replace "big@search.luv" with your own email address
-#' bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@search.luv")
-#' 
+#' # replace "big@@search.luv" with your own email address
+#' bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
+#' }
 
 bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
                       class = NULL, lim = NULL, compact = FALSE, year = NULL, date = NULL,
@@ -38,8 +38,8 @@ bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order
                        recordedby = collector, type = type, hastypestatus = hastypestatus,
                        media = media, rank = rank, tissue = tissue, resource = resource))
   
-  vertwrapper2(fxn = "bigsearch", args = args, lim = NULL, compact = FALSE, 
-              rfile = rfile, email = email)
+  vertwrapper(fxn = "bigsearch", args = args, lim = NULL, rfile = rfile, email = email,
+              compact = FALSE)
   
 }
 

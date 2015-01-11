@@ -1,7 +1,7 @@
 #' Search for records using keywords/terms to control how your query is interpreted.
 #'
 #' Returns only those records in which the targeted input is found in
-#' association with the specified search terms.  Not a global search.
+#' association with the specified search terms.
 #' 
 #' @import plyr jsonlite httr data.table
 #' @details \code{searchbyterm} builds a query from input parameters based on 

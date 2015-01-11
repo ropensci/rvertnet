@@ -66,7 +66,7 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".", geom = ge
 
 	tomap <- input[complete.cases(input$decimallatitude, input$decimallongitude), ]
 	tomap <- tomap[tomap$decimallatitude < 90 & tomap$decimallatitude > -90, ]
-	tomap <- tomap[tomap$decimallongitude < 180 & tomap$decimalllongitude > -180, ]
+	tomap <- tomap[tomap$decimallongitude < 180 & tomap$decimallongitude > -180, ]
 
 	basemap <- map_data(map=mapdatabase, region=region) # get base-map data
 	message(paste("Rendering map...plotting ", nrow(tomap), " points", sep=""))

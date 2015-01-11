@@ -1,6 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
-rvertnet2.Rproj
+rvertnet-manual.pdf
+rvertnet.Rproj
 ^.*\.Rproj$
 ^\.Rproj\.user$

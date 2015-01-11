@@ -8,7 +8,7 @@ vertsumwrapper <- function(input = NULL)
 
   # recs <- number of records in the data frame
   recs <- nrow(input)
-	cat("\nNumber of records ($recs): ", recs, sep = "")
+	cat("\n\nNumber of records ($recs): ", recs, sep = "")
 
   # coords <- number of records with viable lat and long data
   # errest <- number of "coords" records with viable coordinate uncertainty estimate

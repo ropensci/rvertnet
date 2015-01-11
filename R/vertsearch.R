@@ -1,6 +1,6 @@
 #' Find records using a global full-text search of VertNet archives.
 #' 
-#' Returns any record containing the text you input.
+#' Returns any record containing your target text in any field of the record.
 #'
 #' @import plyr jsonlite httr data.table
 #' @details \code{vertsearch} performs a nonspecific search for your input within
@@ -14,10 +14,11 @@
 #' @export
 #' @examples \dontrun{
 #'
-#' out <- vertsearch(tax = "aves", "california")
+#' out <- vertsearch(taxon = "aves", "california")
 #'
-#' # Limit the number of records returned; use bigsearch() for >1000 records
+#' # Limit the number of records returned (under 1000)
 #' out <- vertsearch("(kansas state OR KSU)", lim = 200)
+#' # Use bigsearch() to retrieve >1000 records
 #'
 #' # Find multiple species using searchbyterm():
 #'
