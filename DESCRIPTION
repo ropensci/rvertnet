@@ -1,4 +1,4 @@
-Package: rvertnet2
+Package: rvertnet
 Title: Search VertNet archives using R
 Version: 0.2
 Imports:
