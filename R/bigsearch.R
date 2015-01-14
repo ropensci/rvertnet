@@ -20,7 +20,7 @@
 #' }
 
 bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
-                      class = NULL, lim = NULL, compact = FALSE, year = NULL, date = NULL,
+                      class = NULL, limit = NULL, compact = FALSE, year = NULL, date = NULL,
                       mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
                       stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
                       inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, 
@@ -29,7 +29,7 @@ bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order
   
 {
 
-  args < compact(list(specificepithet = specificepithet, genus = genus, family = family,
+  args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
                             order = order, class = class, year = year, eventdate = date,
                             mappable = mappable, coordinateuncertaintyinmeters = error,
                             continent = continent, country = cntry, stateprovince = stateprovince,

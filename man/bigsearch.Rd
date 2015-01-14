@@ -5,7 +5,7 @@
 \title{Request to download a large number of VertNet records.}
 \usage{
 bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
-  order = NULL, class = NULL, lim = NULL, compact = FALSE,
+  order = NULL, class = NULL, limit = NULL, compact = FALSE,
   year = NULL, date = NULL, mappable = NULL, error = NULL,
   continent = NULL, cntry = NULL, stateprovince = NULL, county = NULL,
   island = NULL, igroup = NULL, inst = NULL, id = NULL,
@@ -23,6 +23,8 @@ bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
 \item{order}{Taxonomic order (character)}
 
 \item{class}{Taxonomic class (character)}
+
+\item{limit}{Limit on the number of records returned (numeric)}
 
 \item{compact}{Return a compact data frame (boolean)}
 
