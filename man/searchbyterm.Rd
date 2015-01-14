@@ -11,7 +11,7 @@ searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
   island = NULL, igroup = NULL, inst = NULL, id = NULL,
   catalognumber = NULL, collector = NULL, type = NULL,
   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-  resource = NULL)
+  resource = NULL, verbose = TRUE)
 }
 \arguments{
 \item{specificepithet}{Taxonomic species (character)}
@@ -74,6 +74,8 @@ holotype, paratype, neotype, etc. (character)}
 
 \item{resource}{Identifier for the resource/dataset from which the record was
 indexed (character)}
+
+\item{verbose}{Print progress and information messages. Default: TRUE}
 }
 \value{
 A data frame of search results

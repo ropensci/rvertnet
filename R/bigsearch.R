@@ -20,12 +20,12 @@
 #' }
 
 bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
-                      class = NULL, limit = NULL, compact = FALSE, year = NULL, date = NULL,
+                      class = NULL, compact = FALSE, year = NULL, date = NULL,
                       mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
                       stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
                       inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, 
                       type = NULL, hastypestatus = NULL, media = NULL, rank = NULL, 
-                      tissue = NULL, resource = NULL, rfile = NULL, email = NULL)
+                      tissue = NULL, resource = NULL, rfile = NULL, email = NULL, verbose = TRUE)
   
 {
 
@@ -39,6 +39,6 @@ bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order
                             media = media, rank = rank, tissue = tissue, resource = resource))
   
   vertwrapper(fxn = "bigsearch", args = args, lim = NULL, rfile = rfile, email = email,
-              compact = FALSE)
+              compact = FALSE, verbose = verbose)
   
 }

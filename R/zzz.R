@@ -1,7 +1,7 @@
 # Wrapper for search functions vertsearch, searchbyterm, spatialsearch and bigsearch
 
 vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email = NULL,
-                        compact = TRUE)
+                        compact = TRUE, verbose = TRUE)
   
 {
   
@@ -35,8 +35,8 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
   message("Processing request...")
   if(fxn == "bigsearch"){
     url <- paste("http://api.vertnet-portal.appspot.com/api/download?", query.str, sep = "")
-    cat("\nDownload of records file '", rfile, "' requested for '", email, "'", sep = "")
-    cat("\nQuery/URL: \"", url, "\"", sep = "")
+    mssg(verbose, paste("\nDownload of records file '", rfile, "' requested for '", email, "'", sep = ""))
+    mssg("\nQuery/URL: \"", url, "\"", sep = "")
     r <- GET(url)
     warn_for_status(r)
     message("\nThank you! Download instructions will be sent by email.")
@@ -48,9 +48,9 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
     
     # Print query and stats
     
-    cat("\nQuery/URL: \"", url, "\"", sep = "")
-    cat("\n\nQuery date:", unlist(out[1]), sep = " ")
-    cat("\n\nMatching records:", unlist(out[2]), "returned,", unlist(out[8]), "available", sep = " ")
+    mssg(verbose, paste("\nQuery/URL: \"", url, "\"", sep = ""))
+    mssg(verbose, paste("\n\nQuery date:", unlist(out[1]), sep = " "))
+    mssg(verbose, paste("\n\nMatching records:", unlist(out[2]), "returned,", unlist(out[8]), "available", sep = " "))
     
     # Sort dataframe columns as in dwc term list
     
@@ -73,8 +73,10 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
     
     if (nrow(r) == 0) {
       NULL
-      message("No records match this search request")
-      if (fxn == "spatialsearch") { message("Check signs on decimal longitude and latitude") }
+      mssg(verbose, "No records match this search request")
+      if (fxn == "spatialsearch") { 
+        mssg(verbose, "Check signs on decimal longitude and latitude") 
+      }
     } else {
       data.frame(r[-dim(r)[1],], stringsAsFactors = FALSE) # Omit a row of NAs generated for the merge above
     }
@@ -82,3 +84,5 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
   }
   
 }
+
+mssg <- function(v, ...) if(v) message(...)

@@ -44,6 +44,7 @@
 #' @param tissue Record is likely to reference tissues; 1 = yes, 0 = no (boolean)
 #' @param resource Identifier for the resource/dataset from which the record was
 #'  indexed (character)
+#' @param verbose Print progress and information messages. Default: TRUE
 #' @return A data frame of search results
 #' @export
 #' @examples \dontrun{
@@ -76,7 +77,8 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                   mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
                   stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
                   inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, type = NULL,
-                  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL, resource = NULL)
+                  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL, 
+                  resource = NULL, verbose = TRUE)
 
 {
 
@@ -89,8 +91,6 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                        recordedby = collector, type = type, hastypestatus = hastypestatus,
                        media = media, rank = rank, tissue = tissue, resource = resource))
 
-  vertwrapper(fxn = "searchbyterm", args = args, lim = limit, compact = compact)
+  vertwrapper(fxn = "searchbyterm", args = args, lim = limit, compact = compact, verbose = verbose)
 
 }
-
-

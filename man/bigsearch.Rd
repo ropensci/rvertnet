@@ -5,13 +5,13 @@
 \title{Request to download a large number of VertNet records.}
 \usage{
 bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
-  order = NULL, class = NULL, limit = NULL, compact = FALSE,
-  year = NULL, date = NULL, mappable = NULL, error = NULL,
-  continent = NULL, cntry = NULL, stateprovince = NULL, county = NULL,
-  island = NULL, igroup = NULL, inst = NULL, id = NULL,
-  catalognumber = NULL, collector = NULL, type = NULL,
-  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-  resource = NULL, rfile = NULL, email = NULL)
+  order = NULL, class = NULL, compact = FALSE, year = NULL,
+  date = NULL, mappable = NULL, error = NULL, continent = NULL,
+  cntry = NULL, stateprovince = NULL, county = NULL, island = NULL,
+  igroup = NULL, inst = NULL, id = NULL, catalognumber = NULL,
+  collector = NULL, type = NULL, hastypestatus = NULL, media = NULL,
+  rank = NULL, tissue = NULL, resource = NULL, rfile = NULL,
+  email = NULL, verbose = TRUE)
 }
 \arguments{
 \item{specificepithet}{Taxonomic species (character)}
@@ -23,8 +23,6 @@ bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
 \item{order}{Taxonomic order (character)}
 
 \item{class}{Taxonomic class (character)}
-
-\item{limit}{Limit on the number of records returned (numeric)}
 
 \item{compact}{Return a compact data frame (boolean)}
 
@@ -79,6 +77,8 @@ indexed (character)}
 
 \item{email}{An email address where you can be contacted when your records are
 ready for download (character)}
+
+\item{verbose}{Print progress and information messages. Default: TRUE}
 }
 \description{
 Specifies a termwise search (like \code{\link{searchbyterm}}) and requests that all available
