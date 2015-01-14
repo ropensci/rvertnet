@@ -4,8 +4,8 @@
 \alias{spatialsearch}
 \title{Find records within some distance of a point given latitude and longitude.}
 \usage{
-spatialsearch(lat = NULL, long = NULL, radius = NULL, lim = 1000,
-  compact = TRUE)
+spatialsearch(lat = NULL, long = NULL, radius = NULL, limit = 1000,
+  compact = TRUE, verbose = TRUE)
 }
 \arguments{
 \item{lat}{Latitude of the central point, in decimal degrees (numeric)}
@@ -14,9 +14,11 @@ spatialsearch(lat = NULL, long = NULL, radius = NULL, lim = 1000,
 
 \item{radius}{Radius to search, in meters (numeric)}
 
-\item{lim}{Limit on the number of records returned (numeric)}
+\item{limit}{Limit on the number of records returned (numeric)}
 
 \item{compact}{Return a compact data frame (boolean)}
+
+\item{verbose}{Print progress and information messages. Default: TRUE}
 }
 \value{
 A data frame of search results
@@ -26,7 +28,7 @@ Searches by decimal latitude and longitude to return any occurrence record
 within the input distance (radius) of the input point.
 }
 \details{
-\code{spatialsearch} finds all records of any taxa having decimal lat/long
+\code{\link{spatialsearch}} finds all records of any taxa having decimal lat/long
    coordinates within a given radius (in meters) of your coordinates.
 }
 \examples{
