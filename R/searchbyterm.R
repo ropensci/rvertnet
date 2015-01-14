@@ -15,7 +15,7 @@
 #' @param family Taxonomic family (character)
 #' @param order Taxonomic order (character)
 #' @param class Taxonomic class (character)
-#' @param lim Limit on the number of records returned (numeric)
+#' @param limit Limit on the number of records returned (numeric)
 #' @param compact Return a compact data frame (boolean)
 #' @param year Year (numeric) or range of years designated by comparison
 #'  operators "<", ">", "<=" or ">=" (character)
@@ -72,7 +72,7 @@
 #' }
 
 searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
-                  class = NULL, lim = 1000, compact = TRUE, year = NULL, date = NULL,
+                  class = NULL, limit = 1000, compact = TRUE, year = NULL, date = NULL,
                   mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
                   stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
                   inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, type = NULL,

@@ -24,8 +24,6 @@ bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
 
 \item{class}{Taxonomic class (character)}
 
-\item{lim}{Limit on the number of records returned (numeric)}
-
 \item{compact}{Return a compact data frame (boolean)}
 
 \item{year}{Year (numeric) or range of years designated by comparison
