@@ -1,19 +1,48 @@
-#' Search for occurrences for a given taxonomic name.
+#' Find records using a global full-text search of VertNet archives.
 #' 
-#' @import httr plyr
-#' @param cl Taxonomic search term (character).
-#' @param sp State or province (character).
-#' @param limit Search return limit (numeric).
-#' @param url The VertNet url for the function (should be left to default).
-#' @return Dataframe of search results OR prints "no search match" if no matches.
+#' Returns any record containing your target text in any field of the record.
+#'
+#' @details \code{\link{vertsearch}} performs a nonspecific search for your input within
+#'    every record and field of the VertNet archives. For a more specific
+#'    search, try searchbyterm().
+#' @param taxon Taxonomic identifier or other text to search for (character)
+#' @param ... Additional search terms (character)
+#' @param limit Limit on the number of records returned; up to 1000 (numeric)
+#' @param compact Return a compact data frame (boolean)
+#' @param verbose Print progress and information messages. Default: TRUE
+#' @return A data frame of search results
 #' @export
 #' @examples \dontrun{
-#' vertsearch(cl = "aves", sp = "california", limit = 10)
+#'
+#' out <- vertsearch(taxon = "aves", state = "california")
+#'
+#' # Limit the number of records returned (under 1000)
+#' out <- vertsearch("(kansas state OR KSU)", lim = 200)
+#' # Use bigsearch() to retrieve >1000 records
+#'
+#' # Find multiple species using searchbyterm():
+#'
+#' # a) returns a specific result
+#' out <- searchbyterm(gen = "mustela", sp = "(nivalis OR erminea)")
+#' vertmap(out)
+#'
+#' # b) returns a non-specific result
+#' out <- vertsearch(tax = "(mustela nivalis OR mustela erminea)")
+#' vertmap(out)
+#'
+#' # c) returns a non-specific result
+#' splist <- c("mustela nivalis", "mustela erminea")
+#' out <- lapply(splist, function(x) vertsearch(t=x, lim=500))
+#' vertmap(out)
 #' }
-vertsearch <- function(cl = NULL, sp = NULL, limit = NULL,
-  url = "http://canary.vert-net.appspot.com/api/search") 
+
+vertsearch <- function(taxon = NULL, ..., limit = 1000, compact = TRUE, verbose = TRUE)
+
 {
-  args <- compact(list(cl = cl, sp = sp, limit = limit))
-  out <- content(GET(url, query = args))
-  ldply(out$records, function(x) as.data.frame(x))
+
+  args <- compact(list(taxon, ...))
+
+  vertwrapper(fxn = "vertsearch", args = args, lim = limit, compact = compact, verbose = verbose)
+
 }
+
