@@ -2,19 +2,19 @@
 #' 
 #' Returns any record containing your target text in any field of the record.
 #'
-#' @import plyr jsonlite httr data.table
-#' @details \code{vertsearch} performs a nonspecific search for your input within
+#' @details \code{\link{vertsearch}} performs a nonspecific search for your input within
 #'    every record and field of the VertNet archives. For a more specific
 #'    search, try searchbyterm().
 #' @param taxon Taxonomic identifier or other text to search for (character)
 #' @param ... Additional search terms (character)
-#' @param lim Limit on the number of records returned; up to 1000 (numeric)
+#' @param limit Limit on the number of records returned; up to 1000 (numeric)
 #' @param compact Return a compact data frame (boolean)
+#' @param verbose Print progress and information messages. Default: TRUE
 #' @return A data frame of search results
 #' @export
 #' @examples \dontrun{
 #'
-#' out <- vertsearch(taxon = "aves", "california")
+#' out <- vertsearch(taxon = "aves", state = "california")
 #'
 #' # Limit the number of records returned (under 1000)
 #' out <- vertsearch("(kansas state OR KSU)", lim = 200)
@@ -36,13 +36,13 @@
 #' vertmap(out)
 #' }
 
-vertsearch <- function(taxon = NULL, ..., lim = 1000, compact = TRUE)
+vertsearch <- function(taxon = NULL, ..., limit = 1000, compact = TRUE, verbose = TRUE)
 
 {
 
   args <- compact(list(taxon, ...))
 
-  r <- vertwrapper(fxn = "vertsearch", args = args, lim = lim, compact = compact)
+  vertwrapper(fxn = "vertsearch", args = args, lim = limit, compact = compact, verbose = verbose)
 
 }
 

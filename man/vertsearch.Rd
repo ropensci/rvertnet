@@ -4,16 +4,19 @@
 \alias{vertsearch}
 \title{Find records using a global full-text search of VertNet archives.}
 \usage{
-vertsearch(taxon = NULL, ..., lim = 1000, compact = TRUE)
+vertsearch(taxon = NULL, ..., limit = 1000, compact = TRUE,
+  verbose = TRUE)
 }
 \arguments{
 \item{taxon}{Taxonomic identifier or other text to search for (character)}
 
 \item{...}{Additional search terms (character)}
 
-\item{lim}{Limit on the number of records returned; up to 1000 (numeric)}
+\item{limit}{Limit on the number of records returned; up to 1000 (numeric)}
 
 \item{compact}{Return a compact data frame (boolean)}
+
+\item{verbose}{Print progress and information messages. Default: TRUE}
 }
 \value{
 A data frame of search results
@@ -22,14 +25,14 @@ A data frame of search results
 Returns any record containing your target text in any field of the record.
 }
 \details{
-\code{vertsearch} performs a nonspecific search for your input within
+\code{\link{vertsearch}} performs a nonspecific search for your input within
    every record and field of the VertNet archives. For a more specific
    search, try searchbyterm().
 }
 \examples{
 \dontrun{
 
-out <- vertsearch(taxon = "aves", "california")
+out <- vertsearch(taxon = "aves", state = "california")
 
 # Limit the number of records returned (under 1000)
 out <- vertsearch("(kansas state OR KSU)", lim = 200)
