@@ -32,7 +32,7 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
   
   # Get results
   
-  message("Processing request...")
+  mssg(verbose, "Processing request...")
   if(fxn == "bigsearch"){
     url <- paste("http://api.vertnet-portal.appspot.com/api/download?", query.str, sep = "")
     mssg(verbose, paste("\nDownload of records file '", rfile, "' requested for '", email, "'", sep = ""))
