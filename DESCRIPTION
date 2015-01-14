@@ -1,6 +1,6 @@
 Package: rvertnet
 Title: Search VertNet archives using R
-Version: 0.2
+Version: 0.2.1.99
 Imports:
     plyr,
     jsonlite,
@@ -8,7 +8,7 @@ Imports:
     data.table,
     ggplot2,
     maps
-Published: 2015-01-01
+Published: 2015-01-14
 Author: Scott Chamberlain [aut, cre], Vijay Barve [aut], Chris Ray [aut]
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 Description: Allows R users to retrieve, map and summarize data from the
