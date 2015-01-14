@@ -1,10 +1,10 @@
 #' Request to download a large number of VertNet records.
 #' 
-#' Specifies a termwise search (like \code{searchbyterm}) and requests that all available records
-#' be made available for download as a tab-delimited text file.
+#' Specifies a termwise search (like \code{\link{searchbyterm}}) and requests that all available 
+#' records be made available for download as a tab-delimited text file.
 #'
 #' @import plyr jsonlite httr data.table
-#' @details \code{bigsearch} allows you to request records as a tab-delimited text file.
+#' @details \code{\link{bigsearch}} allows you to request records as a tab-delimited text file.
 #'    This is the best way to access a large number of records, such as when your search
 #'    results indicate that >1000 records are available. You will be notified by email
 #'    when your records are ready for download.

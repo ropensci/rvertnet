@@ -4,9 +4,9 @@
 #' association with the specified search terms.
 #' 
 #' @import plyr jsonlite httr data.table
-#' @details \code{searchbyterm} builds a query from input parameters based on 
+#' @details \code{\link{searchbyterm}} builds a query from input parameters based on 
 #'    Darwin Core (dwc) terms (for the full list of terms, see
-#'    https://code.google.com/p/darwincore/wiki/DarwinCoreTerms).
+#'    \url{https://code.google.com/p/darwincore/wiki/DarwinCoreTerms}).
 #'    The query string is appended to the base URL for VertNet 
 #'    search requests. View the query string for specification of 
 #'    dwc terms used in the search.
