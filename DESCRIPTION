@@ -1,6 +1,15 @@
 Package: rvertnet
 Title: Search VertNet archives using R
+Description: Allows R users to retrieve, map and summarize data from the
+    VertNet archives
 Version: 0.2.1.99
+Date: 2015-01-14
+Author: Scott Chamberlain [aut, cre], Vijay Barve [aut], Chris Ray [aut]
+Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
+License: MIT + file LICENSE
+LazyData: true
+URL: https://github.com/ropensci/rvertnet
+BugReports: https://github.com/ropensci/rvertnet/issues
 Imports:
     plyr,
     jsonlite,
@@ -8,14 +17,3 @@ Imports:
     data.table,
     ggplot2,
     maps
-Published: 2015-01-14
-Author: Scott Chamberlain [aut, cre], Vijay Barve [aut], Chris Ray [aut]
-Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
-Description: Allows R users to retrieve, map and summarize data from the
-    VertNet archives
-Depends:
-    R (>= 3.1.2)
-License: MIT + file LICENSE
-LazyData: true
-URL: https://github.com/ropensci/rvertnet
-BugReports: https://github.com/ropensci/rvertnet/issues
