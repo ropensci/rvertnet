@@ -6,3 +6,4 @@ rvertnet_0.2.tar.gz
 rvertnet.Rproj
 ^.*\.Rproj$
 ^\.Rproj\.user$
+README.Rmd

@@ -8,6 +8,7 @@ rvertnet
 ## Installation
 
 
+
 ```r
 install.packages("devtools")
 devtools::install_github("ropensci/rvertnet")
@@ -21,6 +22,7 @@ library('rvertnet')
 ## Search by term
 
 Search for _Aves_ in the state of _California_, limit to 10 records
+
 
 
 ```r
@@ -105,5 +107,3 @@ head(res[,1:5])
 * Get citation information for `rvertnet` in R doing `citation(package = 'rvertnet')`
 
 [![ropensci](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
-
-[tut]: http://ropensci.org/tutorials/rvertnet.html
