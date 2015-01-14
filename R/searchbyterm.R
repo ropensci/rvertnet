@@ -89,7 +89,7 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                        recordedby = collector, type = type, hastypestatus = hastypestatus,
                        media = media, rank = rank, tissue = tissue, resource = resource))
 
-  r <- vertwrapper(fxn = "searchbyterm", args = args, lim = lim, compact = compact)
+  vertwrapper(fxn = "searchbyterm", args = args, lim = lim, compact = compact)
 
 }
 

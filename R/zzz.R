@@ -73,11 +73,11 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
   # Return results
   
   if (nrow(r) == 0) {
-    r <- NULL
+    NULL
     message("No records match this search request")
     if (fxn == "spatialsearch") { message("Check signs on decimal longitude and latitude") }
   } else {
-    r <- r[-dim(r)[1],] # Omit a row of NAs generated for the merge above
+    r[-dim(r)[1],] # Omit a row of NAs generated for the merge above
   }
   
 }
