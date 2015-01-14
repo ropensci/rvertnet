@@ -19,7 +19,7 @@
 #' bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 #' }
 
-bigsearch < function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
+bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
                       class = NULL, lim = NULL, compact = FALSE, year = NULL, date = NULL,
                       mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
                       stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
