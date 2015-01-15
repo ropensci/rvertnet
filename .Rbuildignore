@@ -1,9 +1,6 @@
 .Rproj.user
 .Rhistory
 .RData
-rvertnet-manual.pdf
-rvertnet_0.2.tar.gz
-rvertnet.Rproj
 ^.*\.Rproj$
 ^\.Rproj\.user$
 README.Rmd
