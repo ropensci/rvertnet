@@ -93,12 +93,11 @@ association with the specified search terms.
 }
 \examples{
 \dontrun{
-
 # Find multiple species
-out <- searchbyterm(gen = "ochotona", sp = "(princeps OR collaris)")
+out <- searchbyterm(gen = "ochotona", species = "(princeps OR collaris)")
 
 # Find records in multiple locations
-out <- searchbyterm(sp = "mustela nigripes", st = "(wyoming OR south dakota)")
+out <- searchbyterm(species = "mustela nigripes")
 
 # Limit the number of records returned to <1000; use bigsearch() for >1000 records
 out <- searchbyterm(cl = "aves", st = "california", lim = 10)
@@ -116,5 +115,8 @@ out <- searchbyterm(cl = "aves", st = "california", date = "2009-03-25")
 # ...but specifying a date range may not work
 out <- searchbyterm(sp = "mustela nigripes", date = "1935-09-01/1935-09-30")
 }
+}
+\references{
+\url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 }
 

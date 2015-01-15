@@ -3,6 +3,7 @@
 #' Returns only those records in which the targeted input is found in
 #' association with the specified search terms.
 #' 
+#' @export
 #' @import plyr jsonlite httr data.table
 #' @details \code{\link{searchbyterm}} builds a query from input parameters based on 
 #'    Darwin Core (dwc) terms (for the full list of terms, see
@@ -46,9 +47,8 @@
 #'  indexed (character)
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @return A data frame of search results
-#' @export
+#' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
-#'
 #' # Find multiple species
 #' out <- searchbyterm(gen = "ochotona", species = "(princeps OR collaris)")
 #'

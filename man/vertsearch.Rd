@@ -31,7 +31,6 @@ Returns any record containing your target text in any field of the record.
 }
 \examples{
 \dontrun{
-
 out <- vertsearch(taxon = "aves", state = "california")
 
 # Limit the number of records returned (under 1000)
@@ -53,5 +52,8 @@ splist <- c("mustela nivalis", "mustela erminea")
 out <- lapply(splist, function(x) vertsearch(t=x, lim=500))
 vertmap(out)
 }
+}
+\references{
+\url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 }
 

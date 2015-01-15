@@ -33,8 +33,10 @@ within the input distance (radius) of the input point.
 }
 \examples{
 \dontrun{
-
 res <- spatialsearch(lat = 33.529, lon = -105.694, rad = 2000, lim = 10)
 }
+}
+\references{
+\url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 }
 

@@ -3,17 +3,17 @@
 #' Specifies a termwise search (like \code{\link{searchbyterm}}) and requests that all available 
 #' records be made available for download as a tab-delimited text file.
 #'
-#' @details \code{\link{bigsearch}} allows you to request records as a tab-delimited text file.
-#'    This is the best way to access a large number of records, such as when your search
-#'    results indicate that >1000 records are available. You will be notified by email
-#'    when your records are ready for download.
+#' @export
 #' @inheritParams searchbyterm
 #' @param rfile A name for the results file that you will download (character)
 #' @param email An email address where you can be contacted when your records are
 #'    ready for download (character)
-#' @export
+#' @details \code{\link{bigsearch}} allows you to request records as a tab-delimited text file.
+#'    This is the best way to access a large number of records, such as when your search
+#'    results indicate that >1000 records are available. You will be notified by email
+#'    when your records are ready for download.
+#' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
-#'
 #' # replace "big@@search.luv" with your own email address
 #' bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 #' }

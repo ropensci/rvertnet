@@ -2,18 +2,18 @@
 #' 
 #' Returns any record containing your target text in any field of the record.
 #'
-#' @details \code{\link{vertsearch}} performs a nonspecific search for your input within
-#'    every record and field of the VertNet archives. For a more specific
-#'    search, try searchbyterm().
+#' @export
 #' @param taxon Taxonomic identifier or other text to search for (character)
 #' @param ... Additional search terms (character)
 #' @param limit Limit on the number of records returned; up to 1000 (numeric)
 #' @param compact Return a compact data frame (boolean)
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @return A data frame of search results
-#' @export
+#' @details \code{\link{vertsearch}} performs a nonspecific search for your input within
+#'    every record and field of the VertNet archives. For a more specific
+#'    search, try searchbyterm().
+#' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
-#'
 #' out <- vertsearch(taxon = "aves", state = "california")
 #'
 #' # Limit the number of records returned (under 1000)

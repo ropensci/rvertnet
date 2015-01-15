@@ -92,9 +92,11 @@ records be made available for download as a tab-delimited text file.
 }
 \examples{
 \dontrun{
-
 # replace "big@search.luv" with your own email address
 bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@search.luv")
 }
+}
+\references{
+\url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 }
 
