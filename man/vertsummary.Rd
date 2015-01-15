@@ -24,7 +24,6 @@ Creates a simple summary of data returned by a VertNet search.
 }
 \examples{
 \dontrun{
-
 recs <- vertsearch("Junco hyemalis")  # get occurrence records
 vertsummary(recs)            # summarize occurrence records
 

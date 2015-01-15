@@ -10,7 +10,6 @@
 #' @details \code{\link{vertsummary}} provides information on the sources, types and extent
 #'    of data returned by a VertNet search.
 #' @examples \dontrun{
-#'
 #' recs <- vertsearch("Junco hyemalis")  # get occurrence records
 #' vertsummary(recs)            # summarize occurrence records
 #' 

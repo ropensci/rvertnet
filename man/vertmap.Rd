@@ -42,7 +42,6 @@ data returned by a VertNet search.
 }
 \examples{
 \dontrun{
-
 out <- vertsearch("Junco hyemalis") # get occurrence records
 vertmap(out)                        # map occurrence records
 

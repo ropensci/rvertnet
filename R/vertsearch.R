@@ -21,7 +21,6 @@
 #' # Use bigsearch() to retrieve >1000 records
 #'
 #' # Find multiple species using searchbyterm():
-#'
 #' # a) returns a specific result
 #' out <- searchbyterm(gen = "mustela", sp = "(nivalis OR erminea)")
 #' vertmap(out)
