@@ -4,17 +4,16 @@
 \alias{searchbyterm}
 \title{Search for records using keywords/terms to control how your query is interpreted.}
 \usage{
-searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
-  order = NULL, class = NULL, limit = 1000, compact = TRUE,
-  year = NULL, date = NULL, mappable = NULL, error = NULL,
-  continent = NULL, cntry = NULL, stateprovince = NULL, county = NULL,
-  island = NULL, igroup = NULL, inst = NULL, id = NULL,
-  catalognumber = NULL, collector = NULL, type = NULL,
-  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-  resource = NULL, verbose = TRUE)
+searchbyterm(species = NULL, genus = NULL, family = NULL, order = NULL,
+  class = NULL, limit = 1000, compact = TRUE, year = NULL,
+  date = NULL, mappable = NULL, error = NULL, continent = NULL,
+  cntry = NULL, stateprovince = NULL, county = NULL, island = NULL,
+  igroup = NULL, inst = NULL, id = NULL, catalognumber = NULL,
+  collector = NULL, type = NULL, hastypestatus = NULL, media = NULL,
+  rank = NULL, tissue = NULL, resource = NULL, verbose = TRUE)
 }
 \arguments{
-\item{specificepithet}{Taxonomic species (character)}
+\item{species}{Taxonomic species name, as a binomial (genus, epithet) (character)}
 
 \item{genus}{Taxonomic genus (character)}
 

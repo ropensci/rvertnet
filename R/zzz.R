@@ -44,16 +44,13 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
     url <- paste("http://api.vertnet-portal.appspot.com/api/search?", query.str, sep = "")
     out <- fromJSON(url)
     r <- out$recs
-    
-    
+      
     # Print query and stats
-    
     mssg(verbose, paste("\nQuery/URL: \"", url, "\"", sep = ""))
     mssg(verbose, paste("\n\nQuery date:", unlist(out[1]), sep = " "))
     mssg(verbose, paste("\n\nMatching records:", unlist(out[2]), "returned,", unlist(out[8]), "available", sep = " "))
     
     # Sort dataframe columns as in dwc term list
-    
     url <- "https://raw.githubusercontent.com/tdwg/dwc/master/downloads/SimpleDwCTermsList.txt"
     termlist <- read.table(text = content(GET(url), as = "text"), stringsAsFactors = FALSE)
     # Strip embedded header from termlist and deal with upper vs. lower case in termlist vs. out$recs
