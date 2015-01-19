@@ -4,16 +4,17 @@
 \alias{searchbyterm}
 \title{Search for records using keywords/terms to control how your query is interpreted.}
 \usage{
-searchbyterm(species = NULL, genus = NULL, family = NULL, order = NULL,
-  class = NULL, limit = 1000, compact = TRUE, year = NULL,
-  date = NULL, mappable = NULL, error = NULL, continent = NULL,
-  cntry = NULL, stateprovince = NULL, county = NULL, island = NULL,
-  igroup = NULL, inst = NULL, id = NULL, catalognumber = NULL,
-  collector = NULL, type = NULL, hastypestatus = NULL, media = NULL,
-  rank = NULL, tissue = NULL, resource = NULL, verbose = TRUE)
+searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
+  order = NULL, class = NULL, limit = 1000, compact = TRUE,
+  year = NULL, date = NULL, mappable = NULL, error = NULL,
+  continent = NULL, cntry = NULL, stateprovince = NULL, county = NULL,
+  island = NULL, igroup = NULL, inst = NULL, id = NULL,
+  catalognumber = NULL, collector = NULL, type = NULL,
+  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
+  resource = NULL, verbose = TRUE)
 }
 \arguments{
-\item{species}{Taxonomic species name, as a binomial (genus, epithet) (character)}
+\item{specificepithet}{Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)}
 
 \item{genus}{Taxonomic genus (character)}
 
@@ -94,10 +95,10 @@ association with the specified search terms.
 \examples{
 \dontrun{
 # Find multiple species
-out <- searchbyterm(gen = "ochotona", species = "(princeps OR collaris)")
+out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)")
 
 # Find records in multiple locations
-out <- searchbyterm(species = "mustela nigripes")
+out <- searchbyterm(specificepithet = "mustela nigripes")
 
 # Limit the number of records returned to <1000; use bigsearch() for >1000 records
 out <- searchbyterm(cl = "aves", st = "california", lim = 10)
@@ -113,7 +114,7 @@ out <- searchbyterm(cl = "aves", st = "california", y = 1976, err = "<=1000")
 # Specifying records by event date (use quotes)
 out <- searchbyterm(cl = "aves", st = "california", date = "2009-03-25")
 # ...but specifying a date range may not work
-out <- searchbyterm(sp = "mustela nigripes", date = "1935-09-01/1935-09-30")
+out <- searchbyterm(specificepithet = "mustela nigripes", date = "1935-09-01/1935-09-30")
 }
 }
 \references{

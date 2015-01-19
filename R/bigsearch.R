@@ -18,7 +18,7 @@
 #' bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 #' }
 
-bigsearch <- function(species = NULL, genus = NULL, family = NULL, order = NULL,
+bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
                       class = NULL, compact = FALSE, year = NULL, date = NULL,
                       mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
                       stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
@@ -28,7 +28,7 @@ bigsearch <- function(species = NULL, genus = NULL, family = NULL, order = NULL,
   
 {
 
-  args <- compact(list(specificepithet = species, genus = genus, family = family,
+  args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
                             order = order, class = class, year = year, eventdate = date,
                             mappable = mappable, coordinateuncertaintyinmeters = error,
                             continent = continent, country = cntry, stateprovince = stateprovince,

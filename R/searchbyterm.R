@@ -11,7 +11,7 @@
 #'    The query string is appended to the base URL for VertNet 
 #'    search requests. View the query string for specification of 
 #'    dwc terms used in the search.
-#' @param species Taxonomic species name, as a binomial (genus, epithet) (character)
+#' @param specificepithet Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)
 #' @param genus Taxonomic genus (character)
 #' @param family Taxonomic family (character)
 #' @param order Taxonomic order (character)
@@ -50,10 +50,10 @@
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
 #' # Find multiple species
-#' out <- searchbyterm(gen = "ochotona", species = "(princeps OR collaris)")
+#' out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)")
 #'
 #' # Find records in multiple locations
-#' out <- searchbyterm(species = "mustela nigripes")
+#' out <- searchbyterm(specificepithet = "mustela nigripes")
 #'
 #' # Limit the number of records returned to <1000; use bigsearch() for >1000 records
 #' out <- searchbyterm(cl = "aves", st = "california", lim = 10)
@@ -69,10 +69,10 @@
 #' # Specifying records by event date (use quotes)
 #' out <- searchbyterm(cl = "aves", st = "california", date = "2009-03-25")
 #' # ...but specifying a date range may not work
-#' out <- searchbyterm(sp = "mustela nigripes", date = "1935-09-01/1935-09-30")
+#' out <- searchbyterm(specificepithet = "mustela nigripes", date = "1935-09-01/1935-09-30")
 #' }
 
-searchbyterm <- function(species = NULL, genus = NULL, family = NULL, order = NULL,
+searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
                   class = NULL, limit = 1000, compact = TRUE, year = NULL, date = NULL,
                   mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
                   stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
@@ -82,7 +82,7 @@ searchbyterm <- function(species = NULL, genus = NULL, family = NULL, order = NU
 
 {
 
-  args <- compact(list(specificepithet = species, genus = genus, family = family,
+  args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
                        order = order, class = class, year = year, eventdate = date,
                        mappable = mappable, coordinateuncertaintyinmeters = error,
                        continent = continent, country = cntry, stateprovince = stateprovince,

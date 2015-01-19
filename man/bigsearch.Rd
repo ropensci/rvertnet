@@ -4,17 +4,17 @@
 \alias{bigsearch}
 \title{Request to download a large number of VertNet records.}
 \usage{
-bigsearch(species = NULL, genus = NULL, family = NULL, order = NULL,
-  class = NULL, compact = FALSE, year = NULL, date = NULL,
-  mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
-  stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
-  inst = NULL, id = NULL, catalognumber = NULL, collector = NULL,
-  type = NULL, hastypestatus = NULL, media = NULL, rank = NULL,
-  tissue = NULL, resource = NULL, rfile = NULL, email = NULL,
-  verbose = TRUE)
+bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
+  order = NULL, class = NULL, compact = FALSE, year = NULL,
+  date = NULL, mappable = NULL, error = NULL, continent = NULL,
+  cntry = NULL, stateprovince = NULL, county = NULL, island = NULL,
+  igroup = NULL, inst = NULL, id = NULL, catalognumber = NULL,
+  collector = NULL, type = NULL, hastypestatus = NULL, media = NULL,
+  rank = NULL, tissue = NULL, resource = NULL, rfile = NULL,
+  email = NULL, verbose = TRUE)
 }
 \arguments{
-\item{species}{Taxonomic species name, as a binomial (genus, epithet) (character)}
+\item{specificepithet}{Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)}
 
 \item{genus}{Taxonomic genus (character)}
 
