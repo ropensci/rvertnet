@@ -30,38 +30,49 @@ Search for _Aves_ in the state of _California_, limit to 10 records
 ```r
 res <- searchbyterm(class = "Aves", state = "California", lim = 10, verbose = FALSE)
 head(res[,1:5])
-#>       type                                   institutionid
-#> 1 specimen http://biocol.org/urn:lsid:biocol.org:col:34940
-#> 2 specimen http://biocol.org/urn:lsid:biocol.org:col:34940
-#> 3 specimen http://biocol.org/urn:lsid:biocol.org:col:34940
-#> 4 specimen http://biocol.org/urn:lsid:biocol.org:col:34940
-#> 5 specimen http://biocol.org/urn:lsid:biocol.org:col:34940
-#> 6 specimen http://biocol.org/urn:lsid:biocol.org:col:34940
-#>                      collectionid institutioncode collectioncode
-#> 1 http://grbio.org/cool/ywsm-eq6q            DMNH           Bird
-#> 2 http://grbio.org/cool/ywsm-eq6q            DMNH           Bird
-#> 3 http://grbio.org/cool/ywsm-eq6q            DMNH           Bird
-#> 4 http://grbio.org/cool/ywsm-eq6q            DMNH           Bird
-#> 5 http://grbio.org/cool/ywsm-eq6q            DMNH           Bird
-#> 6 http://grbio.org/cool/ywsm-eq6q            DMNH           Bird
+#>       type                   institutionid institutioncode collectioncode
+#> 1 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 2 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 3 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 4 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 5 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 6 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#>       basisofrecord
+#> 1 PreservedSpecimen
+#> 2 PreservedSpecimen
+#> 3 PreservedSpecimen
+#> 4 PreservedSpecimen
+#> 5 PreservedSpecimen
+#> 6 PreservedSpecimen
 ```
 
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
 
 
 ```r
-res <- searchbyterm(specificepithet = "mustela nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
+res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
 head(res[,1:5])
-#>       type                 institutionid institutioncode collectioncode
-#> 1 specimen urn:lsid:biocol.org:col:34495             MSB    MSB Mammals
-#> 2 specimen urn:lsid:biocol.org:col:35013            DMNS   DMNS Mammals
-#> 3 specimen urn:lsid:biocol.org:col:35013            DMNS   DMNS Mammals
-#> 4 specimen urn:lsid:biocol.org:col:35013            DMNS   DMNS Mammals
-#>       basisofrecord
-#> 1 PreservedSpecimen
-#> 2 PreservedSpecimen
-#> 3 PreservedSpecimen
-#> 4 PreservedSpecimen
+#>       type                   institutionid institutioncode
+#> 1 specimen http://grbio.org/cool/iakn-125z              KU
+#> 2 specimen   urn:lsid:biocol.org:col:34495             MSB
+#> 3 specimen   urn:lsid:biocol.org:col:34925            AMNH
+#> 4 specimen   urn:lsid:biocol.org:col:35013            DMNS
+#> 5 specimen   urn:lsid:biocol.org:col:35013            DMNS
+#> 6 specimen   urn:lsid:biocol.org:col:35013            DMNS
+#>     collectioncode
+#> 1              KUM
+#> 2 Mammal specimens
+#> 3          Mammals
+#> 4 Mammal specimens
+#> 5 Mammal specimens
+#> 6 Mammal specimens
+#>                                                        datasetname
+#> 1 University of Kansas Biodiversity Institute Mammalogy Collection
+#> 2                                                             <NA>
+#> 3                                                             <NA>
+#> 4                                                             <NA>
+#> 5                                                             <NA>
+#> 6                                                             <NA>
 ```
 
 ## Big data
@@ -93,13 +104,13 @@ head(res[,1:5])
 #> 4 specimen urn:lsid:biocol.org:col:34495                          <NA>
 #> 5 specimen urn:lsid:biocol.org:col:34495                          <NA>
 #> 6 specimen urn:lsid:biocol.org:col:34495                          <NA>
-#>   institutioncode collectioncode
-#> 1             MSB      MSB Birds
-#> 2             MSB    MSB Mammals
-#> 3             MSB    MSB Mammals
-#> 4             MSB    MSB Mammals
-#> 5             MSB    MSB Mammals
-#> 6             MSB    MSB Mammals
+#>   institutioncode   collectioncode
+#> 1             MSB   Bird specimens
+#> 2             MSB Mammal specimens
+#> 3             MSB Mammal specimens
+#> 4             MSB Mammal specimens
+#> 5             MSB Mammal specimens
+#> 6             MSB Mammal specimens
 ```
 
 ## Meta

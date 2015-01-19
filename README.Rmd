@@ -39,7 +39,7 @@ head(res[,1:5])
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
 
 ```{r}
-res <- searchbyterm(specificepithet = "mustela nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
+res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
 head(res[,1:5])
 ```
 
