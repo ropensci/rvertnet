@@ -39,7 +39,7 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
     mssg(verbose, paste("\nQuery/URL: \"", url, "\"", sep = ""))
     r <- GET(url)
     warn_for_status(r)
-    message("\nThank you! Download instructions will be sent by email.")
+    mssg(verbose, "\nThank you! Download instructions will be sent by email.")
   } else{
     url <- paste("http://api.vertnet-portal.appspot.com/api/search?", query.str, sep = "")
     out <- fromJSON(url)
