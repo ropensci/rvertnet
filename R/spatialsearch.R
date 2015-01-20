@@ -4,21 +4,21 @@
 #' within the input distance (radius) of the input point.
 #'
 #' @export
-#' @param lat Latitude of the central point, in decimal degrees (numeric)
-#' @param long Longitude of the central point, in decimal degrees (numeric)
-#' @param radius Radius to search, in meters (numeric)
-#' @param limit Limit on the number of records returned (numeric)
-#' @param compact Return a compact data frame (boolean)
+#' @param lat Latitude of the central point, in decimal degrees (numeric) Required.
+#' @param long Longitude of the central point, in decimal degrees (numeric) Required.
+#' @param radius Radius to search, in meters (numeric). Required.
+#' @param limit Limit on the number of records returned (numeric). Default: 1000
+#' @param compact Return a compact data frame (logical)
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @details \code{\link{spatialsearch}} finds all records of any taxa having decimal lat/long
 #'    coordinates within a given radius (in meters) of your coordinates.
 #' @return A data frame of search results
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
-#' res <- spatialsearch(lat = 33.529, lon = -105.694, rad = 2000, lim = 10)
+#' res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, limit = 10)
 #' }
 
-spatialsearch <- function(lat = NULL, long = NULL, radius = NULL, limit = 1000,
+spatialsearch <- function(lat, long, radius, limit = 1000,
                           compact = TRUE, verbose = TRUE)
 
 {

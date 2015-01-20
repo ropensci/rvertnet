@@ -4,19 +4,19 @@
 \alias{spatialsearch}
 \title{Find records within some distance of a point given latitude and longitude.}
 \usage{
-spatialsearch(lat = NULL, long = NULL, radius = NULL, limit = 1000,
-  compact = TRUE, verbose = TRUE)
+spatialsearch(lat, long, radius, limit = 1000, compact = TRUE,
+  verbose = TRUE)
 }
 \arguments{
-\item{lat}{Latitude of the central point, in decimal degrees (numeric)}
+\item{lat}{Latitude of the central point, in decimal degrees (numeric) Required.}
 
-\item{long}{Longitude of the central point, in decimal degrees (numeric)}
+\item{long}{Longitude of the central point, in decimal degrees (numeric) Required.}
 
-\item{radius}{Radius to search, in meters (numeric)}
+\item{radius}{Radius to search, in meters (numeric). Required.}
 
-\item{limit}{Limit on the number of records returned (numeric)}
+\item{limit}{Limit on the number of records returned (numeric). Default: 1000}
 
-\item{compact}{Return a compact data frame (boolean)}
+\item{compact}{Return a compact data frame (logical)}
 
 \item{verbose}{Print progress and information messages. Default: TRUE}
 }
@@ -33,7 +33,7 @@ within the input distance (radius) of the input point.
 }
 \examples{
 \dontrun{
-res <- spatialsearch(lat = 33.529, lon = -105.694, rad = 2000, lim = 10)
+res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, limit = 10)
 }
 }
 \references{
