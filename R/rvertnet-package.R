@@ -11,8 +11,8 @@
 #' Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, 
 #' limit to 20 records, e.g.:
 #' 
-#' \code{searchbyterm(specificepithet = "mustela nigripes", state = "(wyoming OR south dakota)", 
-#'    limit = 20, verbose=FALSE)}
+#' \code{searchbyterm(genus = "Mustela", specificepithet = "nigripes", 
+#'    state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)}
 #' 
 #' @section Big data:
 #' Specifies a termwise search (like `searchbyterm()`), but requests that all available records 

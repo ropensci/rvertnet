@@ -97,9 +97,6 @@ association with the specified search terms.
 # Find multiple species
 out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)")
 
-# Find records in multiple locations
-out <- searchbyterm(specificepithet = "mustela nigripes")
-
 # Limit the number of records returned to <1000; use bigsearch() for >1000 records
 out <- searchbyterm(cl = "aves", st = "california", lim = 10)
 
@@ -114,7 +111,7 @@ out <- searchbyterm(cl = "aves", st = "california", y = 1976, err = "<=1000")
 # Specifying records by event date (use quotes)
 out <- searchbyterm(cl = "aves", st = "california", date = "2009-03-25")
 # ...but specifying a date range may not work
-out <- searchbyterm(specificepithet = "mustela nigripes", date = "1935-09-01/1935-09-30")
+out <- searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30")
 }
 }
 \references{

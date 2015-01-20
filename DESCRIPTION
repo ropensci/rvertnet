@@ -3,7 +3,7 @@ Title: Search VertNet archives using R
 Description: Allows R users to retrieve, map and summarize data from the
     VertNet archives
 Version: 0.2.1.99
-Date: 2015-01-14
+Date: 2015-01-20
 Author: Scott Chamberlain [aut, cre], Vijay Barve [aut], Chris Ray [aut]
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 License: MIT + file LICENSE
