@@ -11,9 +11,9 @@ test_that("bigsearch sends email correctly", {
 
 test_that("bigsearch fails correctly", {
   # have to pass in rfile
-  expect_error(bigsearch(email = "myrmecocystus@gmail.com", verbose=FALSE), 'argument "rfile" is missing')
+  expect_error(bigsearch(genus = "adfadf", email = "myrmecocystus@gmail.com", verbose=FALSE), 'argument "rfile" is missing')
   # have to pass in email
-  expect_error(bigsearch(rfile = "file1", verbose=FALSE), 'argument "email" is missing')
+  expect_error(bigsearch(genus = "adfadf", rfile = "file1", verbose=FALSE), 'argument "email" is missing')
   # have to pass in at least one query term
   expect_error(bigsearch(rf = "file2", email = "stuff@stuff.com", verbose=FALSE))
 })

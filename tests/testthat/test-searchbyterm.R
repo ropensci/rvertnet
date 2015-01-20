@@ -17,7 +17,7 @@ test_that("searchbyterm works correctly", {
   expect_match(d$class, "Aves")
   
   expect_equal(NROW(cc), 10)
-  expect_equal(NROW(d), 10)
+  expect_equal(NROW(d), 60)
   
   expect_equal(unique(as.numeric(cc$year)), 1976)
   
