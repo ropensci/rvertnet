@@ -37,7 +37,7 @@ bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order
                             institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
                             recordedby = collector, type = type, hastypestatus = hastypestatus,
                             media = media, rank = rank, tissue = tissue, resource = resource))
-  
+  if(length(args) == 0) stop("You must use at least one parameter to specify your query", call. = FALSE)
   vertwrapper(fxn = "bigsearch", args = args, lim = NULL, rfile = rfile, email = email,
               compact = FALSE, verbose = verbose)
   
