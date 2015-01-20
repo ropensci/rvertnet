@@ -53,7 +53,7 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".", geom = ge
 		stop("Need columns named 'decimallatitude' and 'decimallongitude'") } else {NULL}
 	if(inherits(input$decimallongitude, "NULL")) {
 		stop("Need columns named 'decimallatitude' and 'decimallongitude'") } else {NULL}
-	if(inherits(input$scientificname, "NULL")) { name <- F } else { name <- T }
+	if(inherits(input$scientificname, "NULL")) { name <- FALSE } else { name <- TRUE }
 
   input$decimallatitude <- as.numeric(as.character(input$decimallatitude))
 	input$decimallongitude <- as.numeric(as.character(input$decimallongitude))

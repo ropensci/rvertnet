@@ -6,7 +6,8 @@
 #' @export
 #' @param lat Latitude of the central point, in decimal degrees (numeric) Required.
 #' @param long Longitude of the central point, in decimal degrees (numeric) Required.
-#' @param radius Radius to search, in meters (numeric). Required.
+#' @param radius Radius to search, in meters (numeric). There is no default value for
+#' this parameter. Required.
 #' @param limit Limit on the number of records returned (numeric). Default: 1000
 #' @param compact Return a compact data frame (logical)
 #' @param verbose Print progress and information messages. Default: TRUE

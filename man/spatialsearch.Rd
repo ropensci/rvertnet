@@ -12,7 +12,8 @@ spatialsearch(lat, long, radius, limit = 1000, compact = TRUE,
 
 \item{long}{Longitude of the central point, in decimal degrees (numeric) Required.}
 
-\item{radius}{Radius to search, in meters (numeric). Required.}
+\item{radius}{Radius to search, in meters (numeric). There is no default value for
+this parameter. Required.}
 
 \item{limit}{Limit on the number of records returned (numeric). Default: 1000}
 
