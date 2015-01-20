@@ -5,4 +5,4 @@
 ^\.Rproj\.user$
 README.Rmd
 .travis.yml
-# tests/testthat.R
+travis-tool.sh
