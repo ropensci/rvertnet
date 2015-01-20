@@ -10,8 +10,8 @@ bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
   cntry = NULL, stateprovince = NULL, county = NULL, island = NULL,
   igroup = NULL, inst = NULL, id = NULL, catalognumber = NULL,
   collector = NULL, type = NULL, hastypestatus = NULL, media = NULL,
-  rank = NULL, tissue = NULL, resource = NULL, rfile = NULL,
-  email = NULL, verbose = TRUE)
+  rank = NULL, tissue = NULL, resource = NULL, rfile, email,
+  verbose = TRUE)
 }
 \arguments{
 \item{specificepithet}{Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)}
@@ -73,12 +73,15 @@ holotype, paratype, neotype, etc. (character)}
 \item{resource}{Identifier for the resource/dataset from which the record was
 indexed (character)}
 
-\item{rfile}{A name for the results file that you will download (character)}
+\item{rfile}{A name for the results file that you will download (character). Required.}
 
 \item{email}{An email address where you can be contacted when your records are
-ready for download (character)}
+ready for download (character). Required.}
 
 \item{verbose}{Print progress and information messages. Default: TRUE}
+}
+\value{
+Prints messages on progress, but returns NULL
 }
 \description{
 Specifies a termwise search (like \code{\link{searchbyterm}}) and requests that all available

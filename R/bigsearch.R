@@ -5,13 +5,14 @@
 #'
 #' @export
 #' @inheritParams searchbyterm
-#' @param rfile A name for the results file that you will download (character)
+#' @param rfile A name for the results file that you will download (character). Required.
 #' @param email An email address where you can be contacted when your records are
-#'    ready for download (character)
+#'    ready for download (character). Required.
 #' @details \code{\link{bigsearch}} allows you to request records as a tab-delimited text file.
 #'    This is the best way to access a large number of records, such as when your search
 #'    results indicate that >1000 records are available. You will be notified by email
 #'    when your records are ready for download.
+#' @return Prints messages on progress, but returns NULL
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
 #' # replace "big@@search.luv" with your own email address
@@ -24,7 +25,7 @@ bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order
                       stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
                       inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, 
                       type = NULL, hastypestatus = NULL, media = NULL, rank = NULL, 
-                      tissue = NULL, resource = NULL, rfile = NULL, email = NULL, verbose = TRUE)
+                      tissue = NULL, resource = NULL, rfile, email, verbose = TRUE)
   
 {
 
