@@ -46,4 +46,3 @@ vertsearch <- function(taxon = NULL, ..., limit = 1000, compact = TRUE, verbose 
   vertwrapper(fxn = "vertsearch", args = args, lim = limit, compact = compact, verbose = verbose)
 
 }
-
