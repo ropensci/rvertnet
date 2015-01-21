@@ -24,7 +24,8 @@ searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
 
 \item{class}{Taxonomic class (character)}
 
-\item{limit}{Limit on the number of records returned (numeric)}
+\item{limit}{Limit on the number of records returned. If you use a number with 5 zeros or more
+(e.g., 100000), you need to pass it as \code{100000L} (numeric)}
 
 \item{compact}{Return a compact data frame (boolean)}
 

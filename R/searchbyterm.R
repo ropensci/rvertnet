@@ -11,7 +11,8 @@
 #' @param family Taxonomic family (character)
 #' @param order Taxonomic order (character)
 #' @param class Taxonomic class (character)
-#' @param limit Limit on the number of records returned (numeric)
+#' @param limit Limit on the number of records returned. If you use a number with 5 zeros or more 
+#' (e.g., 100000), you need to pass it as \code{100000L} (numeric)
 #' @param compact Return a compact data frame (boolean)
 #' @param year Year (numeric) or range of years designated by comparison
 #'  operators "<", ">", "<=" or ">=" (character)
