@@ -5,7 +5,8 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
   
 {
   # check that limit < 1000
-  if( lim > 1000 ) stop("For now, limit can't be greater than 1000", call. = FALSE)
+  if(!is.null(lim))
+    if( lim > 1000 ) stop("For now, limit can't be greater than 1000", call. = FALSE)
   
   # Create query object
   
@@ -22,7 +23,7 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
   qstr <- gsub(" ", "%20", qstr) # Allow for AND/OR constructions and multi-word values
   qstr <- paste("%22q%22:%22", qstr, "%22", sep = "") 
   if(!is.null(lim)) { # Add a limit on results returned
-    lstr <- paste("%22l%22", format(lim, digits = 20), sep = ":")
+    lstr <- paste("%22l%22", as.numeric(lim), sep = ":")
     query.str <- paste("q=%7B", paste(qstr, lstr, sep = ","), "%7D", sep = "")
   } else if(fxn == "bigsearch"){ # Add a results.file name and email address
     nstr <- paste("%22n%22:%22", rfile, "%22", sep = "")
