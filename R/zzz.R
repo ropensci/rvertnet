@@ -15,9 +15,7 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
   } else if(fxn == "spatialsearch"){
     qstr <- paste("distance(location,geopoint(", 
                   paste(args$lat, args$long, sep = ","), "))<", args$radius, sep = "")
-  } else { # Additional functions
-    ##### ?????
-  } 
+  }
   
   qstr <- gsub(" ", "%20", qstr) # Allow for AND/OR constructions and multi-word values
   qstr <- paste("%22q%22:%22", qstr, "%22", sep = "") 
