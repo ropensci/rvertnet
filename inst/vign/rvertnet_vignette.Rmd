@@ -1,0 +1,83 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{rvertnet introduction}
+-->
+
+rvertnet introduction
+======
+
+`rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
+
+## Installation
+
+You can install the stable version from CRAN:
+
+```{r eval=FALSE}
+install.packages("rvertnet")
+```
+
+Or the development version from GitHub using the `devtools` package:
+
+```{r eval=FALSE}
+install.packages("devtools")
+devtools::install_github("ropensci/rvertnet")
+```
+
+```{r}
+library('rvertnet')
+```
+
+## Search by term
+
+Search for _Aves_ in the state of _California_, limit to 10 records
+
+```{r}
+res <- searchbyterm(class = "Aves", state = "California", limit = 10, verbose = FALSE)
+head(res[,1:5])
+```
+
+Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
+
+```{r}
+res <- searchbyterm(specificepithet = "nigripes", genus = "Mustela", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
+head(res[,1:4])
+```
+
+Search for class _Aves_, in the state of _Nevada_, with a coordinate uncertainty range (in meters) of less than 25 meters
+
+```{r}
+res <- searchbyterm(class = "Aves", stateprovince = "Nevada", error = "<25", verbose=FALSE)
+head(res[,1:5])
+```
+
+## Email dump of data
+
+Specifies a termwise search (like `searchbyterm()`), but requests that all available records be made available for download as a tab-delimited text file.
+
+```{r eval=FALSE}
+bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
+#> Processing request...
+#> 
+#> Download of records file 'mydata' requested for 'you@gmail.com'
+#> 
+#> Query/URL: "http://api.vertnet-portal.appspot.com/api/download?q=%7B%22q%22:%22genus:ochotona%22,%22n%22:%22mydata%22,%22e%22:%22you@gmail.com%22%7D"
+#> 
+#> Thank you! Download instructions will be sent by email.
+```
+
+## Spatial search
+
+Spatial search service allows only to search on a point defined by latitud and longitude pair, with a radius (meters) from that point. All three parameters are required. 
+
+```{r}
+res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
+head(res[,1:5])
+```
+
+## Messages
+
+In the previous examples, we've suppressed messages for more concise output, but you can set `verbose=TRUE` to get helpful messages - `verbose=TRUE` is also the default setting so if you don't specify that parameter messages will be printed to the console. 
+
+```{r}
+res <- searchbyterm(class = "Aves", state = "California", limit = 10, verbose = TRUE)
+```

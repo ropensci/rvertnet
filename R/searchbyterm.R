@@ -5,12 +5,7 @@
 #' 
 #' @export
 #' @import plyr jsonlite httr data.table
-#' @details \code{\link{searchbyterm}} builds a query from input parameters based on 
-#'    Darwin Core (dwc) terms (for the full list of terms, see
-#'    \url{https://code.google.com/p/darwincore/wiki/DarwinCoreTerms}).
-#'    The query string is appended to the base URL for VertNet 
-#'    search requests. View the query string for specification of 
-#'    dwc terms used in the search.
+#' 
 #' @param specificepithet Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)
 #' @param genus Taxonomic genus (character)
 #' @param family Taxonomic family (character)
@@ -47,8 +42,16 @@
 #'  indexed (character)
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @param ... Curl arguments passed on to \code{\link[httr]{GET}}
+#' 
 #' @return A data frame of search results
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
+#' @details \code{\link{searchbyterm}} builds a query from input parameters based on 
+#'    Darwin Core (dwc) terms (for the full list of terms, see
+#'    \url{https://code.google.com/p/darwincore/wiki/DarwinCoreTerms}).
+#'    The query string is appended to the base URL for VertNet 
+#'    search requests. View the query string for specification of 
+#'    dwc terms used in the search.
+#'    
 #' @examples \dontrun{
 #' # Find multiple species
 #' out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)")
