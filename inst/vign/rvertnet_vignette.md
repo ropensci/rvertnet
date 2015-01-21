@@ -105,7 +105,7 @@ Specifies a termwise search (like `searchbyterm()`), but requests that all avail
 
 
 ```r
-bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
+bigsearch(genus = "ochotona", rfile = "mydata", email = "you@gmail.com")
 #> Processing request...
 #> 
 #> Download of records file 'mydata' requested for 'you@gmail.com'
@@ -117,7 +117,7 @@ bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
 
 ## Spatial search
 
-Spatial search service allows only to search on a point defined by latitud and longitude pair, with a radius (meters) from that point. All three parameters are required. 
+Spatial search service allows only to search on a point defined by latitude and longitude pair, with a radius (meters) from that point. All three parameters are required. 
 
 
 ```r
@@ -157,7 +157,7 @@ res <- searchbyterm(class = "Aves", state = "California", limit = 10, verbose = 
 ## Query/URL: "http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22:%22class:Aves%20stateprovince:California%22,%22l%22:10%7D"
 ## 
 ## 
-## Query date: 2015-01-21T00:41:43.941430
+## Query date: 2015-01-21T18:26:56.577440
 ## 
 ## 
 ## Matching records: 10 returned, >10000 available

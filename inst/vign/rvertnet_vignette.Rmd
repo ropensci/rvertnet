@@ -55,7 +55,7 @@ head(res[,1:5])
 Specifies a termwise search (like `searchbyterm()`), but requests that all available records be made available for download as a tab-delimited text file.
 
 ```{r eval=FALSE}
-bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
+bigsearch(genus = "ochotona", rfile = "mydata", email = "you@gmail.com")
 #> Processing request...
 #> 
 #> Download of records file 'mydata' requested for 'you@gmail.com'
@@ -67,7 +67,7 @@ bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
 
 ## Spatial search
 
-Spatial search service allows only to search on a point defined by latitud and longitude pair, with a radius (meters) from that point. All three parameters are required. 
+Spatial search service allows only to search on a point defined by latitude and longitude pair, with a radius (meters) from that point. All three parameters are required. 
 
 ```{r}
 res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
