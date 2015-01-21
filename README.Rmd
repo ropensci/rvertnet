@@ -12,10 +12,9 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://travis-ci.org/ropensci/rvertnet.svg?branch=master)](https://travis-ci.org/ropensci/rvertnet)
 
-`rvertnet` allows users to search over many taxonomic data sources for species names (scientific and common) and download up and downstream taxonomic hierarchical information - among other things.
+`rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
 ## Installation
-
 
 ```{r eval=FALSE}
 install.packages("devtools")
@@ -64,6 +63,12 @@ bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
 head(res[,1:5])
 ```
+
+## Contributors
+
+* Scott Chamberlain [@sckott](https://github.com/sckott)
+* Chris Ray [@Pika8tona](https://github.com/Pika8tona)
+* Vijay Barve [@vijaybarve](https://github.com/vijaybarve)
 
 ## Meta
 

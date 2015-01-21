@@ -5,10 +5,9 @@ rvertnet
 
 [![Build Status](https://travis-ci.org/ropensci/rvertnet.svg?branch=master)](https://travis-ci.org/ropensci/rvertnet)
 
-`rvertnet` allows users to search over many taxonomic data sources for species names (scientific and common) and download up and downstream taxonomic hierarchical information - among other things.
+`rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
 ## Installation
-
 
 
 ```r
@@ -112,6 +111,12 @@ head(res[,1:5])
 #> 5             MSB Mammal specimens
 #> 6             MSB Mammal specimens
 ```
+
+## Contributors
+
+* Scott Chamberlain [@sckott](https://github.com/sckott)
+* Chris Ray [@Pika8tona](https://github.com/Pika8tona)
+* Vijay Barve [@vijaybarve](https://github.com/vijaybarve)
 
 ## Meta
 
