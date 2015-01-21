@@ -15,7 +15,8 @@ spatialsearch(lat, long, radius, limit = 1000, compact = TRUE,
 \item{radius}{Radius to search, in meters (numeric). There is no default value for
 this parameter. Required.}
 
-\item{limit}{Limit on the number of records returned (numeric). Default: 1000}
+\item{limit}{Limit on the number of records returned. If you use a number with 5 zeros or more
+(e.g., 100000), you need to pass it as \code{100000L}. Default: 1000. (numeric)}
 
 \item{compact}{Return a compact data frame (logical)}
 

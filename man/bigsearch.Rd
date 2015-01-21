@@ -24,7 +24,7 @@ bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
 
 \item{class}{Taxonomic class (character)}
 
-\item{compact}{Return a compact data frame (boolean)}
+\item{compact}{Return a compact data frame (logical)}
 
 \item{year}{Year (numeric) or range of years designated by comparison
 operators "<", ">", "<=" or ">=" (character)}
@@ -33,7 +33,7 @@ operators "<", ">", "<=" or ">=" (character)}
 or the range yyyy-mm-dd/yyyy-mm-dd (character)}
 
 \item{mappable}{Record includes valid coordinates in decimal latitude and
-decimal longitude; 1 = yes, 0 = no (boolean)}
+decimal longitude (logical)}
 
 \item{error}{Coordinate uncertainty in meters (numeric) or range of uncertainty
 values designated by comparison operators "<", ">", "<=" or ">=" (character)}
@@ -63,12 +63,11 @@ values designated by comparison operators "<", ">", "<=" or ">=" (character)}
 \item{hastypestatus}{Specimen associated with this record is identified as a
 holotype, paratype, neotype, etc. (character)}
 
-\item{media}{Record also references associated media, such as a film or video;
-1 = yes, 0 = no (boolean)}
+\item{media}{Record also references associated media, such as a film or video (logical)}
 
 \item{rank}{TBD (numeric)}
 
-\item{tissue}{Record is likely to reference tissues; 1 = yes, 0 = no (boolean)}
+\item{tissue}{Record is likely to reference tissues (logical)}
 
 \item{resource}{Identifier for the resource/dataset from which the record was
 indexed (character)}

@@ -12,14 +12,14 @@
 #' @param order Taxonomic order (character)
 #' @param class Taxonomic class (character)
 #' @param limit Limit on the number of records returned. If you use a number with 5 zeros or more 
-#' (e.g., 100000), you need to pass it as \code{100000L} (numeric)
-#' @param compact Return a compact data frame (boolean)
+#' (e.g., 100000), you need to pass it as \code{100000L}. Default: 1000.  (numeric)
+#' @param compact Return a compact data frame (logical)
 #' @param year Year (numeric) or range of years designated by comparison
 #'  operators "<", ">", "<=" or ">=" (character)
 #' @param date Event date associated with this occurrence record; yyyy-mm-dd
 #'  or the range yyyy-mm-dd/yyyy-mm-dd (character)
 #' @param mappable Record includes valid coordinates in decimal latitude and
-#'  decimal longitude; 1 = yes, 0 = no (boolean)
+#'  decimal longitude (logical)
 #' @param error Coordinate uncertainty in meters (numeric) or range of uncertainty
 #'  values designated by comparison operators "<", ">", "<=" or ">=" (character)
 #' @param continent Continent to search for occurrence (character)
@@ -35,10 +35,9 @@
 #' @param type Type of record; "specimen" or "observation" (character)
 #' @param hastypestatus Specimen associated with this record is identified as a
 #'    holotype, paratype, neotype, etc. (character)
-#' @param media Record also references associated media, such as a film or video;
-#'    1 = yes, 0 = no (boolean)
+#' @param media Record also references associated media, such as a film or video (logical)
 #' @param rank TBD (numeric)
-#' @param tissue Record is likely to reference tissues; 1 = yes, 0 = no (boolean)
+#' @param tissue Record is likely to reference tissues (logical)
 #' @param resource Identifier for the resource/dataset from which the record was
 #'  indexed (character)
 #' @param verbose Print progress and information messages. Default: TRUE
@@ -88,11 +87,19 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                   resource = NULL, verbose = TRUE, ...){
   args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
                        order = order, class = class, year = year, eventdate = date,
-                       mappable = mappable, coordinateuncertaintyinmeters = error,
+                       mappable = ab(mappable), coordinateuncertaintyinmeters = error,
                        continent = continent, country = cntry, stateprovince = stateprovince,
                        county = county, island = island, islandgroup = igroup,
                        institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
                        recordedby = collector, type = type, hastypestatus = hastypestatus,
-                       media = media, rank = rank, tissue = tissue, resource = resource))
+                       media = ab(media), rank = rank, tissue = ab(tissue), resource = resource))
   vertwrapper(fxn = "searchbyterm", args = args, lim = limit, compact = compact, verbose = verbose, ...)
+}
+
+ab <- function(x){
+  if(is.null(x)){
+    NULL
+  } else {
+    if(x) 1 else 0
+  }
 }

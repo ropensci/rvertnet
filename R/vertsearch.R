@@ -5,7 +5,8 @@
 #' @export
 #' @param taxon Taxonomic identifier or other text to search for (character)
 #' @param ... Additional search terms (character)
-#' @param limit Limit on the number of records returned; up to 1000 (numeric)
+#' @param limit Limit on the number of records returned. If you use a number with 5 zeros or more 
+#' (e.g., 100000), you need to pass it as \code{100000L}. Default: 1000.  (numeric)
 #' @param compact Return a compact data frame (boolean)
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @return A data frame of search results

@@ -12,7 +12,8 @@ vertsearch(taxon = NULL, ..., limit = 1000, compact = TRUE,
 
 \item{...}{Additional search terms (character)}
 
-\item{limit}{Limit on the number of records returned; up to 1000 (numeric)}
+\item{limit}{Limit on the number of records returned. If you use a number with 5 zeros or more
+(e.g., 100000), you need to pass it as \code{100000L}. Default: 1000.  (numeric)}
 
 \item{compact}{Return a compact data frame (boolean)}
 
