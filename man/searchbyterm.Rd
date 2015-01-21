@@ -11,7 +11,7 @@ searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
   island = NULL, igroup = NULL, inst = NULL, id = NULL,
   catalognumber = NULL, collector = NULL, type = NULL,
   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-  resource = NULL, verbose = TRUE)
+  resource = NULL, verbose = TRUE, ...)
 }
 \arguments{
 \item{specificepithet}{Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)}
@@ -76,6 +76,8 @@ holotype, paratype, neotype, etc. (character)}
 indexed (character)}
 
 \item{verbose}{Print progress and information messages. Default: TRUE}
+
+\item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
 }
 \value{
 A data frame of search results
@@ -112,6 +114,11 @@ out <- searchbyterm(cl = "aves", st = "california", y = 1976, err = "<=1000")
 out <- searchbyterm(cl = "aves", st = "california", date = "2009-03-25")
 # ...but specifying a date range may not work
 out <- searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30")
+
+# Pass in curl options for curl debugging
+library("httr")
+out <- searchbyterm(class = "aves", limit = 10, config=verbose())
+out <- searchbyterm(class = "aves", limit = 500, config=timeout(1))
 }
 }
 \references{

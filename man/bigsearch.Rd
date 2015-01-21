@@ -11,7 +11,7 @@ bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
   igroup = NULL, inst = NULL, id = NULL, catalognumber = NULL,
   collector = NULL, type = NULL, hastypestatus = NULL, media = NULL,
   rank = NULL, tissue = NULL, resource = NULL, rfile, email,
-  verbose = TRUE)
+  verbose = TRUE, ...)
 }
 \arguments{
 \item{specificepithet}{Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)}
@@ -79,6 +79,8 @@ indexed (character)}
 ready for download (character). Required.}
 
 \item{verbose}{Print progress and information messages. Default: TRUE}
+
+\item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
 }
 \value{
 Prints messages on progress, but returns NULL
@@ -97,6 +99,10 @@ records be made available for download as a tab-delimited text file.
 \dontrun{
 # replace "big@search.luv" with your own email address
 bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@search.luv")
+
+# Pass in curl options for curl debugging
+library("httr")
+bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@search.luv", config=verbose())
 }
 }
 \references{

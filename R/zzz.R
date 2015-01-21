@@ -1,7 +1,7 @@
 # Wrapper for search functions vertsearch, searchbyterm, spatialsearch and bigsearch
 
 vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email = NULL,
-                        compact = TRUE, verbose = TRUE)
+                        compact = TRUE, verbose = TRUE, ...)
   
 {
   
@@ -37,18 +37,20 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
     url <- paste("http://api.vertnet-portal.appspot.com/api/download?", query.str, sep = "")
     mssg(verbose, paste("\nDownload of records file '", rfile, "' requested for '", email, "'", sep = ""))
     mssg(verbose, paste("\nQuery/URL: \"", url, "\"", sep = ""))
-    r <- GET(url)
-    warn_for_status(r)
+    r <- GET(url, ...)
+    stop_for_status(r)
     mssg(verbose, "\nThank you! Download instructions will be sent by email.")
-  } else{
+  } else {
     url <- paste("http://api.vertnet-portal.appspot.com/api/search?", query.str, sep = "")
-    out <- fromJSON(url)
+    tt <- GET(url, ...)
+    stop_for_status(tt)
+    out <- jsonlite::fromJSON(content(tt, "text"))
     r <- out$recs
       
     # Print query and stats
     mssg(verbose, paste("\nQuery/URL: \"", url, "\"", sep = ""))
-    mssg(verbose, paste("\n\nQuery date:", unlist(out[1]), sep = " "))
-    mssg(verbose, paste("\n\nMatching records:", unlist(out[2]), "returned,", unlist(out[8]), "available", sep = " "))
+    mssg(verbose, paste("\n\nQuery date:", out$request_date, sep = " "))
+    mssg(verbose, paste("\n\nMatching records:", out$response_records, "returned,", out$matching_records, "available", sep = " "))
     
     # Sort dataframe columns as in dwc term list
     url <- "https://raw.githubusercontent.com/tdwg/dwc/master/downloads/SimpleDwCTermsList.txt"
@@ -77,9 +79,7 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
     } else {
       data.frame(r[-dim(r)[1],], stringsAsFactors = FALSE) # Omit a row of NAs generated for the merge above
     }
-    
   }
-  
 }
 
 mssg <- function(v, ...) if(v) message(...)

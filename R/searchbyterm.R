@@ -46,6 +46,7 @@
 #' @param resource Identifier for the resource/dataset from which the record was
 #'  indexed (character)
 #' @param verbose Print progress and information messages. Default: TRUE
+#' @param ... Curl arguments passed on to \code{\link[httr]{GET}}
 #' @return A data frame of search results
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
@@ -67,6 +68,11 @@
 #' out <- searchbyterm(cl = "aves", st = "california", date = "2009-03-25")
 #' # ...but specifying a date range may not work
 #' out <- searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30")
+#' 
+#' # Pass in curl options for curl debugging
+#' library("httr")
+#' out <- searchbyterm(class = "aves", limit = 10, config=verbose())
+#' out <- searchbyterm(class = "aves", limit = 500, config=timeout(1))
 #' }
 
 searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
@@ -75,10 +81,7 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                   stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
                   inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, type = NULL,
                   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL, 
-                  resource = NULL, verbose = TRUE)
-
-{
-
+                  resource = NULL, verbose = TRUE, ...){
   args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
                        order = order, class = class, year = year, eventdate = date,
                        mappable = mappable, coordinateuncertaintyinmeters = error,
@@ -87,7 +90,5 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                        institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
                        recordedby = collector, type = type, hastypestatus = hastypestatus,
                        media = media, rank = rank, tissue = tissue, resource = resource))
-
-  vertwrapper(fxn = "searchbyterm", args = args, lim = limit, compact = compact, verbose = verbose)
-
+  vertwrapper(fxn = "searchbyterm", args = args, lim = limit, compact = compact, verbose = verbose, ...)
 }

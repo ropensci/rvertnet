@@ -5,7 +5,7 @@
 \title{Find records within some distance of a point given latitude and longitude.}
 \usage{
 spatialsearch(lat, long, radius, limit = 1000, compact = TRUE,
-  verbose = TRUE)
+  verbose = TRUE, ...)
 }
 \arguments{
 \item{lat}{Latitude of the central point, in decimal degrees (numeric) Required.}
@@ -20,6 +20,8 @@ this parameter. Required.}
 \item{compact}{Return a compact data frame (logical)}
 
 \item{verbose}{Print progress and information messages. Default: TRUE}
+
+\item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
 }
 \value{
 A data frame of search results
@@ -35,6 +37,10 @@ within the input distance (radius) of the input point.
 \examples{
 \dontrun{
 res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, limit = 10)
+
+# Pass in curl options for curl debugging
+library("httr")
+out <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, limit = 10, config=verbose())
 }
 }
 \references{

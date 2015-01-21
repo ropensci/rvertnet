@@ -8,6 +8,7 @@
 #' @param rfile A name for the results file that you will download (character). Required.
 #' @param email An email address where you can be contacted when your records are
 #'    ready for download (character). Required.
+#' @param ... Curl arguments passed on to \code{\link[httr]{GET}}
 #' @details \code{\link{bigsearch}} allows you to request records as a tab-delimited text file.
 #'    This is the best way to access a large number of records, such as when your search
 #'    results indicate that >1000 records are available. You will be notified by email
@@ -17,6 +18,10 @@
 #' @examples \dontrun{
 #' # replace "big@@search.luv" with your own email address
 #' bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
+#' 
+#' # Pass in curl options for curl debugging
+#' library("httr")
+#' bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv", config=verbose())
 #' }
 
 bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
@@ -25,9 +30,7 @@ bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order
                       stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
                       inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, 
                       type = NULL, hastypestatus = NULL, media = NULL, rank = NULL, 
-                      tissue = NULL, resource = NULL, rfile, email, verbose = TRUE)
-  
-{
+                      tissue = NULL, resource = NULL, rfile, email, verbose = TRUE, ...){
 
   args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
                             order = order, class = class, year = year, eventdate = date,
@@ -39,6 +42,5 @@ bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order
                             media = media, rank = rank, tissue = tissue, resource = resource))
   if(length(args) == 0) stop("You must use at least one parameter to specify your query", call. = FALSE)
   vertwrapper(fxn = "bigsearch", args = args, lim = NULL, rfile = rfile, email = email,
-              compact = FALSE, verbose = verbose)
-  
+              compact = FALSE, verbose = verbose, ...)  
 }

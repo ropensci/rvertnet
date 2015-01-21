@@ -11,21 +11,20 @@
 #' @param limit Limit on the number of records returned (numeric). Default: 1000
 #' @param compact Return a compact data frame (logical)
 #' @param verbose Print progress and information messages. Default: TRUE
+#' @param ... Curl arguments passed on to \code{\link[httr]{GET}}
 #' @details \code{\link{spatialsearch}} finds all records of any taxa having decimal lat/long
 #'    coordinates within a given radius (in meters) of your coordinates.
 #' @return A data frame of search results
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
 #' res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, limit = 10)
+#' 
+#' # Pass in curl options for curl debugging
+#' library("httr")
+#' out <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, limit = 10, config=verbose())
 #' }
 
-spatialsearch <- function(lat, long, radius, limit = 1000,
-                          compact = TRUE, verbose = TRUE)
-
-{
-
+spatialsearch <- function(lat, long, radius, limit = 1000, compact = TRUE, verbose = TRUE, ...){
   args <- list(lat = lat, long = long, radius = radius)
-
-  vertwrapper(fxn = "spatialsearch", args = args, lim = limit, compact = compact, verbose = verbose)
-
+  vertwrapper(fxn = "spatialsearch", args = args, lim = limit, compact = compact, verbose = verbose, ...)
 }
