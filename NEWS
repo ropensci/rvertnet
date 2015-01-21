@@ -7,7 +7,8 @@ NEW FEATURES
 
 * The functions `vertavailablemaps()`, `vertlocations()`, 
 `vertoccurrence()`, `vertoccurrencecount()`, `vertproviders()`, 
-`verttaxa()` are now defunct.
+`verttaxa()` are now defunct. You can call these functions, but 
+they print an error message, saying they are defunct.
 * Gained new functions `bigsearch()`, `searchbyterm()`, 
 `spatialsearch()`, and `vertsummary()`.
 * Gained new author: Chris Ray
