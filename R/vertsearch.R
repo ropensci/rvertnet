@@ -3,16 +3,17 @@
 #' Returns any record containing your target text in any field of the record.
 #'
 #' @export
-#' @param taxon Taxonomic identifier or other text to search for (character)
-#' @param ... Additional search terms (character)
-#' @param limit Limit on the number of records returned. If you use a number with 5 zeros or more 
-#' (e.g., 100000), you need to pass it as \code{100000L}. Default: 1000.  (numeric)
+#' @param taxon (character) Taxonomic identifier or other text to search for 
+#' @param ... (character) Additional search terms 
+#' @param limit (numeric) Limit on the number of records returned. Up to 1000. We'll incorporate
+#' paging later for higher limits. See \code{\link{bigsearch}} to get larger result sets in a 
+#' text file via email.
 #' @param compact Return a compact data frame (boolean)
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @return A data frame of search results
 #' @details \code{\link{vertsearch}} performs a nonspecific search for your input within
 #'    every record and field of the VertNet archives. For a more specific
-#'    search, try searchbyterm().
+#'    search, try \code{\link{searchbyterm}}
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
 #' out <- vertsearch(taxon = "aves", state = "california")

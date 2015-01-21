@@ -8,8 +8,9 @@
 #' @param long Longitude of the central point, in decimal degrees (numeric) Required.
 #' @param radius Radius to search, in meters (numeric). There is no default value for
 #' this parameter. Required.
-#' @param limit Limit on the number of records returned. If you use a number with 5 zeros or more 
-#' (e.g., 100000), you need to pass it as \code{100000L}. Default: 1000. (numeric)
+#' @param limit (numeric) Limit on the number of records returned. Up to 1000. We'll incorporate
+#' paging later for higher limits. See \code{\link{bigsearch}} to get larger result sets in a 
+#' text file via email.
 #' @param compact Return a compact data frame (logical)
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @param ... Curl arguments passed on to \code{\link[httr]{GET}}

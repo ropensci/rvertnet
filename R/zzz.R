@@ -4,6 +4,8 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
                         compact = TRUE, verbose = TRUE, ...)
   
 {
+  # check that limit < 1000
+  if( lim > 1000 ) stop("For now, limit can't be greater than 1000", call. = FALSE)
   
   # Create query object
   

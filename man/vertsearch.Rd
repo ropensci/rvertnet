@@ -8,12 +8,13 @@ vertsearch(taxon = NULL, ..., limit = 1000, compact = TRUE,
   verbose = TRUE)
 }
 \arguments{
-\item{taxon}{Taxonomic identifier or other text to search for (character)}
+\item{taxon}{(character) Taxonomic identifier or other text to search for}
 
-\item{...}{Additional search terms (character)}
+\item{...}{(character) Additional search terms}
 
-\item{limit}{Limit on the number of records returned. If you use a number with 5 zeros or more
-(e.g., 100000), you need to pass it as \code{100000L}. Default: 1000.  (numeric)}
+\item{limit}{(numeric) Limit on the number of records returned. Up to 1000. We'll incorporate
+paging later for higher limits. See \code{\link{bigsearch}} to get larger result sets in a
+text file via email.}
 
 \item{compact}{Return a compact data frame (boolean)}
 
@@ -28,7 +29,7 @@ Returns any record containing your target text in any field of the record.
 \details{
 \code{\link{vertsearch}} performs a nonspecific search for your input within
    every record and field of the VertNet archives. For a more specific
-   search, try searchbyterm().
+   search, try \code{\link{searchbyterm}}
 }
 \examples{
 \dontrun{
