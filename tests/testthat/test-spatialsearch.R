@@ -3,15 +3,17 @@ context("spatialsearch")
 a <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
 
 test_that("spatialsearch works correctly", {
-  expect_is(a, "data.frame")
+  expect_is(a, "list")
+  expect_is(a$meta, "list")
+  expect_is(a$data, "data.frame")
   
-  expect_is(a$type, "character")
-  expect_is(na.omit(unique(a$infraspecificepithet)), "character")
+  expect_is(a$data$type, "character")
+  expect_is(na.omit(unique(a$data$infraspecificepithet)), "character")
   
-  expect_equal(NROW(a), 10)
+  expect_equal(NROW(a$data), 10)
   
-  expect_more_than(min(as.numeric(a$decimallatitude)), 10)
-  expect_more_than(min(as.numeric(a$decimallongitude)), -110)
+  expect_more_than(min(as.numeric(a$data$decimallatitude)), 10)
+  expect_more_than(min(as.numeric(a$data$decimallongitude)), -110)
 })
 
 test_that("spatialsearch fails correctly", {
