@@ -7,21 +7,23 @@ cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10
 d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, verbose=FALSE)
 
 test_that("searchbyterm works correctly", {
-  expect_equal( NROW( searchbyterm(limit=1, verbose=FALSE) ), 1)
-  expect_is(a, "data.frame")
-  expect_is(b, "data.frame")
-  expect_is(cc, "data.frame")
-  expect_is(d, "data.frame")
+  expect_equal( NROW( searchbyterm(limit=1, verbose=FALSE)$data ), 1)
+  expect_is(a, "list")
+  expect_is(a$meta, "list")
+  expect_is(a$data, "data.frame")
+  expect_is(b$data, "data.frame")
+  expect_is(cc, "list")
+  expect_is(d$meta, "list")
   
-  expect_is(a$type, "character")
-  expect_match(d$class, "Aves")
+  expect_is(a$data$type, "character")
+  expect_match(d$data$class, "Aves")
   
-  expect_equal(NROW(cc), 10)
-  expect_equal(NROW(d), 60)
+  expect_equal(NROW(cc$data), 10)
+  expect_equal(NROW(d$data), 60)
   
-  expect_equal(unique(as.numeric(cc$year)), 1976)
+  expect_equal(unique(as.numeric(cc$data$year)), 1976)
   
-  expect_more_than(min(as.numeric(d$year)), 1976)
+  expect_more_than(min(as.numeric(d$data$year)), 1976)
 })
 
 test_that("searchbyterm fails correctly", {
