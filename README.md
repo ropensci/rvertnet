@@ -25,10 +25,45 @@ library('rvertnet')
 Search for _Aves_ in the state of _California_, limit to 10 records
 
 
-
 ```r
 res <- searchbyterm(class = "Aves", state = "California", lim = 10, verbose = FALSE)
-head(res[,1:5])
+```
+
+Inspect metadata
+
+
+```r
+res$meta
+#> $request_date
+#> [1] "2015-01-30T01:34:28.595250"
+#> 
+#> $response_records
+#> [1] 10
+#> 
+#> $request_origin
+#> [1] "45.523452,-122.676207"
+#> 
+#> $last_cursor
+#> [1] "False:CuYECuACCrgC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87L0s_M0s7N_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD_c3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzsvSz8zSzs3_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyKkonQnZaNm4yPmpyWkpqRjNDKz8zOzP8Ac3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJskbMcm_DyqEQARINRG9jdW1lbnRJbmRleBrPAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxNC0wMy0xMiIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKFFUICJBdmVzIiAicnRleHRfY2xhc3MiKSAoUVQgIkNhbGlmb3JuaWEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKToZCgwoTiBvcmRlcl9pZCkQARkAAAAAAADw_0oFCABA6Ac"
+#> 
+#> $limit
+#> [1] 10
+#> 
+#> $query_version
+#> [1] "feature/api:search.query():2015-01-08T19:56"
+#> 
+#> $matching_records
+#> [1] ">10000"
+#> 
+#> $api_version
+#> [1] "SearchAPI:2014-10-21T15:44"
+```
+
+Inspect data
+
+
+```r
+head(res$data[,1:5])
 #>       type                   institutionid institutioncode collectioncode
 #> 1 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
 #> 2 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
@@ -50,7 +85,7 @@ Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limi
 
 ```r
 res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
-head(res[,1:5])
+head(res$data[,1:5])
 #>       type                   institutionid institutioncode
 #> 1 specimen http://grbio.org/cool/iakn-125z              KU
 #> 2 specimen   urn:lsid:biocol.org:col:34495             MSB
@@ -95,7 +130,7 @@ bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 
 ```r
 res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
-head(res[,1:5])
+head(res$data[,1:5])
 #>       type                 institutionid                  collectionid
 #> 1 specimen urn:lsid:biocol.org:col:34495 urn:lsid:biocol.org:col:34950
 #> 2 specimen urn:lsid:biocol.org:col:34495                          <NA>
