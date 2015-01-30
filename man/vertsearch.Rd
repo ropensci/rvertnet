@@ -33,10 +33,10 @@ Returns any record containing your target text in any field of the record.
 }
 \examples{
 \dontrun{
-out <- vertsearch(taxon = "aves", state = "california")
+out <- vertsearch(taxon = "aves", state = "california", limit=10)
 
 # Limit the number of records returned (under 1000)
-out <- vertsearch("(kansas state OR KSU)", lim = 200)
+out <- vertsearch("(kansas state OR KSU)", limit = 200)
 # Use bigsearch() to retrieve >1000 records
 
 # Find multiple species using searchbyterm():

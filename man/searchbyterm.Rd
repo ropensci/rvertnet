@@ -97,22 +97,22 @@ association with the specified search terms.
 }
 \examples{
 \dontrun{
-# Find multiple species
-out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)")
-
 # Limit the number of records returned to <1000; use bigsearch() for >1000 records
-out <- searchbyterm(cl = "aves", st = "california", lim = 10)
+out <- searchbyterm(class = "aves", st = "california", lim = 10)
+
+# Find multiple species
+out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)", limit=10)
 
 # Specifying a single year (no quotes) or range of years (use quotes)
-out <- searchbyterm(cl = "aves", st = "california", y = 1976)
-out <- searchbyterm(cl = "aves", st = "california", y = ">=1976")
+out <- searchbyterm(class = "aves", st = "california", y = 1976, limit=10)
+out <- searchbyterm(class = "aves", st = "california", y = ">=1976")
 
 # Specifying a range (in meters) for uncertainty in spatial location (use quotes)
-out <- searchbyterm(cl = "aves", st = "nevada", err = "<25")
-out <- searchbyterm(cl = "aves", st = "california", y = 1976, err = "<=1000")
+out <- searchbyterm(class = "aves", st = "nevada", error = "<25")
+out <- searchbyterm(class = "aves", st = "california", y = 1976, error = "<=1000")
 
 # Specifying records by event date (use quotes)
-out <- searchbyterm(cl = "aves", st = "california", date = "2009-03-25")
+out <- searchbyterm(class = "aves", st = "california", date = "2009-03-25")
 # ...but specifying a date range may not work
 out <- searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30")
 
@@ -120,6 +120,10 @@ out <- searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30"
 library("httr")
 out <- searchbyterm(class = "aves", limit = 10, config=verbose())
 out <- searchbyterm(class = "aves", limit = 500, config=timeout(1))
+
+# Request more than 1000 records
+out <- searchbyterm(genus = "Ochotona", limit = 1500)
+NROW(out$data)
 }
 }
 \references{

@@ -16,10 +16,10 @@
 #'    search, try \code{\link{searchbyterm}}
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
-#' out <- vertsearch(taxon = "aves", state = "california")
+#' out <- vertsearch(taxon = "aves", state = "california", limit=10)
 #'
 #' # Limit the number of records returned (under 1000)
-#' out <- vertsearch("(kansas state OR KSU)", lim = 200)
+#' out <- vertsearch("(kansas state OR KSU)", limit = 200)
 #' # Use bigsearch() to retrieve >1000 records
 #'
 #' # Find multiple species using searchbyterm():
@@ -37,12 +37,7 @@
 #' vertmap(out)
 #' }
 
-vertsearch <- function(taxon = NULL, ..., limit = 1000, compact = TRUE, verbose = TRUE)
-
-{
-
+vertsearch <- function(taxon = NULL, ..., limit = 1000, compact = TRUE, verbose = TRUE){
   args <- compact(list(taxon, ...))
-
   vertwrapper(fxn = "vertsearch", args = args, lim = limit, compact = compact, verbose = verbose)
-
 }
