@@ -1,46 +1,11 @@
 # Wrapper for search functions vertsearch, searchbyterm, spatialsearch and bigsearch
 
 vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email = NULL,
-                        compact = TRUE, verbose = TRUE, ...)
-  
-{
-  # check that limit < 1000
-#   if(!is.null(lim))
-#     if( lim > 1000 ) stop("For now, limit can't be greater than 1000", call. = FALSE)
-
-  # Create query object
-  
-#   if(fxn == "vertsearch"){
-#     qstr <- paste(args, collapse = "%20")
-#   } else if(fxn == "searchbyterm" | fxn == "bigsearch"){
-#     qstr <- paste(names(args), args, sep = ":", collapse = "%20")
-#     qstr <- gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", qstr))) # Numerical query
-#   } else if(fxn == "spatialsearch"){
-#     qstr <- paste("distance(location,geopoint(", 
-#                   paste(args$lat, args$long, sep = ","), "))<", args$radius, sep = "")
-#   }
-#   
-#   qstr <- gsub(" ", "%20", qstr) # Allow for AND/OR constructions and multi-word values
-#   qstr <- paste("%22q%22:%22", qstr, "%22", sep = "") 
-#   if(!is.null(lim)) { # Add a limit on results returned
-#     lstr <- paste("%22l%22", as.numeric(lim), sep = ":")
-#     query.str <- paste("q=%7B", paste(qstr, lstr, sep = ","), "%7D", sep = "")
-#   } else if(fxn == "bigsearch"){ # Add a results.file name and email address
-#     nstr <- paste("%22n%22:%22", rfile, "%22", sep = "")
-#     estr <- paste("%22e%22:%22", email, "%22", sep = "")
-#     query.str <- paste("q=%7B", paste(qstr, nstr, estr, sep = ","), "%7D", sep = "")
-#   } else{
-#     query.str <- paste("q=%7B", qstr, "%7D", sep = "")
-#   }
-  
-  # Get results
+                        compact = TRUE, verbose = TRUE, ...){
   mssg(verbose, "Processing request...")
   if(fxn == "bigsearch"){
-    url <- paste("http://api.vertnet-portal.appspot.com/api/download?", query.str, sep = "")
-    mssg(verbose, paste("\nDownload of records file '", rfile, "' requested for '", email, "'", sep = ""))
-    mssg(verbose, paste("\nQuery/URL: \"", url, "\"", sep = ""))
-    r <- GET(url, ...)
-    stop_for_status(r)
+    tt <- GET(vdurl(), query = list(q = make_bigq(args, email, rfile)), ...)
+    stop_for_status(tt)
     mssg(verbose, "\nThank you! Download instructions will be sent by email.")
   } else {
     ress <- vert_GET(fxn, args, lim, verbose, ...)
@@ -118,6 +83,7 @@ make_q <- function(fxn, x, cursor = NULL, limit=1000){
 }
 
 vurl <- function() "http://api.vertnet-portal.appspot.com/api/search"
+vdurl <- function() "http://api.vertnet-portal.appspot.com/api/download"
 
 make_meta <- function(x){
   tmp <- x[ !names(x) %in% "recs" ]
@@ -139,4 +105,9 @@ noc <- function(x, fxn){
     x
   else
     gsub(",", " ", x)
+}
+
+make_bigq <- function(x, email, rfile){
+  ff <- sprintf('{"q":"%s","n":"%s","e":"%s"}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), ""), rfile, email)
+  gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", ff)))
 }
