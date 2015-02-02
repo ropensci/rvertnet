@@ -98,14 +98,14 @@ association with the specified search terms.
 \examples{
 \dontrun{
 # Limit the number of records returned to <1000; use bigsearch() for >1000 records
-out <- searchbyterm(class = "aves", st = "california", lim = 10)
+(out <- searchbyterm(class = "aves", st = "california", lim = 10))
 
 # Find multiple species
-out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)", limit=10)
+(out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)", limit=10))
 
 # Specifying a single year (no quotes) or range of years (use quotes)
-out <- searchbyterm(class = "aves", st = "california", y = 1976, limit=10)
-out <- searchbyterm(class = "aves", st = "california", y = ">=1976")
+(out <- searchbyterm(class = "aves", st = "california", y = 1976, limit=10))
+(out <- searchbyterm(class = "aves", st = "california", y = ">=1976", limit=100))
 
 # Specifying a range (in meters) for uncertainty in spatial location (use quotes)
 out <- searchbyterm(class = "aves", st = "nevada", error = "<25")
@@ -123,6 +123,8 @@ out <- searchbyterm(class = "aves", limit = 500, config=timeout(1))
 
 # Request more than 1000 records
 out <- searchbyterm(genus = "Ochotona", limit = 1500)
+out$meta
+out$data
 NROW(out$data)
 }
 }

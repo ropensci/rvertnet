@@ -22,7 +22,7 @@ test_that("spatialsearch fails correctly", {
   # server error when pass bad var types
   expect_message(spatialsearch(lat = "asdfadsf", long = -80, radius = 1), 'Check signs')
   # server error when pass bad var types
-  expect_message(spatialsearch(lat = 50, lon = "asdfadsf", radius = 1), 'Check signs')
+  expect_message(spatialsearch(lat = 50, long = "asdfadsf", radius = 1), 'Check signs')
   # message given when verobse is TRUE
-  expect_message(spatialsearch(lat = 33.529, lon = -105.694, radius=1, limit = 1, verbose = TRUE))
+  expect_message(spatialsearch(lat = 33.529, long = -105.694, radius=2000, limit = 1, verbose = TRUE))
 })

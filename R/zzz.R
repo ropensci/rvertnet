@@ -12,8 +12,8 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
     
     # Remove columns populated fully by NAs
     if (compact) { 
-      r <- as.data.table(ress$data)
-      ress$data <- data.frame(r[,which(unlist(lapply(r, function(x) !all(is.na(x))))), with=FALSE], stringsAsFactors = FALSE)
+      r <- ress$data
+      ress$data <- r[,!sapply(r, function(x) all(is.na(x)))]
     }
     
     # Return results
@@ -58,13 +58,13 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
     allres <- sum(sapply(result, NROW))
     if(char2num(avail) < limit) allres <- limit
   }
-  df <- data.frame(rbindlist(result), stringsAsFactors = FALSE)
+  df <- if(sum(sapply(result, NROW)) == 0) data.frame(NULL, stringsAsFactors = FALSE) else rbind_all(result)
   res <- get_terms()
   df <- merge(res$fullr, df, all = TRUE)[,tolower(res$termlist[,1])]
   df <- df[ -NROW(df), ]
   mssg(verbose, paste("\nLast Query URL: \"", tt$url, "\"", sep = ""))
   mssg(verbose, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))
-  list(meta=make_meta(out), data=df)
+  list(meta=make_meta(out), data=tbl_df(df))
 }
 
 make_q <- function(fxn, x, cursor = NULL, limit=1000){
@@ -87,7 +87,7 @@ vdurl <- function() "http://api.vertnet-portal.appspot.com/api/download"
 
 make_meta <- function(x){
   tmp <- x[ !names(x) %in% "recs" ]
-  rename(tmp, c(cursor = "last_cursor"))
+  plyr::rename(tmp, c(cursor = "last_cursor"))
 }
 
 getlim <- function(x, y){
