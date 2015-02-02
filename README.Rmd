@@ -39,18 +39,32 @@ Inspect metadata
 res$meta
 ```
 
-Inspect data
+Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data summary:
 
 ```{r}
-head(res$data[,1:5])
+res$data[,1:5]
 ```
 
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
 
 ```{r}
 res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
-head(res$data[,1:5])
+res$data[,1:5]
 ```
+
+### dplyr downstream
+
+You can pass the data object directly on to `dplyr` functions. Here, we get a table of record counts by species in descending order.
+
+```{r}
+library("dplyr")
+out <- searchbyterm(genus = "Ochotona", limit = 800)
+out$data %>% 
+  group_by(scientificname) %>% 
+  summarise(count = length(scientificname)) %>% 
+  arrange(desc(count))
+```
+
 
 ## Big data
 
@@ -71,7 +85,7 @@ bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 
 ```{r}
 res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
-head(res$data[,1:5])
+res$data[,1:5]
 ```
 
 ## Contributors

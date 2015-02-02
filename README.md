@@ -35,7 +35,7 @@ Inspect metadata
 ```r
 res$meta
 #> $request_date
-#> [1] "2015-01-30T01:34:28.595250"
+#> [1] "2015-02-02T18:39:22.888300"
 #> 
 #> $response_records
 #> [1] 10
@@ -59,25 +59,25 @@ res$meta
 #> [1] "SearchAPI:2014-10-21T15:44"
 ```
 
-Inspect data
+Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data summary:
 
 
 ```r
-head(res$data[,1:5])
-#>       type                   institutionid institutioncode collectioncode
-#> 1 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 2 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 3 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 4 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 5 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 6 specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#>       basisofrecord
-#> 1 PreservedSpecimen
-#> 2 PreservedSpecimen
-#> 3 PreservedSpecimen
-#> 4 PreservedSpecimen
-#> 5 PreservedSpecimen
-#> 6 PreservedSpecimen
+res$data[,1:5]
+#> Source: local data frame [10 x 5]
+#> 
+#>        type                   institutionid institutioncode collectioncode
+#> 1  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 2  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 3  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 4  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 5  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 6  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 7  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
+#> 8  specimen                              NA            ANWC          Birds
+#> 9  specimen                              NA            ANWC          Birds
+#> 10 specimen                              NA            ANWC           Eggs
+#> Variables not shown: basisofrecord (chr)
 ```
 
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
@@ -85,29 +85,59 @@ Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limi
 
 ```r
 res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
-head(res$data[,1:5])
-#>       type                   institutionid institutioncode
-#> 1 specimen http://grbio.org/cool/iakn-125z              KU
-#> 2 specimen   urn:lsid:biocol.org:col:34495             MSB
-#> 3 specimen   urn:lsid:biocol.org:col:34925            AMNH
-#> 4 specimen   urn:lsid:biocol.org:col:35013            DMNS
-#> 5 specimen   urn:lsid:biocol.org:col:35013            DMNS
-#> 6 specimen   urn:lsid:biocol.org:col:35013            DMNS
-#>     collectioncode
-#> 1              KUM
-#> 2 Mammal specimens
-#> 3          Mammals
-#> 4 Mammal specimens
-#> 5 Mammal specimens
-#> 6 Mammal specimens
-#>                                                        datasetname
-#> 1 University of Kansas Biodiversity Institute Mammalogy Collection
-#> 2                                                             <NA>
-#> 3                                                             <NA>
-#> 4                                                             <NA>
-#> 5                                                             <NA>
-#> 6                                                             <NA>
+res$data[,1:5]
+#> Source: local data frame [18 x 5]
+#> 
+#>        type                   institutionid institutioncode
+#> 1  specimen http://grbio.org/cool/iakn-125z              KU
+#> 2  specimen   urn:lsid:biocol.org:col:34495             MSB
+#> 3  specimen   urn:lsid:biocol.org:col:34925            AMNH
+#> 4  specimen   urn:lsid:biocol.org:col:35013            DMNS
+#> 5  specimen   urn:lsid:biocol.org:col:35013            DMNS
+#> 6  specimen   urn:lsid:biocol.org:col:35013            DMNS
+#> 7  specimen                              NA            USNM
+#> 8  specimen                              NA            USNM
+#> 9  specimen                              NA            USNM
+#> 10 specimen                              NA            USNM
+#> 11 specimen                              NA            USNM
+#> 12 specimen                              NA            USNM
+#> 13 specimen                              NA            USNM
+#> 14 specimen                              NA            USNM
+#> 15 specimen                              NA            USNM
+#> 16 specimen                              NA            USNM
+#> 17 specimen                              NA            USNM
+#> 18 specimen                              NA            USNM
+#> Variables not shown: collectioncode (chr), datasetname (chr)
 ```
+
+### dplyr downstream
+
+You can pass the data object directly on to `dplyr` functions. Here, we get a table of record counts by species in descending order.
+
+
+```r
+library("dplyr")
+out <- searchbyterm(genus = "Ochotona", limit = 800)
+out$data %>% 
+  group_by(scientificname) %>% 
+  summarise(count = length(scientificname)) %>% 
+  arrange(desc(count))
+#> Source: local data frame [31 x 2]
+#> 
+#>                   scientificname count
+#> 1              Ochotona princeps   251
+#> 2    Ochotona princeps saxatilis   146
+#> 3        Ochotona princeps muiri   137
+#> 4               Ochotona pallasi   112
+#> 5            Ochotona hyperborea    20
+#> 6       Ochotona princeps albata    20
+#> 7              Ochotona dauurica    16
+#> 8     Ochotona princeps figginsi    14
+#> 9     Ochotona princeps sheltoni    11
+#> 10 Ochotona princeps brunnescens    10
+#> ..                           ...   ...
+```
+
 
 ## Big data
 
@@ -130,21 +160,21 @@ bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 
 ```r
 res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
-head(res$data[,1:5])
-#>       type                 institutionid                  collectionid
-#> 1 specimen urn:lsid:biocol.org:col:34495 urn:lsid:biocol.org:col:34950
-#> 2 specimen urn:lsid:biocol.org:col:34495                          <NA>
-#> 3 specimen urn:lsid:biocol.org:col:34495                          <NA>
-#> 4 specimen urn:lsid:biocol.org:col:34495                          <NA>
-#> 5 specimen urn:lsid:biocol.org:col:34495                          <NA>
-#> 6 specimen urn:lsid:biocol.org:col:34495                          <NA>
-#>   institutioncode   collectioncode
-#> 1             MSB   Bird specimens
-#> 2             MSB Mammal specimens
-#> 3             MSB Mammal specimens
-#> 4             MSB Mammal specimens
-#> 5             MSB Mammal specimens
-#> 6             MSB Mammal specimens
+res$data[,1:5]
+#> Source: local data frame [10 x 5]
+#> 
+#>        type                 institutionid                  collectionid
+#> 1  specimen urn:lsid:biocol.org:col:34495 urn:lsid:biocol.org:col:34950
+#> 2  specimen urn:lsid:biocol.org:col:34495                            NA
+#> 3  specimen urn:lsid:biocol.org:col:34495                            NA
+#> 4  specimen urn:lsid:biocol.org:col:34495                            NA
+#> 5  specimen urn:lsid:biocol.org:col:34495                            NA
+#> 6  specimen urn:lsid:biocol.org:col:34495                            NA
+#> 7  specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
+#> 8  specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
+#> 9  specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
+#> 10 specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
+#> Variables not shown: institutioncode (chr), collectioncode (chr)
 ```
 
 ## Contributors
