@@ -4,8 +4,8 @@ Description: Retrieve, map and summarize data from the VertNet.org archives.
     Functions allow searching by many parameters, including taxonomic names, 
     places, dates. In addition, there is an interface for conducting spatially 
     delimited searches, and another for requesting large datasets via email.
-Version: 0.2.4.99
-Date: 2015-01-29
+Version: 0.2.6.99
+Date: 2015-03-23
 Author: Scott Chamberlain [aut, cre], Chris Ray [aut], Vijay Barve [aut]
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 License: MIT + file LICENSE
