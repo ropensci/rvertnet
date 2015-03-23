@@ -2,7 +2,8 @@ all: move rmd2md
 
 move:
 	cd inst/vign;\
-	cp rvertnet_vignette.md ../../vignettes
+	cp rvertnet_vignette.md ../../vignettes;\
+	cp -rf figure/* ../../vignettes/figure/
 
 rmd2md:
 	cd vignettes;\

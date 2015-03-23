@@ -3,8 +3,17 @@
 %\VignetteIndexEntry{rvertnet introduction}
 -->
 
+```{r, eval=TRUE, echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
 rvertnet introduction
-======
+=====================
 
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
@@ -33,26 +42,73 @@ Search for _Aves_ in the state of _California_, limit to 10 records
 
 ```{r}
 res <- searchbyterm(class = "Aves", state = "California", limit = 10, verbose = FALSE)
-head(res[,1:5])
+```
+
+All major functions (`searchbyterm()`, `spatialsearch()`, `vertsearch()`) give back a `meta` (for metadata, in a list) and `data` (for data, in a data.frame) slot. The metadata:
+
+```{r}
+res$meta
+```
+
+The data
+
+```{r}
+res$data
 ```
 
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
 
 ```{r}
-res <- searchbyterm(specificepithet = "nigripes", genus = "Mustela", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
-head(res[,1:4])
+res <- searchbyterm(specificepithet = "nigripes", genus = "Mustela", state = "(wyoming OR south dakota)", limit = 20, verbose = FALSE)
+res$data
 ```
 
 Search for class _Aves_, in the state of _Nevada_, with a coordinate uncertainty range (in meters) of less than 25 meters
 
 ```{r}
-res <- searchbyterm(class = "Aves", stateprovince = "Nevada", error = "<25", verbose=FALSE)
-head(res[,1:5])
+res <- searchbyterm(class = "Aves", stateprovince = "Nevada", error = "<25", verbose = FALSE)
+res$data
 ```
+
+## Spatial search
+
+Spatial search service allows only to search on a point defined by latitude and longitude pair, with a radius (meters) from that point. All three parameters are required. 
+
+```{r}
+res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
+res$data
+```
+
+## Global full text search
+
+`vertsearch()` provides a simple full text search against all fields. For more info see [the docs](https://github.com/VertNet/webapp/wiki/The-API-search-function#global-full-text-search). An example:
+
+```{r}
+res <- vertsearch(taxon = "aves", state = "california", limit = 10)
+res$data
+```
+
+Limit the number of records returned (under 1000)
+
+```{r}
+res <- vertsearch("(kansas state OR KSU)", limit = 200)
+res$data
+```
+
+Pass output of `vertsearch()` to a map
+
+```{r fig.width=8, fig.height=4}
+out <- vertsearch(tax = "(mustela nivalis OR mustela erminea)")
+vertmap(out)
+```
+
+## Lots of data
+
+For `searchbyterm()`, `spatialsearch()`, and `vertsearch()`, you can request more than 1000 records. VertNet limits each request to 1000 records, but internally in this package, if you request more than 1000 records, we'll continue to send requests to get all the records you want. See the [VertNet docs](https://github.com/VertNet/webapp/wiki/The-API-search-function#retrieving-large-result-sets) for more information on this.
 
 ## Email dump of data
 
-Specifies a termwise search (like `searchbyterm()`), but requests that all available records be made available for download as a tab-delimited text file.
+`bigsearch()` specifies a termwise search (like `searchbyterm()`), but requests that all available records be made available for download as a tab-delimited text file.
 
 ```{r eval=FALSE}
 bigsearch(genus = "ochotona", rfile = "mydata", email = "you@gmail.com")
@@ -63,15 +119,6 @@ bigsearch(genus = "ochotona", rfile = "mydata", email = "you@gmail.com")
 #> Query/URL: "http://api.vertnet-portal.appspot.com/api/download?q=%7B%22q%22:%22genus:ochotona%22,%22n%22:%22mydata%22,%22e%22:%22you@gmail.com%22%7D"
 #> 
 #> Thank you! Download instructions will be sent by email.
-```
-
-## Spatial search
-
-Spatial search service allows only to search on a point defined by latitude and longitude pair, with a radius (meters) from that point. All three parameters are required. 
-
-```{r}
-res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
-head(res[,1:5])
 ```
 
 ## Messages
