@@ -1,13 +1,13 @@
 context("searchbyterm")
 
 # Find multiple species
-a <- searchbyterm(genus = "ochotona", specificepithet = "(princeps OR collaris)", limit=5, verbose = FALSE)
-b <- searchbyterm(class = "aves", state = "california", limit = 10, verbose=FALSE)
-cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, verbose=FALSE)
-d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, verbose=FALSE)
+a <- searchbyterm(genus = "ochotona", specificepithet = "(princeps OR collaris)", limit = 5, verbose = FALSE)
+b <- searchbyterm(class = "aves", state = "california", limit = 10, verbose = FALSE)
+cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, verbose = FALSE)
+d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, verbose = FALSE)
 
 test_that("searchbyterm works correctly", {
-  expect_equal( NROW( searchbyterm(limit=1, verbose=FALSE)$data ), 1)
+  expect_equal( NROW( searchbyterm(limit = 1, verbose = FALSE)$data ), 1)
   expect_is(a, "list")
   expect_is(a$meta, "list")
   expect_is(a$data, "data.frame")
@@ -28,6 +28,14 @@ test_that("searchbyterm works correctly", {
 
 test_that("searchbyterm fails correctly", {
   # server error with inproper date
-  expect_error(searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30", verbose=FALSE), 
+  expect_error(searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30", verbose = FALSE), 
                'server error')
+})
+
+test_that("searchbyterm cursor works correctly", {
+  out <- searchbyterm(genus = "Ochotona", limit = 1010)
+  expect_equal( NROW( out$data ), 1010)
+  expect_is(out, "list")
+  expect_is(out$meta, "list")
+  expect_is(out$data, "data.frame")
 })
