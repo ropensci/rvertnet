@@ -7,6 +7,8 @@ rvertnet
 
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
+VertNet.org API docs: [github.com/VertNet/webapp/wiki/The-API-search-function](https://github.com/VertNet/webapp/wiki/The-API-search-function)
+
 ## Installation
 
 
@@ -35,7 +37,7 @@ Inspect metadata
 ```r
 res$meta
 #> $request_date
-#> [1] "2015-02-02T18:39:22.888300"
+#> [1] "2015-03-23T16:55:58.119590"
 #> 
 #> $response_records
 #> [1] 10
@@ -84,7 +86,7 @@ Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limi
 
 
 ```r
-res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
+res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose = FALSE)
 res$data[,1:5]
 #> Source: local data frame [18 x 5]
 #> 
@@ -189,4 +191,4 @@ res$data[,1:5]
 * License: MIT
 * Get citation information for `rvertnet` in R doing `citation(package = 'rvertnet')`
 
-[![ropensci](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![ropensci_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

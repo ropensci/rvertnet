@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
+VertNet.org API docs: [github.com/VertNet/webapp/wiki/The-API-search-function](https://github.com/VertNet/webapp/wiki/The-API-search-function)
+
 ## Installation
 
 ```{r eval=FALSE}
@@ -48,7 +50,7 @@ res$data[,1:5]
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
 
 ```{r}
-res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose=FALSE)
+res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose = FALSE)
 res$data[,1:5]
 ```
 
@@ -100,4 +102,4 @@ res$data[,1:5]
 * License: MIT
 * Get citation information for `rvertnet` in R doing `citation(package = 'rvertnet')`
 
-[![ropensci](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![ropensci_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
