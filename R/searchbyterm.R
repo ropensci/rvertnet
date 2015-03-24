@@ -92,7 +92,8 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                   stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
                   inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, type = NULL,
                   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL, 
-                  resource = NULL, verbose = TRUE, ...){
+                  resource = NULL, verbose = TRUE, ...) {
+  
   args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
                        order = order, class = class, year = year, eventdate = date,
                        mappable = ab(mappable), coordinateuncertaintyinmeters = error,
