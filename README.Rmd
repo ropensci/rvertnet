@@ -3,7 +3,7 @@ rvertnet
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
-  warning = FALSE, 
+  warning = FALSE,
   message = FALSE,
   collapse = TRUE,
   comment = "#>"
@@ -11,6 +11,9 @@ knitr::opts_chunk$set(
 ```
 
 [![Build Status](https://travis-ci.org/ropensci/rvertnet.svg?branch=master)](https://travis-ci.org/ropensci/rvertnet)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/rvertnet?color=2ECC71)](https://github.com/metacran/cranlogs.app)
+[![cran version](http://www.r-pkg.org/badges/version/rvertnet)](http://cran.rstudio.com/web/packages/rvertnet)
+
 
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
@@ -61,9 +64,9 @@ You can pass the data object directly on to `dplyr` functions. Here, we get a ta
 ```{r}
 library("dplyr")
 out <- searchbyterm(genus = "Ochotona", limit = 800)
-out$data %>% 
-  group_by(scientificname) %>% 
-  summarise(count = length(scientificname)) %>% 
+out$data %>%
+  group_by(scientificname) %>%
+  summarise(count = length(scientificname)) %>%
   arrange(desc(count))
 ```
 
@@ -75,11 +78,11 @@ Specifies a termwise search (like `searchbyterm()`), but requests that all avail
 ```{r eval=FALSE}
 bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 #> Processing request...
-#> 
+#>
 #> Download of records file 'mydata' requested for 'you@gmail.com'
-#> 
+#>
 #> Query/URL: "http://api.vertnet-portal.appspot.com/api/download?q=%7B%22q%22:%22genus:ochotona%22,%22n%22:%22mydata%22,%22e%22:%22you@gmail.com%22%7D"
-#> 
+#>
 #> Thank you! Download instructions will be sent by email.
 ```
 

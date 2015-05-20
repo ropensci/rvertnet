@@ -4,6 +4,8 @@ rvertnet
 
 
 [![Build Status](https://travis-ci.org/ropensci/rvertnet.svg?branch=master)](https://travis-ci.org/ropensci/rvertnet)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/rvertnet?color=2ECC71)](https://github.com/metacran/cranlogs.app)
+[![cran version](http://www.r-pkg.org/badges/version/rvertnet)](http://cran.rstudio.com/web/packages/rvertnet)
 
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
