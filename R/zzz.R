@@ -79,7 +79,8 @@ make_q <- function(fxn, x, cursor = NULL, limit=1000){
   } else {
     ff <- sprintf('{"q":"%s"}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn))
   }
-  gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", ff)))
+  tmp <- gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", ff)))
+  gsub("year\\.[0-9]", "year", tmp)
 }
 
 vurl <- function() "http://api.vertnet-portal.appspot.com/api/search"
@@ -109,5 +110,14 @@ noc <- function(x, fxn){
 
 make_bigq <- function(x, email, rfile){
   ff <- sprintf('{"q":"%s","n":"%s","e":"%s"}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), ""), rfile, email)
-  gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", ff)))
+  tmp <- gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", ff)))
+  gsub("year\\.[0-9]", "year", tmp)
+}
+
+combyr <- function(x) {
+  if (!is.null(x) && length(x) > 1) {
+    setNames(as.list(x), rep("year", length(x)))
+  } else {
+    list(year = x)
+  } 
 }

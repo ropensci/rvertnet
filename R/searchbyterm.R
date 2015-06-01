@@ -17,7 +17,8 @@
 #' text file via email.
 #' @param compact Return a compact data frame (logical)
 #' @param year Year (numeric) or range of years designated by comparison
-#'  operators "<", ">", "<=" or ">=" (character)
+#'  operators "<", ">", "<=" or ">=". You can pass in more than one of these
+#'  queries, in a vector. See example below. (character)
 #' @param date Event date associated with this occurrence record; yyyy-mm-dd
 #'  or the range yyyy-mm-dd/yyyy-mm-dd (character)
 #' @param mappable Record includes valid coordinates in decimal latitude and
@@ -63,7 +64,7 @@
 #'
 #' # Specifying a single year (no quotes) or range of years (use quotes)
 #' (out <- searchbyterm(class = "aves", st = "california", y = 1976, limit=10))
-#' (out <- searchbyterm(class = "aves", st = "california", y = ">=1976", limit=100))
+#' (out <- searchbyterm(class = "aves", st = "california", y = ">=1976", limit=10))
 #'
 #' # Specifying a range (in meters) for uncertainty in spatial location (use quotes)
 #' out <- searchbyterm(class = "aves", st = "nevada", error = "<25")
@@ -84,6 +85,9 @@
 #' out$meta
 #' out$data
 #' NROW(out$data)
+#' 
+#' # Use more than one year query
+#' searchbyterm(class = "aves", year = c(">=1976", "<=1986"))
 #' }
 
 searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
@@ -95,20 +99,21 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                   resource = NULL, verbose = TRUE, ...) {
   
   args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
-                       order = order, class = class, year = year, eventdate = date,
+                       order = order, class = class, eventdate = date,
                        mappable = ab(mappable), coordinateuncertaintyinmeters = error,
                        continent = continent, country = cntry, stateprovince = stateprovince,
                        county = county, island = island, islandgroup = igroup,
                        institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
                        recordedby = collector, type = type, hastypestatus = hastypestatus,
                        media = ab(media), rank = rank, tissue = ab(tissue), resource = resource))
+  args <- compact(c(args, combyr(year)))
   vertwrapper(fxn = "searchbyterm", args = args, lim = limit, compact = compact, verbose = verbose, ...)
 }
 
 ab <- function(x){
-  if(is.null(x)){
+  if (is.null(x)) {
     NULL
   } else {
-    if(x) 1 else 0
+    if (x) 1 else 0
   }
 }

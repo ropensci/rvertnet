@@ -21,7 +21,11 @@
 #' 
 #' # Pass in curl options for curl debugging
 #' library("httr")
-#' bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv", config=verbose())
+#' bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv", config=verbose())
+#' 
+#' # Use more than one year query
+#' bigsearch(class = "aves", year = c(">=1976", "<=1986"), 
+#'           rfile = "test-bigsearch1", email = "myrmecocystus@@gmail.com")
 #' }
 
 bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
@@ -33,14 +37,15 @@ bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order
                       tissue = NULL, resource = NULL, rfile, email, verbose = TRUE, ...){
 
   args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
-                            order = order, class = class, year = year, eventdate = date,
+                            order = order, class = class, eventdate = date,
                             mappable = mappable, coordinateuncertaintyinmeters = error,
                             continent = continent, country = cntry, stateprovince = stateprovince,
                             county = county, island = island, islandgroup = igroup,
                             institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
                             recordedby = collector, type = type, hastypestatus = hastypestatus,
                             media = media, rank = rank, tissue = tissue, resource = resource))
-  if(length(args) == 0) stop("You must use at least one parameter to specify your query", call. = FALSE)
+  args <- compact(c(args, combyr(year)))
+  if (length(args) == 0) stop("You must use at least one parameter to specify your query", call. = FALSE)
   vertwrapper(fxn = "bigsearch", args = args, lim = NULL, rfile = rfile, email = email,
               compact = FALSE, verbose = verbose, ...)  
 }
