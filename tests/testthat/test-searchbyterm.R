@@ -1,12 +1,14 @@
 context("searchbyterm")
 
-# Find multiple species
-a <- searchbyterm(genus = "ochotona", specificepithet = "(princeps OR collaris)", limit = 5, verbose = FALSE)
-b <- searchbyterm(class = "aves", state = "california", limit = 10, verbose = FALSE)
-cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, verbose = FALSE)
-d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, verbose = FALSE)
-
 test_that("searchbyterm works correctly", {
+  skip_on_cran()
+  
+  # Find multiple species
+  a <- searchbyterm(genus = "ochotona", specificepithet = "(princeps OR collaris)", limit = 5, verbose = FALSE)
+  b <- searchbyterm(class = "aves", state = "california", limit = 10, verbose = FALSE)
+  cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, verbose = FALSE)
+  d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, verbose = FALSE)
+  
   expect_equal( NROW( searchbyterm(limit = 1, verbose = FALSE)$data ), 1)
   expect_is(a, "list")
   expect_is(a$meta, "list")
@@ -27,6 +29,8 @@ test_that("searchbyterm works correctly", {
 })
 
 test_that("searchbyterm fails correctly", {
+  skip_on_cran()
+  
   # server error with inproper date
   expect_null(searchbyterm(specificepithet = "nigripes", date = "1935-09-abab", verbose = FALSE))
 })
@@ -41,6 +45,8 @@ test_that("searchbyterm fails correctly", {
 # })
 
 test_that("searchbyterm multi-year param input works", {
+  skip_on_cran()
+  
   out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)", 
                       year = c(">=1916", "<=1920"))
   dates <- as.Date(na.omit(out$data$eventdate))
