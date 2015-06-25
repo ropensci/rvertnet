@@ -50,13 +50,16 @@ out <- vertsearch("mustela nigripes")
 vertmap(input = out, mapdatabase = "state")
 
 # Use searchbyterm() to match records with mapped region
-spec.out <- searchbyterm(sp = "ochotona princeps", st = "california")
-vertmap(input = spec.out, mapdatabase = "state", region = "california")
+spec <- searchbyterm(genus = "ochotona", specificepithet = "princeps", state = "california",
+limit = 200)
+vertmap(input = spec, mapdatabase = "state", region = "california")
 
 # Many species
 splist <- c("Accipiter erythronemius", "Aix sponsa", "Haliaeetus leucocephalus",
 		"Corvus corone", "Threskiornis molucca", "Merops malimbicus")
-out <- lapply(splist, function(x) vertsearch(t=x, lim=500))
+out <- lapply(splist, function(x) vertsearch(t=x, lim=100))
+library("plyr")
+out <- ldply(lapply(out, "[[", "data"))
 vertmap(out)
 }
 }

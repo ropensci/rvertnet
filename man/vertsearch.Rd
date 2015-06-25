@@ -51,6 +51,8 @@ vertmap(out)
 # c) returns a non-specific result
 splist <- c("mustela nivalis", "mustela erminea")
 out <- lapply(splist, function(x) vertsearch(t=x, lim=500))
+library("plyr")
+out <- ldply(lapply(out, "[[", "data"))
 vertmap(out)
 }
 }

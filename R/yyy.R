@@ -1,7 +1,7 @@
 # Wrapper for vertsummary function
 vertsumwrapper <- function(input = NULL, verbose = TRUE){
   
-  if(is(input, "list"))  input <- ldply(input, data.frame)
+  if (is(input, "list"))  input <- input$data
   
   # recs <- number of records in the data frame
   recs <- nrow(input)
@@ -18,7 +18,7 @@ vertsumwrapper <- function(input = NULL, verbose = TRUE){
   } else {
     errest <- NULL
   }
-  if(is.null(coords)){
+  if (is.null(coords)) {
     coords <- sum(complete.cases(input[,c('decimallatitude','decimallongitude')]))
     # checking for good lat/long data (if not, use only the above line)
     input$decimallatitude <- as.numeric(as.character(input$decimallatitude))

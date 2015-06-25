@@ -33,21 +33,23 @@
 #' vertmap(input = out, mapdatabase = "state")
 #'
 #' # Use searchbyterm() to match records with mapped region
-#' spec.out <- searchbyterm(sp = "ochotona princeps", st = "california")
-#' vertmap(input = spec.out, mapdatabase = "state", region = "california")
+#' spec <- searchbyterm(genus = "ochotona", specificepithet = "princeps", state = "california",
+#' limit = 200)
+#' vertmap(input = spec, mapdatabase = "state", region = "california")
 #'
 #' # Many species
 #' splist <- c("Accipiter erythronemius", "Aix sponsa", "Haliaeetus leucocephalus",
 #' 		"Corvus corone", "Threskiornis molucca", "Merops malimbicus")
-#' out <- lapply(splist, function(x) vertsearch(t=x, lim=500))
+#' out <- lapply(splist, function(x) vertsearch(t=x, lim=100))
+#' library("plyr")
+#' out <- ldply(lapply(out, "[[", "data"))
 #' vertmap(out)
 #' }
 
-vertmap <- function(input = NULL, mapdatabase = "world", region = ".", geom = geom_point, jitter = NULL)
+vertmap <- function(input = NULL, mapdatabase = "world", region = ".", 
+                    geom = geom_point, jitter = NULL) {
 
-{
-
-	if(is(input, "list"))	input <- ldply(input, data.frame)
+	if (is(input, "list"))	input <- input$data
 
 	if(inherits(input$decimallatitude, "NULL")) {
 		stop("Need columns named 'decimallatitude' and 'decimallongitude'") } else {NULL}
@@ -69,14 +71,16 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".", geom = ge
 
 	basemap <- map_data(map=mapdatabase, region=region) # get base-map data
 	message(paste("Rendering map...plotting ", nrow(tomap), " points", sep=""))
-  if (name) { # Color record locations by scientificname
+  if (name) { 
+    # Color record locations by scientificname
     ggplot(basemap, aes(long, lat)) + # Plot using lat/long of base map
     geom_polygon(aes(group=group), fill="white", color="gray40", size=0.2) +
 	  geom(data=tomap, aes(decimallongitude, decimallatitude, colour = scientificname),
       alpha=0.4, size=3, position=jitter) +
     labs(x="Longitude (decimal degrees)", y="Latitude") +
     theme_bw(base_size=14)
-  } else { # Do not distinguish record locations by color
+  } else { 
+    # Do not distinguish record locations by color
     ggplot(basemap, aes(long, lat)) +
     geom_polygon(aes(group=group), fill="white", color="gray40", size=0.2) +
     geom(data=tomap, aes(decimallongitude, decimallatitude),

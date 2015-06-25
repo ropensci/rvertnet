@@ -120,7 +120,7 @@ out <- searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30"
 # Pass in curl options for curl debugging
 library("httr")
 out <- searchbyterm(class = "aves", limit = 10, config=verbose())
-out <- searchbyterm(class = "aves", limit = 500, config=timeout(1))
+# out <- searchbyterm(class = "aves", limit = 500, config=timeout(1))
 
 # Request more than 1000 records
 out <- searchbyterm(genus = "Ochotona", limit = 1500)
