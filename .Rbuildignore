@@ -9,3 +9,4 @@ travis-tool.sh
 cran-comments.md
 Makefile
 vignettes/figure
+^NEWS\.md$
