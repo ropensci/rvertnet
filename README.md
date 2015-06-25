@@ -7,11 +7,21 @@ rvertnet
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/rvertnet?color=2ECC71)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/rvertnet)](http://cran.rstudio.com/web/packages/rvertnet)
 
+
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
 VertNet.org API docs: [github.com/VertNet/webapp/wiki/The-API-search-function](https://github.com/VertNet/webapp/wiki/The-API-search-function)
 
 ## Installation
+
+Stable CRAN version
+
+
+```r
+install.packages("rvertnet")
+```
+
+Or development version from GitHub
 
 
 ```r
@@ -39,13 +49,13 @@ Inspect metadata
 ```r
 res$meta
 #> $request_date
-#> [1] "2015-03-23T16:55:58.119590"
+#> [1] "2015-06-25T22:39:55.663390"
 #> 
 #> $response_records
 #> [1] 10
 #> 
 #> $request_origin
-#> [1] "45.523452,-122.676207"
+#> [1] "44.983334,-93.266670"
 #> 
 #> $last_cursor
 #> [1] "False:CuYECuACCrgC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87L0s_M0s7N_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD_c3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzsvSz8zSzs3_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyKkonQnZaNm4yPmpyWkpqRjNDKz8zOzP8Ac3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJskbMcm_DyqEQARINRG9jdW1lbnRJbmRleBrPAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxNC0wMy0xMiIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKFFUICJBdmVzIiAicnRleHRfY2xhc3MiKSAoUVQgIkNhbGlmb3JuaWEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKToZCgwoTiBvcmRlcl9pZCkQARkAAAAAAADw_0oFCABA6Ac"
@@ -54,13 +64,13 @@ res$meta
 #> [1] 10
 #> 
 #> $query_version
-#> [1] "feature/api:search.query():2015-01-08T19:56"
+#> [1] "feature/api:search.query():2015-01-26T11:29"
 #> 
 #> $matching_records
 #> [1] ">10000"
 #> 
 #> $api_version
-#> [1] "SearchAPI:2014-10-21T15:44"
+#> [1] "SearchAPI:2015-01-26T11:29"
 ```
 
 Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data summary:
@@ -122,23 +132,23 @@ You can pass the data object directly on to `dplyr` functions. Here, we get a ta
 ```r
 library("dplyr")
 out <- searchbyterm(genus = "Ochotona", limit = 800)
-out$data %>% 
-  group_by(scientificname) %>% 
-  summarise(count = length(scientificname)) %>% 
+out$data %>%
+  group_by(scientificname) %>%
+  summarise(count = length(scientificname)) %>%
   arrange(desc(count))
-#> Source: local data frame [31 x 2]
+#> Source: local data frame [29 x 2]
 #> 
 #>                   scientificname count
-#> 1              Ochotona princeps   251
+#> 1              Ochotona princeps   271
 #> 2    Ochotona princeps saxatilis   146
-#> 3        Ochotona princeps muiri   137
+#> 3        Ochotona princeps muiri   135
 #> 4               Ochotona pallasi   112
 #> 5            Ochotona hyperborea    20
-#> 6       Ochotona princeps albata    20
+#> 6       Ochotona princeps albata    19
 #> 7              Ochotona dauurica    16
 #> 8     Ochotona princeps figginsi    14
-#> 9     Ochotona princeps sheltoni    11
-#> 10 Ochotona princeps brunnescens    10
+#> 9     Ochotona princeps princeps    10
+#> 10 Ochotona princeps brunnescens     9
 #> ..                           ...   ...
 ```
 
@@ -151,11 +161,11 @@ Specifies a termwise search (like `searchbyterm()`), but requests that all avail
 ```r
 bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 #> Processing request...
-#> 
+#>
 #> Download of records file 'mydata' requested for 'you@gmail.com'
-#> 
+#>
 #> Query/URL: "http://api.vertnet-portal.appspot.com/api/download?q=%7B%22q%22:%22genus:ochotona%22,%22n%22:%22mydata%22,%22e%22:%22you@gmail.com%22%7D"
-#> 
+#>
 #> Thank you! Download instructions will be sent by email.
 ```
 

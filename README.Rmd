@@ -21,6 +21,14 @@ VertNet.org API docs: [github.com/VertNet/webapp/wiki/The-API-search-function](h
 
 ## Installation
 
+Stable CRAN version
+
+```{r eval=FALSE}
+install.packages("rvertnet")
+```
+
+Or development version from GitHub
+
 ```{r eval=FALSE}
 install.packages("devtools")
 devtools::install_github("ropensci/rvertnet")
