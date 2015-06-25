@@ -1,3 +1,20 @@
+rvertnet 0.3.0
+===============
+
+NEW FEATURES
+
+* `searchbyterm()` and `bigsearch()` have some parameters that accept multiple values.
+Fixed to allow this (#37)
+* Internals of `searchbyterm()`, `spatialsearch()`, and `vertsearch()` reworked to 
+use cursor so we internally do paging for you for bigger result sets. (#25) 
+
+MINOR IMPROVEMENTS
+
+* Replaced `data.table` import with `dplyr`
+* Using `skip_on_cran()` (#38)
+* Minor vignette updates (#35)
+* Metadata now returned in data requests (#33)
+
 rvertnet 0.2.2
 ===============
 
