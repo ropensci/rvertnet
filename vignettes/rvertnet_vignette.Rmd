@@ -47,13 +47,13 @@ All major functions (`searchbyterm()`, `spatialsearch()`, `vertsearch()`) give b
 ```r
 res$meta
 #> $request_date
-#> [1] "2015-03-23T17:20:47.018620"
+#> [1] "2015-06-25T21:28:42.327820"
 #> 
 #> $response_records
 #> [1] 10
 #> 
 #> $request_origin
-#> [1] "45.523452,-122.676207"
+#> [1] "44.983334,-93.266670"
 #> 
 #> $last_cursor
 #> [1] "False:CuYECuACCrgC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87L0s_M0s7N_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD_c3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzsvSz8zSzs3_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyKkonQnZaNm4yPmpyWkpqRjNDKz8zOzP8Ac3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJskbMcm_DyqEQARINRG9jdW1lbnRJbmRleBrPAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxNC0wMy0xMiIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKFFUICJBdmVzIiAicnRleHRfY2xhc3MiKSAoUVQgIkNhbGlmb3JuaWEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKToZCgwoTiBvcmRlcl9pZCkQARkAAAAAAADw_0oFCABA6Ac"
@@ -62,13 +62,13 @@ res$meta
 #> [1] 10
 #> 
 #> $query_version
-#> [1] "feature/api:search.query():2015-01-08T19:56"
+#> [1] "feature/api:search.query():2015-01-26T11:29"
 #> 
 #> $matching_records
 #> [1] ">10000"
 #> 
 #> $api_version
-#> [1] "SearchAPI:2014-10-21T15:44"
+#> [1] "SearchAPI:2015-01-26T11:29"
 ```
 
 The data
@@ -247,7 +247,7 @@ res$data
 ```r
 res <- vertsearch(taxon = "aves", state = "california", limit = 10)
 res$data
-#> Source: local data frame [10 x 56]
+#> Source: local data frame [10 x 55]
 #> 
 #>        type                 institutionid institutioncode collectioncode
 #> 1  specimen urn:lsid:biocol.org:col:34938            CRCM          Birds
@@ -261,15 +261,14 @@ res$data
 #> 9  specimen                            NA            ANWC          Birds
 #> 10 specimen                            NA            ANWC           Eggs
 #> Variables not shown: basisofrecord (chr), dynamicproperties (chr),
-#>   occurrenceid (chr), catalognumber (chr), recordedby (chr),
-#>   individualcount (chr), sex (chr), establishmentmeans (chr),
-#>   occurrencestatus (chr), preparations (chr), othercatalognumbers (chr),
-#>   occurrenceremarks (chr), eventdate (chr), startdayofyear (chr),
-#>   enddayofyear (chr), year (chr), month (chr), day (chr),
-#>   verbatimeventdate (chr), highergeography (chr), continent (chr), country
-#>   (chr), countrycode (chr), stateprovince (chr), county (chr), locality
-#>   (chr), verbatimlocality (chr), locationremarks (chr), decimallatitude
-#>   (chr), decimallongitude (chr), geodeticdatum (chr),
+#>   occurrenceid (chr), catalognumber (chr), recordedby (chr), sex (chr),
+#>   establishmentmeans (chr), occurrencestatus (chr), preparations (chr),
+#>   othercatalognumbers (chr), occurrenceremarks (chr), eventdate (chr),
+#>   startdayofyear (chr), enddayofyear (chr), year (chr), month (chr), day
+#>   (chr), verbatimeventdate (chr), highergeography (chr), continent (chr),
+#>   country (chr), countrycode (chr), stateprovince (chr), county (chr),
+#>   locality (chr), verbatimlocality (chr), locationremarks (chr),
+#>   decimallatitude (chr), decimallongitude (chr), geodeticdatum (chr),
 #>   coordinateuncertaintyinmeters (chr), coordinateprecision (chr),
 #>   georeferencedby (chr), georeferenceddate (chr), georeferenceprotocol
 #>   (chr), georeferencesources (chr), georeferenceverificationstatus (chr),
