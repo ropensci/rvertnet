@@ -8,3 +8,4 @@ README.Rmd
 travis-tool.sh
 cran-comments.md
 Makefile
+vignettes/figure
