@@ -1,5 +1,5 @@
 Package: rvertnet
-Title: Search 'VertNet', a Database of Vertebrate Specimen Records
+Title: Search 'VertNet', A 'Database' of Vertebrate Specimen Records
 Description: Retrieve, map and summarize data from the 'VertNet.org' archives. 
     Functions allow searching by many parameters, including 'taxonomic' names, 
     places, and dates. In addition, there is an interface for conducting spatially 
