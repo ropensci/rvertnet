@@ -1,9 +1,9 @@
 R CMD CHECK passed on my local OS X install with R 3.2.1 and R development version, 
-Ubuntu running on Travis-CI, and Win builder.
+Ubuntu running on Travis-CI, and R-devel version on Win builder.
 
 On Win-Builder the check on R version 3.2.1 failed with 
 
-
+----------------------
 * installing *source* package 'rvertnet' ...
 ** R
 ** inst
@@ -21,10 +21,11 @@ Execution halted
 *** arch - x64
 ERROR: loading failed for 'i386'
 * removing 'd:/RCompile/CRANguest/R-release/lib/rvertnet'
+----------------------
 
-
-But I when I check this pacakge on a Windows machine I have it works fine on R-devel 
-as well as R 3.2.1. So I assumed it was okay to submit. If I have assumed wrong, 
-I apologize in advance for that. 
+But I when I check this pacakge on a Windows machine locally I have it works fine 
+on R-devel as well as R 3.2.1. In addition, checks passed on Appveyor Windows machines. 
+So I assumed it was okay to submit and perhaps this is a temporary problem. If I 
+have assumed wrong, I apologize in advance for that. 
 
 Thanks! Scott Chamberlain
