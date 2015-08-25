@@ -47,8 +47,8 @@ test_that("searchbyterm fails correctly", {
 test_that("searchbyterm multi-year param input works", {
   skip_on_cran()
   
-  out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)", 
-                      year = c(">=1916", "<=1920"))
+  out <- suppressMessages(searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)", 
+                      year = c(">=1916", "<=1920")))
   dates <- as.Date(na.omit(out$data$eventdate))
   asnumdates <- as.numeric(format(dates, "%Y"))
   expect_is(dates, "Date")
