@@ -28,6 +28,13 @@
 #' 
 #' \code{vertsearch(taxon = "aves", state = "california")}
 #' 
+#' @importFrom methods is
+#' @importFrom stats complete.cases setNames
+#' @importFrom utils read.table
+#' @importFrom httr GET content stop_for_status
+#' @importFrom jsonlite fromJSON toJSON
+#' @importFrom plyr compact rename
+#' @importFrom dplyr rbind_all tbl_df
 #' @name rvertnet-package
 #' @aliases rvertnet
 #' @docType package

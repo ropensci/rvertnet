@@ -2,18 +2,16 @@
 #'
 #' Returns only those records in which the targeted input is found in
 #' association with the specified search terms.
-#' 
+#'
 #' @export
-#' @import plyr jsonlite httr 
-#' @importFrom dplyr rbind_all tbl_df
-#' 
+#'
 #' @param specificepithet Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)
 #' @param genus Taxonomic genus (character)
 #' @param family Taxonomic family (character)
 #' @param order Taxonomic order (character)
 #' @param class Taxonomic class (character)
 #' @param limit (numeric) Limit on the number of records returned. Up to 1000. We'll incorporate
-#' paging later for higher limits. See \code{\link{bigsearch}} to get larger result sets in a 
+#' paging later for higher limits. See \code{\link{bigsearch}} to get larger result sets in a
 #' text file via email.
 #' @param compact Return a compact data frame (logical)
 #' @param year Year (numeric) or range of years designated by comparison
@@ -45,20 +43,20 @@
 #'  indexed (character)
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @param ... Curl arguments passed on to \code{\link[httr]{GET}}
-#' 
+#'
 #' @return A data frame of search results
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
-#' @details \code{\link{searchbyterm}} builds a query from input parameters based on 
+#' @details \code{\link{searchbyterm}} builds a query from input parameters based on
 #'    Darwin Core (dwc) terms (for the full list of terms, see
 #'    \url{https://code.google.com/p/darwincore/wiki/DarwinCoreTerms}).
-#'    The query string is appended to the base URL for VertNet 
-#'    search requests. View the query string for specification of 
+#'    The query string is appended to the base URL for VertNet
+#'    search requests. View the query string for specification of
 #'    dwc terms used in the search.
-#'    
+#'
 #' @examples \dontrun{
 #' # Limit the number of records returned to <1000; use bigsearch() for >1000 records
 #' (out <- searchbyterm(class = "aves", st = "california", lim = 10))
-#' 
+#'
 #' # Find multiple species
 #' (out <- searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)", limit=10))
 #'
@@ -74,18 +72,18 @@
 #' out <- searchbyterm(class = "aves", st = "california", date = "2009-03-25")
 #' # ...but specifying a date range may not work
 #' out <- searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30")
-#' 
+#'
 #' # Pass in curl options for curl debugging
 #' library("httr")
 #' out <- searchbyterm(class = "aves", limit = 10, config=verbose())
 #' # out <- searchbyterm(class = "aves", limit = 500, config=timeout(1))
-#' 
+#'
 #' # Request more than 1000 records
 #' out <- searchbyterm(genus = "Ochotona", limit = 1500)
 #' out$meta
 #' out$data
 #' NROW(out$data)
-#' 
+#'
 #' # Use more than one year query
 #' searchbyterm(class = "aves", year = c(">=1976", "<=1986"))
 #' }
@@ -95,9 +93,9 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                   mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
                   stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
                   inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, type = NULL,
-                  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL, 
+                  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
                   resource = NULL, verbose = TRUE, ...) {
-  
+
   args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
                        order = order, class = class, eventdate = date,
                        mappable = ab(mappable), coordinateuncertaintyinmeters = error,
