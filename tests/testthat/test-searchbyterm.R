@@ -17,7 +17,7 @@ test_that("searchbyterm works correctly", {
   expect_is(cc, "list")
   expect_is(d$meta, "list")
   
-  expect_is(a$data$type, "character")
+  expect_is(a$data$language, "character")
   expect_match(d$data$class, "Aves")
   
   expect_equal(NROW(cc$data), 10)

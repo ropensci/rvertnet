@@ -59,8 +59,10 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
     if(char2num(avail) < limit) allres <- limit
   }
   df <- if(sum(sapply(result, NROW)) == 0) data.frame(NULL, stringsAsFactors = FALSE) else rbind_all(result)
+  names(df) <- tolower(names(df))
   res <- get_terms()
-  df <- merge(res$fullr, df, all = TRUE)[,tolower(res$termlist[,1])]
+  df <- merge(res$fullr, df, all = TRUE)[, tolower(res$termlist[,1]) ]
+  # df <- merge(res$fullr, df, all = TRUE)[,tolower(res$termlist[,1])]
   df <- df[ -NROW(df), ]
   mssg(verbose, paste("\nLast Query URL: \"", tt$url, "\"", sep = ""))
   mssg(verbose, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))
