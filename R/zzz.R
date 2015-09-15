@@ -70,7 +70,6 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
 
 make_q <- function(fxn, x, cursor = NULL, limit=1000){
   if (fxn == "vertsearch") x <- paste0(unname(unlist(x)), collapse = " ")
-  if (fxn == "vertid") x <- paste0(sprintf('\"%s\"', unname(unlist(x))), collapse = " OR ")
   if (fxn == "spatialsearch") x <- sprintf("distance(location,geopoint(%s,%s))<%s", x$lat, x$long, x$radius)
   if (!is.null(limit)) {
     if (!is.null(cursor)) {
