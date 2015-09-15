@@ -46,7 +46,7 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
   allres <- 0
   result <- list()
   i <- 0
-  while(allres < limit){
+  while (allres < limit) {
     i <- i + 1
     tt <- GET(vurl(), query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), ...)
     stop_for_status(tt)
@@ -56,24 +56,24 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
     cursor <- out$cursor
     result[[i]] <- out$recs
     allres <- sum(sapply(result, NROW))
-    if(char2num(avail) < limit) allres <- limit
+    if (char2num(avail) < limit) allres <- limit
   }
-  df <- if(sum(sapply(result, NROW)) == 0) data.frame(NULL, stringsAsFactors = FALSE) else rbind_all(result)
+  df <- if (sum(sapply(result, NROW)) == 0) data.frame(NULL, stringsAsFactors = FALSE) else rbind_all(result)
   names(df) <- tolower(names(df))
   res <- get_terms()
   df <- merge(res$fullr, df, all = TRUE)[, tolower(res$termlist[,1]) ]
-  # df <- merge(res$fullr, df, all = TRUE)[,tolower(res$termlist[,1])]
   df <- df[ -NROW(df), ]
   mssg(verbose, paste("\nLast Query URL: \"", tt$url, "\"", sep = ""))
   mssg(verbose, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))
-  list(meta=make_meta(out), data=tbl_df(df))
+  list(meta = make_meta(out), data = tbl_df(df))
 }
 
 make_q <- function(fxn, x, cursor = NULL, limit=1000){
-  if(fxn == "vertsearch") x <- paste0(unname(unlist(x)), collapse = " ")
-  if(fxn == "spatialsearch") x <- sprintf("distance(location,geopoint(%s,%s))<%s", x$lat, x$long, x$radius)
-  if(!is.null(limit)){
-    if(!is.null(cursor)){
+  if (fxn == "vertsearch") x <- paste0(unname(unlist(x)), collapse = " ")
+  if (fxn == "vertid") x <- paste0(sprintf('\"%s\"', unname(unlist(x))), collapse = " OR ")
+  if (fxn == "spatialsearch") x <- sprintf("distance(location,geopoint(%s,%s))<%s", x$lat, x$long, x$radius)
+  if (!is.null(limit)) {
+    if (!is.null(cursor)) {
       ff <- sprintf('{"q":"%s","l":%s,"c":"%s"}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn), limit, cursor)
     } else {
       ff <- sprintf('{"q":"%s","l":%s}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn), limit)
@@ -95,8 +95,8 @@ make_meta <- function(x){
 
 getlim <- function(x, y){
   stopifnot(is.numeric(x), is.numeric(y))
-  toget <- x-y
-  if(toget < 0) 0 else toget
+  toget <- x - y
+  if (toget < 0) 0 else toget
 }
 
 char2num <- function(x) as.numeric(strextract(x, "[0-9]+"))
@@ -104,10 +104,11 @@ strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
 strtrim <- function(str) gsub("^\\s+|\\s+$", "", str)
 
 noc <- function(x, fxn){
-  if(fxn == "spatialsearch")
+  if (fxn == "spatialsearch") {
     x
-  else
+  } else {
     gsub(",", " ", x)
+  }
 }
 
 make_bigq <- function(x, email, rfile){

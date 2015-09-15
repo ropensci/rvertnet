@@ -41,16 +41,16 @@ out <- vertsearch("(kansas state OR KSU)", limit = 200)
 
 # Find multiple species using searchbyterm():
 # a) returns a specific result
-out <- searchbyterm(gen = "mustela", sp = "(nivalis OR erminea)")
+out <- searchbyterm(genus = "mustela", species = "(nivalis OR erminea)")
 vertmap(out)
 
 # b) returns a non-specific result
-out <- vertsearch(tax = "(mustela nivalis OR mustela erminea)")
+out <- vertsearch(taxon = "(mustela nivalis OR mustela erminea)")
 vertmap(out)
 
 # c) returns a non-specific result
 splist <- c("mustela nivalis", "mustela erminea")
-out <- lapply(splist, function(x) vertsearch(t=x, lim=500))
+out <- lapply(splist, function(x) vertsearch(taxon = x, lim = 500))
 library("plyr")
 out <- ldply(lapply(out, "[[", "data"))
 vertmap(out)
