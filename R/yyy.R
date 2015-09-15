@@ -1,6 +1,9 @@
 # Wrapper for vertsummary function
 vertsumwrapper <- function(input = NULL, verbose = TRUE){
   
+  if (!class(input) %in% c("list", "data.frame")) {
+    stop("Input must be of class list or data.frame", call. = FALSE)
+  }
   if (is(input, "list"))  input <- input$data
   
   # recs <- number of records in the data frame

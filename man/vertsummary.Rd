@@ -4,11 +4,11 @@
 \alias{vertsummary}
 \title{Summarize a set of records downloaded from VertNet.}
 \usage{
-vertsummary(input = NULL, verbose = TRUE)
+vertsummary(input, verbose = TRUE)
 }
 \arguments{
 \item{input}{Output from \code{\link{vertsearch}},
-\code{\link{searchbyterm}}, or \code{\link{spatialsearch}}}
+\code{\link{searchbyterm}}, or \code{\link{spatialsearch}}. Required.}
 
 \item{verbose}{Print progress and information messages. Default: TRUE}
 }

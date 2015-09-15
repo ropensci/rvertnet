@@ -4,7 +4,7 @@
 #'
 #' @export
 #' @param input Output from \code{\link{vertsearch}}, 
-#'    \code{\link{searchbyterm}}, or \code{\link{spatialsearch}}
+#'    \code{\link{searchbyterm}}, or \code{\link{spatialsearch}}. Required.
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @return A list of summary statistics
 #' @details \code{\link{vertsummary}} provides information on the sources, types and extent
@@ -16,4 +16,4 @@
 #' vertsummary(vertsearch("Oncorhynchus clarki henshawi"))
 #' }
 
-vertsummary <- function(input = NULL, verbose = TRUE) vertsumwrapper(input, verbose)
+vertsummary <- function(input, verbose = TRUE) vertsumwrapper(input, verbose)

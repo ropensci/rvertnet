@@ -50,6 +50,9 @@
 vertmap <- function(input = NULL, mapdatabase = "world", region = ".", 
                     geom = geom_point, jitter = NULL) {
 
+  if (!class(input) %in% c("list", "data.frame")) {
+    stop("Input must be of class list or data.frame", call. = FALSE)
+  }
 	if (is(input, "list"))	input <- input$data
 
 	if(inherits(input$decimallatitude, "NULL")) {
@@ -71,7 +74,6 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".",
 	tomap <- tomap[tomap$decimallongitude < 180 & tomap$decimallongitude > -180, ]
 
 	basemap <- map_data(map=mapdatabase, region=region) # get base-map data
-	message(paste("Rendering map...plotting ", nrow(tomap), " points", sep=""))
   if (name) { 
     # Color record locations by scientificname
     ggplot(basemap, aes(long, lat)) + # Plot using lat/long of base map
