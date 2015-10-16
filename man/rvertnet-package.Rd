@@ -6,9 +6,6 @@
 \alias{rvertnet-package}
 \title{Search VertNet archives using R}
 \description{
-Search VertNet archives using R
-}
-\details{
 There are a variety of ways to search VertNet
 }
 \section{Search by term}{

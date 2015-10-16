@@ -4,7 +4,6 @@
 #' data returned by a VertNet search.
 #'
 #' @export
-#' @import ggplot2 maps
 #' @param input Output from \code{\link{vertsearch}}, 
 #'    \code{\link{searchbyterm}}, or \code{\link{spatialsearch}}. Must
 #' 		include columns "decimallatitude" and "decimallongitude"

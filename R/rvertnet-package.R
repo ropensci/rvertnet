@@ -35,9 +35,11 @@
 #' @importFrom jsonlite fromJSON toJSON
 #' @importFrom plyr compact rename
 #' @importFrom dplyr rbind_all tbl_df
+#' @importFrom ggplot2 ggplot position_jitter aes geom_polygon 
+#' geom_point labs theme_bw map_data
+#' @import maps
 #' @name rvertnet-package
 #' @aliases rvertnet
 #' @docType package
-#' @title Search VertNet archives using R
 #' @keywords package
 NULL
