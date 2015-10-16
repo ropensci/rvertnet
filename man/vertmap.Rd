@@ -25,8 +25,8 @@ and ggplot2; to see region names for the US "state" layer, run
 \item{geom}{Specifies the type of object being plotted; one of: geom_point or
 geom_jitter (do not use quotes)}
 
-\item{jitter}{If geom = geom_jitter, the amount by which to jitter points in
-width, height, or both}
+\item{jitter}{If \code{geom = geom_jitter}, the amount by which to jitter points in
+width, height, or both. Default}
 }
 \value{
 Map of record locations displayed on the selected base map
@@ -62,6 +62,9 @@ out <- lapply(splist, function(x) vertsearch(t=x, lim=100))
 library("plyr")
 out <- ldply(lapply(out, "[[", "data"))
 vertmap(out)
+## jitter points
+library("ggplot2")
+vertmap(out, geom = geom_jitter(), jitter = position_jitter(1, 6))
 }
 }
 
