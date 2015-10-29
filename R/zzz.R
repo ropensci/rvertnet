@@ -123,3 +123,12 @@ combyr <- function(x) {
     list(year = x)
   } 
 }
+
+checkfourpkg <- function(x) {
+  if (!requireNamespace(x, quietly = TRUE)) {
+    stop("Please install ", x, call. = FALSE)
+  } else {
+    invisible(TRUE)
+  }
+}
+  

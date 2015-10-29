@@ -34,7 +34,7 @@
 #' @importFrom httr GET content stop_for_status
 #' @importFrom jsonlite fromJSON toJSON
 #' @importFrom plyr compact rename
-#' @importFrom dplyr rbind_all tbl_df
+#' @importFrom dplyr rbind_all tbl_df src_sqlite tbl
 #' @importFrom ggplot2 ggplot position_jitter aes geom_polygon 
 #' geom_point labs theme_bw map_data
 #' @import maps
