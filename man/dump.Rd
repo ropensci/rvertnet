@@ -7,7 +7,7 @@
 \alias{dump_tbl}
 \title{Use Vertnet taxon specific dump from KNB}
 \usage{
-dump_init(path, group = "amphibians", table = NULL, ...)
+dump_init(path, group = "amphibians", table = NULL)
 
 dump_tbl(x)
 

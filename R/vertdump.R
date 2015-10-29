@@ -1,50 +1,50 @@
 #' Use Vertnet taxon specific dump from KNB
-#' 
+#'
 #' @name dump
-#' @param path (character) Path to a sqlite file on your machine. 
+#' @param path (character) Path to a sqlite file on your machine.
 #' @param group (character) One of mammals, reptiles, amphibians, fishes, or birds
-#' @param table (character) sqlite table name, you can use anything you like, but 
+#' @param table (character) sqlite table name, you can use anything you like, but
 #' code defaults to the values in the \code{group} parameter
 #' @param x An object of class \code{src_sqlite}
-#' 
-#' @details \code{dump_init} creates a \code{src_sqlite} class that you can use to 
-#' query the data either using SQL syntax or dplyr's R syntax. \code{dump_tbl} is 
-#' just a wrapper around \code{\link[dplyr]{tbl}} to create a \code{tbl} class 
-#' object that you can use to feed directly into dplyr's verbs, like 
+#'
+#' @details \code{dump_init} creates a \code{src_sqlite} class that you can use to
+#' query the data either using SQL syntax or dplyr's R syntax. \code{dump_tbl} is
+#' just a wrapper around \code{\link[dplyr]{tbl}} to create a \code{tbl} class
+#' object that you can use to feed directly into dplyr's verbs, like
 #' \code{\link[dplyr]{select}} and \code{\link[dplyr]{filter}}
-#' 
+#'
 #' You first need to create your SQLite databases, e.g, for amphibians:
-#' 
+#'
 #' ## In the terminal
 #' wget https://knb.ecoinformatics.org/knb/d1/mn/v1/object/urn:uuid:afc58110-b9c1-4cf7-b46c-837bdc930a21
 #' mv urn\:uuid\:afc58110-b9c1-4cf7-b46c-837bdc930a21 vertnet_amphib.gz
 #' gunzip vertnet_amphib.gz
 #' sqlite3 amphibians.sqlite
-#' 
+#'
 #' ## In SQLite
 #' sqlite> .separator ','
 #' sqlite> .import vertnet_amphib amphibians
-#' 
-#' @references 
+#'
+#' @references
 #' \url{http://blog.vertnet.org/post/115875718156/the-data-one-thing-about-vertnet-and-big-data}
-#' 
+#'
 #' @examples \dontrun{
 #' library("dplyr")
 #' x <- dump_init(path = "~/github/sac/vertnetdumps/amphibians.sqlite")
-#' 
+#'
 #' # use SQL syntax
 #' tbl(x, sql("SELECT scientificname,title FROM amphibians LIMIT 10"))
-#' 
+#'
 #' # use R syntax
 #' tab <- x %>% dump_tbl()
-#' tab %>% 
-#'   filter(year > 2010) %>% 
+#' tab %>%
+#'   filter(year > 2010) %>%
 #'   select(scientificname, title)
 #' }
 
 #' @export
 #' @rdname dump
-dump_init <- function(path, group = "amphibians", table = NULL, ...) {
+dump_init <- function(path, group = "amphibians", table = NULL) {
   checkfourpkg("RSQLite")
   group <- match.arg(group, c("mammals", "reptiles", "amphibians", "fishes", "birds"))
   if (is.null(table)) table <- group
@@ -103,7 +103,7 @@ dump_links <- function() {
 
 # helpers ------------------
 dump_base <- function(x) {
-  switch(x, 
+  switch(x,
          data = "https://knb.ecoinformatics.org/knb/d1/mn/v1/object/urn:uuid:",
          view = "https://knb.ecoinformatics.org/#view/doi:",
          eml = "https://knb.ecoinformatics.org/knb/d1/mn/v1/object/doi:"
