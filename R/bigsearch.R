@@ -13,6 +13,12 @@
 #'    This is the best way to access a large number of records, such as when your search
 #'    results indicate that >1000 records are available. You will be notified by email
 #'    when your records are ready for download.
+#'    
+#' @section Reading data:
+#' We suggest reading data data in with \code{\link[data.table]{fread}} - as it's
+#' very fast for the sometimes large datasets you will get from using this function, 
+#' and is usually robust to formatting issues.
+#' 
 #' @return Prints messages on progress, but returns NULL
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{

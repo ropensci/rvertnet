@@ -95,6 +95,12 @@ records be made available for download as a tab-delimited text file.
    results indicate that >1000 records are available. You will be notified by email
    when your records are ready for download.
 }
+\section{Reading data}{
+
+We suggest reading data data in with \code{\link[data.table]{fread}} - as it's
+very fast for the sometimes large datasets you will get from using this function, 
+and is usually robust to formatting issues.
+}
 \examples{
 \dontrun{
 # replace "big@search.luv" with your own email address
