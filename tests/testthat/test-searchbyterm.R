@@ -28,6 +28,25 @@ test_that("searchbyterm works correctly", {
   expect_more_than(min(as.numeric(d$data$year)), 1976)
 })
 
+
+test_that("searchbyterm - state param works when using boolean's with > 1 state name", {
+  skip_on_cran()
+  
+  aa <- searchbyterm(genus = "zapus", specificepithet = "hudsonius",  
+                     stateprovince = "minnesota OR new mexico")
+  
+  expect_is(aa, "list")
+  expect_is(aa$data, "data.frame")
+  expect_equal(unique(tolower(aa$data$stateprovince)), "new mexico")
+  
+  aa <- searchbyterm(genus = "Ursus", stateprovince = "california OR florida", limit = 5)
+  
+  expect_is(aa, "list")
+  expect_is(aa$data, "data.frame")
+  expect_equal(unique(tolower(aa$data$stateprovince)), "california")
+})
+
+
 test_that("searchbyterm fails correctly", {
   skip_on_cran()
   
