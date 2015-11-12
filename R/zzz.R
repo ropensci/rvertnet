@@ -3,7 +3,7 @@
 vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email = NULL,
                         compact = TRUE, verbose = TRUE, ...){
   mssg(verbose, "Processing request...")
-  if(fxn == "bigsearch"){
+  if (fxn == "bigsearch") {
     tt <- GET(vdurl(), query = list(q = make_bigq(args, email, rfile)), ...)
     stop_for_status(tt)
     mssg(verbose, "\nThank you! Download instructions will be sent by email.")
@@ -29,7 +29,7 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
   }
 }
 
-mssg <- function(v, ...) if(v) message(...)
+mssg <- function(v, ...) if (v) message(...)
 
 get_terms <- function(){
   url <- "https://raw.githubusercontent.com/tdwg/dwc/master/downloads/SimpleDwCTermsList.txt"
@@ -38,7 +38,7 @@ get_terms <- function(){
   if (grep("term", tolower(termlist[1,1]))) termlist <- as.data.frame(termlist[-1,1], stringsAsFactors = F)
   fullr <- as.data.frame(matrix(NA, 1, length(termlist[,1]))) # Create a full data frame to populate
   colnames(fullr) <- tolower(termlist[,1]) # Sync case to facilitate merge
-  list(termlist=termlist, fullr=fullr)
+  list(termlist = termlist, fullr = fullr)
 }
 
 vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...){
