@@ -15,8 +15,8 @@
 #'    \code{sort(unique(map_data("world")$region))} after loading packages maps 
 #'    and ggplot2; to see region names for the US "state" layer, run 
 #'    \code{sort(unique(map_data("state")$region))}
-#' @param geom Specifies the type of object being plotted; one of: geom_point or
-#'    geom_jitter (do not use quotes)
+#' @param geom Specifies the type of object being plotted; one of: \code{geom_point} or
+#'    \code{geom_jitter} (do not use quotes)
 #' @param jitter If \code{geom = geom_jitter}, the amount by which to jitter points in
 #'    width, height, or both. Default
 #' @return Map of record locations displayed on the selected base map
@@ -46,7 +46,7 @@
 #' vertmap(out)
 #' ## jitter points
 #' library("ggplot2")
-#' vertmap(out, geom = geom_jitter(), jitter = position_jitter(1, 6))
+#' vertmap(out, geom = geom_jitter, jitter = position_jitter(1, 6))
 #' }
 
 vertmap <- function(input = NULL, mapdatabase = "world", region = ".", 
