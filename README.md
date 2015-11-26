@@ -51,28 +51,28 @@ Inspect metadata
 ```r
 res$meta
 #> $request_date
-#> [1] "2015-06-25T22:39:55.663390"
+#> [1] "2015-11-26T01:10:03.810980"
 #> 
 #> $response_records
 #> [1] 10
 #> 
 #> $request_origin
-#> [1] "44.983334,-93.266670"
+#> [1] "45.523452,-122.676207"
 #> 
 #> $last_cursor
-#> [1] "False:CuYECuACCrgC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87L0s_M0s7N_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD_c3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzsvSz8zSzs3_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyKkonQnZaNm4yPmpyWkpqRjNDKz8zOzP8Ac3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJskbMcm_DyqEQARINRG9jdW1lbnRJbmRleBrPAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxNC0wMy0xMiIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKFFUICJBdmVzIiAicnRleHRfY2xhc3MiKSAoUVQgIkNhbGlmb3JuaWEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKToZCgwoTiBvcmRlcl9pZCkQARkAAAAAAADw_0oFCABA6Ac"
+#> [1] "False:CpoFCuYCCr4C9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87L0s_N0s7Onv8AAP90baCgmYuMoKD_AAD_XZ6Pj5qRmJaRmv8AAP9zdG2WkZuah_8AAP9dm4ic_wAA_3N0bZuQnKCWm_8AAP9dnIqSidCdlo2b0oyPmpyWkpqRjNDKz8zPx_8AAP9zf5yKkonQnZaNm9KMj5qclpKakYzQys_Mz8f_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzsvSz83Szs6e_wB0baCgmYuMoKD_AF2ej4-akZiWkZr_AHN0bZaRm5qH_wBdm4ic_wBzdG2bkJyglpv_AF2cipKJ0J2WjZvSjI-anJaSmpGM0MrPzM_H_wBzf5yKkonQnZaNm9KMj5qclpKakYzQys_Mz8f_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJyEEOwRHJ_dAQARINRG9jdW1lbnRJbmRleBr9AShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxNC0wMi0xMWEiKSAoSVMgImluZGV4X25hbWUiICJkd2MiKSAoQU5EIChRVCAiQXZlcyIgInJ0ZXh0X2NsYXNzIikgKE9SIChJUyAicmF0b21fc3RhdGVwcm92aW5jZSIgImNhbGlmb3JuaWEiKSAoUVQgIkNhbGlmb3JuaWEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH"
 #> 
 #> $limit
 #> [1] 10
 #> 
 #> $query_version
-#> [1] "feature/api:search.query():2015-01-26T11:29"
+#> [1] "search.py 2015-08-29T21:04:44+02:00"
 #> 
 #> $matching_records
 #> [1] ">10000"
 #> 
 #> $api_version
-#> [1] "SearchAPI:2015-01-26T11:29"
+#> [1] "api.py 2015-09-02T11:09:38+02:00"
 ```
 
 Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data summary:
@@ -82,18 +82,19 @@ Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data s
 res$data[,1:5]
 #> Source: local data frame [10 x 5]
 #> 
-#>        type                   institutionid institutioncode collectioncode
-#> 1  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 2  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 3  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 4  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 5  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 6  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 7  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 8  specimen                              NA            ANWC          Birds
-#> 9  specimen                              NA            ANWC          Birds
-#> 10 specimen                              NA            ANWC           Eggs
-#> Variables not shown: basisofrecord (chr)
+#>                 modified language                            accessrights
+#>                    (chr)    (chr)                                   (chr)
+#> 1             2015-01-06       en                                      NA
+#> 2             2015-01-06       en                                      NA
+#> 3  2015-05-11 07:55:08.0       en http://vertnet.org/resources/norms.html
+#> 4  2015-05-11 07:55:08.0       en http://vertnet.org/resources/norms.html
+#> 5  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 6  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 7  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 8  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 9  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 10 2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> Variables not shown: references (chr), institutionid (chr)
 ```
 
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
@@ -104,26 +105,28 @@ res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dak
 res$data[,1:5]
 #> Source: local data frame [18 x 5]
 #> 
-#>        type                   institutionid institutioncode
-#> 1  specimen http://grbio.org/cool/iakn-125z              KU
-#> 2  specimen   urn:lsid:biocol.org:col:34495             MSB
-#> 3  specimen   urn:lsid:biocol.org:col:34925            AMNH
-#> 4  specimen   urn:lsid:biocol.org:col:35013            DMNS
-#> 5  specimen   urn:lsid:biocol.org:col:35013            DMNS
-#> 6  specimen   urn:lsid:biocol.org:col:35013            DMNS
-#> 7  specimen                              NA            USNM
-#> 8  specimen                              NA            USNM
-#> 9  specimen                              NA            USNM
-#> 10 specimen                              NA            USNM
-#> 11 specimen                              NA            USNM
-#> 12 specimen                              NA            USNM
-#> 13 specimen                              NA            USNM
-#> 14 specimen                              NA            USNM
-#> 15 specimen                              NA            USNM
-#> 16 specimen                              NA            USNM
-#> 17 specimen                              NA            USNM
-#> 18 specimen                              NA            USNM
-#> Variables not shown: collectioncode (chr), datasetname (chr)
+#>                 modified language
+#>                    (chr)    (chr)
+#> 1  2010-01-14 13:06:23.0       en
+#> 2  2011-11-17 12:02:57.0       en
+#> 3             2013-08-07       en
+#> 4  2015-04-14 15:45:27.0       en
+#> 5  2015-04-17 17:39:57.0       en
+#> 6  2015-08-18 10:24:17.0       en
+#> 7                     NA       NA
+#> 8                     NA       NA
+#> 9                     NA       NA
+#> 10                    NA       NA
+#> 11                    NA       NA
+#> 12                    NA       NA
+#> 13                    NA       NA
+#> 14                    NA       NA
+#> 15                    NA       NA
+#> 16                    NA       NA
+#> 17                    NA       NA
+#> 18                    NA       NA
+#> Variables not shown: accessrights (chr), references (chr), institutionid
+#>   (chr)
 ```
 
 ### dplyr downstream
@@ -138,19 +141,20 @@ out$data %>%
   group_by(scientificname) %>%
   summarise(count = length(scientificname)) %>%
   arrange(desc(count))
-#> Source: local data frame [29 x 2]
+#> Source: local data frame [25 x 2]
 #> 
 #>                   scientificname count
-#> 1              Ochotona princeps   271
-#> 2    Ochotona princeps saxatilis   146
-#> 3        Ochotona princeps muiri   135
-#> 4               Ochotona pallasi   112
-#> 5            Ochotona hyperborea    20
-#> 6       Ochotona princeps albata    19
-#> 7              Ochotona dauurica    16
-#> 8     Ochotona princeps figginsi    14
-#> 9     Ochotona princeps princeps    10
-#> 10 Ochotona princeps brunnescens     9
+#>                            (chr) (int)
+#> 1              Ochotona princeps   288
+#> 2    Ochotona princeps saxatilis   168
+#> 3               Ochotona pallasi   114
+#> 4        Ochotona princeps muiri   106
+#> 5            Ochotona hyperborea    30
+#> 6     Ochotona princeps figginsi    19
+#> 7              Ochotona dauurica    14
+#> 8     Ochotona princeps princeps     9
+#> 9  Ochotona princeps brunnescens     8
+#> 10      Ochotona princeps cuppes     8
 #> ..                           ...   ...
 ```
 
@@ -179,18 +183,20 @@ res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, ve
 res$data[,1:5]
 #> Source: local data frame [10 x 5]
 #> 
-#>        type                 institutionid                  collectionid
-#> 1  specimen urn:lsid:biocol.org:col:34495 urn:lsid:biocol.org:col:34950
-#> 2  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 3  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 4  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 5  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 6  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 7  specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
-#> 8  specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
-#> 9  specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
-#> 10 specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
-#> Variables not shown: institutioncode (chr), collectioncode (chr)
+#>                 modified language
+#>                    (chr)    (chr)
+#> 1  2013-09-10 12:55:00.0       en
+#> 2  2013-09-10 12:55:00.0       en
+#> 3  2013-09-10 12:55:00.0       en
+#> 4  2014-01-14 16:04:11.0       en
+#> 5  2014-06-03 17:37:34.0       en
+#> 6  2014-09-09 14:04:14.0       en
+#> 7  2014-09-09 14:04:14.0       en
+#> 8  2015-08-03 19:48:08.0       en
+#> 9  2015-09-08 00:33:35.0       en
+#> 10                    NA       en
+#> Variables not shown: accessrights (chr), references (chr), institutionid
+#>   (chr)
 ```
 
 ## Contributors
