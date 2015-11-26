@@ -1,3 +1,28 @@
+rvertnet 0.4.0
+===============
+
+### NEW FEATURES
+
+* New set of functions to make working with VertNet data dumps
+easier. `dump_links()` gives you links to various data dump 
+resources; `dump_init()` initialized a SQLite database connection;
+`dump_tbl()` creates a `dplyr::tbl` object, which can then be used 
+in a `dplyr` query. This setup requires that the user manually
+download data dumps uncompress, and load into SQLite. We hope to 
+make this process easier in the future. (#36)
+
+### MINOR IMPROVEMENTS
+
+* Fixes to `vertmap()` for new `ggplot2` version (#43)
+* Added note to docs for `bigsearch()` for how to read in data
+after obtaining the data (#44)
+
+### BUG FIXES
+
+* Fix to the `searchbyterm()` function. When the parameter `stateprovince`
+was used, lead to error, as that param requires different handling than 
+other params. (#45)
+
 rvertnet 0.3.4
 ===============
 
