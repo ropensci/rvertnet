@@ -37,7 +37,8 @@ object that you can use to feed directly into dplyr's verbs, like
 \dontrun{
 # You first need to create your SQLite databases, e.g, for amphibians:
 ## In the terminal
-# wget https://knb.ecoinformatics.org/knb/d1/mn/v1/object/urn:uuid:afc58110-b9c1-4cf7-b46c-837bdc930a21
+# wget 
+# https://knb.ecoinformatics.org/knb/d1/mn/v1/object/urn:uuid:afc58110-b9c1-4cf7-b46c-837bdc930a21
 # mv urn\\:uuid\\:afc58110-b9c1-4cf7-b46c-837bdc930a21 vertnet_amphib.gz
 # gunzip vertnet_amphib.gz
 # sqlite3 amphibians.sqlite
