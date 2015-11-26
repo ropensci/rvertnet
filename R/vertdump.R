@@ -30,17 +30,17 @@
 #' # sqlite> .import vertnet_amphib amphibians
 #' 
 #' # After you have a SQLite database, do
-#' library("dplyr")
-#' x <- dump_init(path = "~/github/sac/vertnetdumps/amphibians.sqlite")
+#' # library("dplyr")
+#' # x <- dump_init(path = "~/github/sac/vertnetdumps/amphibians.sqlite")
 #'
 #' # use SQL syntax
-#' tbl(x, sql("SELECT scientificname,title FROM amphibians LIMIT 10"))
+#' # tbl(x, sql("SELECT scientificname,title FROM amphibians LIMIT 10"))
 #'
 #' # use R syntax
-#' tab <- x %>% dump_tbl()
-#' tab %>%
-#'   filter(year > 2010) %>%
-#'   select(scientificname, title)
+#' # tab <- x %>% dump_tbl()
+#' # tab %>%
+#' #  filter(year > 2010) %>%
+#' #  select(scientificname, title)
 #' }
 
 #' @export
