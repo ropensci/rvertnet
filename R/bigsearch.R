@@ -35,23 +35,25 @@
 #' }
 
 bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
-                      class = NULL, compact = FALSE, year = NULL, date = NULL,
-                      mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
-                      stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
-                      inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, 
-                      type = NULL, hastypestatus = NULL, media = NULL, rank = NULL, 
-                      tissue = NULL, resource = NULL, rfile, email, verbose = TRUE, ...){
+      class = NULL, compact = FALSE, year = NULL, date = NULL,
+      mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
+      stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
+      inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, 
+      type = NULL, hastypestatus = NULL, media = NULL, rank = NULL, 
+      tissue = NULL, resource = NULL, rfile, email, verbose = TRUE, ...){
 
   args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
-                            order = order, class = class, eventdate = date,
-                            mappable = mappable, coordinateuncertaintyinmeters = error,
-                            continent = continent, country = cntry, stateprovince = stateprovince,
-                            county = county, island = island, islandgroup = igroup,
-                            institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
-                            recordedby = collector, type = type, hastypestatus = hastypestatus,
-                            media = media, rank = rank, tissue = tissue, resource = resource))
+      order = order, class = class, eventdate = date,
+      mappable = ab(mappable), coordinateuncertaintyinmeters = error,
+      continent = continent, country = cntry, stateprovince = stateprovince,
+      county = county, island = island, islandgroup = igroup,
+      institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
+      recordedby = collector, type = type, hastypestatus = hastypestatus,
+      media = ab(media), rank = rank, tissue = ab(tissue), resource = resource))
   args <- compact(c(args, combyr(year)))
-  if (length(args) == 0) stop("You must use at least one parameter to specify your query", call. = FALSE)
+  if (length(args) == 0) {
+    stop("You must use at least one parameter to specify your query", call. = FALSE)
+  }
   vertwrapper(fxn = "bigsearch", args = args, lim = NULL, rfile = rfile, email = email,
               compact = FALSE, verbose = verbose, ...)  
 }

@@ -91,13 +91,13 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, or
                   resource = NULL, verbose = TRUE, ...) {
 
   args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
-                       order = order, class = class, eventdate = date,
-                       mappable = ab(mappable), coordinateuncertaintyinmeters = error,
-                       continent = continent, country = cntry, stateprovince = sp_paren(stateprovince),
-                       county = county, island = island, islandgroup = igroup,
-                       institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
-                       recordedby = collector, type = type, hastypestatus = hastypestatus,
-                       media = ab(media), rank = rank, tissue = ab(tissue), resource = resource))
+        order = order, class = class, eventdate = date,
+        mappable = ab(mappable), coordinateuncertaintyinmeters = error,
+        continent = continent, country = cntry, stateprovince = sp_paren(stateprovince),
+        county = county, island = island, islandgroup = igroup,
+        institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
+        recordedby = collector, type = type, hastypestatus = hastypestatus,
+        media = ab(media), rank = rank, tissue = ab(tissue), resource = resource))
   args <- compact(c(args, combyr(year)))
   vertwrapper(fxn = "searchbyterm", args = args, lim = limit, compact = compact, verbose = verbose, ...)
 }
