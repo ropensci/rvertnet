@@ -70,7 +70,8 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".",
 		stop("Need columns named 'decimallatitude' and 'decimallongitude'", call. = FALSE) 
 	}
 	
-	name <- !inherits(input$scientificname, "NULL")
+	# name <- !inherits(input$scientificname, "NULL")
+	name <- "scientificname" %in% names(input)
 
   input$decimallatitude <- as.numeric(as.character(input$decimallatitude))
 	input$decimallongitude <- as.numeric(as.character(input$decimallongitude))
