@@ -1,3 +1,12 @@
+rvertnet 0.4.1
+===============
+
+### BUG FIXES
+
+* Fixed a bug in `bigsearch()` in which we had forgotten to do 
+internal conversion of logical input to 0/1 needed by the web
+API (#46)
+
 rvertnet 0.4.0
 ===============
 
