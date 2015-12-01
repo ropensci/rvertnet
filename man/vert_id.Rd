@@ -9,7 +9,8 @@ vert_id(ids, compact = TRUE, verbose = TRUE, ...)
 \arguments{
 \item{ids}{(character) VertNet IDs, one or more. Required.}
 
-\item{compact}{(logical) Return a compact data frame. Default: \code{TRUE}}
+\item{compact}{(logical) Return a compact data frame. That is, remove
+empty columns. Default: \code{TRUE}}
 
 \item{verbose}{(logical) Print progress and information messages. Default: \code{TRUE}}
 
@@ -21,11 +22,15 @@ A list, with data frame of search results, and list of metadata
 \description{
 Search by Vertnet occurrence ID
 }
+\details{
+VertNet IDs can be a variety of things, some URIs (i.e., with http://...), 
+while others start with \code{urn}.
+}
 \examples{
 \dontrun{
-vert_id(ids = "urn:occurrence:Arctos:CUMV:Amph:10008:2243441")
-ids <- c("urn:occurrence:Arctos:CUMV:Amph:10008:2243441", 
-         "urn:occurrence:Arctos:CUMV:Fish:65813:2206324",
+vert_id(ids = "urn:catalog:AUM:Fish:13271")
+ids <- c("http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089", 
+         "urn:catalog:CM:Herps:116520",
          "urn:catalog:AUM:Fish:13271")
 res <- vert_id(ids)
 res$data$occurrenceid
