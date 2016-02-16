@@ -33,9 +33,9 @@ mssg <- function(v, ...) if (v) message(...)
 
 get_terms <- function(){
   url <- "https://raw.githubusercontent.com/tdwg/dwc/master/downloads/SimpleDwCTermsList.txt"
-  termlist <- read.table(text = content(GET(url), as = "text"), stringsAsFactors = FALSE)
+  termlist <- read.table(text = content(GET(url), as = "text", encoding = "UTF-8"), stringsAsFactors = FALSE)
   # Strip embedded header from termlist and deal with upper vs. lower case in termlist vs. out$recs
-  if (grep("term", tolower(termlist[1,1]))) termlist <- as.data.frame(termlist[-1,1], stringsAsFactors = F)
+  if (grep("term", tolower(termlist[1,1]))) termlist <- as.data.frame(termlist[-1,1], stringsAsFactors = FALSE)
   fullr <- as.data.frame(matrix(NA, 1, length(termlist[,1]))) # Create a full data frame to populate
   colnames(fullr) <- tolower(termlist[,1]) # Sync case to facilitate merge
   list(termlist = termlist, fullr = fullr)
@@ -50,7 +50,7 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
     i <- i + 1
     tt <- GET(vurl(), query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), ...)
     stop_for_status(tt)
-    txt <- content(tt, "text")
+    txt <- content(tt, "text", encoding = "UTF-8")
     out <- jsonlite::fromJSON(txt)
     avail <- out$matching_records
     cursor <- out$cursor

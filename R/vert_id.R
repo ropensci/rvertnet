@@ -31,7 +31,7 @@
 vert_id <- function(ids, compact = TRUE, verbose = TRUE, ...) {
   tt <- GET(vurl(), query = list(q = make_id_q(ids)), ...)
   stop_for_status(tt)
-  txt <- content(tt, "text")
+  txt <- content(tt, "text", encoding = "UTF-8")
   out <- jsonlite::fromJSON(txt)
   avail <- out$matching_records
   result <- out$recs
