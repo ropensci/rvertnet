@@ -7,6 +7,7 @@ test_that("searchbyterm works correctly", {
   a <- searchbyterm(genus = "ochotona", specificepithet = "(princeps OR collaris)", limit = 5, verbose = FALSE)
   b <- searchbyterm(class = "aves", state = "california", limit = 10, verbose = FALSE)
   cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, verbose = FALSE)
+  Sys.sleep(3)
   d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, verbose = FALSE)
   
   expect_equal( NROW( searchbyterm(limit = 1, verbose = FALSE)$data ), 1)
