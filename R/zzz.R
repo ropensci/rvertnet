@@ -55,8 +55,8 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
     avail <- out$matching_records
     cursor <- out$cursor
     result[[i]] <- out$recs
-    allres <- sum(sapply(result, NROW))
-    if (char2num(avail) < limit) allres <- limit
+    allres <- sum(vapply(result, NROW, 1))
+    if (char2num(avail) <= allres) allres <- limit
   }
   df <- if (sum(sapply(result, NROW)) == 0) data.frame(NULL, stringsAsFactors = FALSE) else rbind_all(result)
   names(df) <- tolower(names(df))
