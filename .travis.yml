@@ -2,9 +2,11 @@ language: r
 
 sudo: required
 
+r_packages:
+  - covr
+
 r_github_packages:
-  - jimhester/robustr
-  - jimhester/covr
+  - hadley/ggplot2
 
 after_success:
   - Rscript -e 'covr::codecov()'
