@@ -14,8 +14,8 @@ test_that("spatialsearch works correctly", {
   
   expect_equal(NROW(a$data), 10)
   
-  expect_more_than(min(as.numeric(a$data$decimallatitude)), 10)
-  expect_more_than(min(as.numeric(a$data$decimallongitude)), -110)
+  expect_gt(min(as.numeric(a$data$decimallatitude)), 10)
+  expect_gt(min(as.numeric(a$data$decimallongitude)), -110)
 })
 
 test_that("spatialsearch fails correctly", {

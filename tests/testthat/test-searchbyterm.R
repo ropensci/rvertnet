@@ -8,6 +8,8 @@ test_that("searchbyterm works correctly", {
   b <- searchbyterm(class = "aves", state = "california", limit = 10, verbose = FALSE)
   cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, verbose = FALSE)
   Sys.sleep(3)
+  library("httr")
+  #d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, config = verbose())
   d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, verbose = FALSE)
   
   expect_equal( NROW( searchbyterm(limit = 1, verbose = FALSE)$data ), 1)
@@ -26,7 +28,7 @@ test_that("searchbyterm works correctly", {
   
   expect_equal(unique(as.numeric(cc$data$year)), 1976)
   
-  expect_more_than(min(as.numeric(d$data$year)), 1976)
+  expect_gt(min(as.numeric(d$data$year)), 1976)
 })
 
 
