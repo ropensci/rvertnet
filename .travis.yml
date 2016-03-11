@@ -1,12 +1,10 @@
 language: r
-
-sudo: required
-
-r_packages:
-  - covr
+sudo: false
+cache: packages
 
 r_github_packages:
   - hadley/ggplot2
+  - jimhester/covr
 
 after_success:
   - Rscript -e 'covr::codecov()'
