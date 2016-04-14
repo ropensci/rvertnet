@@ -7,7 +7,7 @@ rvertnet
 [![Build status](https://ci.appveyor.com/api/projects/status/duyrffhdrstu840v?svg=true)](https://ci.appveyor.com/project/sckott/rvertnet)
 [![codecov.io](https://codecov.io/github/ropensci/rvertnet/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rvertnet?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/rvertnet?color=2ECC71)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/rvertnet)](http://cran.rstudio.com/web/packages/rvertnet)
+[![cran version](http://www.r-pkg.org/badges/version/rvertnet)](https://cran.r-project.org/package=rvertnet)
 
 
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).

@@ -97,7 +97,7 @@ records be made available for download as a tab-delimited text file.
 }
 \section{Reading data}{
 
-We suggest reading data in with \code{\link[data.table]{fread}} - as it's
+We suggest reading data in with \code{fread()} from the package \pkg{data.table} - as it's
 very fast for the sometimes large datasets you will get from using this function, 
 and is usually robust to formatting issues.
 }
