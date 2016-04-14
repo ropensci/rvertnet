@@ -1,3 +1,15 @@
+rvertnet 0.4.4
+===============
+
+### MINOR IMPROVEMENTS
+
+* Updated docs to better indicate how to use the cursor feature (#49)
+* Now using explicit encoding specification when using `httr::content()` (#47)
+
+### BUG FIXES
+
+* Fixed `externalptr` error in the internal `vert_GET()` function (#48)
+
 rvertnet 0.4.1
 ===============
 

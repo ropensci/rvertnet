@@ -1,15 +1,14 @@
 language: r
-sudo: required
+sudo: false
 cache: packages
-
-r_github_packages:
-  - hadley/ggplot2
-  - jimhester/covr
 
 after_success:
   - Rscript -e 'covr::codecov()'
 
 notifications:
+  email:
+    on_success: never
+    on_failure: never
   slack:
     rooms:
       - ropensci:i4vO9jmkH90vWFVDZsbtPTRT#builds
