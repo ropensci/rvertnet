@@ -58,7 +58,7 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
     allres <- sum(vapply(result, NROW, 1))
     if (char2num(avail) <= allres) allres <- limit
   }
-  df <- if (sum(sapply(result, NROW)) == 0) data.frame(NULL, stringsAsFactors = FALSE) else rbind_all(result)
+  df <- if (sum(sapply(result, NROW)) == 0) data.frame(NULL, stringsAsFactors = FALSE) else bind_rows(result)
   names(df) <- tolower(names(df))
   res <- get_terms()
   df <- merge(res$fullr, df, all = TRUE)[, tolower(res$termlist[,1]) ]
