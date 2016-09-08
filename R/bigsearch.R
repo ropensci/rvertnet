@@ -31,7 +31,7 @@
 #' 
 #' # Use more than one year query
 #' bigsearch(class = "aves", year = c(">=1976", "<=1986"), 
-#'           rfile = "test-bigsearch1", email = "myrmecocystus@@gmail.com")
+#'           rfile = "test-bigsearch1", email = "big@@search.luv")
 #' }
 
 bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
