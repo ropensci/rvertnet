@@ -56,7 +56,7 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".",
     stop("Input must be of class list or data.frame", call. = FALSE)
   }
 	
-  if (is(input, "list"))	input <- input$data
+  if (inherits(input, "list"))	input <- input$data
 	
 	if (is.null(jitter)) {
 	  jitter <- position_jitter()
@@ -82,7 +82,7 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".",
       function(x) paste(strsplit(x, " ")[[1]][1:2], collapse = " ")))
   }
 
-	tomap <- input[complete.cases(input$decimallatitude, input$decimallongitude), ]
+	tomap <- input[stats::complete.cases(input$decimallatitude, input$decimallongitude), ]
 	tomap <- tomap[tomap$decimallatitude < 90 & tomap$decimallatitude > -90, ]
 	tomap <- tomap[tomap$decimallongitude < 180 & tomap$decimallongitude > -180, ]
 

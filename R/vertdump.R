@@ -56,7 +56,7 @@ dump_init <- function(path, group = "amphibians", table = NULL) {
 #' @export
 #' @rdname dump
 dump_tbl <- function(x) {
-  stopifnot(is(x, "src_sqlite"))
+  stopifnot(inherits(x, "src_sqlite"))
   dplyr::tbl(x, attr(x, "table"))
 }
 

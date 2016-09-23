@@ -6,7 +6,7 @@ vertsumwrapper <- function(input = NULL, verbose = TRUE){
   if (!class(input) %in% c("list", "data.frame")) {
     stop("Input must be of class list or data.frame", call. = FALSE)
   }
-  if (is(input, "list"))  input <- input$data
+  if (inherits(input, "list"))  input <- input$data
   
   # recs <- number of records in the data frame
   recs <- nrow(input)
@@ -24,14 +24,14 @@ vertsumwrapper <- function(input = NULL, verbose = TRUE){
     errest <- NULL
   }
   if (is.null(coords)) {
-    coords <- sum(complete.cases(input[, c('decimallatitude','decimallongitude')]))
+    coords <- sum(stats::complete.cases(input[, c('decimallatitude','decimallongitude')]))
     # checking for good lat/long data (if not, use only the above line)
     input$decimallatitude <- as.numeric(as.character(input$decimallatitude))
     input$decimallongitude <- as.numeric(as.character(input$decimallongitude))
     if (is.null(errest)) {
       input$coordinateuncertaintyinmeters <- as.numeric(as.character(input$coordinateuncertaintyinmeters))
     }
-    mappable <- input[complete.cases(input[,c('decimallatitude','decimallongitude')]),]
+    mappable <- input[stats::complete.cases(input[,c('decimallatitude','decimallongitude')]),]
     mappable <- subset(mappable, input$decimallatitude < 90 & input$decimallatitude > -90)
     mappable <- subset(mappable, input$decimallongitude < 180 & input$decimallongitude > -180)
     if (nrow(mappable) < coords) {

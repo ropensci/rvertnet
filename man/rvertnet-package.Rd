@@ -13,7 +13,8 @@ There are a variety of ways to search VertNet
 
 Search for _Aves_ in the state of _California_, limit to 10 records, e.g.:
 
-\code{searchbyterm(class = "Aves", state = "California", lim = 10, verbose = FALSE)}
+\code{searchbyterm(class = "Aves", state = "California", lim = 10, 
+verbose = FALSE)}
 
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, 
 limit to 20 records, e.g.:
@@ -24,15 +25,18 @@ limit to 20 records, e.g.:
 
 \section{Big data}{
 
-Specifies a termwise search (like `searchbyterm()`), but requests that all available records 
-be made available for download as a tab-delimited text file.
+Specifies a termwise search (like `searchbyterm()`), but requests that all 
+available records  be made available for download as a tab-delimited 
+text file.
 
-\code{bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@search.luv")}
+\code{bigsearch(genus = "ochotona", rf = "pikaRecords", 
+email = "big@search.luv")}
 }
 
 \section{Spatial search}{
 
-\code{spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)}
+\code{spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, 
+verbose = FALSE)}
 }
 
 \section{Full text search}{
