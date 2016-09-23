@@ -11,3 +11,6 @@ Makefile
 vignettes/figure
 ^NEWS\.md$
 appveyor.yml
+^cran-comments\.md$
+^revdep$
+
