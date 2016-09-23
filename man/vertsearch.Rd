@@ -10,7 +10,7 @@ vertsearch(taxon = NULL, ..., limit = 1000, compact = TRUE,
 \arguments{
 \item{taxon}{(character) Taxonomic identifier or other text to search for}
 
-\item{...}{(character) Additional search terms}
+\item{...}{(character) Additional search terms. These must be unnamed}
 
 \item{limit}{(numeric) Limit on the number of records returned. If >1000 results, we use
 a cursor internally, but you should still get up to the results you asked for. See also 
@@ -33,7 +33,7 @@ Returns any record containing your target text in any field of the record.
 }
 \examples{
 \dontrun{
-out <- vertsearch(taxon = "aves", state = "california", limit=10)
+out <- vertsearch(taxon = "aves", "california", limit=10)
 
 # Limit the number of records returned (under 1000)
 out <- vertsearch("(kansas state OR KSU)", limit = 200)

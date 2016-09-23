@@ -1,18 +1,21 @@
-#' Search for records using keywords/terms to control how your query is interpreted.
+#' Search for records using keywords/terms to control how your query 
+#' is interpreted
 #'
 #' Returns only those records in which the targeted input is found in
 #' association with the specified search terms.
 #'
 #' @export
 #'
-#' @param specificepithet Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)
-#' @param genus Taxonomic genus (character)
-#' @param family Taxonomic family (character)
-#' @param order Taxonomic order (character)
-#' @param class Taxonomic class (character)
-#' @param limit (numeric) Limit on the number of records returned. If >1000 results, we use
-#' a cursor internally, but you should still get up to the results you asked for. See also 
-#' \code{\link{bigsearch}} to get larger result sets in a text file via email.
+#' @param specificepithet (character) Taxonomic specific epithet, e.g. (sapiens 
+#' in Homo sapiens) 
+#' @param genus (character) Taxonomic genus
+#' @param family (character) Taxonomic family
+#' @param order (character) Taxonomic order
+#' @param class (character) Taxonomic class
+#' @param limit (numeric) Limit on the number of records returned. If >1000 
+#' results, we use a cursor internally, but you should still get up to the 
+#' results you asked for. See also  \code{\link{bigsearch}} to get larger 
+#' result sets in a text file via email.
 #' @param compact Return a compact data frame (logical)
 #' @param year Year (numeric) or range of years designated by comparison
 #'  operators "<", ">", "<=" or ">=". You can pass in more than one of these
@@ -41,6 +44,9 @@
 #' @param tissue Record is likely to reference tissues (logical)
 #' @param resource Identifier for the resource/dataset from which the record was
 #'  indexed (character)
+#' @param query (character) full text search term(s). not tied to any specific 
+#' field. This does the same thing as using \code{\link{vertsearch}}, where
+#' this searches for any mention of these terms
 #' @param verbose Print progress and information messages. Default: TRUE
 #' @param ... Curl arguments passed on to \code{\link[httr]{GET}}
 #'
@@ -80,26 +86,32 @@
 #'
 #' # Use more than one year query
 #' searchbyterm(class = "aves", year = c(">=1976", "<=1986"))
+#' 
+#' # full text search - note the URL message
+#' searchbyterm(query = "Mustela nigripes", limit = 50)
+#' searchbyterm(query = "bear", limit = 50)
 #' }
 
-searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, order = NULL,
-                  class = NULL, limit = 1000, compact = TRUE, year = NULL, date = NULL,
-                  mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
-                  stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
-                  inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, type = NULL,
-                  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-                  resource = NULL, verbose = TRUE, ...) {
+searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL, 
+  order = NULL, class = NULL, limit = 1000, compact = TRUE, year = NULL, 
+  date = NULL, mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
+  stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
+  inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, type = NULL,
+  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
+  resource = NULL, query = NULL, verbose = TRUE, ...) {
 
-  args <- compact(list(specificepithet = specificepithet, genus = genus, family = family,
+  args <- rvc(list(specificepithet = specificepithet, genus = genus, family = family,
         order = order, class = class, eventdate = date,
         mappable = ab(mappable), coordinateuncertaintyinmeters = error,
         continent = continent, country = cntry, stateprovince = sp_paren(stateprovince),
         county = county, island = island, islandgroup = igroup,
         institutioncode = inst, occurrenceid = id, catalognumber = catalognumber,
         recordedby = collector, type = type, hastypestatus = hastypestatus,
-        media = ab(media), rank = rank, tissue = ab(tissue), resource = resource))
-  args <- compact(c(args, combyr(year)))
-  vertwrapper(fxn = "searchbyterm", args = args, lim = limit, compact = compact, verbose = verbose, ...)
+        media = ab(media), rank = rank, tissue = ab(tissue), resource = resource,
+        query = query))
+  args <- rvc(c(args, combyr(year)))
+  vertwrapper(fxn = "searchbyterm", args = args, lim = limit, 
+              compact = compact, verbose = verbose, ...)
 }
 
 sp_paren <- function(x) {

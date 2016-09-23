@@ -14,15 +14,16 @@ bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
   verbose = TRUE, ...)
 }
 \arguments{
-\item{specificepithet}{Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)}
+\item{specificepithet}{(character) Taxonomic specific epithet, e.g. (sapiens 
+in Homo sapiens)}
 
-\item{genus}{Taxonomic genus (character)}
+\item{genus}{(character) Taxonomic genus}
 
-\item{family}{Taxonomic family (character)}
+\item{family}{(character) Taxonomic family}
 
-\item{order}{Taxonomic order (character)}
+\item{order}{(character) Taxonomic order}
 
-\item{class}{Taxonomic class (character)}
+\item{class}{(character) Taxonomic class}
 
 \item{compact}{Return a compact data frame (logical)}
 

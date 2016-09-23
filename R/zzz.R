@@ -69,17 +69,42 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
 }
 
 make_q <- function(fxn, x, cursor = NULL, limit=1000){
+  qry <- ""
   if (fxn == "vertsearch") x <- paste0(unname(unlist(x)), collapse = " ")
   if (fxn == "spatialsearch") x <- sprintf("distance(location,geopoint(%s,%s))<%s", x$lat, x$long, x$radius)
+  # if query param present, remove named param
+  if ("query" %in% names(x)) {
+    qry <- x$query
+    x <- pop(x, "query")
+  }
   if (!is.null(limit)) {
     if (!is.null(cursor)) {
-      ff <- sprintf('{"q":"%s","l":%s,"c":"%s"}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn), limit, cursor)
+      ff <- sprintf(
+        '{"q":"%s","l":%s,"c":"%s"}', 
+        noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn), 
+        limit, 
+        cursor
+      )
     } else {
-      ff <- sprintf('{"q":"%s","l":%s}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn), limit)
+      ff <- sprintf(
+        '{"q":"%s","l":%s}', 
+        paste(
+          qry,
+          noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn)
+        ),
+        limit
+      )
     }
   } else {
-    ff <- sprintf('{"q":"%s"}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn))
+    ff <- sprintf(
+      '{"q":"%s"}',
+      paste(
+        qry,
+        noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn)
+      )
+    )
   }
+  
   tmp <- gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", ff)))
   gsub("year\\.[0-9]", "year", tmp)
 }
@@ -132,3 +157,8 @@ checkfourpkg <- function(x) {
   }
 }
   
+pop <- function(x, nms) {
+  x[!names(x) %in% nms]
+}
+
+rvc <- function(x) Filter(Negate(is.null), x)

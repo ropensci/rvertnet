@@ -4,7 +4,7 @@
 #'
 #' @export
 #' @param taxon (character) Taxonomic identifier or other text to search for 
-#' @param ... (character) Additional search terms 
+#' @param ... (character) Additional search terms. These must be unnamed 
 #' @param limit (numeric) Limit on the number of records returned. If >1000 results, we use
 #' a cursor internally, but you should still get up to the results you asked for. See also 
 #' \code{\link{bigsearch}} to get larger result sets in a text file via email.
@@ -16,7 +16,7 @@
 #'    search, try \code{\link{searchbyterm}}
 #' @references \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' @examples \dontrun{
-#' out <- vertsearch(taxon = "aves", state = "california", limit=10)
+#' out <- vertsearch(taxon = "aves", "california", limit=10)
 #'
 #' # Limit the number of records returned (under 1000)
 #' out <- vertsearch("(kansas state OR KSU)", limit = 200)
@@ -40,6 +40,7 @@
 #' }
 
 vertsearch <- function(taxon = NULL, ..., limit = 1000, compact = TRUE, verbose = TRUE){
-  args <- compact(list(taxon, ...))
-  vertwrapper(fxn = "vertsearch", args = args, lim = limit, compact = compact, verbose = verbose)
+  args <- rvc(list(taxon, ...))
+  vertwrapper(fxn = "vertsearch", args = args, lim = limit,
+              compact = compact, verbose = verbose)
 }

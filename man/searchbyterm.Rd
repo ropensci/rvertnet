@@ -2,7 +2,8 @@
 % Please edit documentation in R/searchbyterm.R
 \name{searchbyterm}
 \alias{searchbyterm}
-\title{Search for records using keywords/terms to control how your query is interpreted.}
+\title{Search for records using keywords/terms to control how your query 
+is interpreted}
 \usage{
 searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
   order = NULL, class = NULL, limit = 1000, compact = TRUE,
@@ -11,22 +12,24 @@ searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
   island = NULL, igroup = NULL, inst = NULL, id = NULL,
   catalognumber = NULL, collector = NULL, type = NULL,
   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-  resource = NULL, verbose = TRUE, ...)
+  resource = NULL, query = NULL, verbose = TRUE, ...)
 }
 \arguments{
-\item{specificepithet}{Taxonomic specific epithet, e.g. (sapiens in Homo sapiens) (character)}
+\item{specificepithet}{(character) Taxonomic specific epithet, e.g. (sapiens 
+in Homo sapiens)}
 
-\item{genus}{Taxonomic genus (character)}
+\item{genus}{(character) Taxonomic genus}
 
-\item{family}{Taxonomic family (character)}
+\item{family}{(character) Taxonomic family}
 
-\item{order}{Taxonomic order (character)}
+\item{order}{(character) Taxonomic order}
 
-\item{class}{Taxonomic class (character)}
+\item{class}{(character) Taxonomic class}
 
-\item{limit}{(numeric) Limit on the number of records returned. If >1000 results, we use
-a cursor internally, but you should still get up to the results you asked for. See also 
-\code{\link{bigsearch}} to get larger result sets in a text file via email.}
+\item{limit}{(numeric) Limit on the number of records returned. If >1000 
+results, we use a cursor internally, but you should still get up to the 
+results you asked for. See also  \code{\link{bigsearch}} to get larger 
+result sets in a text file via email.}
 
 \item{compact}{Return a compact data frame (logical)}
 
@@ -77,6 +80,10 @@ holotype, paratype, neotype, etc. (character)}
 \item{resource}{Identifier for the resource/dataset from which the record was
 indexed (character)}
 
+\item{query}{(character) full text search term(s). not tied to any specific 
+field. This does the same thing as using \code{\link{vertsearch}}, where
+this searches for any mention of these terms}
+
 \item{verbose}{Print progress and information messages. Default: TRUE}
 
 \item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
@@ -124,6 +131,10 @@ out <- searchbyterm(class = "aves", limit = 10, config=verbose())
 
 # Use more than one year query
 searchbyterm(class = "aves", year = c(">=1976", "<=1986"))
+
+# full text search - note the URL message
+searchbyterm(query = "Mustela nigripes", limit = 50)
+searchbyterm(query = "bear", limit = 50)
 }
 }
 \references{
