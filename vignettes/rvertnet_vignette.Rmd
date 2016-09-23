@@ -1,6 +1,7 @@
 <!--
 %\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{rvertnet introduction}
+%\VignetteEncoding{UTF-8}
 -->
 
 
@@ -47,28 +48,28 @@ All major functions (`searchbyterm()`, `spatialsearch()`, `vertsearch()`) give b
 ```r
 res$meta
 #> $request_date
-#> [1] "2015-06-25T21:28:42.327820"
+#> [1] "2016-09-23T18:59:51.449530"
 #> 
 #> $response_records
 #> [1] 10
 #> 
 #> $request_origin
-#> [1] "44.983334,-93.266670"
+#> [1] "45.523452,-122.676207"
 #> 
 #> $last_cursor
-#> [1] "False:CuYECuACCrgC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87L0s_M0s7N_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD_c3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzsvSz8zSzs3_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyKkonQnZaNm4yPmpyWkpqRjNDKz8zOzP8Ac3-cipKJ0J2WjZuMj5qclpKakYzQys_Mzsz_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJskbMcm_DyqEQARINRG9jdW1lbnRJbmRleBrPAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxNC0wMy0xMiIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKFFUICJBdmVzIiAicnRleHRfY2xhc3MiKSAoUVQgIkNhbGlmb3JuaWEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKToZCgwoTiBvcmRlcl9pZCkQARkAAAAAAADw_0oFCABA6Ac"
+#> [1] "False:CqAFCuwCCr4C9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87L0s_N0s7Onv8AAP90baCgmYuMoKD_AAD_XZ6Pj5qRmJaRmv8AAP9zdG2WkZuah_8AAP9dm4ic_wAA_3N0bZuQnKCWm_8AAP9dnIqSidCdlo2b0oyPmpyWkpqRjNDKz8zPx_8AAP9zf5yKkonQnZaNm9KMj5qclpKakYzQys_Mz8f_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzsvSz83Szs6e_wB0baCgmYuMoKD_AF2ej4-akZiWkZr_AHN0bZaRm5qH_wBdm4ic_wBzdG2bkJyglpv_AF2cipKJ0J2WjZvSjI-anJaSmpGM0MrPzM_H_wBzf5yKkonQnZaNm9KMj5qclpKakYzQys_Mz8f_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJaEr43cr5mgoQAmCrk_-KBBINRG9jdW1lbnRJbmRleBr9AShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxNC0wMi0xMWEiKSAoSVMgImluZGV4X25hbWUiICJkd2MiKSAoQU5EIChRVCAiQXZlcyIgInJ0ZXh0X2NsYXNzIikgKE9SIChJUyAicmF0b21fc3RhdGVwcm92aW5jZSIgImNhbGlmb3JuaWEiKSAoUVQgIkNhbGlmb3JuaWEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH"
 #> 
 #> $limit
 #> [1] 10
 #> 
 #> $query_version
-#> [1] "feature/api:search.query():2015-01-26T11:29"
+#> [1] "search.py 2015-08-29T21:04:44+02:00"
 #> 
 #> $matching_records
 #> [1] ">10000"
 #> 
 #> $api_version
-#> [1] "SearchAPI:2015-01-26T11:29"
+#> [1] "api.py 2015-09-02T11:09:38+02:00"
 ```
 
 The data
@@ -76,40 +77,44 @@ The data
 
 ```r
 res$data
-#> Source: local data frame [10 x 63]
-#> 
-#>        type                   institutionid institutioncode collectioncode
-#> 1  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 2  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 3  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 4  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 5  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 6  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 7  specimen http://grbio.org/cool/i64g-wjcr            CUMV Bird specimens
-#> 8  specimen                              NA            ANWC          Birds
-#> 9  specimen                              NA            ANWC          Birds
-#> 10 specimen                              NA            ANWC           Eggs
-#> Variables not shown: basisofrecord (chr), dynamicproperties (chr),
-#>   occurrenceid (chr), catalognumber (chr), recordedby (chr),
-#>   individualcount (chr), sex (chr), establishmentmeans (chr),
-#>   occurrencestatus (chr), preparations (chr), othercatalognumbers (chr),
-#>   previousidentifications (chr), eventdate (chr), startdayofyear (chr),
-#>   enddayofyear (chr), year (chr), month (chr), day (chr),
-#>   verbatimeventdate (chr), samplingprotocol (chr), highergeography (chr),
-#>   continent (chr), country (chr), countrycode (chr), stateprovince (chr),
-#>   county (chr), locality (chr), verbatimlocality (chr),
-#>   locationaccordingto (chr), locationremarks (chr), decimallatitude (chr),
-#>   decimallongitude (chr), geodeticdatum (chr),
-#>   coordinateuncertaintyinmeters (chr), coordinateprecision (chr),
-#>   verbatimcoordinates (chr), verbatimcoordinatesystem (chr),
-#>   georeferencedby (chr), georeferenceddate (chr), georeferenceprotocol
-#>   (chr), georeferencesources (chr), georeferenceverificationstatus (chr),
-#>   identificationqualifier (chr), identifiedby (chr), dateidentified (chr),
-#>   identificationverificationstatus (chr), scientificname (chr),
-#>   higherclassification (chr), kingdom (chr), phylum (chr), class (chr),
-#>   order (chr), family (chr), genus (chr), specificepithet (chr),
-#>   infraspecificepithet (chr), taxonrank (chr), vernacularname (chr),
-#>   nomenclaturalcode (chr)
+#> # A tibble: 10 × 68
+#>                 modified language                            accessrights
+#>                    <chr>    <chr>                                   <chr>
+#> 1             2015-01-06       en                                    <NA>
+#> 2             2015-01-06       en                                    <NA>
+#> 3  2015-05-11 07:55:08.0       en http://vertnet.org/resources/norms.html
+#> 4  2015-05-11 07:55:08.0       en http://vertnet.org/resources/norms.html
+#> 5  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 6  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 7  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 8  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 9  2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> 10 2015-08-26 13:10:07.0       en http://vertnet.org/resources/norms.html
+#> # ... with 65 more variables: references <chr>, institutionid <chr>,
+#> #   institutioncode <chr>, collectioncode <chr>, basisofrecord <chr>,
+#> #   dynamicproperties <chr>, occurrenceid <chr>, catalognumber <chr>,
+#> #   recordedby <chr>, individualcount <chr>, sex <chr>,
+#> #   establishmentmeans <chr>, occurrencestatus <chr>, preparations <chr>,
+#> #   associatedmedia <chr>, othercatalognumbers <chr>,
+#> #   occurrenceremarks <chr>, organismid <chr>,
+#> #   previousidentifications <chr>, eventdate <chr>, startdayofyear <chr>,
+#> #   enddayofyear <chr>, year <chr>, month <chr>, day <chr>,
+#> #   verbatimeventdate <chr>, samplingprotocol <chr>,
+#> #   highergeography <chr>, continent <chr>, country <chr>,
+#> #   countrycode <chr>, stateprovince <chr>, county <chr>, locality <chr>,
+#> #   verbatimlocality <chr>, locationaccordingto <chr>,
+#> #   decimallatitude <chr>, decimallongitude <chr>, geodeticdatum <chr>,
+#> #   coordinateuncertaintyinmeters <chr>, coordinateprecision <chr>,
+#> #   verbatimcoordinates <chr>, verbatimcoordinatesystem <chr>,
+#> #   georeferencedby <chr>, georeferenceddate <chr>,
+#> #   georeferenceprotocol <chr>, georeferencesources <chr>,
+#> #   georeferenceverificationstatus <chr>, identificationqualifier <chr>,
+#> #   identifiedby <chr>, dateidentified <chr>,
+#> #   identificationverificationstatus <chr>, scientificname <chr>,
+#> #   higherclassification <chr>, kingdom <chr>, phylum <chr>, class <chr>,
+#> #   order <chr>, family <chr>, genus <chr>, specificepithet <chr>,
+#> #   infraspecificepithet <chr>, taxonrank <chr>, vernacularname <chr>,
+#> #   nomenclaturalcode <chr>
 ```
 
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
@@ -118,49 +123,54 @@ Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limi
 ```r
 res <- searchbyterm(specificepithet = "nigripes", genus = "Mustela", state = "(wyoming OR south dakota)", limit = 20, verbose = FALSE)
 res$data
-#> Source: local data frame [18 x 67]
-#> 
-#>        type                   institutionid institutioncode
-#> 1  specimen http://grbio.org/cool/iakn-125z              KU
-#> 2  specimen   urn:lsid:biocol.org:col:34495             MSB
-#> 3  specimen   urn:lsid:biocol.org:col:34925            AMNH
-#> 4  specimen   urn:lsid:biocol.org:col:35013            DMNS
-#> 5  specimen   urn:lsid:biocol.org:col:35013            DMNS
-#> 6  specimen   urn:lsid:biocol.org:col:35013            DMNS
-#> 7  specimen                              NA            USNM
-#> 8  specimen                              NA            USNM
-#> 9  specimen                              NA            USNM
-#> 10 specimen                              NA            USNM
-#> 11 specimen                              NA            USNM
-#> 12 specimen                              NA            USNM
-#> 13 specimen                              NA            USNM
-#> 14 specimen                              NA            USNM
-#> 15 specimen                              NA            USNM
-#> 16 specimen                              NA            USNM
-#> 17 specimen                              NA            USNM
-#> 18 specimen                              NA            USNM
-#> Variables not shown: collectioncode (chr), datasetname (chr),
-#>   basisofrecord (chr), dynamicproperties (chr), occurrenceid (chr),
-#>   catalognumber (chr), recordnumber (chr), recordedby (chr),
-#>   individualcount (chr), sex (chr), establishmentmeans (chr),
-#>   occurrencestatus (chr), preparations (chr), othercatalognumbers (chr),
-#>   occurrenceremarks (chr), previousidentifications (chr), eventdate (chr),
-#>   eventtime (chr), startdayofyear (chr), enddayofyear (chr), year (chr),
-#>   month (chr), day (chr), verbatimeventdate (chr), samplingprotocol (chr),
-#>   eventremarks (chr), highergeography (chr), continent (chr), country
-#>   (chr), countrycode (chr), stateprovince (chr), county (chr), locality
-#>   (chr), verbatimlocality (chr), minimumelevationinmeters (chr),
-#>   maximumelevationinmeters (chr), locationaccordingto (chr),
-#>   locationremarks (chr), decimallatitude (chr), decimallongitude (chr),
-#>   geodeticdatum (chr), coordinateuncertaintyinmeters (chr),
-#>   verbatimcoordinates (chr), verbatimcoordinatesystem (chr),
-#>   georeferencedby (chr), georeferenceddate (chr), georeferenceprotocol
-#>   (chr), georeferencesources (chr), georeferenceverificationstatus (chr),
-#>   identificationqualifier (chr), identifiedby (chr), dateidentified (chr),
-#>   identificationverificationstatus (chr), scientificname (chr),
-#>   higherclassification (chr), kingdom (chr), phylum (chr), class (chr),
-#>   order (chr), family (chr), genus (chr), specificepithet (chr), taxonrank
-#>   (chr), nomenclaturalcode (chr)
+#> # A tibble: 19 × 71
+#>                 modified language
+#>                    <chr>    <chr>
+#> 1  2010-01-14 13:06:23.0       en
+#> 2  2011-11-17 12:02:57.0       en
+#> 3             2013-08-07       en
+#> 4  2015-04-14 15:45:27.0       en
+#> 5  2015-04-17 17:39:57.0       en
+#> 6  2015-08-18 10:24:17.0       en
+#> 7             2016-06-02       en
+#> 8                   <NA>     <NA>
+#> 9                   <NA>     <NA>
+#> 10                  <NA>     <NA>
+#> 11                  <NA>     <NA>
+#> 12                  <NA>     <NA>
+#> 13                  <NA>     <NA>
+#> 14                  <NA>     <NA>
+#> 15                  <NA>     <NA>
+#> 16                  <NA>     <NA>
+#> 17                  <NA>     <NA>
+#> 18                  <NA>     <NA>
+#> 19                  <NA>     <NA>
+#> # ... with 69 more variables: accessrights <chr>, references <chr>,
+#> #   institutionid <chr>, institutioncode <chr>, collectioncode <chr>,
+#> #   datasetname <chr>, basisofrecord <chr>, dynamicproperties <chr>,
+#> #   occurrenceid <chr>, catalognumber <chr>, recordedby <chr>,
+#> #   individualcount <chr>, sex <chr>, establishmentmeans <chr>,
+#> #   occurrencestatus <chr>, preparations <chr>, othercatalognumbers <chr>,
+#> #   occurrenceremarks <chr>, organismid <chr>,
+#> #   previousidentifications <chr>, eventdate <chr>, eventtime <chr>,
+#> #   startdayofyear <chr>, enddayofyear <chr>, year <chr>, month <chr>,
+#> #   day <chr>, verbatimeventdate <chr>, samplingprotocol <chr>,
+#> #   eventremarks <chr>, highergeography <chr>, continent <chr>,
+#> #   country <chr>, countrycode <chr>, stateprovince <chr>, county <chr>,
+#> #   locality <chr>, verbatimlocality <chr>,
+#> #   minimumelevationinmeters <chr>, maximumelevationinmeters <chr>,
+#> #   locationaccordingto <chr>, locationremarks <chr>,
+#> #   decimallatitude <chr>, decimallongitude <chr>, geodeticdatum <chr>,
+#> #   coordinateuncertaintyinmeters <chr>, verbatimcoordinates <chr>,
+#> #   verbatimcoordinatesystem <chr>, georeferencedby <chr>,
+#> #   georeferenceddate <chr>, georeferenceprotocol <chr>,
+#> #   georeferencesources <chr>, georeferenceverificationstatus <chr>,
+#> #   identificationqualifier <chr>, identifiedby <chr>,
+#> #   dateidentified <chr>, identificationverificationstatus <chr>,
+#> #   scientificname <chr>, higherclassification <chr>, kingdom <chr>,
+#> #   phylum <chr>, class <chr>, order <chr>, family <chr>, genus <chr>,
+#> #   specificepithet <chr>, taxonrank <chr>, vernacularname <chr>,
+#> #   nomenclaturalcode <chr>
 ```
 
 Search for class _Aves_, in the state of _Nevada_, with a coordinate uncertainty range (in meters) of less than 25 meters
@@ -169,31 +179,35 @@ Search for class _Aves_, in the state of _Nevada_, with a coordinate uncertainty
 ```r
 res <- searchbyterm(class = "Aves", stateprovince = "Nevada", error = "<25", verbose = FALSE)
 res$data
-#> Source: local data frame [2 x 60]
-#> 
-#>          type                 institutionid                  collectionid
-#> 1 observation urn:lsid:biocol.org:col:34777                            NA
-#> 2    specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34952
-#> Variables not shown: institutioncode (chr), collectioncode (chr),
-#>   basisofrecord (chr), dynamicproperties (chr), occurrenceid (chr),
-#>   catalognumber (chr), recordnumber (chr), recordedby (chr),
-#>   individualcount (chr), sex (chr), establishmentmeans (chr), preparations
-#>   (chr), associatedmedia (chr), othercatalognumbers (chr),
-#>   occurrenceremarks (chr), eventdate (chr), enddayofyear (chr), year
-#>   (chr), month (chr), day (chr), verbatimeventdate (chr), samplingprotocol
-#>   (chr), highergeography (chr), continent (chr), country (chr),
-#>   stateprovince (chr), county (chr), locality (chr), verbatimlocality
-#>   (chr), minimumelevationinmeters (chr), maximumelevationinmeters (chr),
-#>   locationaccordingto (chr), decimallatitude (chr), decimallongitude
-#>   (chr), geodeticdatum (chr), coordinateuncertaintyinmeters (chr),
-#>   verbatimcoordinates (chr), verbatimcoordinatesystem (chr),
-#>   georeferencedby (chr), georeferenceddate (chr), georeferenceprotocol
-#>   (chr), georeferencesources (chr), georeferenceverificationstatus (chr),
-#>   identificationqualifier (chr), identifiedby (chr), dateidentified (chr),
-#>   identificationverificationstatus (chr), scientificname (chr),
-#>   higherclassification (chr), phylum (chr), class (chr), order (chr),
-#>   family (chr), genus (chr), specificepithet (chr), infraspecificepithet
-#>   (chr), nomenclaturalcode (chr)
+#> # A tibble: 2 × 66
+#>                modified language
+#>                   <chr>    <chr>
+#> 1 2013-01-05 17:46:29.0       en
+#> 2 2015-06-22 12:58:04.0       en
+#> # ... with 64 more variables: accessrights <chr>, references <chr>,
+#> #   institutionid <chr>, collectionid <chr>, institutioncode <chr>,
+#> #   collectioncode <chr>, basisofrecord <chr>, dynamicproperties <chr>,
+#> #   occurrenceid <chr>, catalognumber <chr>, recordnumber <chr>,
+#> #   recordedby <chr>, individualcount <chr>, sex <chr>,
+#> #   establishmentmeans <chr>, preparations <chr>, associatedmedia <chr>,
+#> #   othercatalognumbers <chr>, occurrenceremarks <chr>, organismid <chr>,
+#> #   previousidentifications <chr>, eventdate <chr>, enddayofyear <chr>,
+#> #   year <chr>, month <chr>, day <chr>, verbatimeventdate <chr>,
+#> #   samplingprotocol <chr>, highergeography <chr>, continent <chr>,
+#> #   country <chr>, stateprovince <chr>, county <chr>, locality <chr>,
+#> #   verbatimlocality <chr>, minimumelevationinmeters <chr>,
+#> #   maximumelevationinmeters <chr>, locationaccordingto <chr>,
+#> #   decimallatitude <chr>, decimallongitude <chr>, geodeticdatum <chr>,
+#> #   coordinateuncertaintyinmeters <chr>, verbatimcoordinates <chr>,
+#> #   verbatimcoordinatesystem <chr>, georeferencedby <chr>,
+#> #   georeferenceddate <chr>, georeferenceprotocol <chr>,
+#> #   georeferencesources <chr>, georeferenceverificationstatus <chr>,
+#> #   identificationqualifier <chr>, identifiedby <chr>,
+#> #   dateidentified <chr>, identificationverificationstatus <chr>,
+#> #   scientificname <chr>, higherclassification <chr>, kingdom <chr>,
+#> #   phylum <chr>, class <chr>, order <chr>, family <chr>, genus <chr>,
+#> #   specificepithet <chr>, infraspecificepithet <chr>,
+#> #   nomenclaturalcode <chr>
 ```
 
 ## Spatial search
@@ -204,39 +218,45 @@ Spatial search service allows only to search on a point defined by latitude and 
 ```r
 res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
 res$data
-#> Source: local data frame [10 x 62]
-#> 
-#>        type                 institutionid                  collectionid
-#> 1  specimen urn:lsid:biocol.org:col:34495 urn:lsid:biocol.org:col:34950
-#> 2  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 3  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 4  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 5  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 6  specimen urn:lsid:biocol.org:col:34495                            NA
-#> 7  specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
-#> 8  specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
-#> 9  specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
-#> 10 specimen urn:lsid:biocol.org:col:34777 urn:lsid:biocol.org:col:34904
-#> Variables not shown: institutioncode (chr), collectioncode (chr),
-#>   basisofrecord (chr), informationwithheld (chr), dynamicproperties (chr),
-#>   occurrenceid (chr), catalognumber (chr), recordnumber (chr), recordedby
-#>   (chr), individualcount (chr), sex (chr), establishmentmeans (chr),
-#>   preparations (chr), othercatalognumbers (chr), occurrenceremarks (chr),
-#>   previousidentifications (chr), eventdate (chr), enddayofyear (chr), year
-#>   (chr), month (chr), day (chr), verbatimeventdate (chr), highergeography
-#>   (chr), continent (chr), country (chr), stateprovince (chr), county
-#>   (chr), locality (chr), verbatimlocality (chr), minimumelevationinmeters
-#>   (chr), maximumelevationinmeters (chr), locationaccordingto (chr),
-#>   locationremarks (chr), decimallatitude (chr), decimallongitude (chr),
-#>   geodeticdatum (chr), coordinateuncertaintyinmeters (chr),
-#>   verbatimcoordinates (chr), verbatimcoordinatesystem (chr),
-#>   georeferencedby (chr), georeferenceddate (chr), georeferenceprotocol
-#>   (chr), georeferencesources (chr), georeferenceverificationstatus (chr),
-#>   identificationqualifier (chr), identifiedby (chr), dateidentified (chr),
-#>   identificationverificationstatus (chr), scientificname (chr),
-#>   higherclassification (chr), kingdom (chr), phylum (chr), class (chr),
-#>   order (chr), family (chr), genus (chr), specificepithet (chr),
-#>   infraspecificepithet (chr), nomenclaturalcode (chr)
+#> # A tibble: 10 × 69
+#>                 modified language
+#>                    <chr>    <chr>
+#> 1  2013-09-10 12:55:00.0       en
+#> 2  2013-09-10 12:55:00.0       en
+#> 3  2013-09-10 12:55:00.0       en
+#> 4  2014-01-14 16:04:11.0       en
+#> 5  2014-06-03 17:37:34.0       en
+#> 6  2014-09-09 14:04:14.0       en
+#> 7  2014-09-09 14:04:14.0       en
+#> 8  2015-08-03 19:48:08.0       en
+#> 9  2015-09-08 00:33:35.0       en
+#> 10                  <NA>       en
+#> # ... with 67 more variables: accessrights <chr>, references <chr>,
+#> #   institutionid <chr>, collectionid <chr>, institutioncode <chr>,
+#> #   collectioncode <chr>, datasetname <chr>, basisofrecord <chr>,
+#> #   dynamicproperties <chr>, occurrenceid <chr>, catalognumber <chr>,
+#> #   recordnumber <chr>, recordedby <chr>, individualcount <chr>,
+#> #   sex <chr>, establishmentmeans <chr>, occurrencestatus <chr>,
+#> #   preparations <chr>, othercatalognumbers <chr>,
+#> #   occurrenceremarks <chr>, organismid <chr>,
+#> #   previousidentifications <chr>, eventdate <chr>, startdayofyear <chr>,
+#> #   enddayofyear <chr>, year <chr>, month <chr>, day <chr>,
+#> #   verbatimeventdate <chr>, highergeography <chr>, continent <chr>,
+#> #   country <chr>, countrycode <chr>, stateprovince <chr>, county <chr>,
+#> #   locality <chr>, verbatimlocality <chr>,
+#> #   minimumelevationinmeters <chr>, maximumelevationinmeters <chr>,
+#> #   locationaccordingto <chr>, decimallatitude <chr>,
+#> #   decimallongitude <chr>, geodeticdatum <chr>,
+#> #   coordinateuncertaintyinmeters <chr>, verbatimcoordinates <chr>,
+#> #   verbatimcoordinatesystem <chr>, georeferencedby <chr>,
+#> #   georeferenceddate <chr>, georeferenceprotocol <chr>,
+#> #   georeferencesources <chr>, georeferenceverificationstatus <chr>,
+#> #   identificationqualifier <chr>, identifiedby <chr>,
+#> #   dateidentified <chr>, identificationverificationstatus <chr>,
+#> #   scientificname <chr>, higherclassification <chr>, kingdom <chr>,
+#> #   phylum <chr>, class <chr>, order <chr>, family <chr>, genus <chr>,
+#> #   specificepithet <chr>, infraspecificepithet <chr>, taxonrank <chr>,
+#> #   nomenclaturalcode <chr>
 ```
 
 ## Global full text search
@@ -247,35 +267,38 @@ res$data
 ```r
 res <- vertsearch(taxon = "aves", state = "california", limit = 10)
 res$data
-#> Source: local data frame [10 x 55]
-#> 
-#>        type                 institutionid institutioncode collectioncode
-#> 1  specimen urn:lsid:biocol.org:col:34938            CRCM          Birds
-#> 2  specimen urn:lsid:biocol.org:col:34938            CRCM          Birds
-#> 3  specimen urn:lsid:biocol.org:col:34938            CRCM          Birds
-#> 4  specimen urn:lsid:biocol.org:col:34938            CRCM          Birds
-#> 5  specimen urn:lsid:biocol.org:col:34938            CRCM          Birds
-#> 6  specimen urn:lsid:biocol.org:col:34938            CRCM          Birds
-#> 7  specimen urn:lsid:biocol.org:col:34938            CRCM          Birds
-#> 8  specimen                            NA            ANWC          Birds
-#> 9  specimen                            NA            ANWC          Birds
-#> 10 specimen                            NA            ANWC           Eggs
-#> Variables not shown: basisofrecord (chr), dynamicproperties (chr),
-#>   occurrenceid (chr), catalognumber (chr), recordedby (chr), sex (chr),
-#>   establishmentmeans (chr), occurrencestatus (chr), preparations (chr),
-#>   othercatalognumbers (chr), occurrenceremarks (chr), eventdate (chr),
-#>   startdayofyear (chr), enddayofyear (chr), year (chr), month (chr), day
-#>   (chr), verbatimeventdate (chr), highergeography (chr), continent (chr),
-#>   country (chr), countrycode (chr), stateprovince (chr), county (chr),
-#>   locality (chr), verbatimlocality (chr), locationremarks (chr),
-#>   decimallatitude (chr), decimallongitude (chr), geodeticdatum (chr),
-#>   coordinateuncertaintyinmeters (chr), coordinateprecision (chr),
-#>   georeferencedby (chr), georeferenceddate (chr), georeferenceprotocol
-#>   (chr), georeferencesources (chr), georeferenceverificationstatus (chr),
-#>   georeferenceremarks (chr), scientificname (chr), higherclassification
-#>   (chr), kingdom (chr), phylum (chr), class (chr), order (chr), family
-#>   (chr), genus (chr), specificepithet (chr), infraspecificepithet (chr),
-#>   taxonrank (chr), vernacularname (chr), nomenclaturalcode (chr)
+#> # A tibble: 10 × 57
+#>      modified language                            accessrights
+#>         <chr>    <chr>                                   <chr>
+#> 1  2015-01-06       en                                    <NA>
+#> 2  2015-01-06       en                                    <NA>
+#> 3  2015-10-13       en http://vertnet.org/resources/norms.html
+#> 4  2015-10-13       en http://vertnet.org/resources/norms.html
+#> 5  2015-10-13       en http://vertnet.org/resources/norms.html
+#> 6  2015-10-13       en http://vertnet.org/resources/norms.html
+#> 7  2015-10-13       en http://vertnet.org/resources/norms.html
+#> 8  2015-10-13       en http://vertnet.org/resources/norms.html
+#> 9  2015-10-13       en http://vertnet.org/resources/norms.html
+#> 10 2015-10-13       en http://vertnet.org/resources/norms.html
+#> # ... with 54 more variables: references <chr>, institutionid <chr>,
+#> #   institutioncode <chr>, collectioncode <chr>, basisofrecord <chr>,
+#> #   dynamicproperties <chr>, occurrenceid <chr>, catalognumber <chr>,
+#> #   recordedby <chr>, sex <chr>, establishmentmeans <chr>,
+#> #   occurrencestatus <chr>, preparations <chr>, othercatalognumbers <chr>,
+#> #   occurrenceremarks <chr>, eventdate <chr>, startdayofyear <chr>,
+#> #   enddayofyear <chr>, year <chr>, month <chr>, day <chr>,
+#> #   verbatimeventdate <chr>, highergeography <chr>, continent <chr>,
+#> #   country <chr>, countrycode <chr>, stateprovince <chr>, county <chr>,
+#> #   locality <chr>, verbatimlocality <chr>, decimallatitude <chr>,
+#> #   decimallongitude <chr>, geodeticdatum <chr>,
+#> #   coordinateuncertaintyinmeters <chr>, coordinateprecision <chr>,
+#> #   georeferencedby <chr>, georeferenceddate <chr>,
+#> #   georeferenceprotocol <chr>, georeferencesources <chr>,
+#> #   georeferenceverificationstatus <chr>, georeferenceremarks <chr>,
+#> #   scientificname <chr>, higherclassification <chr>, kingdom <chr>,
+#> #   phylum <chr>, class <chr>, order <chr>, family <chr>, genus <chr>,
+#> #   specificepithet <chr>, infraspecificepithet <chr>, taxonrank <chr>,
+#> #   vernacularname <chr>, nomenclaturalcode <chr>
 ```
 
 Limit the number of records returned (under 1000)
@@ -284,43 +307,47 @@ Limit the number of records returned (under 1000)
 ```r
 res <- vertsearch("(kansas state OR KSU)", limit = 200)
 res$data
-#> Source: local data frame [200 x 69]
-#> 
-#>        type                   institutionid
-#> 1  specimen                             CAS
-#> 2  specimen http://grbio.org/cool/i64g-wjcr
-#> 3  specimen http://grbio.org/cool/iakn-125z
-#> 4  specimen http://grbio.org/cool/iakn-125z
-#> 5  specimen http://grbio.org/cool/iakn-125z
-#> 6  specimen http://grbio.org/cool/iakn-125z
-#> 7  specimen http://grbio.org/cool/iakn-125z
-#> 8  specimen http://grbio.org/cool/iakn-125z
-#> 9  specimen http://grbio.org/cool/iakn-125z
-#> 10 specimen http://grbio.org/cool/iakn-125z
-#> ..      ...                             ...
-#> Variables not shown: collectionid (chr), institutioncode (chr),
-#>   collectioncode (chr), datasetname (chr), basisofrecord (chr),
-#>   dynamicproperties (chr), occurrenceid (chr), catalognumber (chr),
-#>   recordnumber (chr), recordedby (chr), individualcount (chr), sex (chr),
-#>   lifestage (chr), establishmentmeans (chr), occurrencestatus (chr),
-#>   preparations (chr), othercatalognumbers (chr), occurrenceremarks (chr),
-#>   previousidentifications (chr), fieldnumber (chr), eventdate (chr),
-#>   startdayofyear (chr), enddayofyear (chr), year (chr), month (chr), day
-#>   (chr), verbatimeventdate (chr), highergeography (chr), continent (chr),
-#>   country (chr), countrycode (chr), stateprovince (chr), county (chr),
-#>   locality (chr), verbatimlocality (chr), minimumelevationinmeters (chr),
-#>   maximumelevationinmeters (chr), verbatimelevation (chr),
-#>   locationaccordingto (chr), decimallatitude (chr), decimallongitude
-#>   (chr), geodeticdatum (chr), coordinateuncertaintyinmeters (chr),
-#>   verbatimcoordinates (chr), verbatimcoordinatesystem (chr),
-#>   georeferencedby (chr), georeferenceddate (chr), georeferenceprotocol
-#>   (chr), georeferencesources (chr), georeferenceverificationstatus (chr),
-#>   georeferenceremarks (chr), identificationqualifier (chr), identifiedby
-#>   (chr), dateidentified (chr), identificationverificationstatus (chr),
-#>   scientificname (chr), higherclassification (chr), kingdom (chr), phylum
-#>   (chr), class (chr), order (chr), family (chr), genus (chr),
-#>   specificepithet (chr), infraspecificepithet (chr), taxonrank (chr),
-#>   nomenclaturalcode (chr)
+#> # A tibble: 200 × 76
+#>              modified language
+#>                 <chr>    <chr>
+#> 1  2008-09-03 0:00:00       en
+#> 2  2008-09-03 0:00:00       en
+#> 3  2008-09-03 0:00:00       en
+#> 4  2008-09-03 0:00:00       en
+#> 5  2008-09-03 0:00:00       en
+#> 6  2008-09-03 0:00:00       en
+#> 7  2008-09-03 0:00:00       en
+#> 8  2008-09-03 0:00:00       en
+#> 9  2008-09-03 0:00:00       en
+#> 10 2008-09-03 0:00:00       en
+#> # ... with 190 more rows, and 74 more variables: accessrights <chr>,
+#> #   bibliographiccitation <chr>, references <chr>, institutionid <chr>,
+#> #   collectionid <chr>, institutioncode <chr>, collectioncode <chr>,
+#> #   datasetname <chr>, basisofrecord <chr>, dynamicproperties <chr>,
+#> #   occurrenceid <chr>, catalognumber <chr>, recordnumber <chr>,
+#> #   recordedby <chr>, individualcount <chr>, sex <chr>, lifestage <chr>,
+#> #   establishmentmeans <chr>, occurrencestatus <chr>, preparations <chr>,
+#> #   othercatalognumbers <chr>, occurrenceremarks <chr>, organismid <chr>,
+#> #   previousidentifications <chr>, fieldnumber <chr>, eventdate <chr>,
+#> #   startdayofyear <chr>, enddayofyear <chr>, year <chr>, month <chr>,
+#> #   day <chr>, verbatimeventdate <chr>, samplingprotocol <chr>,
+#> #   highergeography <chr>, continent <chr>, country <chr>,
+#> #   countrycode <chr>, stateprovince <chr>, county <chr>, locality <chr>,
+#> #   verbatimlocality <chr>, minimumelevationinmeters <chr>,
+#> #   maximumelevationinmeters <chr>, verbatimelevation <chr>,
+#> #   locationaccordingto <chr>, decimallatitude <chr>,
+#> #   decimallongitude <chr>, geodeticdatum <chr>,
+#> #   coordinateuncertaintyinmeters <chr>, verbatimcoordinates <chr>,
+#> #   verbatimlatitude <chr>, verbatimcoordinatesystem <chr>,
+#> #   georeferencedby <chr>, georeferenceddate <chr>,
+#> #   georeferenceprotocol <chr>, georeferencesources <chr>,
+#> #   georeferenceverificationstatus <chr>, georeferenceremarks <chr>,
+#> #   identificationqualifier <chr>, identifiedby <chr>,
+#> #   dateidentified <chr>, identificationverificationstatus <chr>,
+#> #   scientificname <chr>, higherclassification <chr>, kingdom <chr>,
+#> #   phylum <chr>, class <chr>, order <chr>, family <chr>, genus <chr>,
+#> #   specificepithet <chr>, infraspecificepithet <chr>, taxonrank <chr>,
+#> #   nomenclaturalcode <chr>
 ```
 
 Pass output of `vertsearch()` to a map
@@ -328,10 +355,10 @@ Pass output of `vertsearch()` to a map
 
 ```r
 out <- vertsearch(tax = "(mustela nivalis OR mustela erminea)")
+#> Error in vert_GET(fxn, args, lim, verbose, ...): Internal Server Error (HTTP 500).
 vertmap(out)
+#> Error in match(x, table, nomatch = 0L): object 'out' not found
 ```
-
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
 
 ## Lots of data
 

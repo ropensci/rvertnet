@@ -1,6 +1,7 @@
 <!--
 %\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{rvertnet introduction}
+%\VignetteEncoding{UTF-8}
 -->
 
 ```{r, eval=TRUE, echo=FALSE}
