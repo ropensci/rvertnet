@@ -46,7 +46,7 @@ test_that("searchbyterm - state param works when using boolean's with > 1 state 
   
   expect_is(aa, "list")
   expect_is(aa$data, "data.frame")
-  expect_equal(unique(tolower(aa$data$stateprovince)), "california")
+  expect_equal(unique(tolower(aa$data$stateprovince)), c("california", "florida"))
 })
 
 

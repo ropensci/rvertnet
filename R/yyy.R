@@ -1,4 +1,6 @@
 # Wrapper for vertsummary function
+sw <- function(x) suppressWarnings(x)
+
 vertsumwrapper <- function(input = NULL, verbose = TRUE){
   
   if (!class(input) %in% c("list", "data.frame")) {
@@ -11,36 +13,36 @@ vertsumwrapper <- function(input = NULL, verbose = TRUE){
   
   # coords <- number of records with viable lat and long data
   # errest <- number of "coords" records with viable coordinate uncertainty estimate
-  if(is.null(input$decimallatitude) & is.null(input$decimallongitude)){
+  if (is.null(sw(input$decimallatitude)) & is.null(sw(input$decimallongitude))) {
     coords <- 0
   } else{ 
     coords <- NULL
   }
-  if(inherits(input$coordinateuncertaintyinmeters, "NULL")){
+  if (inherits(sw(input$coordinateuncertaintyinmeters), "NULL")) {
     errest <- 0
   } else {
     errest <- NULL
   }
   if (is.null(coords)) {
-    coords <- sum(complete.cases(input[,c('decimallatitude','decimallongitude')]))
+    coords <- sum(complete.cases(input[, c('decimallatitude','decimallongitude')]))
     # checking for good lat/long data (if not, use only the above line)
     input$decimallatitude <- as.numeric(as.character(input$decimallatitude))
     input$decimallongitude <- as.numeric(as.character(input$decimallongitude))
-    if(is.null(errest)){
+    if (is.null(errest)) {
       input$coordinateuncertaintyinmeters <- as.numeric(as.character(input$coordinateuncertaintyinmeters))
     }
     mappable <- input[complete.cases(input[,c('decimallatitude','decimallongitude')]),]
     mappable <- subset(mappable, input$decimallatitude < 90 & input$decimallatitude > -90)
     mappable <- subset(mappable, input$decimallongitude < 180 & input$decimallongitude > -180)
-    if(nrow(mappable) < coords){
+    if (nrow(mappable) < coords) {
       bad <- coords - nrow(mappable)
       mssg(verbose, paste(bad, " record(s) with bad coordinates"))
       coords <- coords - bad
     }
-    if(is.null(errest)){
+    if (is.null(errest)) {
       mappable <- subset(mappable, input$coordinateuncertaintyinmeters > 0 &
                            input$coordinateuncertaintyinmeters < 20020000)
-      if((errest <- nrow(mappable)) < coords){
+      if ((errest <- nrow(mappable)) < coords) {
         bad <- coords - errest
       }
     }
@@ -48,9 +50,9 @@ vertsumwrapper <- function(input = NULL, verbose = TRUE){
   
   # instcoll <- number of records from each institution+collection
   removeDups <- function(x) {
-    paste(unique(unlist(strsplit(x, split=" "))), collapse = " ")
+    paste(unique(unlist(strsplit(x, split = " "))), collapse = " ")
   }
-  if(inherits(input$institutioncode, "NULL") & inherits(input$collectioncode, "NULL")){
+  if (inherits(input$institutioncode, "NULL") & inherits(input$collectioncode, "NULL")) {
     instcoll <- NA
   } else {
     instcoll <- as.matrix(paste(input[,'institutioncode'], 
@@ -59,22 +61,31 @@ vertsumwrapper <- function(input = NULL, verbose = TRUE){
   }
   
   # country <- number of records from each country
-  if(inherits(input$country, "NULL")){country <- NA} else{country <- table(input$country)}
+  if (inherits(sw(input$country), "NULL")) {
+    country <- NA 
+  }  else {
+    country <- table(input$country)
+  }
   
   # year <- number of records by year
-  if(inherits(input$year, "NULL")){year <- NA} else{year <- table(input$year)}
+  if (inherits(sw(input$year), "NULL")) {
+    year <- NA
+  } else {
+    year <- table(input$year)
+  }
   
   # taxon <- number of records by taxonomic name
   taxon <- as.matrix(paste(input[,'genus'], input[,'specificepithet'], sep = " "))
-  if(!inherits(input$infraspecificepithet, "NULL")){
+  if (!inherits(sw(input$infraspecificepithet), "NULL")) {
     taxon <- as.matrix(paste(taxon, input[,'infraspecificepithet'], sep = " "))
   }
   taxon <- gsub(" NA", "", taxon) # remove unknowns - usually infrasp.ep
   taxon <- table(apply(taxon, 1, removeDups))
   
   # return summary
-  structure(list("recs" = recs, "coords" = coords, "errest" = errest, "instcoll" = instcoll,
-                 "country" = country, "year" = year, "taxon" = taxon), class="vertsummary")
+  structure(list("recs" = recs, "coords" = coords, "errest" = errest, 
+                 "instcoll" = instcoll, "country" = country, "year" = year, 
+                 "taxon" = taxon), class = "vertsummary")
 }
 
 #' @export
