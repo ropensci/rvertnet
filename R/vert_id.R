@@ -19,11 +19,10 @@
 #'          "urn:catalog:AUM:Fish:13271")
 #' res <- vert_id(ids)
 #' res$data$occurrenceid
-#' identical(sort(res$data$occurrenceid), sort(ids))
 #' 
 #' # Lots
 #' out <- vertsearch(taxon = "aves", state = "california", limit = 20)
-#' ids <- out$data$occurrenceid
+#' (ids <- out$data$occurrenceid)
 #' res <- vert_id(ids)
 #' identical(sort(res$data$occurrenceid), sort(ids))
 #' }
