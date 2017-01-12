@@ -9,8 +9,9 @@ test_that("vert_id works", {
   expect_is(aa$meta, "list")
   expect_is(aa$data, "data.frame")
   expect_equal(NROW(aa$data), 1)
-  expect_named(aa$meta, c('request_date','response_records','request_origin','last_cursor',
-                          'limit','query_version','matching_records','api_version'))
+  expect_named(aa$meta, c('request_date','response_records','submitted_query', 
+                          'request_origin','limit','last_cursor',
+                          'query_version','matching_records','api_version'))
   expect_true(grepl("Bufo debilis", aa$data$scientificname))
 })
 
@@ -25,8 +26,9 @@ test_that("vert_id works", {
   expect_is(aa$meta, "list")
   expect_is(aa$data, "data.frame")
   expect_equal(NROW(aa$data), 2)
-  expect_named(aa$meta, c('request_date','response_records','request_origin','last_cursor',
-                          'limit','query_version','matching_records','api_version'))
+  expect_named(aa$meta, c('request_date','response_records','submitted_query',
+                          'request_origin','limit','last_cursor',
+                          'query_version','matching_records','api_version'))
   expect_true(any(grepl("Zapus", aa$data$scientificname)))
   expect_true(any(grepl("Bufo", aa$data$scientificname)))
 })

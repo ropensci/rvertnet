@@ -46,7 +46,7 @@ test_that("searchbyterm - state param works when using boolean's with > 1 state 
   
   expect_is(aa, "list")
   expect_is(aa$data, "data.frame")
-  expect_equal(unique(tolower(aa$data$stateprovince)), c("california", "florida"))
+  expect_equal(unique(tolower(aa$data$stateprovince)), "california")
 })
 
 
@@ -75,6 +75,6 @@ test_that("searchbyterm multi-year param input works", {
   asnumdates <- as.numeric(format(dates, "%Y"))
   expect_is(dates, "Date")
   expect_is(asnumdates, "numeric")
-  expect_equal(min(asnumdates), 1916)
-  expect_equal(max(asnumdates), 1920)
+  expect_equal(min(na.omit(asnumdates)), 1916)
+  expect_equal(max(na.omit(asnumdates)), 1920)
 })

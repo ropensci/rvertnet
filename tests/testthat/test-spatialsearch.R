@@ -10,7 +10,7 @@ test_that("spatialsearch works correctly", {
   expect_is(a$data, "data.frame")
   
   expect_is(a$data$references, "character")
-  expect_is(na.omit(unique(a$data$infraspecificepithet)), "character")
+  expect_is(na.omit(unique(a$data$specificepithet)), "character")
   
   expect_equal(NROW(a$data), 10)
   
