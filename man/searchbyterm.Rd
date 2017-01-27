@@ -2,8 +2,7 @@
 % Please edit documentation in R/searchbyterm.R
 \name{searchbyterm}
 \alias{searchbyterm}
-\title{Search for records using keywords/terms to control how your query 
-is interpreted}
+\title{Search by term}
 \usage{
 searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
   order = NULL, class = NULL, limit = 1000, compact = TRUE,
@@ -12,7 +11,7 @@ searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
   island = NULL, igroup = NULL, inst = NULL, id = NULL,
   catalognumber = NULL, collector = NULL, type = NULL,
   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-  resource = NULL, query = NULL, verbose = TRUE, ...)
+  resource = NULL, query = NULL, verbose = TRUE, only_dwc = TRUE, ...)
 }
 \arguments{
 \item{specificepithet}{(character) Taxonomic specific epithet, e.g. (sapiens 
@@ -43,8 +42,9 @@ or the range yyyy-mm-dd/yyyy-mm-dd (character)}
 \item{mappable}{Record includes valid coordinates in decimal latitude and
 decimal longitude (logical)}
 
-\item{error}{Coordinate uncertainty in meters (numeric) or range of uncertainty
-values designated by comparison operators "<", ">", "<=" or ">=" (character)}
+\item{error}{Coordinate uncertainty in meters (numeric) or range of 
+uncertainty values designated by comparison operators "<", ">", "<=" 
+or ">=" (character)}
 
 \item{continent}{Continent to search for occurrence (character)}
 
@@ -62,7 +62,8 @@ values designated by comparison operators "<", ">", "<=" or ">=" (character)}
 
 \item{id}{Provider's unique identifier for this occurrence record (character)}
 
-\item{catalognumber}{Provider's catalog number or other ID for this record (character)}
+\item{catalognumber}{Provider's catalog number or other ID for this record 
+(character)}
 
 \item{collector}{Collector name (character)}
 
@@ -71,7 +72,8 @@ values designated by comparison operators "<", ">", "<=" or ">=" (character)}
 \item{hastypestatus}{Specimen associated with this record is identified as a
 holotype, paratype, neotype, etc. (character)}
 
-\item{media}{Record also references associated media, such as a film or video (logical)}
+\item{media}{Record also references associated media, such as a film or 
+video (logical)}
 
 \item{rank}{TBD (numeric)}
 
@@ -84,7 +86,10 @@ indexed (character)}
 field. This does the same thing as using \code{\link{vertsearch}}, where
 this searches for any mention of these terms}
 
-\item{verbose}{Print progress and information messages. Default: TRUE}
+\item{verbose}{Print progress and information messages. Default: \code{TRUE}}
+
+\item{only_dwc}{(logical) whether or not to return only Darwin Core term
+fields. Default: \code{TRUE}}
 
 \item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
 }
@@ -92,37 +97,41 @@ this searches for any mention of these terms}
 A data frame of search results
 }
 \description{
-Returns only those records in which the targeted input is found in
-association with the specified search terms.
+Flexible search for records using keywords/terms
 }
 \details{
-\code{\link{searchbyterm}} builds a query from input parameters based on
-   Darwin Core (dwc) terms (for the full list of terms, see
-   \url{https://code.google.com/p/darwincore/wiki/DarwinCoreTerms}).
-   The query string is appended to the base URL for VertNet
-   search requests. View the query string for specification of
-   dwc terms used in the search.
+\code{\link{searchbyterm}} builds a query from input parameters 
+based on Darwin Core (dwc) terms (for the full list of terms, see
+\url{https://code.google.com/p/darwincore/wiki/DarwinCoreTerms}).
 }
 \examples{
 \dontrun{
-# Limit the number of records returned to <1000; use bigsearch() for >1000 records
+# Limit the number of records returned to <1000; use bigsearch() for 
+# >1000 records
 (out <- searchbyterm(class = "aves", state = "california", limit = 10))
 
 # Find multiple species
-(out <- searchbyterm(genus = "ochotona", specificepithet = "(princeps OR collaris)", limit=10))
+(out <- searchbyterm(genus = "ochotona", 
+  specificepithet = "(princeps OR collaris)", limit=10))
 
 # Specifying a single year (no quotes) or range of years (use quotes)
-(out <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10))
-(out <- searchbyterm(class = "aves", state = "california", year = ">=1976", limit = 10))
+(out <- searchbyterm(class = "aves", state = "california", year = 1976, 
+  limit = 10))
+(out <- searchbyterm(class = "aves", state = "california", year = ">=1976", 
+  limit = 10))
 
-# Specifying a range (in meters) for uncertainty in spatial location (use quotes)
+# Specifying a range (in meters) for uncertainty in spatial location 
+# (use quotes)
 out <- searchbyterm(class = "aves", state = "nevada", error = "<25")
-out <- searchbyterm(class = "aves", state = "california", year = 1976, error = "<=1000")
+out <- searchbyterm(class = "aves", state = "california", year = 1976, 
+  error = "<=1000")
 
 # Specifying records by event date (use quotes)
-out <- searchbyterm(class = "aves", state = "california", date = "2009-03-25")
+out <- searchbyterm(class = "aves", state = "california", 
+  date = "2009-03-25")
 # ...but specifying a date range may not work
-out <- searchbyterm(specificepithet = "nigripes", date = "1935-09-01/1935-09-30")
+out <- searchbyterm(specificepithet = "nigripes", 
+  date = "1935-09-01/1935-09-30")
 
 # Pass in curl options for curl debugging
 library("httr")

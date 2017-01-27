@@ -1,14 +1,14 @@
 # Wrapper for search functions vertsearch, searchbyterm, spatialsearch and bigsearch
 
 vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email = NULL,
-                        compact = TRUE, verbose = TRUE, ...){
+                        compact = TRUE, verbose = TRUE, only_dwc = TRUE, ...){
   mssg(verbose, "Processing request...")
   if (fxn == "bigsearch") {
     tt <- GET(vdurl(), query = list(q = make_bigq(args, email, rfile)), ...)
     stop_for_status(tt)
     mssg(verbose, "\nThank you! Download instructions will be sent by email.")
   } else {
-    ress <- vert_GET(fxn, args, lim, verbose, ...)
+    ress <- vert_GET(fxn, args, lim, verbose, only_dwc, ...)
     
     # Remove columns populated fully by NAs
     if (compact) { 
@@ -41,7 +41,8 @@ get_terms <- function(){
   list(termlist = termlist, fullr = fullr)
 }
 
-vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...){
+vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, 
+                     only_dwc = TRUE, ...) {
   cursor <- NULL
   allres <- 0
   result <- list()
@@ -60,9 +61,11 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, ...
   }
   df <- if (sum(sapply(result, NROW)) == 0) data.frame(NULL, stringsAsFactors = FALSE) else bind_rows(result)
   names(df) <- tolower(names(df))
-  res <- get_terms()
-  df <- merge(res$fullr, df, all = TRUE)[, tolower(res$termlist[,1]) ]
-  df <- df[ -NROW(df), ]
+  if (only_dwc) {
+    res <- get_terms()
+    df <- merge(res$fullr, df, all = TRUE)[, tolower(res$termlist[,1]) ]
+    df <- df[ -NROW(df), ]
+  }
   mssg(verbose, paste("\nLast Query URL: \"", tt$url, "\"", sep = ""))
   mssg(verbose, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))
   list(meta = make_meta(out), data = tbl_df(df))
@@ -163,3 +166,4 @@ pop <- function(x, nms) {
 }
 
 rvc <- function(x) Filter(Negate(is.null), x)
+

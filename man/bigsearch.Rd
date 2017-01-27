@@ -37,8 +37,9 @@ or the range yyyy-mm-dd/yyyy-mm-dd (character)}
 \item{mappable}{Record includes valid coordinates in decimal latitude and
 decimal longitude (logical)}
 
-\item{error}{Coordinate uncertainty in meters (numeric) or range of uncertainty
-values designated by comparison operators "<", ">", "<=" or ">=" (character)}
+\item{error}{Coordinate uncertainty in meters (numeric) or range of 
+uncertainty values designated by comparison operators "<", ">", "<=" 
+or ">=" (character)}
 
 \item{continent}{Continent to search for occurrence (character)}
 
@@ -56,7 +57,8 @@ values designated by comparison operators "<", ">", "<=" or ">=" (character)}
 
 \item{id}{Provider's unique identifier for this occurrence record (character)}
 
-\item{catalognumber}{Provider's catalog number or other ID for this record (character)}
+\item{catalognumber}{Provider's catalog number or other ID for this record 
+(character)}
 
 \item{collector}{Collector name (character)}
 
@@ -65,7 +67,8 @@ values designated by comparison operators "<", ">", "<=" or ">=" (character)}
 \item{hastypestatus}{Specimen associated with this record is identified as a
 holotype, paratype, neotype, etc. (character)}
 
-\item{media}{Record also references associated media, such as a film or video (logical)}
+\item{media}{Record also references associated media, such as a film or 
+video (logical)}
 
 \item{rank}{TBD (numeric)}
 
@@ -79,7 +82,7 @@ indexed (character)}
 \item{email}{An email address where you can be contacted when your records are
 ready for download (character). Required.}
 
-\item{verbose}{Print progress and information messages. Default: TRUE}
+\item{verbose}{Print progress and information messages. Default: \code{TRUE}}
 
 \item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
 }

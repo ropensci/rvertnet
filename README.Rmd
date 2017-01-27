@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
-VertNet.org API docs: [github.com/VertNet/webapp/wiki/The-API-search-function](https://github.com/VertNet/webapp/wiki/The-API-search-function)
+VertNet.org API docs: <https://github.com/VertNet/webapp/wiki/The-API-search-function>
 
 ## Installation
 
