@@ -2,18 +2,19 @@
 #' 
 #' @export
 #' @inheritParams vertsearch
-#' @param has_mass (logical) limit to records that have mass data (stored in \code{massing}). 
-#' Default: \code{FALSE}
-#' @param has_length (logical) limit to records that have length data (stored in \code{lengthinmm}). 
-#' Default: \code{FALSE}
-#' @param has_sex (logical) limit to records that have sex data (stored in \code{sex}). 
-#' Default: \code{FALSE}
-#' @param has_lifestage (logical) limit to records that have lifestage data (stored in \code{lifestage}).
-#' Default: \code{FALSE}
+#' @param has_mass (logical) limit to records that have mass data (stored in 
+#' \code{massing}). Default: \code{FALSE}
+#' @param has_length (logical) limit to records that have length data (stored 
+#' in \code{lengthinmm}). Default: \code{FALSE}
+#' @param has_sex (logical) limit to records that have sex data (stored in 
+#' \code{sex}). Default: \code{FALSE}
+#' @param has_lifestage (logical) limit to records that have lifestage data
+#' (stored in \code{lifestage}). Default: \code{FALSE}
 #' @param length_type (character) length type, one of 'total length', 
 #' 'standard length', 'snout-vent length', 'head-body length', 'fork length', 
 #' 'total length range', 'standard length range', 'snout-vent length range',
-#' 'head-body length range', 'fork length range'. (stored in \code{lengthtype}) Default: \code{NULL}
+#' 'head-body length range', 'fork length range'. (stored in \code{lengthtype}) 
+#' Default: \code{NULL}
 #' @param length (list) list of query terms for length, e.g., "< 100"
 #' @param mass (list) list of query terms for mass, e.g., "< 100"
 #' 
