@@ -49,7 +49,7 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE,
   i <- 0
   while (allres < limit) {
     i <- i + 1
-    tt <- GET(vurl(), query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), ...)
+    tt <- GET(vurl(), query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), verbose(),...)
     stop_for_status(tt)
     txt <- content(tt, "text", encoding = "UTF-8")
     out <- jsonlite::fromJSON(txt)
@@ -73,7 +73,7 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE,
 
 make_q <- function(fxn, x, cursor = NULL, limit=1000){
   qry <- ""
-  if (fxn == "vertsearch") x <- paste0(unname(unlist(x)), collapse = " ")
+  if (fxn == "vertsearch") x <- strtrim(paste0(unname(unlist(x)), collapse = " "))
   if (fxn == "spatialsearch") x <- sprintf("distance(location,geopoint(%s,%s))<%s", x$lat, x$long, x$radius)
   # if query param present, remove named param
   if ("query" %in% names(x)) {
@@ -84,27 +84,27 @@ make_q <- function(fxn, x, cursor = NULL, limit=1000){
     if (!is.null(cursor)) {
       ff <- sprintf(
         '{"q":"%s","l":%s,"c":"%s"}', 
-        noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn), 
+        strtrim(noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn)), 
         limit, 
         cursor
       )
     } else {
       ff <- sprintf(
         '{"q":"%s","l":%s}', 
-        paste(
+        strtrim(paste(
           qry,
           noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn)
-        ),
+        )),
         limit
       )
     }
   } else {
     ff <- sprintf(
       '{"q":"%s"}',
-      paste(
+      strtrim(paste(
         qry,
         noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), fxn)
-      )
+      ))
     )
   }
   
