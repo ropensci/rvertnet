@@ -55,8 +55,8 @@ vertsumwrapper <- function(input = NULL, verbose = TRUE){
   if (inherits(input$institutioncode, "NULL") & inherits(input$collectioncode, "NULL")) {
     instcoll <- NA
   } else {
-    instcoll <- as.matrix(paste(input[,'institutioncode'], 
-                                input[,'collectioncode'], sep = " "))
+    instcoll <- as.matrix(paste(input$institutioncode, 
+                                input$collectioncode, sep = " "))
     instcoll <- table(apply(instcoll, 1, removeDups))
   }
   
@@ -75,9 +75,9 @@ vertsumwrapper <- function(input = NULL, verbose = TRUE){
   }
   
   # taxon <- number of records by taxonomic name
-  taxon <- as.matrix(paste(input[,'genus'], input[,'specificepithet'], sep = " "))
+  taxon <- as.matrix(paste(input$genus, input$specificepithet, sep = " "))
   if (!inherits(sw(input$infraspecificepithet), "NULL")) {
-    taxon <- as.matrix(paste(taxon, input[,'infraspecificepithet'], sep = " "))
+    taxon <- as.matrix(paste(taxon, input$infraspecificepithet, sep = " "))
   }
   taxon <- gsub(" NA", "", taxon) # remove unknowns - usually infrasp.ep
   taxon <- table(apply(taxon, 1, removeDups))

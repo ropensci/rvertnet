@@ -11,7 +11,7 @@
 #' types and extent of data returned by a VertNet search.
 #' @examples \dontrun{
 #' # get occurrence records
-#' recs <- vertsearch("Junco hyemalis")
+#' recs <- vertsearch("Junco hyemalis", limit = 10)
 #' 
 #' # summarize occurrence records
 #' vertsummary(recs)
