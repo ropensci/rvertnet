@@ -3,7 +3,7 @@ context("vert_id")
 test_that("vert_id works", {
   skip_on_cran()
   
-  aa <- vert_id(ids = "urn:catalog:CM:Herps:116520", verbose = FALSE)
+  aa <- vert_id(ids = "urn:catalog:CM:Herps:116520", messages = FALSE)
   
   expect_is(aa, "list")
   expect_is(aa$meta, "list")
@@ -20,7 +20,7 @@ test_that("vert_id works", {
   
   ids <- c("http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089",
            "urn:catalog:CM:Herps:116520")
-  aa <- vert_id(ids, verbose = FALSE)
+  aa <- vert_id(ids, messages = FALSE)
   
   expect_is(aa, "list")
   expect_is(aa$meta, "list")

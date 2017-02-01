@@ -47,10 +47,11 @@
 #' @param query (character) full text search term(s). not tied to any specific 
 #' field. This does the same thing as using \code{\link{vertsearch}}, where
 #' this searches for any mention of these terms
-#' @param verbose Print progress and information messages. Default: \code{TRUE}
+#' @param messages Print progress and information messages. 
+#' Default: \code{TRUE}
 #' @param only_dwc (logical) whether or not to return only Darwin Core term
 #' fields. Default: \code{TRUE}
-#' @param ... Curl arguments passed on to \code{\link[httr]{GET}}
+#' @param ... Curl arguments passed on to \code{\link[crul]{HttpClient}}
 #'
 #' @return A data frame of search results
 #' @references 
@@ -88,7 +89,7 @@
 #'   date = "1935-09-01/1935-09-30")
 #'
 #' # Pass in curl options for curl debugging
-#' library("httr")
+#' library(crul)
 #' out <- searchbyterm(class = "aves", limit = 10, config=verbose())
 #' # out <- searchbyterm(class = "aves", limit = 500, config=timeout(1))
 #'
@@ -106,7 +107,7 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL,
   stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
   inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, type = NULL,
   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-  resource = NULL, query = NULL, verbose = TRUE, only_dwc = TRUE, ...) {
+  resource = NULL, query = NULL, messages = TRUE, only_dwc = TRUE, ...) {
 
   args <- rvc(list(specificepithet = specificepithet, genus = genus, 
         family = family, order = order, class = class, eventdate = date,
@@ -120,7 +121,7 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL,
         query = query))
   args <- rvc(c(args, combyr(year)))
   vertwrapper(fxn = "searchbyterm", args = args, lim = limit, 
-              compact = compact, verbose = verbose, only_dwc = only_dwc, ...)
+              compact = compact, messages = messages, only_dwc = only_dwc, ...)
 }
 
 sp_paren <- function(x) {

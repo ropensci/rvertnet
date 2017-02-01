@@ -10,9 +10,11 @@
 #' results you asked for. See also 
 #' \code{\link{bigsearch}} to get larger result sets in a text file via email.
 #' @param compact Return a compact data frame (boolean)
-#' @param verbose Print progress and information messages. Default: TRUE
+#' @param messages Print progress and information messages. Default: TRUE
 #' @param only_dwc (logical) whether or not to return only Darwin Core term
 #' fields. Default: \code{TRUE}
+#' @param callopts curl options in a list pased on to 
+#' \code{\link[crul]{HttpClient}}, see examples
 #' 
 #' @return A data frame of search results
 #' @details \code{\link{vertsearch}} performs a nonspecific search for your 
@@ -22,7 +24,7 @@
 #' \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 #' 
 #' @examples \dontrun{
-#' out <- vertsearch(taxon = "aves", "california", limit=10)
+#' out <- vertsearch(taxon = "aves", "california", limit=3)
 #'
 #' # Limit the number of records returned (under 1000)
 #' out <- vertsearch("(kansas state OR KSU)", limit = 200)
@@ -43,11 +45,16 @@
 #' library("plyr")
 #' out <- ldply(lapply(out, "[[", "data"))
 #' vertmap(out)
+#' 
+#' # curl options
+#' vertsearch(taxon = "Aves", limit = 10, callopts = list(verbose = TRUE))
+#' # vertsearch(taxon = "Aves", limit = 10, callopts = list(timeout_ms = 10))
 #' }
 
 vertsearch <- function(taxon = NULL, ..., limit = 1000, compact = TRUE, 
-                       verbose = TRUE, only_dwc = TRUE) {
+                       messages = TRUE, only_dwc = TRUE, callopts = list()) {
   args <- rvc(list(taxon, ...))
   vertwrapper(fxn = "vertsearch", args = args, lim = limit,
-              compact = compact, verbose = verbose, only_dwc = only_dwc)
+              compact = compact, messages = messages, only_dwc = only_dwc, 
+              callopts = callopts)
 }

@@ -7,7 +7,7 @@
 traitsearch(taxon = NULL, has_mass = FALSE, has_length = FALSE,
   has_sex = FALSE, has_lifestage = FALSE, length_type = NULL,
   length = NULL, mass = NULL, limit = 1000, compact = TRUE,
-  verbose = TRUE, ...)
+  messages = TRUE, callopts = list(), ...)
 }
 \arguments{
 \item{taxon}{(character) Taxonomic identifier or other text to search for}
@@ -41,7 +41,10 @@ results you asked for. See also
 
 \item{compact}{Return a compact data frame (boolean)}
 
-\item{verbose}{Print progress and information messages. Default: TRUE}
+\item{messages}{Print progress and information messages. Default: TRUE}
+
+\item{callopts}{curl options in a list pased on to 
+\code{\link[crul]{HttpClient}}, see examples}
 
 \item{...}{(character) Additional search terms. These must be unnamed}
 }
@@ -71,6 +74,9 @@ res <- traitsearch(has_mass = TRUE, mass = list(">= 20", "<= 500"))
 summary(as.numeric(res$data$massing))
 
 traitsearch(taxon = "aves", has_mass = TRUE, limit = 100)
+
+# curl options
+traitsearch(has_mass = TRUE, limit = 10, callopts = list(verbose = TRUE))
 }
 }
 

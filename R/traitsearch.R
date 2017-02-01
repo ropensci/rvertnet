@@ -39,10 +39,14 @@
 #' summary(as.numeric(res$data$massing))
 #' 
 #' traitsearch(taxon = "aves", has_mass = TRUE, limit = 100)
+#' 
+#' # curl options
+#' traitsearch(has_mass = TRUE, limit = 10, callopts = list(verbose = TRUE))
 #' }
 traitsearch <- function(taxon = NULL, has_mass = FALSE, has_length = FALSE, 
   has_sex = FALSE, has_lifestage = FALSE, length_type = NULL, length = NULL, 
-  mass = NULL, limit = 1000, compact = TRUE, verbose = TRUE, ...) {
+  mass = NULL, limit = 1000, compact = TRUE, messages = TRUE, 
+  callopts = list(), ...) {
   
   assert(has_mass, "logical")
   assert(has_length, "logical")
@@ -63,7 +67,8 @@ traitsearch <- function(taxon = NULL, has_mass = FALSE, has_length = FALSE,
     if (!is.null(length_type)) sprintf("lengthtype:%s", length_type),
     if (!is.null(length)) handle_len_mass("lengthinmm", length),
     if (!is.null(mass)) handle_len_mass("massing", mass),
-    ..., limit = limit, compact = compact, verbose = verbose, only_dwc = FALSE
+    ..., limit = limit, compact = compact, messages = messages, 
+    only_dwc = FALSE, callopts = callopts
   )
 }
 

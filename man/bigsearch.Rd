@@ -11,7 +11,7 @@ bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
   igroup = NULL, inst = NULL, id = NULL, catalognumber = NULL,
   collector = NULL, type = NULL, hastypestatus = NULL, media = NULL,
   rank = NULL, tissue = NULL, resource = NULL, rfile, email,
-  verbose = TRUE, ...)
+  messages = TRUE, ...)
 }
 \arguments{
 \item{specificepithet}{(character) Taxonomic specific epithet, e.g. (sapiens 
@@ -77,33 +77,38 @@ video (logical)}
 \item{resource}{Identifier for the resource/dataset from which the record was
 indexed (character)}
 
-\item{rfile}{A name for the results file that you will download (character). Required.}
+\item{rfile}{A name for the results file that you will download (character). 
+Required.}
 
-\item{email}{An email address where you can be contacted when your records are
-ready for download (character). Required.}
+\item{email}{An email address where you can be contacted when your records 
+are ready for download (character). Required.}
 
-\item{verbose}{Print progress and information messages. Default: \code{TRUE}}
+\item{messages}{Print progress and information messages. 
+Default: \code{TRUE}}
 
-\item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl arguments passed on to \code{\link[crul]{HttpClient}}}
 }
 \value{
 Prints messages on progress, but returns NULL
 }
 \description{
-Specifies a termwise search (like \code{\link{searchbyterm}}) and requests that all available 
-records be made available for download as a tab-delimited text file.
+Specifies a termwise search (like \code{\link{searchbyterm}}) and requests 
+that all available  records be made available for download as a 
+tab-delimited text file.
 }
 \details{
-\code{\link{bigsearch}} allows you to request records as a tab-delimited text file.
-   This is the best way to access a large number of records, such as when your search
-   results indicate that >1000 records are available. You will be notified by email
-   when your records are ready for download.
+\code{\link{bigsearch}} allows you to request records as a 
+tab-delimited text file. This is the best way to access a large number of 
+records, such as when your search results indicate that >1000 records are
+available. You will be notified by email when your records are ready 
+for download.
 }
 \section{Reading data}{
 
-We suggest reading data in with \code{fread()} from the package \pkg{data.table} - as it's
-very fast for the sometimes large datasets you will get from using this function, 
-and is usually robust to formatting issues.
+We suggest reading data in with \code{fread()} from the package 
+\pkg{data.table} - as it's very fast for the sometimes large datasets 
+you will get from using this function, and is usually robust to 
+formatting issues.
 }
 \examples{
 \dontrun{
@@ -111,8 +116,9 @@ and is usually robust to formatting issues.
 bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@search.luv")
 
 # Pass in curl options for curl debugging
-library("httr")
-bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@search.luv", config=verbose())
+library(crul)
+bigsearch(genus = "ochotona", rfile = "pikaRecords", 
+  email = "big@search.luv", config=verbose())
 
 # Use more than one year query
 bigsearch(class = "aves", year = c(">=1976", "<=1986"), 

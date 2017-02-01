@@ -16,10 +16,11 @@ dump_links()
 \arguments{
 \item{path}{(character) Path to a sqlite file on your machine.}
 
-\item{group}{(character) One of mammals, reptiles, amphibians, fishes, or birds}
+\item{group}{(character) One of mammals, reptiles, amphibians, fishes, or 
+birds}
 
-\item{table}{(character) sqlite table name, you can use anything you like, but
-code defaults to the values in the \code{group} parameter}
+\item{table}{(character) sqlite table name, you can use anything you like, 
+but code defaults to the values in the \code{group} parameter}
 
 \item{x}{An object of class \code{src_sqlite}}
 }
@@ -27,11 +28,11 @@ code defaults to the values in the \code{group} parameter}
 Use Vertnet taxon specific dump from KNB
 }
 \details{
-\code{dump_init} creates a \code{src_sqlite} class that you can use to
-query the data either using SQL syntax or dplyr's R syntax. \code{dump_tbl} is
-just a wrapper around \code{\link[dplyr]{tbl}} to create a \code{tbl} class
-object that you can use to feed directly into dplyr's verbs, like
-\code{\link[dplyr]{select}} and \code{\link[dplyr]{filter}}
+\code{dump_init} creates a \code{src_sqlite} class that you can 
+use to query the data either using SQL syntax or dplyr's R syntax. 
+\code{dump_tbl} is just a wrapper around \code{\link[dplyr]{tbl}} to create 
+a \code{tbl} class object that you can use to feed directly into dplyr's 
+verbs, like \code{\link[dplyr]{select}} and \code{\link[dplyr]{filter}}
 }
 \examples{
 \dontrun{

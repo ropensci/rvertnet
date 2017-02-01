@@ -3,7 +3,7 @@ context("vertmap")
 test_that("vertmap works with vertsearch", {
   skip_on_cran()
   
-  out <- vertsearch("mustela nigripes", verbose = FALSE, limit = 50)
+  out <- vertsearch("mustela nigripes", messages = FALSE, limit = 50)
   map1 <- vertmap(input = out, mapdatabase = "state")
   
   expect_is(map1, "gg")
@@ -16,7 +16,7 @@ test_that("vertmap works with vertsearch", {
 test_that("vertmap works for maps not distinguished by color", {
   skip_on_cran()
   
-  out <- vertsearch("mustela nigripes", verbose = FALSE, limit = 50)
+  out <- vertsearch("mustela nigripes", messages = FALSE, limit = 50)
   out$data$scientificname <- NULL
   map1 <- vertmap(input = out, mapdatabase = "state")
   

@@ -5,25 +5,28 @@
 \title{Find records within some distance of a point given latitude and longitude.}
 \usage{
 spatialsearch(lat, long, radius, limit = 1000, compact = TRUE,
-  verbose = TRUE, ...)
+  messages = TRUE, ...)
 }
 \arguments{
-\item{lat}{Latitude of the central point, in decimal degrees (numeric) Required.}
+\item{lat}{Latitude of the central point, in decimal degrees (numeric) 
+Required.}
 
-\item{long}{Longitude of the central point, in decimal degrees (numeric) Required.}
+\item{long}{Longitude of the central point, in decimal degrees (numeric) R
+equired.}
 
-\item{radius}{Radius to search, in meters (numeric). There is no default value for
-this parameter. Required.}
+\item{radius}{Radius to search, in meters (numeric). There is no default 
+value for this parameter. Required.}
 
-\item{limit}{(numeric) Limit on the number of records returned. If >1000 results, we use
-a cursor internally, but you should still get up to the results you asked for. See also 
+\item{limit}{(numeric) Limit on the number of records returned. If >1000 
+results, we use a cursor internally, but you should still get up to the 
+results you asked for. See also 
 \code{\link{bigsearch}} to get larger result sets in a text file via email.}
 
 \item{compact}{Return a compact data frame (logical)}
 
-\item{verbose}{Print progress and information messages. Default: TRUE}
+\item{messages}{Print progress and information messages. Default: TRUE}
 
-\item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl arguments passed on to \code{\link[crul]{HttpClient}}}
 }
 \value{
 A data frame of search results
@@ -33,16 +36,19 @@ Searches by decimal latitude and longitude to return any occurrence record
 within the input distance (radius) of the input point.
 }
 \details{
-\code{\link{spatialsearch}} finds all records of any taxa having decimal lat/long
-   coordinates within a given radius (in meters) of your coordinates.
+\code{\link{spatialsearch}} finds all records of any taxa having 
+decimal lat/long coordinates within a given radius (in meters) of 
+your coordinates.
 }
 \examples{
 \dontrun{
-res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, limit = 10)
+res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, 
+  limit = 10)
 
 # Pass in curl options for curl debugging
-library("httr")
-out <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, limit = 10, config=verbose())
+library(crul)
+out <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, 
+  limit = 10, verbose = TRUE)
 }
 }
 \references{

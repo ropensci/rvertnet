@@ -4,15 +4,12 @@ test_that("searchbyterm works correctly", {
   skip_on_cran()
   
   # Find multiple species
-  a <- searchbyterm(genus = "ochotona", specificepithet = "(princeps OR collaris)", limit = 5, verbose = FALSE)
-  b <- searchbyterm(class = "aves", state = "california", limit = 10, verbose = FALSE)
-  cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, verbose = FALSE)
+  a <- searchbyterm(genus = "ochotona", specificepithet = "(princeps OR collaris)", limit = 5, messages = FALSE)
+  b <- searchbyterm(class = "aves", state = "california", limit = 10, messages = FALSE)
+  cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, messages = FALSE)
   Sys.sleep(3)
-  library("httr")
-  #d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, config = verbose())
-  #d <- searchbyterm(class = "aves", state = "california", year = ">1976", limit = 60, verbose = FALSE)
   
-  expect_equal( NROW( searchbyterm(limit = 1, verbose = FALSE)$data ), 1)
+  expect_equal( NROW( searchbyterm(limit = 1, messages = FALSE)$data ), 1)
   expect_is(a, "list")
   expect_is(a$meta, "list")
   expect_is(a$data, "data.frame")
@@ -36,13 +33,15 @@ test_that("searchbyterm - state param works when using boolean's with > 1 state 
   skip_on_cran()
   
   aa <- searchbyterm(genus = "zapus", specificepithet = "hudsonius",  
-                     stateprovince = "minnesota OR new mexico")
+                     stateprovince = "minnesota OR new mexico", 
+                     messages = FALSE)
   
   expect_is(aa, "list")
   expect_is(aa$data, "data.frame")
   expect_equal(unique(tolower(aa$data$stateprovince)), "new mexico")
   
-  aa <- searchbyterm(genus = "Ursus", stateprovince = "california OR florida", limit = 5)
+  aa <- searchbyterm(genus = "Ursus", stateprovince = "california OR florida", 
+                     limit = 5, messages = FALSE)
   
   expect_is(aa, "list")
   expect_is(aa$data, "data.frame")
@@ -54,7 +53,8 @@ test_that("searchbyterm fails correctly", {
   skip_on_cran()
   
   # server error with inproper date
-  expect_null(searchbyterm(specificepithet = "nigripes", date = "1935-09-abab", verbose = FALSE))
+  expect_null(searchbyterm(specificepithet = "nigripes", date = "1935-09-abab",
+                           messages = FALSE))
 })
 
 ## FIX ME, cursor works when run alone, but not in this test
@@ -69,8 +69,12 @@ test_that("searchbyterm fails correctly", {
 test_that("searchbyterm multi-year param input works", {
   skip_on_cran()
   
-  out <- suppressMessages(searchbyterm(gen = "ochotona", specificepithet = "(princeps OR collaris)", 
-                      year = c(">=1916", "<=1920")))
+  out <- suppressMessages(
+    searchbyterm(gen = "ochotona", 
+                 specificepithet = "(princeps OR collaris)", 
+                 year = c(">=1916", "<=1920"),
+                 messages = FALSE)
+  )
   dates <- as.Date(na.omit(out$data$eventdate))
   asnumdates <- as.numeric(format(dates, "%Y"))
   expect_is(dates, "Date")

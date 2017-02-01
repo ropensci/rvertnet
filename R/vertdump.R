@@ -2,16 +2,17 @@
 #'
 #' @name dump
 #' @param path (character) Path to a sqlite file on your machine.
-#' @param group (character) One of mammals, reptiles, amphibians, fishes, or birds
-#' @param table (character) sqlite table name, you can use anything you like, but
-#' code defaults to the values in the \code{group} parameter
+#' @param group (character) One of mammals, reptiles, amphibians, fishes, or 
+#' birds
+#' @param table (character) sqlite table name, you can use anything you like, 
+#' but code defaults to the values in the \code{group} parameter
 #' @param x An object of class \code{src_sqlite}
 #'
-#' @details \code{dump_init} creates a \code{src_sqlite} class that you can use to
-#' query the data either using SQL syntax or dplyr's R syntax. \code{dump_tbl} is
-#' just a wrapper around \code{\link[dplyr]{tbl}} to create a \code{tbl} class
-#' object that you can use to feed directly into dplyr's verbs, like
-#' \code{\link[dplyr]{select}} and \code{\link[dplyr]{filter}}
+#' @details \code{dump_init} creates a \code{src_sqlite} class that you can 
+#' use to query the data either using SQL syntax or dplyr's R syntax. 
+#' \code{dump_tbl} is just a wrapper around \code{\link[dplyr]{tbl}} to create 
+#' a \code{tbl} class object that you can use to feed directly into dplyr's 
+#' verbs, like \code{\link[dplyr]{select}} and \code{\link[dplyr]{filter}}
 #'
 #' @references
 #' \url{http://blog.vertnet.org/post/115875718156/the-data-one-thing-about-vertnet-and-big-data}
@@ -47,7 +48,8 @@
 #' @rdname dump
 dump_init <- function(path, group = "amphibians", table = NULL) {
   checkfourpkg("RSQLite")
-  group <- match.arg(group, c("mammals", "reptiles", "amphibians", "fishes", "birds"))
+  group <- match.arg(group, c("mammals", "reptiles", "amphibians", 
+                              "fishes", "birds"))
   if (is.null(table)) table <- group
   x <- dplyr::src_sqlite(path = path)
   structure(x, table = table)

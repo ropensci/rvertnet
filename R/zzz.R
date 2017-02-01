@@ -1,14 +1,17 @@
 # Wrapper for search functions vertsearch, searchbyterm, spatialsearch and bigsearch
 
-vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email = NULL,
-                        compact = TRUE, verbose = TRUE, only_dwc = TRUE, ...){
-  mssg(verbose, "Processing request...")
+vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, 
+                        email = NULL, compact = TRUE, messages = TRUE, 
+                        only_dwc = TRUE, callopts = list(), ...) {
+  mssg(messages, "Processing request...")
   if (fxn == "bigsearch") {
-    tt <- GET(vdurl(), query = list(q = make_bigq(args, email, rfile)), ...)
-    stop_for_status(tt)
-    mssg(verbose, "\nThank you! Download instructions will be sent by email.")
+    #tt <- GET(vdurl(), query = list(q = make_bigq(args, email, rfile)), ...)
+    cli <- crul::HttpClient$new(url = vdurl(), opts = callopts)
+    tt <- cli$get('api/download', query = list(q = make_bigq(args, email, rfile)), ...)
+    tt$raise_for_status()
+    mssg(messages, "\nThank you! Download instructions will be sent by email.")
   } else {
-    ress <- vert_GET(fxn, args, lim, verbose, only_dwc, ...)
+    ress <- vert_GET(fxn, args, lim, messages, only_dwc, callopts, ...)
     
     # Remove columns populated fully by NAs
     if (compact) { 
@@ -19,9 +22,9 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL, email =
     # Return results
     if (NROW(ress$data) == 0) {
       NULL
-      mssg(verbose, "No records match this search request")
+      mssg(messages, "No records match this search request")
       if (fxn == "spatialsearch") { 
-        mssg(verbose, "Check signs on decimal longitude and latitude") 
+        mssg(messages, "Check signs on decimal longitude and latitude") 
       }
     } else {
       ress
@@ -33,7 +36,7 @@ mssg <- function(v, ...) if (v) message(...)
 
 get_terms <- function(){
   url <- "https://raw.githubusercontent.com/tdwg/dwc/master/downloads/SimpleDwCTermsList.txt"
-  termlist <- utils::read.table(text = content(GET(url), as = "text", encoding = "UTF-8"), stringsAsFactors = FALSE)
+  termlist <- utils::read.table(text = crul::HttpClient$new(url)$get()$parse("UTF-8"), stringsAsFactors = FALSE)
   # Strip embedded header from termlist and deal with upper vs. lower case in termlist vs. out$recs
   if (grep("term", tolower(termlist[1,1]))) termlist <- as.data.frame(termlist[-1,1], stringsAsFactors = FALSE)
   fullr <- as.data.frame(matrix(NA, 1, length(termlist[,1]))) # Create a full data frame to populate
@@ -41,17 +44,22 @@ get_terms <- function(){
   list(termlist = termlist, fullr = fullr)
 }
 
-vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE, 
-                     only_dwc = TRUE, ...) {
+vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE, 
+                     only_dwc = TRUE, callopts = list(), ...) {
   cursor <- NULL
   allres <- 0
   result <- list()
   i <- 0
+  cli <- crul::HttpClient$new(url = vurl(), opts = callopts)
   while (allres < limit) {
+    # increment iterator
     i <- i + 1
-    tt <- GET(vurl(), query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), ...)
-    stop_for_status(tt)
-    txt <- content(tt, "text", encoding = "UTF-8")
+  
+    # http  
+    tt <- cli$get('api/search', query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), ...)
+    tt$raise_for_status()
+    txt <- tt$parse("UTF-8")
+    
     out <- jsonlite::fromJSON(txt)
     avail <- out$matching_records
     cursor <- out$cursor
@@ -66,8 +74,8 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE,
     df <- merge(res$fullr, df, all = TRUE)[, tolower(res$termlist[,1]) ]
     df <- df[ -NROW(df), ]
   }
-  mssg(verbose, paste("\nLast Query URL: \"", tt$url, "\"", sep = ""))
-  mssg(verbose, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))
+  mssg(messages, paste("\nLast Query URL: \"", tt$url, "\"", sep = ""))
+  mssg(messages, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))
   list(meta = make_meta(out), data = tbl_df(df))
 }
 
@@ -112,8 +120,10 @@ make_q <- function(fxn, x, cursor = NULL, limit=1000){
   gsub("year\\.[0-9]", "year", tmp)
 }
 
-vurl <- function() "http://api.vertnet-portal.appspot.com/api/search"
-vdurl <- function() "http://api.vertnet-portal.appspot.com/api/download"
+vurl <- function() "http://api.vertnet-portal.appspot.com"
+#vurl <- function() "http://api.vertnet-portal.appspot.com/api/search"
+vdurl <- function() "http://api.vertnet-portal.appspot.com"
+# vdurl <- function() "http://api.vertnet-portal.appspot.com/api/download"
 
 make_meta <- function(x){
   tmp <- x[ !names(x) %in% "recs" ]
@@ -174,17 +184,4 @@ assert <- function(x, y) {
            paste0(y, collapse = ", "), call. = FALSE)
     }
   }
-}
-
-assert2 <- function(..., y) {
-  x <- list(...)
-  deparse(substitute(x[[1]]))
-  # if (!is.null(x) || length(x) == 0) {
-  #   if (!class(x) %in% y) {
-  #     for (i in seq_along(x)) {
-  #       stop(deparse(substitute(x[i])), " must be of class ", 
-  #            paste0(y, collapse = ", "), call. = FALSE)
-  #     }
-  #   }
-  # }
 }

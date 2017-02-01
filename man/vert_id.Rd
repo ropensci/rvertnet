@@ -4,7 +4,7 @@
 \alias{vert_id}
 \title{Search by Vertnet occurrence ID}
 \usage{
-vert_id(ids, compact = TRUE, verbose = TRUE, ...)
+vert_id(ids, compact = TRUE, messages = TRUE, ...)
 }
 \arguments{
 \item{ids}{(character) VertNet IDs, one or more. Required.}
@@ -12,9 +12,10 @@ vert_id(ids, compact = TRUE, verbose = TRUE, ...)
 \item{compact}{(logical) Return a compact data frame. That is, remove
 empty columns. Default: \code{TRUE}}
 
-\item{verbose}{(logical) Print progress and information messages. Default: \code{TRUE}}
+\item{messages}{(logical) Print progress and information messages. 
+Default: \code{TRUE}}
 
-\item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl arguments passed on to \code{\link[crul]{HttpClient}}}
 }
 \value{
 A list, with data frame of search results, and list of metadata
@@ -23,12 +24,12 @@ A list, with data frame of search results, and list of metadata
 Search by Vertnet occurrence ID
 }
 \details{
-VertNet IDs can be a variety of things, some URIs (i.e., with http://...), 
-while others start with \code{urn}.
+VertNet IDs can be a variety of things, some URIs 
+(i.e., with http://...), while others start with \code{urn}.
 }
 \examples{
 \dontrun{
-vert_id(ids = "urn:catalog:AUM:Fish:13271")
+vert_id(ids = "urn:catalog:CM:Herps:116520")
 ids <- c("http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089", 
          "urn:catalog:CM:Herps:116520",
          "urn:catalog:AUM:Fish:13271")

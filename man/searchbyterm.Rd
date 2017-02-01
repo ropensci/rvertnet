@@ -11,7 +11,7 @@ searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
   island = NULL, igroup = NULL, inst = NULL, id = NULL,
   catalognumber = NULL, collector = NULL, type = NULL,
   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-  resource = NULL, query = NULL, verbose = TRUE, only_dwc = TRUE, ...)
+  resource = NULL, query = NULL, messages = TRUE, only_dwc = TRUE, ...)
 }
 \arguments{
 \item{specificepithet}{(character) Taxonomic specific epithet, e.g. (sapiens 
@@ -86,12 +86,13 @@ indexed (character)}
 field. This does the same thing as using \code{\link{vertsearch}}, where
 this searches for any mention of these terms}
 
-\item{verbose}{Print progress and information messages. Default: \code{TRUE}}
+\item{messages}{Print progress and information messages. 
+Default: \code{TRUE}}
 
 \item{only_dwc}{(logical) whether or not to return only Darwin Core term
 fields. Default: \code{TRUE}}
 
-\item{...}{Curl arguments passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl arguments passed on to \code{\link[crul]{HttpClient}}}
 }
 \value{
 A data frame of search results
@@ -134,7 +135,7 @@ out <- searchbyterm(specificepithet = "nigripes",
   date = "1935-09-01/1935-09-30")
 
 # Pass in curl options for curl debugging
-library("httr")
+library(crul)
 out <- searchbyterm(class = "aves", limit = 10, config=verbose())
 # out <- searchbyterm(class = "aves", limit = 500, config=timeout(1))
 

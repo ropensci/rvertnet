@@ -5,7 +5,7 @@
 \title{Find records using a global full-text search of VertNet archives.}
 \usage{
 vertsearch(taxon = NULL, ..., limit = 1000, compact = TRUE,
-  verbose = TRUE, only_dwc = TRUE)
+  messages = TRUE, only_dwc = TRUE, callopts = list())
 }
 \arguments{
 \item{taxon}{(character) Taxonomic identifier or other text to search for}
@@ -19,10 +19,13 @@ results you asked for. See also
 
 \item{compact}{Return a compact data frame (boolean)}
 
-\item{verbose}{Print progress and information messages. Default: TRUE}
+\item{messages}{Print progress and information messages. Default: TRUE}
 
 \item{only_dwc}{(logical) whether or not to return only Darwin Core term
 fields. Default: \code{TRUE}}
+
+\item{callopts}{curl options in a list pased on to 
+\code{\link[crul]{HttpClient}}, see examples}
 }
 \value{
 A data frame of search results
@@ -37,7 +40,7 @@ specific search, try \code{\link{searchbyterm}}
 }
 \examples{
 \dontrun{
-out <- vertsearch(taxon = "aves", "california", limit=10)
+out <- vertsearch(taxon = "aves", "california", limit=3)
 
 # Limit the number of records returned (under 1000)
 out <- vertsearch("(kansas state OR KSU)", limit = 200)
@@ -58,6 +61,10 @@ out <- lapply(splist, function(x) vertsearch(taxon = x, lim = 500))
 library("plyr")
 out <- ldply(lapply(out, "[[", "data"))
 vertmap(out)
+
+# curl options
+vertsearch(taxon = "Aves", limit = 10, callopts = list(verbose = TRUE))
+# vertsearch(taxon = "Aves", limit = 10, callopts = list(timeout_ms = 10))
 }
 }
 \references{
