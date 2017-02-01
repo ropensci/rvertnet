@@ -167,3 +167,24 @@ pop <- function(x, nms) {
 
 rvc <- function(x) Filter(Negate(is.null), x)
 
+assert <- function(x, y) {
+  if (!is.null(x)) {
+    if (!class(x) %in% y) {
+      stop(deparse(substitute(x)), " must be of class ", 
+           paste0(y, collapse = ", "), call. = FALSE)
+    }
+  }
+}
+
+assert2 <- function(..., y) {
+  x <- list(...)
+  deparse(substitute(x[[1]]))
+  # if (!is.null(x) || length(x) == 0) {
+  #   if (!class(x) %in% y) {
+  #     for (i in seq_along(x)) {
+  #       stop(deparse(substitute(x[i])), " must be of class ", 
+  #            paste0(y, collapse = ", "), call. = FALSE)
+  #     }
+  #   }
+  # }
+}

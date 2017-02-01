@@ -44,6 +44,16 @@ traitsearch <- function(taxon = NULL, has_mass = FALSE, has_length = FALSE,
   has_sex = FALSE, has_lifestage = FALSE, length_type = NULL, length = NULL, 
   mass = NULL, limit = 1000, compact = TRUE, verbose = TRUE, ...) {
   
+  assert(has_mass, "logical")
+  assert(has_length, "logical")
+  assert(has_sex, "logical")
+  assert(has_lifestage, "logical")
+  assert(length_type, "character")
+  if (!any(c(has_mass, has_length, has_sex, has_lifestage)) && 
+      is.null(rvc(c(length_type, length, mass)))
+  ) {
+    stop("must specify one of the trait parameters", call. = FALSE)
+  }
   vertsearch(
     taxon = taxon,
     if (has_mass) sprintf("hasmass:%s", ab(has_mass)), 
