@@ -49,7 +49,7 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, verbose = TRUE,
   i <- 0
   while (allres < limit) {
     i <- i + 1
-    tt <- GET(vurl(), query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), verbose(),...)
+    tt <- GET(vurl(), query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), ...)
     stop_for_status(tt)
     txt <- content(tt, "text", encoding = "UTF-8")
     out <- jsonlite::fromJSON(txt)
