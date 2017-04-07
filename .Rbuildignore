@@ -12,4 +12,5 @@ vignettes/figure
 appveyor.yml
 ^cran-comments\.md$
 ^revdep$
-
+.github
+^CONDUCT\.md$
