@@ -46,4 +46,3 @@ identical(sort(res$data$occurrenceid), sort(ids))
 \references{
 \url{http://bit.ly/vertnet-wiki}
 }
-

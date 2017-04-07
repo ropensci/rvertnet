@@ -70,4 +70,3 @@ vertsearch(taxon = "Aves", limit = 10, callopts = list(verbose = TRUE))
 \references{
 \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 }
-

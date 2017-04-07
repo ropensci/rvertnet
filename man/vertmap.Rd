@@ -67,4 +67,3 @@ library("ggplot2")
 vertmap(out, geom = geom_jitter, jitter = position_jitter(1, 6))
 }
 }
-

@@ -150,4 +150,3 @@ searchbyterm(query = "bear", limit = 50)
 \references{
 \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 }
-

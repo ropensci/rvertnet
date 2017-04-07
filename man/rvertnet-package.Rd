@@ -2,8 +2,8 @@
 % Please edit documentation in R/rvertnet-package.R
 \docType{package}
 \name{rvertnet-package}
-\alias{rvertnet}
 \alias{rvertnet-package}
+\alias{rvertnet}
 \title{Search VertNet archives using R}
 \description{
 There are a variety of ways to search VertNet
@@ -45,5 +45,5 @@ Find records using a global full-text search of VertNet archives.
 
 \code{vertsearch(taxon = "aves", state = "california")}
 }
-\keyword{package}
 
+\keyword{package}

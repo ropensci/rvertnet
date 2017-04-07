@@ -13,4 +13,3 @@
  \item \code{\link{verttaxa}}: Function is now defunct, i.e., not available anymore.
 }
 }
-

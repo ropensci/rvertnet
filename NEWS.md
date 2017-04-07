@@ -1,3 +1,25 @@
+rvertnet 0.6.0
+===============
+
+### NEW FEATURES
+
+* xxx (#xx)
+* xxx (#xx)
+* xxx (#xx)
+
+## MINOR IMPROVEMENTS
+
+* xxx (#xx)
+* xxx (#xx)
+* xxx (#xx)
+
+## BUG FIXES 
+
+* xxx (#xx)
+* xxx (#xx)
+* xxx (#xx)
+
+
 rvertnet 0.5.0
 ===============
 

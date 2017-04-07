@@ -3,8 +3,8 @@
 \name{dump}
 \alias{dump}
 \alias{dump_init}
-\alias{dump_links}
 \alias{dump_tbl}
+\alias{dump_links}
 \title{Use Vertnet taxon specific dump from KNB}
 \usage{
 dump_init(path, group = "amphibians", table = NULL)
@@ -65,4 +65,3 @@ verbs, like \code{\link[dplyr]{select}} and \code{\link[dplyr]{filter}}
 \references{
 \url{http://blog.vertnet.org/post/115875718156/the-data-one-thing-about-vertnet-and-big-data}
 }
-

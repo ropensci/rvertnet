@@ -110,6 +110,7 @@ We suggest reading data in with \code{fread()} from the package
 you will get from using this function, and is usually robust to 
 formatting issues.
 }
+
 \examples{
 \dontrun{
 # replace "big@search.luv" with your own email address
@@ -128,4 +129,3 @@ bigsearch(class = "aves", year = c(">=1976", "<=1986"),
 \references{
 \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 }
-

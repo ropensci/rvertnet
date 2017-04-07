@@ -54,4 +54,3 @@ out <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000,
 \references{
 \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
 }
-

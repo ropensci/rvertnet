@@ -10,4 +10,3 @@ vertavailablemaps(...)
 This function is defunct.
 }
 \keyword{internal}
-

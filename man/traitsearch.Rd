@@ -79,4 +79,3 @@ traitsearch(taxon = "aves", has_mass = TRUE, limit = 100)
 traitsearch(has_mass = TRUE, limit = 10, callopts = list(verbose = TRUE))
 }
 }
-
