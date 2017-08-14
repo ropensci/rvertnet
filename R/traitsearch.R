@@ -25,9 +25,7 @@
 #' in the \code{data} slot
 #' 
 #' @examples
-#' traitsearch(has_mass = TRUE, limit = 10)
-#' traitsearch(has_length = TRUE, limit = 10)
-#' traitsearch(has_sex = TRUE, limit = 10)
+#' traitsearch(has_mass = TRUE, limit = 3)
 #' 
 #' \dontrun{
 #' traitsearch(has_lifestage = TRUE)
