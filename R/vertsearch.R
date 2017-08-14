@@ -13,7 +13,7 @@
 #' @param messages Print progress and information messages. Default: TRUE
 #' @param only_dwc (logical) whether or not to return only Darwin Core term
 #' fields. Default: \code{TRUE}
-#' @param callopts curl options in a list pased on to 
+#' @param callopts curl options in a list passed on to 
 #' \code{\link[crul]{HttpClient}}, see examples
 #' 
 #' @return A data frame of search results

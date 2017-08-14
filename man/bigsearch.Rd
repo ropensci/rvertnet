@@ -92,7 +92,7 @@ Default: \code{TRUE}}
 Prints messages on progress, but returns NULL
 }
 \description{
-Specifies a termwise search (like \code{\link{searchbyterm}}) and requests 
+Specifies a term-wise search (like \code{\link{searchbyterm}}) and requests 
 that all available  records be made available for download as a 
 tab-delimited text file.
 }

@@ -5,11 +5,11 @@
 #'
 #' @export
 #' @param lat Latitude of the central point, in decimal degrees (numeric) 
-#' Required.
-#' @param long Longitude of the central point, in decimal degrees (numeric) R
-#' equired.
+#' required.
+#' @param long Longitude of the central point, in decimal degrees (numeric) 
+#' required.
 #' @param radius Radius to search, in meters (numeric). There is no default 
-#' value for this parameter. Required.
+#' value for this parameter. required.
 #' @param limit (numeric) Limit on the number of records returned. If >1000 
 #' results, we use a cursor internally, but you should still get up to the 
 #' results you asked for. See also 

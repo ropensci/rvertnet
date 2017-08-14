@@ -9,13 +9,13 @@ spatialsearch(lat, long, radius, limit = 1000, compact = TRUE,
 }
 \arguments{
 \item{lat}{Latitude of the central point, in decimal degrees (numeric) 
-Required.}
+required.}
 
-\item{long}{Longitude of the central point, in decimal degrees (numeric) R
-equired.}
+\item{long}{Longitude of the central point, in decimal degrees (numeric) 
+required.}
 
 \item{radius}{Radius to search, in meters (numeric). There is no default 
-value for this parameter. Required.}
+value for this parameter. required.}
 
 \item{limit}{(numeric) Limit on the number of records returned. If >1000 
 results, we use a cursor internally, but you should still get up to the 

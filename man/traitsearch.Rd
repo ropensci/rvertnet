@@ -43,7 +43,7 @@ results you asked for. See also
 
 \item{messages}{Print progress and information messages. Default: TRUE}
 
-\item{callopts}{curl options in a list pased on to 
+\item{callopts}{curl options in a list passed on to 
 \code{\link[crul]{HttpClient}}, see examples}
 
 \item{...}{(character) Additional search terms. These must be unnamed}

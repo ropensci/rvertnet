@@ -24,7 +24,7 @@ results you asked for. See also
 \item{only_dwc}{(logical) whether or not to return only Darwin Core term
 fields. Default: \code{TRUE}}
 
-\item{callopts}{curl options in a list pased on to 
+\item{callopts}{curl options in a list passed on to 
 \code{\link[crul]{HttpClient}}, see examples}
 }
 \value{
