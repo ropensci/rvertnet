@@ -14,7 +14,7 @@ BugReports: https://github.com/ropensci/rvertnet/issues
 VignetteBuilder: knitr
 Imports:
     jsonlite (>= 1.0),
-    crul (>= 0.2.0),
+    crul (>= 0.3.8),
     dplyr (>= 0.5.0),
     ggplot2,
     maps
