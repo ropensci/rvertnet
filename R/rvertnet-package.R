@@ -33,7 +33,7 @@
 #' \code{vertsearch(taxon = "aves", state = "california")}
 #' 
 #' @importFrom jsonlite fromJSON toJSON
-#' @importFrom dplyr bind_rows tbl_df src_sqlite tbl
+#' @importFrom dplyr bind_rows tbl_df
 #' @importFrom ggplot2 ggplot position_jitter aes geom_polygon 
 #' geom_point labs theme_bw map_data
 #' @import maps

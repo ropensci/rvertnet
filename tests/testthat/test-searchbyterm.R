@@ -6,7 +6,7 @@ test_that("searchbyterm works correctly", {
   # Find multiple species
   a <- searchbyterm(genus = "ochotona", specificepithet = "(princeps OR collaris)", limit = 5, messages = FALSE)
   b <- searchbyterm(class = "aves", state = "california", limit = 10, messages = FALSE)
-  cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, messages = FALSE)
+  ##cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, messages = FALSE)
   Sys.sleep(3)
   
   expect_equal( NROW( searchbyterm(limit = 1, messages = FALSE)$data ), 1)
@@ -14,16 +14,16 @@ test_that("searchbyterm works correctly", {
   expect_is(a$meta, "list")
   expect_is(a$data, "data.frame")
   expect_is(b$data, "data.frame")
-  expect_is(cc, "list")
+  ##expect_is(cc, "list")
   #expect_is(d$meta, "list")
   
   expect_is(a$data$language, "character")
   #expect_match(d$data$class, "Aves")
   
-  expect_equal(NROW(cc$data), 10)
+  expect_equal(NROW(a$data), 5)
   #expect_equal(NROW(d$data), 60)
   
-  expect_equal(unique(as.numeric(cc$data$year)), 1976)
+  expect_match(a$data$specificepithet, "princeps")
   
   #expect_gt(min(as.numeric(d$data$year)), 1976)
 })

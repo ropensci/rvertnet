@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.3.3
-* ubuntu 12.04 (on travis-ci), R 3.3.3
+* local OS X install, R 3.4.1 patched
+* ubuntu 12.04 (on travis-ci), R 3.4.1
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -22,7 +22,8 @@
 
 --------
 
-This release includes xxx.
+This release includes a new function, swaps a dependency, and some minor
+changes and bug fixes.
 
 Sincerely,
 Scott Chamberlain

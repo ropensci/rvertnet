@@ -121,9 +121,7 @@ make_q <- function(fxn, x, cursor = NULL, limit=1000){
 }
 
 vurl <- function() "http://api.vertnet-portal.appspot.com"
-#vurl <- function() "http://api.vertnet-portal.appspot.com/api/search"
 vdurl <- function() "http://api.vertnet-portal.appspot.com"
-# vdurl <- function() "http://api.vertnet-portal.appspot.com/api/download"
 
 make_meta <- function(x){
   tmp <- x[ !names(x) %in% "recs" ]
@@ -161,14 +159,6 @@ combyr <- function(x) {
   } else {
     list(year = x)
   } 
-}
-
-checkfourpkg <- function(x) {
-  if (!requireNamespace(x, quietly = TRUE)) {
-    stop("Please install ", x, call. = FALSE)
-  } else {
-    invisible(TRUE)
-  }
 }
   
 pop <- function(x, nms) {

@@ -107,19 +107,9 @@ based on Darwin Core (dwc) terms (for the full list of terms, see
 }
 \examples{
 \dontrun{
-# Limit the number of records returned to <1000; use bigsearch() for 
-# >1000 records
-(out <- searchbyterm(class = "aves", state = "california", limit = 10))
-
 # Find multiple species
 (out <- searchbyterm(genus = "ochotona", 
   specificepithet = "(princeps OR collaris)", limit=10))
-
-# Specifying a single year (no quotes) or range of years (use quotes)
-(out <- searchbyterm(class = "aves", state = "california", year = 1976, 
-  limit = 10))
-(out <- searchbyterm(class = "aves", state = "california", year = ">=1976", 
-  limit = 10))
 
 # Specifying a range (in meters) for uncertainty in spatial location 
 # (use quotes)
