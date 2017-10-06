@@ -43,8 +43,7 @@ vert_id <- function(ids, compact = TRUE, messages = TRUE, ...) {
   }
   names(df) <- tolower(names(df))
   res <- get_terms()
-  df <- merge(res$fullr, df, all = TRUE)[, tolower(res$termlist[,1]) ]
-  df <- df[ -NROW(df), ]
+  df <- df[ , names(df) %in% res ]
   if (compact) { 
     df <- df[ , !sapply(df, function(x) all(is.na(x))) ]
   }

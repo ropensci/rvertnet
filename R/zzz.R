@@ -38,16 +38,6 @@ get_terms <- function(){
   url <- "https://raw.githubusercontent.com/tdwg/dwc/master/dist/simple_dwc_horizontal.csv"
   res <- crul::HttpClient$new(url)$get()$parse("UTF-8")
   tolower(strsplit(res, split = ",")[[1]])
-  # Strip embedded header from x and deal with upper 
-  #   vs. lower case in x vs. out$recs
-  # if (grep("term", tolower(x[1,1]))) {
-  #   x <- as.data.frame(x[-1,1], stringsAsFactors = FALSE)
-  # }
-  # # Create a full data frame to populate
-  # fullr <- as.data.frame(matrix(NA, 1, length(x[,1]))) 
-  # # Sync case to facilitate merge
-  # colnames(fullr) <- tolower(x[,1]) 
-  # list(termlist = x, fullr = fullr)
 }
 
 vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE, 
@@ -78,8 +68,6 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE,
   if (only_dwc) {
     res <- get_terms()
     df <- df[ , names(df) %in% res ]
-    #df <- merge(res$fullr, df, all = TRUE)[, tolower(res$termlist[,1]) ]
-    #df <- df[ -NROW(df), ]
   }
   mssg(messages, paste("\nLast Query URL: \"", tt$url, "\"", sep = ""))
   mssg(messages, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))
