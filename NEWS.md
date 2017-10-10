@@ -1,3 +1,13 @@
+rvertnet 0.6.2
+===============
+
+### BUG FIXES 
+
+* A small data source used in one function was on the web, and
+was moved - that data source now within the pkg as quite small, and 
+now pkg won't break when the file is moved again (#61) (#62)
+
+
 rvertnet 0.6.0
 ===============
 
@@ -24,7 +34,7 @@ allows to optionally only return Darwin Core fields
 
 ### BUG FIXES 
 
-* Small fix to `vertsummary()` (59)
+* Small fix to `vertsummary()` (#59)
 
 
 rvertnet 0.5.0

@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.4.1 patched
-* ubuntu 12.04 (on travis-ci), R 3.4.1
+* local OS X install, R 3.4.2 patched
+* ubuntu 12.04 (on travis-ci), R 3.4.2
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -22,8 +22,7 @@
 
 --------
 
-This release includes a new function, swaps a dependency, and some minor
-changes and bug fixes.
+This release includes a bug fix for a data source that moved on the web.
 
 Sincerely,
 Scott Chamberlain

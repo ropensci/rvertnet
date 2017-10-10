@@ -34,10 +34,10 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL,
 
 mssg <- function(v, ...) if (v) message(...)
 
-get_terms <- function(){
-  url <- "https://raw.githubusercontent.com/tdwg/dwc/master/dist/simple_dwc_horizontal.csv"
-  res <- crul::HttpClient$new(url)$get()$parse("UTF-8")
-  tolower(strsplit(res, split = ",")[[1]])
+get_terms <- function() {
+  readLines(
+    system.file("extdata", "simple_dwc_terms.txt", package = "rvertnet")
+  )
 }
 
 vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE, 

@@ -26,6 +26,14 @@ Search by Vertnet occurrence ID
 \details{
 VertNet IDs can be a variety of things, some URIs 
 (i.e., with http://...), while others start with \code{urn}.
+
+Internally in this function we filter data to darwin core terms only. To 
+see what terms we use, do 
+\code{readLines(
+system.file("extdata", "simple_dwc_terms.txt", package = "rvertnet"))}. 
+Get in touch with us if these terms need correcting/are out of date. The
+terms are from 
+https://github.com/tdwg/dwc/blob/master/dist/simple_dwc_horizontal.csv
 }
 \examples{
 \dontrun{
@@ -36,8 +44,7 @@ ids <- c("http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089",
 res <- vert_id(ids)
 res$data$occurrenceid
 
-# Lots
-out <- vertsearch(taxon = "aves", state = "california", limit = 20)
+out <- vertsearch(taxon = "aves", state = "california", limit = 5)
 (ids <- out$data$occurrenceid)
 res <- vert_id(ids)
 identical(sort(res$data$occurrenceid), sort(ids))
