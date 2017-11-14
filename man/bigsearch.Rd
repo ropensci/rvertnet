@@ -14,7 +14,7 @@ bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
   messages = TRUE, ...)
 }
 \arguments{
-\item{specificepithet}{(character) Taxonomic specific epithet, e.g. (sapiens 
+\item{specificepithet}{(character) Taxonomic specific epithet, e.g. (sapiens
 in Homo sapiens)}
 
 \item{genus}{(character) Taxonomic genus}
@@ -37,8 +37,8 @@ or the range yyyy-mm-dd/yyyy-mm-dd (character)}
 \item{mappable}{Record includes valid coordinates in decimal latitude and
 decimal longitude (logical)}
 
-\item{error}{Coordinate uncertainty in meters (numeric) or range of 
-uncertainty values designated by comparison operators "<", ">", "<=" 
+\item{error}{Coordinate uncertainty in meters (numeric) or range of
+uncertainty values designated by comparison operators "<", ">", "<="
 or ">=" (character)}
 
 \item{continent}{Continent to search for occurrence (character)}
@@ -57,7 +57,7 @@ or ">=" (character)}
 
 \item{id}{Provider's unique identifier for this occurrence record (character)}
 
-\item{catalognumber}{Provider's catalog number or other ID for this record 
+\item{catalognumber}{Provider's catalog number or other ID for this record
 (character)}
 
 \item{collector}{Collector name (character)}
@@ -67,7 +67,7 @@ or ">=" (character)}
 \item{hastypestatus}{Specimen associated with this record is identified as a
 holotype, paratype, neotype, etc. (character)}
 
-\item{media}{Record also references associated media, such as a film or 
+\item{media}{Record also references associated media, such as a film or
 video (logical)}
 
 \item{rank}{TBD (numeric)}
@@ -77,13 +77,13 @@ video (logical)}
 \item{resource}{Identifier for the resource/dataset from which the record was
 indexed (character)}
 
-\item{rfile}{A name for the results file that you will download (character). 
+\item{rfile}{A name for the results file that you will download (character).
 Required.}
 
-\item{email}{An email address where you can be contacted when your records 
+\item{email}{An email address where you can be contacted when your records
 are ready for download (character). Required.}
 
-\item{messages}{Print progress and information messages. 
+\item{messages}{Print progress and information messages.
 Default: \code{TRUE}}
 
 \item{...}{Curl arguments passed on to \code{\link[crul]{HttpClient}}}
@@ -92,22 +92,22 @@ Default: \code{TRUE}}
 Prints messages on progress, but returns NULL
 }
 \description{
-Specifies a term-wise search (like \code{\link{searchbyterm}}) and requests 
-that all available  records be made available for download as a 
+Specifies a term-wise search (like \code{\link{searchbyterm}}) and requests
+that all available  records be made available for download as a
 tab-delimited text file.
 }
 \details{
-\code{\link{bigsearch}} allows you to request records as a 
-tab-delimited text file. This is the best way to access a large number of 
+\code{\link{bigsearch}} allows you to request records as a
+tab-delimited text file. This is the best way to access a large number of
 records, such as when your search results indicate that >1000 records are
-available. You will be notified by email when your records are ready 
+available. You will be notified by email when your records are ready
 for download.
 }
 \section{Reading data}{
 
-We suggest reading data in with \code{fread()} from the package 
-\pkg{data.table} - as it's very fast for the sometimes large datasets 
-you will get from using this function, and is usually robust to 
+We suggest reading data in with \code{fread()} from the package
+\pkg{data.table} - as it's very fast for the sometimes large datasets
+you will get from using this function, and is usually robust to
 formatting issues.
 }
 
@@ -117,12 +117,11 @@ formatting issues.
 bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@search.luv")
 
 # Pass in curl options for curl debugging
-library(crul)
-bigsearch(genus = "ochotona", rfile = "pikaRecords", 
-  email = "big@search.luv", config=verbose())
+bigsearch(genus = "ochotona", rfile = "pikaRecords",
+  email = "big@search.luv", verbose = TRUE)
 
 # Use more than one year query
-bigsearch(class = "aves", year = c(">=1976", "<=1986"), 
+bigsearch(class = "aves", year = c(">=1976", "<=1986"),
           rfile = "test-bigsearch1", email = "big@search.luv")
 }
 }

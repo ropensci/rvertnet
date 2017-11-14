@@ -8,18 +8,18 @@ spatialsearch(lat, long, radius, limit = 1000, compact = TRUE,
   messages = TRUE, ...)
 }
 \arguments{
-\item{lat}{Latitude of the central point, in decimal degrees (numeric) 
+\item{lat}{Latitude of the central point, in decimal degrees (numeric)
 required.}
 
-\item{long}{Longitude of the central point, in decimal degrees (numeric) 
+\item{long}{Longitude of the central point, in decimal degrees (numeric)
 required.}
 
-\item{radius}{Radius to search, in meters (numeric). There is no default 
+\item{radius}{Radius to search, in meters (numeric). There is no default
 value for this parameter. required.}
 
-\item{limit}{(numeric) Limit on the number of records returned. If >1000 
-results, we use a cursor internally, but you should still get up to the 
-results you asked for. See also 
+\item{limit}{(numeric) Limit on the number of records returned. If >1000
+results, we use a cursor internally, but you should still get up to the
+results you asked for. See also
 \code{\link{bigsearch}} to get larger result sets in a text file via email.}
 
 \item{compact}{Return a compact data frame (logical)}
@@ -36,18 +36,17 @@ Searches by decimal latitude and longitude to return any occurrence record
 within the input distance (radius) of the input point.
 }
 \details{
-\code{\link{spatialsearch}} finds all records of any taxa having 
-decimal lat/long coordinates within a given radius (in meters) of 
+\code{\link{spatialsearch}} finds all records of any taxa having
+decimal lat/long coordinates within a given radius (in meters) of
 your coordinates.
 }
 \examples{
 \dontrun{
-res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, 
+res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000,
   limit = 10)
 
 # Pass in curl options for curl debugging
-library(crul)
-out <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000, 
+out <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000,
   limit = 10, verbose = TRUE)
 }
 }
