@@ -14,3 +14,4 @@ appveyor.yml
 ^revdep$
 .github
 ^CONDUCT\.md$
+^codemeta\.json$
