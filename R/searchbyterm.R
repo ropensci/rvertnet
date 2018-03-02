@@ -62,8 +62,8 @@
 #'
 #' @examples \dontrun{
 #' # Find multiple species
-#' (out <- searchbyterm(genus = "ochotona",
-#'   specificepithet = "(princeps OR collaris)", limit=10))
+#' out <- searchbyterm(genus = "ochotona",
+#'   specificepithet = "(princeps OR collaris)", limit=10)
 #'
 #' # Specifying a range (in meters) for uncertainty in spatial location
 #' # (use quotes)
