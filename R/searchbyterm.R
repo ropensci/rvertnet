@@ -14,9 +14,15 @@
 #' results you asked for. See also  \code{\link{bigsearch}} to get larger
 #' result sets in a text file via email.
 #' @param compact Return a compact data frame (logical)
-#' @param year Year (numeric) or range of years designated by comparison
+#' @param year (numeric) Year or range of years designated by comparison
 #'  operators "<", ">", "<=" or ">=". You can pass in more than one of these
-#'  queries, in a vector. See example below. (character)
+#'  queries, in a vector. See example below
+#' @param month (numeric) month or range of months designated by comparison
+#'  operators "<", ">", "<=" or ">=". You can pass in more than one of these
+#'  queries, in a vector. See example below
+#' @param day (numeric) day or range of days designated by comparison
+#'  operators "<", ">", "<=" or ">=". You can pass in more than one of these
+#'  queries, in a vector. See example below
 #' @param date Event date associated with this occurrence record; yyyy-mm-dd
 #'  or the range yyyy-mm-dd/yyyy-mm-dd (character)
 #' @param mappable Record includes valid coordinates in decimal latitude and
@@ -84,7 +90,8 @@
 #' # out <- searchbyterm(class = "aves", limit = 500, timeout_ms = 100)
 #'
 #' # Use more than one year query
-#' searchbyterm(class = "aves", year = c(">=1976", "<=1986"))
+#' searchbyterm(cgenus = "mustela", specificepithet = "nigripes", 
+#'    year = c('>=1900', '<=1940'))
 #'
 #' # full text search - note the URL message
 #' searchbyterm(query = "Mustela nigripes", limit = 50)
@@ -93,7 +100,8 @@
 
 searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL,
   order = NULL, class = NULL, limit = 1000, compact = TRUE, year = NULL,
-  date = NULL, mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
+  month = NULL, day = NULL, date = NULL, mappable = NULL, error = NULL, 
+  continent = NULL, cntry = NULL,
   stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
   inst = NULL, id = NULL, catalognumber = NULL, collector = NULL, type = NULL,
   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
@@ -110,7 +118,8 @@ searchbyterm <- function(specificepithet = NULL, genus = NULL, family = NULL,
         recordedby = collector, type = type, hastypestatus = hastypestatus,
         media = ab(media), rank = rank, tissue = ab(tissue), resource = resource,
         query = query))
-  args <- rvc(c(args, combyr(year)))
+  args <- rvc(c(args, comb_var(year, "year"), comb_var(month, "month"), 
+    comb_var(day, "day")))
   vertwrapper(fxn = "searchbyterm", args = args, lim = limit,
               compact = compact, messages = messages, only_dwc = only_dwc,
               callopts = callopts)

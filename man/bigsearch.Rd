@@ -27,9 +27,9 @@ in Homo sapiens)}
 
 \item{compact}{Return a compact data frame (logical)}
 
-\item{year}{Year (numeric) or range of years designated by comparison
+\item{year}{(numeric) Year or range of years designated by comparison
 operators "<", ">", "<=" or ">=". You can pass in more than one of these
-queries, in a vector. See example below. (character)}
+queries, in a vector. See example below}
 
 \item{date}{Event date associated with this occurrence record; yyyy-mm-dd
 or the range yyyy-mm-dd/yyyy-mm-dd (character)}

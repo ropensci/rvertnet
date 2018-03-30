@@ -6,9 +6,9 @@
 \usage{
 searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
   order = NULL, class = NULL, limit = 1000, compact = TRUE,
-  year = NULL, date = NULL, mappable = NULL, error = NULL,
-  continent = NULL, cntry = NULL, stateprovince = NULL, county = NULL,
-  island = NULL, igroup = NULL, inst = NULL, id = NULL,
+  year = NULL, month = NULL, day = NULL, date = NULL, mappable = NULL,
+  error = NULL, continent = NULL, cntry = NULL, stateprovince = NULL,
+  county = NULL, island = NULL, igroup = NULL, inst = NULL, id = NULL,
   catalognumber = NULL, collector = NULL, type = NULL,
   hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
   resource = NULL, query = NULL, messages = TRUE, only_dwc = TRUE,
@@ -33,9 +33,17 @@ result sets in a text file via email.}
 
 \item{compact}{Return a compact data frame (logical)}
 
-\item{year}{Year (numeric) or range of years designated by comparison
+\item{year}{(numeric) Year or range of years designated by comparison
 operators "<", ">", "<=" or ">=". You can pass in more than one of these
-queries, in a vector. See example below. (character)}
+queries, in a vector. See example below}
+
+\item{month}{(numeric) month or range of months designated by comparison
+operators "<", ">", "<=" or ">=". You can pass in more than one of these
+queries, in a vector. See example below}
+
+\item{day}{(numeric) day or range of days designated by comparison
+operators "<", ">", "<=" or ">=". You can pass in more than one of these
+queries, in a vector. See example below}
 
 \item{date}{Event date associated with this occurrence record; yyyy-mm-dd
 or the range yyyy-mm-dd/yyyy-mm-dd (character)}
@@ -131,7 +139,8 @@ out <- searchbyterm(class = "aves", limit = 10, verbose = TRUE)
 # out <- searchbyterm(class = "aves", limit = 500, timeout_ms = 100)
 
 # Use more than one year query
-searchbyterm(class = "aves", year = c(">=1976", "<=1986"))
+searchbyterm(cgenus = "mustela", specificepithet = "nigripes", 
+   year = c('>=1900', '<=1940'))
 
 # full text search - note the URL message
 searchbyterm(query = "Mustela nigripes", limit = 50)

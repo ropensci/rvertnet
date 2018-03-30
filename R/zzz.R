@@ -111,7 +111,9 @@ make_q <- function(fxn, x, cursor = NULL, limit=1000){
   }
 
   tmp <- gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", ff)))
-  gsub("year\\.[0-9]", "year", tmp)
+  tmp <- gsub("year\\.[0-9]", "year", tmp)
+  tmp <- gsub("month\\.[0-9]", "month", tmp)
+  gsub("day\\.[0-9]", "day", tmp)
 }
 
 vurl <- function() "http://api.vertnet-portal.appspot.com"
@@ -144,14 +146,16 @@ noc <- function(x, fxn){
 make_bigq <- function(x, email, rfile){
   ff <- sprintf('{"q":"%s","n":"%s","e":"%s"}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), ""), rfile, email)
   tmp <- gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", ff)))
-  gsub("year\\.[0-9]", "year", tmp)
+  tmp <- gsub("year\\.[0-9]", "year", tmp)
+  tmp <- gsub("month\\.[0-9]", "month", tmp)
+  gsub("day\\.[0-9]", "day", tmp)
 }
 
-combyr <- function(x) {
+comb_var <- function(x, var) {
   if (!is.null(x) && length(x) > 1) {
-    stats::setNames(as.list(x), rep("year", length(x)))
+    stats::setNames(as.list(x), rep(var, length(x)))
   } else {
-    list(year = x)
+    stats::setNames(list(x), var)
   }
 }
 
