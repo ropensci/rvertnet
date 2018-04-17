@@ -42,7 +42,7 @@ Search for _Aves_ in the state of _California_, limit to 10 records
 
 
 ```r
-res <- searchbyterm(class = "Aves", state = "California", lim = 10, verbose = FALSE)
+res <- searchbyterm(class = "Aves", state = "California", lim = 10, messages = FALSE)
 ```
 
 Inspect metadata
@@ -51,31 +51,31 @@ Inspect metadata
 ```r
 res$meta
 #> $request_date
-#> [1] "2017-08-14T21:55:09.833740"
-#>
+#> [1] "2018-04-17T06:11:10.584520"
+#> 
 #> $response_records
 #> [1] 10
-#>
+#> 
 #> $submitted_query
 #> [1] "class:Aves stateprovince:California"
-#>
+#> 
 #> $request_origin
 #> [1] "45.523452,-122.676207"
-#>
+#> 
 #> $limit
 #> [1] 10
-#>
+#> 
 #> $last_cursor
-#> [1] "False:Cu8GCsoECpwE9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cipKJ0J2WjZvSjI-anJaSmpGM0JeLi4_Sno2ci5CM0puei56dnoya0pKKjJqKktKYipab0pyKkonSnZaNm9LLy87JydKMmpab0s3Mz8zMxsj_AAD_c3-cipKJ0J2WjZvSjI-anJaSmpGM0JeLi4_Sno2ci5CM0puei56dnoya0pKKjJqKktKYipab0pyKkonSnZaNm9LLy87JydKMmpab0s3Mz8zMxsj_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyKkonQnZaNm9KMj5qclpKakYzQl4uLj9KejZyLkIzSm56Lnp2ejJrSkoqMmoqS0piKlpvSnIqSidKdlo2b0svLzsnJ0oyalpvSzczPzMzGyP8Ac3-cipKJ0J2WjZvSjI-anJaSmpGM0JeLi4_Sno2ci5CM0puei56dnoya0pKKjJqKktKYipab0pyKkonSnZaNm9LLy87JydKMmpab0s3Mz8zMxsj_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJ4h5N-19FzJ8QAmDc4-iNBRINRG9jdW1lbnRJbmRleBruAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKE9SIChRVCAiQXZlcyIgInJ0ZXh0X2NsYXNzIikgKElTICJyYXRvbV9jbGFzcyIgImF2ZXMiKSkgKFFUICJDYWxpZm9ybmlhIiAicnRleHRfc3RhdGVwcm92aW5jZSIpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH"
-#>
+#> [1] "False:Cq8FCooDCtwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD_c3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyejNCQjZHQio2R0pyei56TkJjSnJ6M0pCNkdLOz8_Ozv8Ac3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJdSRwg5uy6lIQAmDOz46YAhINRG9jdW1lbnRJbmRleBruAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKE9SIChRVCAiQXZlcyIgInJ0ZXh0X2NsYXNzIikgKElTICJyYXRvbV9jbGFzcyIgImF2ZXMiKSkgKFFUICJDYWxpZm9ybmlhIiAicnRleHRfc3RhdGVwcm92aW5jZSIpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH"
+#> 
 #> $query_version
 #> [1] "search.py 2016-08-15T16:43+02:00"
-#>
+#> 
 #> $matching_records
 #> [1] ">10000"
-#>
+#> 
 #> $api_version
-#> [1] "api.py 2017-01-12T20:08-03:00"
+#> [1] "api.py 2017-11-24T12:16-03:00"
 ```
 
 Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data summary:
@@ -84,52 +84,48 @@ Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data s
 ```r
 res$data[,1:5]
 #> # A tibble: 10 x 5
-#>                 modified language license
-#>                    <chr>    <chr>   <chr>
-#>  1            2015-01-06       en    CCBY
-#>  2            2015-01-06       en    CCBY
-#>  3            2015-01-06       en    CCBY
-#>  4 2015-08-26 13:10:07.0       en     CC0
-#>  5 2015-08-26 13:10:07.0       en     CC0
-#>  6 2015-08-26 13:10:07.0       en     CC0
-#>  7 2015-08-26 13:10:07.0       en     CC0
-#>  8 2016-05-18 09:27:29.0       en     CC0
-#>  9 2016-05-18 09:27:29.0       en     CC0
-#> 10 2016-05-18 09:27:29.0       en     CC0
-#> # ... with 2 more variables: accessrights <chr>,
-#> #   bibliographiccitation <chr>
+#>    higherclassification stateprovince basisofrecord month decimallongitude
+#>    <chr>                <chr>         <chr>         <chr> <chr>           
+#>  1 Animalia | Chordata… California    PreservedSpe… 2     -121.7833       
+#>  2 Animalia | Chordata… California    PreservedSpe… 6     -122.15         
+#>  3 Animalia | Chordata… California    PreservedSpe… 5     -120.9014       
+#>  4 Animalia; Chordata;… California    PreservedSpe… 1     -121.93300      
+#>  5 Animalia; Chordata;… California    PreservedSpe… 1     -121.93300      
+#>  6 Animalia; Chordata;… California    PreservedSpe… 7     -121.85760      
+#>  7 Animalia; Chordata;… California    PreservedSpe… 7     -121.85760      
+#>  8 Animalia; Chordata;… California    PreservedSpe… 7     -121.85760      
+#>  9 Animalia; Chordata;… California    PreservedSpe… 7     -121.85760      
+#> 10 Animalia; Chordata;… California    PreservedSpe… 6     -121.85760
 ```
 
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
 
 
 ```r
-res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose = FALSE)
+res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, messages = FALSE)
 res$data[,1:5]
 #> # A tibble: 19 x 5
-#>                 modified language license
-#>                    <chr>    <chr>   <chr>
-#>  1 2010-01-14 13:06:23.0       en   CC-BY
-#>  2 2011-11-17 12:02:57.0       en     CC0
-#>  3            2013-08-07       en    <NA>
-#>  4 2015-11-23 09:17:09.0       en     CC0
-#>  5 2016-02-01 17:40:23.0       en     CC0
-#>  6 2016-04-12 00:24:00.0       en     CC0
-#>  7            2016-11-15       en     CC0
-#>  8                  <NA>     <NA>     CC0
-#>  9                  <NA>     <NA>     CC0
-#> 10                  <NA>     <NA>     CC0
-#> 11                  <NA>     <NA>     CC0
-#> 12                  <NA>     <NA>     CC0
-#> 13                  <NA>     <NA>     CC0
-#> 14                  <NA>     <NA>     CC0
-#> 15                  <NA>     <NA>     CC0
-#> 16                  <NA>     <NA>     CC0
-#> 17                  <NA>     <NA>     CC0
-#> 18                  <NA>     <NA>     CC0
-#> 19                  <NA>     <NA>     CC0
-#> # ... with 2 more variables: accessrights <chr>,
-#> #   bibliographiccitation <chr>
+#>    month decimallongitude startdayofyear accessrights              kingdom
+#>    <chr> <chr>            <chr>          <chr>                     <chr>  
+#>  1 12    -100.8276541162  336            http://vertnet.org/resou… Animal…
+#>  2 03    -100.9827        64             http://vertnet.org/resou… Animal…
+#>  3 1     -100.759483      1              http://www.vertnet.org/r… Animal…
+#>  4 3     -100.7373        67             http://biodiversity.ku.e… Animal…
+#>  5 11    <NA>             305            http://vertnet.org/resou… Animal…
+#>  6 10    <NA>             282            <NA>                      Animal…
+#>  7 8     <NA>             234            <NA>                      Animal…
+#>  8 12    <NA>             342            <NA>                      Animal…
+#>  9 12    <NA>             358            http://www.vertnet.org/r… Animal…
+#> 10 1     <NA>             1              http://vertnet.org/resou… Animal…
+#> 11 11    <NA>             313            <NA>                      Animal…
+#> 12 9     <NA>             272            <NA>                      Animal…
+#> 13 12    <NA>             335            <NA>                      Animal…
+#> 14 9     <NA>             259            <NA>                      Animal…
+#> 15 10    <NA>             297            <NA>                      Animal…
+#> 16 12    <NA>             339            <NA>                      Animal…
+#> 17 11    <NA>             305            <NA>                      Animal…
+#> 18 11    <NA>             315            <NA>                      Animal…
+#> 19 <NA>  <NA>             <NA>           <NA>                      Animal…
 ```
 
 ### dplyr downstream
@@ -144,20 +140,20 @@ out$data %>%
   group_by(scientificname) %>%
   summarise(count = length(scientificname)) %>%
   arrange(desc(count))
-#> # A tibble: 28 x 2
-#>                               scientificname count
-#>                                        <chr> <int>
-#>  1                         Ochotona princeps   284
-#>  2               Ochotona princeps saxatilis   202
-#>  3                          Ochotona pallasi   132
-#>  4                   Ochotona princeps muiri    43
-#>  5                       Ochotona hyperborea    39
-#>  6                         Ochotona dauurica    21
-#>  7 Ochotona (Pika) princeps Richardson, 1828    20
-#>  8                Ochotona princeps figginsi    13
-#>  9              Ochotona princeps nevadensis     8
-#> 10                           Ochotona alpina     4
-#> # ... with 18 more rows
+#> # A tibble: 23 x 2
+#>    scientificname                            count
+#>    <chr>                                     <int>
+#>  1 Ochotona princeps                           428
+#>  2 Ochotona pallasi                            129
+#>  3 Ochotona princeps saxatilis                 103
+#>  4 Ochotona hyperborea                          30
+#>  5 Ochotona dauurica                            21
+#>  6 Ochotona (Pika) princeps Richardson, 1828    20
+#>  7 Ochotona collaris                            15
+#>  8 Ochotona princeps figginsi                   14
+#>  9 Ochotona princeps schisticeps                 6
+#> 10 Ochotona princeps taylori                     5
+#> # ... with 13 more rows
 ```
 
 
@@ -181,22 +177,21 @@ bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 
 
 ```r
-res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
+res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, messages = FALSE)
 res$data[,1:5]
 #> # A tibble: 10 x 5
-#>                 modified language                            accessrights
-#>                    <chr>    <chr>                                   <chr>
-#>  1 2014-09-09 14:04:14.0       en http://vertnet.org/resources/norms.html
-#>  2 2015-08-03 19:48:08.0       en http://vertnet.org/resources/norms.html
-#>  3 2015-08-03 19:48:08.0       en http://vertnet.org/resources/norms.html
-#>  4 2015-08-03 19:48:08.0       en http://vertnet.org/resources/norms.html
-#>  5 2015-08-03 19:48:08.0       en http://vertnet.org/resources/norms.html
-#>  6 2015-08-03 19:48:08.0       en http://vertnet.org/resources/norms.html
-#>  7 2015-08-03 19:48:08.0       en http://vertnet.org/resources/norms.html
-#>  8 2015-08-03 19:48:08.0       en http://vertnet.org/resources/norms.html
-#>  9 2015-08-03 19:48:08.0       en http://vertnet.org/resources/norms.html
-#> 10 2015-08-03 19:48:08.0       en http://vertnet.org/resources/norms.html
-#> # ... with 2 more variables: bibliographiccitation <chr>, references <chr>
+#>    month decimallongitude startdayofyear minimumelevation… accessrights   
+#>    <chr> <chr>            <chr>          <chr>             <chr>          
+#>  1 07    -105.68633       193            2182.368          http://vertnet…
+#>  2 07    -105.705479      196            2023.872          http://vertnet…
+#>  3 07    -105.705479      196            2023.872          http://vertnet…
+#>  4 07    -105.705479      196            2023.872          http://vertnet…
+#>  5 07    -105.705479      196            2023.872          http://vertnet…
+#>  6 07    -105.705479      196            2023.872          http://vertnet…
+#>  7 07    -105.705479      196            2023.872          http://vertnet…
+#>  8 07    -105.705479      196            2023.872          http://vertnet…
+#>  9 07    -105.705479      196            2023.872          http://vertnet…
+#> 10 07    -105.705479      196            2023.872          http://vertnet…
 ```
 
 ## Contributors

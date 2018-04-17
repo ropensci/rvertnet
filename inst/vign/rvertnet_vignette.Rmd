@@ -42,7 +42,7 @@ library('rvertnet')
 Search for _Aves_ in the state of _California_, limit to 10 records
 
 ```{r}
-res <- searchbyterm(class = "Aves", state = "California", limit = 10, verbose = FALSE)
+res <- searchbyterm(class = "Aves", state = "California", limit = 10, messages = FALSE)
 ```
 
 All major functions (`searchbyterm()`, `spatialsearch()`, `vertsearch()`) give back a `meta` (for metadata, in a list) and `data` (for data, in a data.frame) slot. The metadata:
@@ -60,14 +60,14 @@ res$data
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
 
 ```{r}
-res <- searchbyterm(specificepithet = "nigripes", genus = "Mustela", state = "(wyoming OR south dakota)", limit = 20, verbose = FALSE)
+res <- searchbyterm(specificepithet = "nigripes", genus = "Mustela", state = "(wyoming OR south dakota)", limit = 20, messages = FALSE)
 res$data
 ```
 
 Search for class _Aves_, in the state of _Nevada_, with a coordinate uncertainty range (in meters) of less than 25 meters
 
 ```{r}
-res <- searchbyterm(class = "Aves", stateprovince = "Nevada", error = "<25", verbose = FALSE)
+res <- searchbyterm(class = "Aves", stateprovince = "Nevada", error = "<25", messages = FALSE)
 res$data
 ```
 
@@ -76,7 +76,7 @@ res$data
 Spatial search service allows only to search on a point defined by latitude and longitude pair, with a radius (meters) from that point. All three parameters are required. 
 
 ```{r}
-res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
+res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, messages = FALSE)
 res$data
 ```
 
@@ -124,8 +124,8 @@ bigsearch(genus = "ochotona", rfile = "mydata", email = "you@gmail.com")
 
 ## Messages
 
-In the previous examples, we've suppressed messages for more concise output, but you can set `verbose=TRUE` to get helpful messages - `verbose=TRUE` is also the default setting so if you don't specify that parameter messages will be printed to the console. 
+In the previous examples, we've suppressed messages for more concise output, but you can set `messages=TRUE` to get helpful messages - `messages=TRUE` is also the default setting so if you don't specify that parameter messages will be printed to the console. 
 
 ```{r}
-res <- searchbyterm(class = "Aves", state = "California", limit = 10, verbose = TRUE)
+res <- searchbyterm(class = "Aves", state = "California", limit = 10, messages = TRUE)
 ```

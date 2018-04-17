@@ -45,7 +45,7 @@ library('rvertnet')
 Search for _Aves_ in the state of _California_, limit to 10 records
 
 ```{r}
-res <- searchbyterm(class = "Aves", state = "California", lim = 10, verbose = FALSE)
+res <- searchbyterm(class = "Aves", state = "California", lim = 10, messages = FALSE)
 ```
 
 Inspect metadata
@@ -63,7 +63,7 @@ res$data[,1:5]
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
 
 ```{r}
-res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, verbose = FALSE)
+res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, messages = FALSE)
 res$data[,1:5]
 ```
 
@@ -99,7 +99,7 @@ bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 ## Spatial search
 
 ```{r}
-res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, verbose = FALSE)
+res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, messages = FALSE)
 res$data[,1:5]
 ```
 
