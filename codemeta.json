@@ -127,7 +127,7 @@
   "contIntegration": "https://travis-ci.org/ropensci/rvertnet",
   "releaseNotes": "https://github.com/ropensci/rvertnet/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rvertnet/blob/master/README.md",
-  "fileSize": "158.151KB",
+  "fileSize": "158.741KB",
   "contributor": [
     {
       "@type": "Person",
