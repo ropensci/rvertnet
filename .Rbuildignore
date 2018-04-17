@@ -13,7 +13,7 @@ appveyor.yml
 ^cran-comments\.md$
 ^revdep$
 .github
-^CONDUCT\.md$
+^CODE_OF_CONDUCT\.md$
 ^codemeta\.json$
 revdep/checks.noindex
 revdep/data.sqlite
