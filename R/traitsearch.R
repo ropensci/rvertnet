@@ -24,10 +24,8 @@
 #' @return a list, same as returned by \code{\link{vertsearch}}, with data
 #' in the \code{data} slot
 #'
-#' @examples
+#' @examples \dontrun{
 #' traitsearch(has_mass = TRUE, limit = 3)
-#'
-#' \dontrun{
 #' traitsearch(has_lifestage = TRUE)
 #' traitsearch(has_mass = TRUE, has_length = TRUE)
 #' res <- traitsearch(length_type = "total length",

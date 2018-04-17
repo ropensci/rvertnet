@@ -60,9 +60,8 @@ Wraps \code{\link{vertsearch}}, with some of the same parameters,
 but with additional parameters added to make querying for traits easy.
 }
 \examples{
-traitsearch(has_mass = TRUE, limit = 3)
-
 \dontrun{
+traitsearch(has_mass = TRUE, limit = 3)
 traitsearch(has_lifestage = TRUE)
 traitsearch(has_mass = TRUE, has_length = TRUE)
 res <- traitsearch(length_type = "total length",
