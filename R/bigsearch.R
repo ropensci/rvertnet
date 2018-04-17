@@ -57,7 +57,7 @@ bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL,
          recordedby = collector, type = type, hastypestatus = hastypestatus,
          media = ab(media), rank = rank, tissue = ab(tissue),
          resource = resource))
-  args <- rvc(c(args, combyr(year)))
+  args <- rvc(c(args, comb_var(year, "year")))
   if (length(args) == 0) {
     stop("You must use at least one parameter to specify your query",
          call. = FALSE)
