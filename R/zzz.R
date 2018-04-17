@@ -51,7 +51,8 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE,
     i <- i + 1
 
     # http
-    tt <- cli$get('api/search', query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), ...)
+    tt <- cli$get('api/search', 
+      query = list(q = make_q(fxn, args, cursor, getlim(limit, allres))), ...)
     tt$raise_for_status()
     txt <- tt$parse("UTF-8")
 
@@ -62,7 +63,11 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE,
     allres <- sum(vapply(result, NROW, 1))
     if (char2num(avail) <= allres) allres <- limit
   }
-  df <- if (sum(sapply(result, NROW)) == 0) data.frame(NULL, stringsAsFactors = FALSE) else bind_rows(result)
+  df <- if (sum(sapply(result, NROW)) == 0) {
+    data.frame(NULL, stringsAsFactors = FALSE)
+  } else {
+    bind_rows(result)
+  }
   names(df) <- tolower(names(df))
   if (only_dwc) {
     res <- get_terms()
@@ -144,7 +149,9 @@ noc <- function(x, fxn){
 }
 
 make_bigq <- function(x, email, rfile){
-  ff <- sprintf('{"q":"%s","n":"%s","e":"%s"}', noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), ""), rfile, email)
+  ff <- sprintf('{"q":"%s","n":"%s","e":"%s"}', 
+    noc(gsub('\"|\\{|\\}', "", jsonlite::toJSON(x, auto_unbox = TRUE)), ""), 
+    rfile, email)
   tmp <- gsub(":>", ">", gsub(":<", "<", gsub(":=", "=", ff)))
   tmp <- gsub("year\\.[0-9]", "year", tmp)
   tmp <- gsub("month\\.[0-9]", "month", tmp)

@@ -5,8 +5,14 @@ Description: Retrieve, map and summarize data from the 'VertNet.org' archives.
     places, and dates. In addition, there is an interface for conducting spatially
     delimited searches, and another for requesting large 'datasets' via email.
 Version: 0.7.0
-Author: Scott Chamberlain [aut, cre], Chris Ray [aut], Vijay Barve [aut]
-Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
+Authors@R: c(
+    person("Scott", "Chamberlain",
+        role = c("aut", "cre"),
+        email = "myrmecocystus@gmail.com",
+        comment = "http://orcid.org/0000-0003-1444-9135"),
+    person("Chris", "Ray", role = "ctb"),
+    person("Vijay", "Barve", role = "ctb")
+    )
 License: MIT + file LICENSE
 LazyData: true
 URL: https://github.com/ropensci/rvertnet
@@ -22,3 +28,6 @@ Suggests:
     testthat,
     knitr
 RoxygenNote: 6.0.1
+X-schema.org-applicationCategory: Data Access
+X-schema.org-keywords: species, occurrences, biodiversity, maps, vertnet, mammals, mammalia, specimens
+X-schema.org-isPartOf: "https://ropensci.org"
