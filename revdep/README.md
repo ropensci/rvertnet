@@ -1,34 +1,27 @@
-# Setup
+# Platform
 
-## Platform
-
-|setting  |value                                       |
+|field    |value                                       |
 |:--------|:-------------------------------------------|
-|version  |R version 3.4.1 Patched (2017-07-04 r72893) |
+|version  |R version 3.4.4 Patched (2018-03-19 r74426) |
+|os       |macOS High Sierra 10.13.4                   |
 |system   |x86_64, darwin15.6.0                        |
-|ui       |RStudio (1.1.331)                           |
+|ui       |X11                                         |
 |language |(EN)                                        |
 |collate  |en_US.UTF-8                                 |
-|tz       |America/Vancouver                           |
-|date     |2017-08-14                                  |
+|tz       |US/Pacific                                  |
+|date     |2018-04-16                                  |
 
-## Packages
+# Dependencies
 
-|package  |*  |version |date       |source                       |
-|:--------|:--|:-------|:----------|:----------------------------|
-|rvertnet |   |0.6.0   |2017-08-14 |local (ropensci/rvertnet@NA) |
+|package  |old   |new   |Δ  |
+|:--------|:-----|:-----|:--|
+|rvertnet |0.6.2 |0.7.0 |*  |
 
-# Check results
+# Revdeps
 
-1 packages
+## All (1)
 
-|package |version | errors| warnings| notes|
-|:-------|:-------|------:|--------:|-----:|
-|spocc   |0.7.0   |      0|        0|     0|
-
-## spocc (0.7.0)
-Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>  
-Bug reports: https://github.com/ropensci/spocc/issues
-
-0 errors | 0 warnings | 0 notes
+|package |version |error |warning |note |
+|:-------|:-------|:-----|:-------|:----|
+|spocc   |0.7.0   |      |        |     |
 

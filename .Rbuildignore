@@ -15,3 +15,6 @@ appveyor.yml
 .github
 ^CONDUCT\.md$
 ^codemeta\.json$
+revdep/checks.noindex
+revdep/data.sqlite
+revdep/library.noindex
