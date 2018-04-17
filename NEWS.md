@@ -1,3 +1,11 @@
+rvertnet 0.7.0
+===============
+
+### BUG FIXES 
+
+* add month and day params to `searchbyterm` (#64)
+
+
 rvertnet 0.6.2
 ===============
 

@@ -4,7 +4,7 @@ Description: Retrieve, map and summarize data from the 'VertNet.org' archives.
     Functions allow searching by many parameters, including 'taxonomic' names,
     places, and dates. In addition, there is an interface for conducting spatially
     delimited searches, and another for requesting large 'datasets' via email.
-Version: 0.6.3.9112
+Version: 0.7.0
 Author: Scott Chamberlain [aut, cre], Chris Ray [aut], Vijay Barve [aut]
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 License: MIT + file LICENSE
@@ -13,13 +13,12 @@ URL: https://github.com/ropensci/rvertnet
 BugReports: https://github.com/ropensci/rvertnet/issues
 VignetteBuilder: knitr
 Imports:
-    jsonlite (>= 1.0),
-    crul (>= 0.3.8),
+    jsonlite (>= 1.5),
+    crul (>= 0.5.2),
     dplyr (>= 0.5.0),
     ggplot2,
     maps
 Suggests:
-    roxygen2 (>= 6.0.1),
     testthat,
     knitr
 RoxygenNote: 6.0.1
