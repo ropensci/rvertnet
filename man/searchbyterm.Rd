@@ -134,9 +134,8 @@ out <- searchbyterm(specificepithet = "nigripes",
   date = "1935-09-01/1935-09-30")
 
 # Pass in curl options for curl debugging
-library(crul)
-out <- searchbyterm(class = "aves", limit = 10, verbose = TRUE)
-# out <- searchbyterm(class = "aves", limit = 500, timeout_ms = 100)
+out <- searchbyterm(class = "aves", limit = 10, 
+ callopts = list(verbose = TRUE))
 
 # Use more than one year query
 searchbyterm(cgenus = "mustela", specificepithet = "nigripes", 
