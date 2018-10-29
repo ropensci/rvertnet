@@ -9,8 +9,7 @@ test_that("vertmap works with vertsearch", {
   expect_is(map1, "gg")
   expect_is(map1$data, "data.frame")
   expect_equal(map1$labels$colour, "scientificname")
-  expect_equal(as.character(map1$mapping$x), "long")
-  expect_is(map1$mapping$x, "name")
+  expect_is(map1$mapping$x, "quosure")
 })
 
 test_that("vertmap works for maps not distinguished by color", {
@@ -23,8 +22,7 @@ test_that("vertmap works for maps not distinguished by color", {
   expect_is(map1, "gg")
   expect_is(map1$data, "data.frame")
   expect_null(map1$labels$colour) # the difference here
-  expect_equal(as.character(map1$mapping$x), "long")
-  expect_is(map1$mapping$x, "name")
+  expect_is(map1$mapping$x, "quosure")
 })
 
 test_that("vertmap fails well", {
