@@ -30,7 +30,11 @@ Default: \code{TRUE}}
 \item{...}{Curl arguments passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \value{
-A data frame of search results
+A list with two slots:
+\itemize{
+\item meta: a named list of metadata for the search results
+\item data: a data frame of search results, columns vary
+}
 }
 \description{
 Searches by decimal latitude and longitude to return any occurrence record

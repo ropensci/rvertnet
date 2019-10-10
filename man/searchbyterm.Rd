@@ -29,7 +29,11 @@ fields. Default: \code{TRUE}}
 \item{callopts}{(named list) Curl arguments passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
-A data frame of search results
+A list with two slots:
+\itemize{
+\item meta: a named list of metadata for the search results
+\item data: a data frame of search results, columns vary
+}
 }
 \description{
 Flexible search for records using keywords/terms
