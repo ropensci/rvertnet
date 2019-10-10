@@ -4,104 +4,29 @@
 \alias{searchbyterm}
 \title{Search by term}
 \usage{
-searchbyterm(specificepithet = NULL, genus = NULL, family = NULL,
-  order = NULL, class = NULL, limit = 1000, compact = TRUE,
-  year = NULL, month = NULL, day = NULL, date = NULL, mappable = NULL,
-  error = NULL, continent = NULL, cntry = NULL, stateprovince = NULL,
-  county = NULL, island = NULL, igroup = NULL, inst = NULL, id = NULL,
-  catalognumber = NULL, collector = NULL, type = NULL,
-  hastypestatus = NULL, media = NULL, rank = NULL, tissue = NULL,
-  resource = NULL, query = NULL, messages = TRUE, only_dwc = TRUE,
-  callopts = list())
+searchbyterm(..., limit = 1000, compact = TRUE, messages = TRUE,
+  only_dwc = TRUE, callopts = list())
 }
 \arguments{
-\item{specificepithet}{(character) Taxonomic specific epithet, e.g. (sapiens
-in Homo sapiens)}
-
-\item{genus}{(character) Taxonomic genus}
-
-\item{family}{(character) Taxonomic family}
-
-\item{order}{(character) Taxonomic order}
-
-\item{class}{(character) Taxonomic class}
+\item{...}{arguments, must be named, see section \code{Parameters} for details.
+Multiple inputs to a single parameter are supported, but you have to
+construct that string yourself with \code{AND} or \code{OR} operators; see
+examples below.}
 
 \item{limit}{(numeric) Limit on the number of records returned. If >1000
 results, we use a cursor internally, but you should still get up to the
-results you asked for. See also  \code{\link{bigsearch}} to get larger
+results you asked for. See also \code{\link[=bigsearch]{bigsearch()}} to get larger
 result sets in a text file via email.}
 
-\item{compact}{Return a compact data frame (logical)}
+\item{compact}{(logical) Return a compact data frame}
 
-\item{year}{(numeric) Year or range of years designated by comparison
-operators "<", ">", "<=" or ">=". You can pass in more than one of these
-queries, in a vector. See example below}
-
-\item{month}{(numeric) month or range of months designated by comparison
-operators "<", ">", "<=" or ">=". You can pass in more than one of these
-queries, in a vector. See example below}
-
-\item{day}{(numeric) day or range of days designated by comparison
-operators "<", ">", "<=" or ">=". You can pass in more than one of these
-queries, in a vector. See example below}
-
-\item{date}{Event date associated with this occurrence record; yyyy-mm-dd
-or the range yyyy-mm-dd/yyyy-mm-dd (character)}
-
-\item{mappable}{Record includes valid coordinates in decimal latitude and
-decimal longitude (logical)}
-
-\item{error}{Coordinate uncertainty in meters (numeric) or range of
-uncertainty values designated by comparison operators "<", ">", "<="
-or ">=" (character)}
-
-\item{continent}{Continent to search for occurrence (character)}
-
-\item{cntry}{Country to search for occurrence (character)}
-
-\item{stateprovince}{State or province to search for occurrence (character)}
-
-\item{county}{County to search for occurrence (character)}
-
-\item{island}{Island to search for occurrence (character)}
-
-\item{igroup}{Island group to search for occurrence (character)}
-
-\item{inst}{Code name for the provider/institution of record (character)}
-
-\item{id}{Provider's unique identifier for this occurrence record (character)}
-
-\item{catalognumber}{Provider's catalog number or other ID for this record
-(character)}
-
-\item{collector}{Collector name (character)}
-
-\item{type}{Type of record; "specimen" or "observation" (character)}
-
-\item{hastypestatus}{Specimen associated with this record is identified as a
-holotype, paratype, neotype, etc. (character)}
-
-\item{media}{Record also references associated media, such as a film or
-video (logical)}
-
-\item{rank}{TBD (numeric)}
-
-\item{tissue}{Record is likely to reference tissues (logical)}
-
-\item{resource}{Identifier for the resource/dataset from which the record was
-indexed (character)}
-
-\item{query}{(character) full text search term(s). not tied to any specific
-field. This does the same thing as using \code{\link{vertsearch}}, where
-this searches for any mention of these terms}
-
-\item{messages}{Print progress and information messages.
+\item{messages}{(logical) Print progress and information messages.
 Default: \code{TRUE}}
 
 \item{only_dwc}{(logical) whether or not to return only Darwin Core term
 fields. Default: \code{TRUE}}
 
-\item{callopts}{Curl arguments passed on to \code{\link[crul]{HttpClient}}}
+\item{callopts}{(named list) Curl arguments passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
 A data frame of search results
@@ -110,42 +35,211 @@ A data frame of search results
 Flexible search for records using keywords/terms
 }
 \details{
-\code{\link{searchbyterm}} builds a query from input parameters
+\code{searchbyterm()} builds a query from input parameters
 based on Darwin Core (dwc) terms (for the full list of terms, see
-\url{https://code.google.com/p/darwincore/wiki/DarwinCoreTerms}).
+https://code.google.com/p/darwincore/wiki/DarwinCoreTerms).
 }
+\section{Parameters}{
+
+
+All these parameters can be passed in to \code{searchbyterm()}. All others
+will be silently dropped.
+
+See https://github.com/VertNet/webapp/wiki/The-API-search-function
+for more details
+
+\strong{taxon}
+\itemize{
+\item kingdom (character) Taxonomic kingdom
+\item phylum (character) Taxonomic phylum
+\item class (character) Taxonomic class
+\item order (character) Taxonomic order
+\item family (character) Taxonomic family
+\item genus (character) Taxonomic genus
+\item specificepithet (character) Taxonomic specific epithet, e.g. (sapiens
+in Homo sapiens)
+\item infraspecificepithet (character) Taxonomic infraspecific epithet
+\item scientificname (character) scientific name
+\item vernacularname (character) a verncular name
+}
+
+\strong{event}
+\itemize{
+\item year (numeric) Year or range of years designated by comparison
+operators "<", ">", "<=" or ">=". You can pass in more than one of these
+queries, in a vector. See example below
+\item month (numeric) month or range of months designated by comparison
+operators "<", ">", "<=" or ">=". You can pass in more than one of these
+queries, in a vector. See example below
+\item day (numeric) day or range of days designated by comparison
+operators "<", ">", "<=" or ">=". You can pass in more than one of these
+queries, in a vector. See example below
+\item date Event date associated with this occurrence record; yyyy-mm-dd
+or the range yyyy-mm-dd/yyyy-mm-dd (character)
+}
+
+\strong{record level}
+\itemize{
+\item institutioncode (character) Code name for the provider/institution
+of record
+\item occurrenceid (character) Provider's unique identifier for this
+occurrence record
+\item catalognumber (character) Provider's catalog number or other ID for
+this record
+\item collectioncode (character) collection code
+\item license (dcterms:license) license string
+\item iptlicense (eml:intellectualRights) license string
+\item basisofrecord (character) one of PreservedSpecimen, FossilSpecimen,
+MaterialSample, Occurrence, MachineObservation, HumanObservation
+\item hasmedia (logical) Record also references associated media, such as a
+film or video
+\item isfossil (logical) \code{dwc:basisOfRecord} is FossilSpecimen or collection
+is a paleo collection
+\item haslicense (logical) \code{dcterms:license} or \code{eml:intellectualRights} has a
+license designated
+}
+
+\strong{identification}
+\itemize{
+\item typestatus (character) a type status
+\item hastypestatus (logical) type status known or not
+}
+
+\strong{occurrence}
+\itemize{
+\item iptrecordid (character) (same as \code{dwc:occurrenceID})
+\item recordedby (character) Collector name
+\item recordnumber (character) record number
+\item fieldnumber (character) field number
+\item establishmentmeans (character) establishment means
+\item wascaptive (logical) (\code{dwc:establishmentMeans} or occurrenceRemarks suggests
+it was captive)
+\item wasinvasive (logical) (was the organism recorded to be invasive where
+and when it occurred)
+\item sex (character) standardized sex from original sex field or extracted
+from elsewhere in the record
+\item lifestage (character) lifeStage from original sex field or extracted
+from elsewhere in the record
+\item preparations (not sure what this means)
+\item hastissue (logical) Record is likely to reference tissues
+\item reproductivecondition (not sure what this means)
+}
+
+\strong{location}
+\itemize{
+\item continent (character) Continent to search for occurrence
+\item country (character) Country to search for occurrence
+\item stateprovince (character) State or province to search for occurrence
+\item county (character) County to search for occurrence
+\item island (character) Island to search for occurrence
+\item igroup (character) Island group to search for occurrence
+\item municipality (character)
+\item waterbody (character)
+\item geodeticdatum (character)
+\item georeferencedby (character)
+\item georeferenceverificationstatus (character)
+\item location a Google GeoField of the \code{dwc:decimalLatitude},
+\code{dwc:decimalLongitude}
+\item mappable (logical) Record includes valid coordinates in decimal latitude
+and decimal longitude
+}
+
+\strong{geological context}
+\itemize{
+\item bed (character) geological bed
+\item formation (character) geological formation
+\item group (character) geological group
+\item member (character) geological member
+}
+
+\strong{traits}
+\itemize{
+\item haslength (logical) (was a value for length extracted?)
+\item hasmass (logical) (was a value for mass extraccted?)
+\item hassex (logical) (does the record have sex?)
+\item haslifestage (logical) (does the record have life stage?)
+\item lengthtype (character) type of length measurement extracted from the
+record, can refer to a number or to a range) ('total length',
+'standard length', 'snout-vent length','head-body length', 'fork length',
+'total length range', 'standard length range', 'snout-vent length range',
+'head-body length range', 'fork length range'
+\item lengthinmm (numeric) length measurement extracted from the record
+\item massing (numeric) mass measurement extracted from the record (For
+detailed information about trait extraction and aggregation and querying
+via the VertNet portal, see http://vertnet.org/resources/traitsguide.html
+}
+
+\strong{data set}
+\itemize{
+\item gbifdatasetid (character) GBIF identifier for the data set
+\item gbifpublisherid (character) GBIF identifier for the data publishing
+organization
+\item lastindexed (character) date (YYYY-MM-DD) the record was most recently
+indexed into VertNet
+\item networks (character) one of MaNIS, ORNIS, HerpNET, FishNet, VertNet,
+Arctos, Paleo
+\item migrator (character) the version of the migrator used to process the
+data set, a date of form (YYYY-MM-DD)
+\item orgcountry (character) the country where the organization is located
+\item orgstateprovince (character) the first-level administrative unit where
+the organization is located
+}
+
+\strong{index}
+\itemize{
+\item rank (character) a higher number means the record is more complete
+with respect to georeferences, scientific names, and event dates
+\item vntype (character) Type of record; "specimen" or "observation"
+\item hashid (integer) a value to distribute records in 10k bins; 0-9998
+}
+
+\strong{other}
+\itemize{
+\item coordinateuncertaintyinmeters (character) Coordinate uncertainty
+in meters (numeric) or range of uncertainty values designated by
+comparison operators "<", ">", "<=", or ">="
+}
+}
+
 \examples{
 \dontrun{
 # Find multiple species
 out <- searchbyterm(genus = "ochotona",
   specificepithet = "(princeps OR collaris)", limit=10)
 
+# iptrecordid
+searchbyterm(iptrecordid = "7108667e-1483-4d04-b204-6a44a73a5219")
+
+# you can pass more than one, as above, in a single string in parens
+records <- "(7108667e-1483-4d04-b204-6a44a73a5219 OR 1efe900e-bde2-45e7-9747-2b2c3e5f36c3)"
+searchbyterm(iptrecordid = records, callopts = list(verbose = TRUE))
+
 # Specifying a range (in meters) for uncertainty in spatial location
 # (use quotes)
-out <- searchbyterm(class = "aves", state = "nevada", error = "<25")
-out <- searchbyterm(class = "aves", state = "california", year = 1976,
-  error = "<=1000")
+out <- searchbyterm(class = "aves", stateprovince = "nevada", 
+  coordinateuncertaintyinmeters = "<25")
+out <- searchbyterm(class = "aves", stateprovince = "california", year = 1976,
+  coordinateuncertaintyinmeters = "<=1000")
 
 # Specifying records by event date (use quotes)
-out <- searchbyterm(class = "aves", state = "california",
-  date = "2009-03-25")
+out <- searchbyterm(class = "aves", stateprovince = "california",
+  eventdate = "2009-03-25")
 # ...but specifying a date range may not work
 out <- searchbyterm(specificepithet = "nigripes",
-  date = "1935-09-01/1935-09-30")
+  eventdate = "1935-09-01/1935-09-30")
 
 # Pass in curl options for curl debugging
-out <- searchbyterm(class = "aves", limit = 10, 
+out <- searchbyterm(class = "aves", limit = 10,
  callopts = list(verbose = TRUE))
 
 # Use more than one year query
-searchbyterm(cgenus = "mustela", specificepithet = "nigripes", 
+searchbyterm(genus = "mustela", specificepithet = "nigripes",
    year = c('>=1900', '<=1940'))
 
-# full text search - note the URL message
-searchbyterm(query = "Mustela nigripes", limit = 50)
-searchbyterm(query = "bear", limit = 50)
+searchbyterm(sex  = "male", limit = 30)$data$sex
+searchbyterm(lifestage  = "juvenile", limit = 30)$data$lifestage
 }
 }
 \references{
-\url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
+https://github.com/VertNet/webapp/wiki/The-API-search-function
 }

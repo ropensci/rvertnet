@@ -5,12 +5,14 @@
 #' tab-delimited text file.
 #'
 #' @export
-#' @inheritParams searchbyterm
+#' @param ... arguments, must be named, see [searchbyterm()] for details
 #' @param rfile A name for the results file that you will download (character).
 #' Required.
 #' @param email An email address where you can be contacted when your records
 #' are ready for download (character). Required.
-#' @param ... Curl arguments passed on to \code{\link[crul]{HttpClient}}
+#' @param messages (logical) Print progress and information messages.
+#' Default: `TRUE`
+#' @param callopts (named list) Curl arguments passed on to [crul::verb-GET]
 #' @details \code{\link{bigsearch}} allows you to request records as a
 #' tab-delimited text file. This is the best way to access a large number of
 #' records, such as when your search results indicate that >1000 records are
@@ -18,17 +20,17 @@
 #' for download.
 #'
 #' @section Reading data:
-#' We suggest reading data in with \code{fread()} from the package
-#' \pkg{data.table} - as it's very fast for the sometimes large datasets
+#' We suggest reading data in with `data.table::fread()` - as it's very
+#' fast for the sometimes large datasets
 #' you will get from using this function, and is usually robust to
 #' formatting issues.
 #'
 #' @return Prints messages on progress, but returns NULL
 #' @references
-#' \url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
+#' https://github.com/VertNet/webapp/wiki/The-API-search-function
 #' @examples \dontrun{
 #' # replace "big@@search.luv" with your own email address
-#' bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
+#' bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
 #'
 #' # Pass in curl options for curl debugging
 #' bigsearch(genus = "ochotona", rfile = "pikaRecords",
@@ -38,30 +40,13 @@
 #' bigsearch(class = "aves", year = c(">=1976", "<=1986"),
 #'           rfile = "test-bigsearch1", email = "big@@search.luv")
 #' }
-bigsearch <- function(specificepithet = NULL, genus = NULL, family = NULL,
-  order = NULL, class = NULL, compact = FALSE, year = NULL, date = NULL,
-  mappable = NULL, error = NULL, continent = NULL, cntry = NULL,
-  stateprovince = NULL, county = NULL, island = NULL, igroup = NULL,
-  inst = NULL, id = NULL, catalognumber = NULL, collector = NULL,
-  type = NULL, hastypestatus = NULL, media = NULL, rank = NULL,
-  tissue = NULL, resource = NULL, rfile, email, messages = TRUE, ...) {
-
-  args <- rvc(
-    list(specificepithet = specificepithet, genus = genus,
-         family = family, order = order, class = class, eventdate = date,
-         mappable = ab(mappable), coordinateuncertaintyinmeters = error,
-         continent = continent, country = cntry, stateprovince = stateprovince,
-         county = county, island = island, islandgroup = igroup,
-         institutioncode = inst, occurrenceid = id,
-         catalognumber = catalognumber,
-         recordedby = collector, type = type, hastypestatus = hastypestatus,
-         media = ab(media), rank = rank, tissue = ab(tissue),
-         resource = resource))
-  args <- rvc(c(args, comb_var(year, "year")))
+bigsearch <- function(..., rfile, email, messages = TRUE, callopts = list()) {
+  args <- process_args(list(...))
   if (length(args) == 0) {
     stop("You must use at least one parameter to specify your query",
          call. = FALSE)
   }
   vertwrapper(fxn = "bigsearch", args = args, lim = NULL, rfile = rfile,
-              email = email, compact = FALSE, messages = messages, ...)
+              email = email, compact = FALSE, messages = messages,
+              callopts = callopts)
 }

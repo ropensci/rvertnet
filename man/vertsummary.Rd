@@ -7,7 +7,7 @@
 vertsummary(input, verbose = TRUE)
 }
 \arguments{
-\item{input}{Output from \code{\link{vertsearch}}, 
+\item{input}{Output from \code{\link{vertsearch}},
 \code{\link{searchbyterm}}, or \code{\link{spatialsearch}}. Required.}
 
 \item{verbose}{Print progress and information messages. Default: TRUE}
@@ -19,7 +19,7 @@ A list of summary statistics
 Creates a simple summary of data returned by a VertNet search.
 }
 \details{
-\code{\link{vertsummary}} provides information on the sources, 
+\code{\link{vertsummary}} provides information on the sources,
 types and extent of data returned by a VertNet search.
 }
 \examples{

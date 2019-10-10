@@ -12,7 +12,7 @@ vert_id(ids, compact = TRUE, messages = TRUE, ...)
 \item{compact}{(logical) Return a compact data frame. That is, remove
 empty columns. Default: \code{TRUE}}
 
-\item{messages}{(logical) Print progress and information messages. 
+\item{messages}{(logical) Print progress and information messages.
 Default: \code{TRUE}}
 
 \item{...}{Curl arguments passed on to \code{\link[crul]{HttpClient}}}
@@ -24,15 +24,15 @@ A list, with data frame of search results, and list of metadata
 Search by Vertnet occurrence ID
 }
 \details{
-VertNet IDs can be a variety of things, some URIs 
+VertNet IDs can be a variety of things, some URIs
 (i.e., with http://...), while others start with \code{urn}.
 
-Internally in this function we filter data to darwin core terms only. To 
-see what terms we use, do 
+Internally in this function we filter data to darwin core terms only. To
+see what terms we use, do
 \code{readLines(
-system.file("extdata", "simple_dwc_terms.txt", package = "rvertnet"))}. 
+system.file("extdata", "simple_dwc_terms.txt", package = "rvertnet"))}.
 Get in touch with us if these terms need correcting/are out of date. The
-terms are from 
+terms are from
 https://github.com/tdwg/dwc/blob/master/dist/simple_dwc_horizontal.csv
 }
 \examples{

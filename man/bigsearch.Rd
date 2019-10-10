@@ -4,78 +4,10 @@
 \alias{bigsearch}
 \title{Request to download a large number of VertNet records.}
 \usage{
-bigsearch(specificepithet = NULL, genus = NULL, family = NULL,
-  order = NULL, class = NULL, compact = FALSE, year = NULL,
-  date = NULL, mappable = NULL, error = NULL, continent = NULL,
-  cntry = NULL, stateprovince = NULL, county = NULL, island = NULL,
-  igroup = NULL, inst = NULL, id = NULL, catalognumber = NULL,
-  collector = NULL, type = NULL, hastypestatus = NULL, media = NULL,
-  rank = NULL, tissue = NULL, resource = NULL, rfile, email,
-  messages = TRUE, ...)
+bigsearch(..., rfile, email, messages = TRUE, callopts = list())
 }
 \arguments{
-\item{specificepithet}{(character) Taxonomic specific epithet, e.g. (sapiens
-in Homo sapiens)}
-
-\item{genus}{(character) Taxonomic genus}
-
-\item{family}{(character) Taxonomic family}
-
-\item{order}{(character) Taxonomic order}
-
-\item{class}{(character) Taxonomic class}
-
-\item{compact}{Return a compact data frame (logical)}
-
-\item{year}{(numeric) Year or range of years designated by comparison
-operators "<", ">", "<=" or ">=". You can pass in more than one of these
-queries, in a vector. See example below}
-
-\item{date}{Event date associated with this occurrence record; yyyy-mm-dd
-or the range yyyy-mm-dd/yyyy-mm-dd (character)}
-
-\item{mappable}{Record includes valid coordinates in decimal latitude and
-decimal longitude (logical)}
-
-\item{error}{Coordinate uncertainty in meters (numeric) or range of
-uncertainty values designated by comparison operators "<", ">", "<="
-or ">=" (character)}
-
-\item{continent}{Continent to search for occurrence (character)}
-
-\item{cntry}{Country to search for occurrence (character)}
-
-\item{stateprovince}{State or province to search for occurrence (character)}
-
-\item{county}{County to search for occurrence (character)}
-
-\item{island}{Island to search for occurrence (character)}
-
-\item{igroup}{Island group to search for occurrence (character)}
-
-\item{inst}{Code name for the provider/institution of record (character)}
-
-\item{id}{Provider's unique identifier for this occurrence record (character)}
-
-\item{catalognumber}{Provider's catalog number or other ID for this record
-(character)}
-
-\item{collector}{Collector name (character)}
-
-\item{type}{Type of record; "specimen" or "observation" (character)}
-
-\item{hastypestatus}{Specimen associated with this record is identified as a
-holotype, paratype, neotype, etc. (character)}
-
-\item{media}{Record also references associated media, such as a film or
-video (logical)}
-
-\item{rank}{TBD (numeric)}
-
-\item{tissue}{Record is likely to reference tissues (logical)}
-
-\item{resource}{Identifier for the resource/dataset from which the record was
-indexed (character)}
+\item{...}{arguments, must be named, see \code{\link[=searchbyterm]{searchbyterm()}} for details}
 
 \item{rfile}{A name for the results file that you will download (character).
 Required.}
@@ -83,10 +15,10 @@ Required.}
 \item{email}{An email address where you can be contacted when your records
 are ready for download (character). Required.}
 
-\item{messages}{Print progress and information messages.
+\item{messages}{(logical) Print progress and information messages.
 Default: \code{TRUE}}
 
-\item{...}{Curl arguments passed on to \code{\link[crul]{HttpClient}}}
+\item{callopts}{(named list) Curl arguments passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
 Prints messages on progress, but returns NULL
@@ -105,8 +37,8 @@ for download.
 }
 \section{Reading data}{
 
-We suggest reading data in with \code{fread()} from the package
-\pkg{data.table} - as it's very fast for the sometimes large datasets
+We suggest reading data in with \code{data.table::fread()} - as it's very
+fast for the sometimes large datasets
 you will get from using this function, and is usually robust to
 formatting issues.
 }
@@ -114,7 +46,7 @@ formatting issues.
 \examples{
 \dontrun{
 # replace "big@search.luv" with your own email address
-bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@search.luv")
+bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@search.luv")
 
 # Pass in curl options for curl debugging
 bigsearch(genus = "ochotona", rfile = "pikaRecords",
@@ -126,5 +58,5 @@ bigsearch(class = "aves", year = c(">=1976", "<=1986"),
 }
 }
 \references{
-\url{https://github.com/VertNet/webapp/wiki/The-API-search-function}
+https://github.com/VertNet/webapp/wiki/The-API-search-function
 }

@@ -1,6 +1,8 @@
 rvertnet
 =======
 
+
+
 [![cran checks](https://cranchecks.info/badges/worst/rvertnet)](https://cranchecks.info/pkgs/rvertnet)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Build Status](https://travis-ci.org/ropensci/rvertnet.svg?branch=master)](https://travis-ci.org/ropensci/rvertnet)
@@ -42,7 +44,8 @@ Search for _Aves_ in the state of _California_, limit to 10 records
 
 
 ```r
-res <- searchbyterm(class = "Aves", state = "California", lim = 10, messages = FALSE)
+res <- searchbyterm(class = "Aves", stateprovince = "California",
+    limit = 10, messages = FALSE)
 ```
 
 Inspect metadata
@@ -51,7 +54,7 @@ Inspect metadata
 ```r
 res$meta
 #> $request_date
-#> [1] "2018-04-17T06:11:10.584520"
+#> [1] "2019-10-10T00:10:38.061624"
 #> 
 #> $response_records
 #> [1] 10
@@ -60,13 +63,13 @@ res$meta
 #> [1] "class:Aves stateprovince:California"
 #> 
 #> $request_origin
-#> [1] "45.523452,-122.676207"
+#> [1] "45.515459,-122.679346"
 #> 
 #> $limit
 #> [1] 10
 #> 
 #> $last_cursor
-#> [1] "False:Cq8FCooDCtwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD_c3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyejNCQjZHQio2R0pyei56TkJjSnJ6M0pCNkdLOz8_Ozv8Ac3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJdSRwg5uy6lIQAmDOz46YAhINRG9jdW1lbnRJbmRleBruAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKE9SIChRVCAiQXZlcyIgInJ0ZXh0X2NsYXNzIikgKElTICJyYXRvbV9jbGFzcyIgImF2ZXMiKSkgKFFUICJDYWxpZm9ybmlhIiAicnRleHRfc3RhdGVwcm92aW5jZSIpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH"
+#> [1] "False:Cq8FCooDCtwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD_c3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyejNCQjZHQio2R0pyei56TkJjSnJ6M0pCNkdLOz8_Ozv8Ac3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJqvR3VAbTv8MQA2DAzfKOBhINRG9jdW1lbnRJbmRleBruAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKE9SIChRVCAiQXZlcyIgInJ0ZXh0X2NsYXNzIikgKElTICJyYXRvbV9jbGFzcyIgImF2ZXMiKSkgKFFUICJDYWxpZm9ybmlhIiAicnRleHRfc3RhdGVwcm92aW5jZSIpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH"
 #> 
 #> $query_version
 #> [1] "search.py 2016-08-15T16:43+02:00"
@@ -84,48 +87,51 @@ Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data s
 ```r
 res$data[,1:5]
 #> # A tibble: 10 x 5
-#>    higherclassification stateprovince basisofrecord month decimallongitude
-#>    <chr>                <chr>         <chr>         <chr> <chr>           
-#>  1 Animalia | Chordata… California    PreservedSpe… 2     -121.7833       
-#>  2 Animalia | Chordata… California    PreservedSpe… 6     -122.15         
-#>  3 Animalia | Chordata… California    PreservedSpe… 5     -120.9014       
-#>  4 Animalia; Chordata;… California    PreservedSpe… 1     -121.93300      
-#>  5 Animalia; Chordata;… California    PreservedSpe… 1     -121.93300      
-#>  6 Animalia; Chordata;… California    PreservedSpe… 7     -121.85760      
-#>  7 Animalia; Chordata;… California    PreservedSpe… 7     -121.85760      
-#>  8 Animalia; Chordata;… California    PreservedSpe… 7     -121.85760      
-#>  9 Animalia; Chordata;… California    PreservedSpe… 7     -121.85760      
-#> 10 Animalia; Chordata;… California    PreservedSpe… 6     -121.85760
+#>    higherclassification  stateprovince basisofrecord month decimallongitude
+#>    <chr>                 <chr>         <chr>         <chr> <chr>           
+#>  1 Animalia | Chordata … California    PreservedSpe… 2     -121.7833       
+#>  2 Animalia | Chordata … California    PreservedSpe… 6     -122.15         
+#>  3 Animalia | Chordata … California    PreservedSpe… 5     -120.9014       
+#>  4 Animalia; Chordata; … California    PreservedSpe… 1     -121.93300      
+#>  5 Animalia; Chordata; … California    PreservedSpe… 1     -121.93300      
+#>  6 Animalia; Chordata; … California    PreservedSpe… 7     -121.85760      
+#>  7 Animalia; Chordata; … California    PreservedSpe… 7     -121.85760      
+#>  8 Animalia; Chordata; … California    PreservedSpe… 7     -121.85760      
+#>  9 Animalia; Chordata; … California    PreservedSpe… 7     -121.85760      
+#> 10 Animalia; Chordata; … California    PreservedSpe… 6     -121.85760
 ```
 
 Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
 
 
 ```r
-res <- searchbyterm(specificepithet = "nigripes", state = "(wyoming OR south dakota)", limit = 20, messages = FALSE)
+res <- searchbyterm(specificepithet = "nigripes",
+    stateprovince = "(wyoming OR south dakota)", 
+    limit = 20, messages = FALSE)
 res$data[,1:5]
-#> # A tibble: 19 x 5
-#>    month decimallongitude startdayofyear accessrights              kingdom
-#>    <chr> <chr>            <chr>          <chr>                     <chr>  
-#>  1 12    -100.8276541162  336            http://vertnet.org/resou… Animal…
-#>  2 03    -100.9827        64             http://vertnet.org/resou… Animal…
-#>  3 1     -100.759483      1              http://www.vertnet.org/r… Animal…
-#>  4 3     -100.7373        67             http://biodiversity.ku.e… Animal…
-#>  5 11    <NA>             305            http://vertnet.org/resou… Animal…
-#>  6 10    <NA>             282            <NA>                      Animal…
-#>  7 8     <NA>             234            <NA>                      Animal…
-#>  8 12    <NA>             342            <NA>                      Animal…
-#>  9 12    <NA>             358            http://www.vertnet.org/r… Animal…
-#> 10 1     <NA>             1              http://vertnet.org/resou… Animal…
-#> 11 11    <NA>             313            <NA>                      Animal…
-#> 12 9     <NA>             272            <NA>                      Animal…
-#> 13 12    <NA>             335            <NA>                      Animal…
-#> 14 9     <NA>             259            <NA>                      Animal…
-#> 15 10    <NA>             297            <NA>                      Animal…
-#> 16 12    <NA>             339            <NA>                      Animal…
-#> 17 11    <NA>             305            <NA>                      Animal…
-#> 18 11    <NA>             315            <NA>                      Animal…
-#> 19 <NA>  <NA>             <NA>           <NA>                      Animal…
+#> # A tibble: 20 x 5
+#>    month decimallongitude startdayofyear accessrights               kingdom
+#>    <chr> <chr>            <chr>          <chr>                      <chr>  
+#>  1 12    -100.8276541162  336            http://vertnet.org/resour… Animal…
+#>  2 03    -100.9827        64             http://vertnet.org/resour… Animal…
+#>  3 1     -100.759483      1              http://vertnet.org/resour… Animal…
+#>  4 3     -100.7373        67             http://biodiversity.ku.ed… Animal…
+#>  5 11    <NA>             305            http://vertnet.org/resour… Animal…
+#>  6 10    <NA>             282            <NA>                       Animal…
+#>  7 8     <NA>             234            <NA>                       Animal…
+#>  8 12    <NA>             342            <NA>                       Animal…
+#>  9 12    <NA>             358            http://www.vertnet.org/re… Animal…
+#> 10 1     <NA>             1              http://vertnet.org/resour… Animal…
+#> 11 1     <NA>             1              http://vertnet.org/resour… Animal…
+#> 12 11    <NA>             313            <NA>                       Animal…
+#> 13 9     <NA>             272            <NA>                       Animal…
+#> 14 12    <NA>             335            <NA>                       Animal…
+#> 15 9     <NA>             259            <NA>                       Animal…
+#> 16 10    <NA>             297            <NA>                       Animal…
+#> 17 12    <NA>             339            <NA>                       Animal…
+#> 18 11    <NA>             305            <NA>                       Animal…
+#> 19 11    <NA>             315            <NA>                       Animal…
+#> 20 <NA>  <NA>             <NA>           http://vertnet.org/resour… Animal…
 ```
 
 ### dplyr downstream
@@ -140,20 +146,29 @@ out$data %>%
   group_by(scientificname) %>%
   summarise(count = length(scientificname)) %>%
   arrange(desc(count))
-#> # A tibble: 23 x 2
-#>    scientificname                            count
-#>    <chr>                                     <int>
-#>  1 Ochotona princeps                           428
-#>  2 Ochotona pallasi                            129
-#>  3 Ochotona princeps saxatilis                 103
-#>  4 Ochotona hyperborea                          30
-#>  5 Ochotona dauurica                            21
-#>  6 Ochotona (Pika) princeps Richardson, 1828    20
-#>  7 Ochotona collaris                            15
-#>  8 Ochotona princeps figginsi                   14
-#>  9 Ochotona princeps schisticeps                 6
-#> 10 Ochotona princeps taylori                     5
-#> # ... with 13 more rows
+#> # A tibble: 20 x 2
+#>    scientificname                  count
+#>    <chr>                           <int>
+#>  1 Ochotona princeps                 450
+#>  2 Ochotona pallasi                  129
+#>  3 Ochotona princeps saxatilis       103
+#>  4 Ochotona hyperborea                30
+#>  5 Ochotona dauurica                  21
+#>  6 Ochotona collaris                  15
+#>  7 Ochotona princeps figginsi         14
+#>  8 Ochotona princeps taylori           8
+#>  9 Ochotona princeps schisticeps       6
+#> 10 Ochotona alpina                     4
+#> 11 Ochotona princeps muiri             4
+#> 12 Ochotona hyperborea mantchurica     3
+#> 13 Ochotona princeps incana            3
+#> 14 Ochotona princeps princeps          3
+#> 15 Ochotona princeps murri             2
+#> 16 Ochotona princeps brunnescens       1
+#> 17 Ochotona princeps jewetti           1
+#> 18 Ochotona princeps tutelata          1
+#> 19 Ochotona princeps uinta             1
+#> 20 Ochotona princeps ventorum          1
 ```
 
 
@@ -163,7 +178,7 @@ Specifies a termwise search (like `searchbyterm()`), but requests that all avail
 
 
 ```r
-bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
+bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
 #> Processing request...
 #>
 #> Download of records file 'mydata' requested for 'you@gmail.com'
@@ -177,21 +192,22 @@ bigsearch(genus = "ochotona", rf = "pikaRecords", email = "big@@search.luv")
 
 
 ```r
-res <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, limit = 10, messages = FALSE)
+res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000,
+    limit = 10, messages = FALSE)
 res$data[,1:5]
 #> # A tibble: 10 x 5
-#>    month decimallongitude startdayofyear minimumelevation… accessrights   
-#>    <chr> <chr>            <chr>          <chr>             <chr>          
-#>  1 07    -105.68633       193            2182.368          http://vertnet…
-#>  2 07    -105.705479      196            2023.872          http://vertnet…
-#>  3 07    -105.705479      196            2023.872          http://vertnet…
-#>  4 07    -105.705479      196            2023.872          http://vertnet…
-#>  5 07    -105.705479      196            2023.872          http://vertnet…
-#>  6 07    -105.705479      196            2023.872          http://vertnet…
-#>  7 07    -105.705479      196            2023.872          http://vertnet…
-#>  8 07    -105.705479      196            2023.872          http://vertnet…
-#>  9 07    -105.705479      196            2023.872          http://vertnet…
-#> 10 07    -105.705479      196            2023.872          http://vertnet…
+#>    month decimallongitude startdayofyear minimumelevationi… accessrights   
+#>    <chr> <chr>            <chr>          <chr>              <chr>          
+#>  1 07    -105.68633       193            2182.368           http://vertnet…
+#>  2 07    -105.705479      196            2023.872           http://vertnet…
+#>  3 07    -105.705479      196            2023.872           http://vertnet…
+#>  4 07    -105.705479      196            2023.872           http://vertnet…
+#>  5 07    -105.705479      196            2023.872           http://vertnet…
+#>  6 07    -105.705479      196            2023.872           http://vertnet…
+#>  7 07    -105.705479      196            2023.872           http://vertnet…
+#>  8 07    -105.705479      196            2023.872           http://vertnet…
+#>  9 07    -105.705479      196            2023.872           http://vertnet…
+#> 10 07    -105.705479      196            2023.872           http://vertnet…
 ```
 
 ## Contributors

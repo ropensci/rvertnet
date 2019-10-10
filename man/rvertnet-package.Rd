@@ -11,12 +11,12 @@ There are a variety of ways to search VertNet
 \section{Search by term}{
 
 
-Search for _Aves_ in the state of _California_, limit to 10 records, e.g.:
+Search for \emph{Aves} in the state of \emph{California}, limit to 10 records, e.g.:
 
 \code{searchbyterm(class = "Aves", state = "California", lim = 10, 
 verbose = FALSE)}
 
-Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, 
+Search for \emph{Mustela nigripes} in the states of \emph{Wyoming} or \emph{South Dakota},
 limit to 20 records, e.g.:
 
 \code{searchbyterm(genus = "Mustela", specificepithet = "nigripes", 
@@ -25,8 +25,8 @@ limit to 20 records, e.g.:
 
 \section{Big data}{
 
-Specifies a termwise search (like `searchbyterm()`), but requests that all 
-available records  be made available for download as a tab-delimited 
+Specifies a termwise search (like \code{searchbyterm()}), but requests that all
+available records  be made available for download as a tab-delimited
 text file.
 
 \code{bigsearch(genus = "ochotona", rf = "pikaRecords", 

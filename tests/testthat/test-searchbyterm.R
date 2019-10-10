@@ -69,7 +69,7 @@ test_that("searchbyterm multi-year param input works", {
   skip_on_cran()
   
   out <- suppressMessages(
-    searchbyterm(gen = "ochotona", 
+    searchbyterm(genus = "ochotona", 
                  specificepithet = "(princeps OR collaris)", 
                  year = c(">=1916", "<=1920"),
                  messages = FALSE)

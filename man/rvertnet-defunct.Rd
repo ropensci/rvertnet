@@ -5,11 +5,11 @@
 \title{Defunct functions in rvertnet}
 \description{
 \itemize{
- \item \code{\link{vertavailablemaps}}: Function is now defunct, i.e., not available anymore.
- \item \code{\link{vertlocations}}: Function is now defunct, i.e., not available anymore.
- \item \code{\link{vertoccurrence}}: Function is now defunct, i.e., not available anymore.
- \item \code{\link{vertoccurrencecount}}: Function is now defunct, i.e., not available anymore.
- \item \code{\link{vertproviders}}: Function is now defunct, i.e., not available anymore.
- \item \code{\link{verttaxa}}: Function is now defunct, i.e., not available anymore.
+\item \code{\link{vertavailablemaps}}: Function is now defunct, i.e., not available anymore.
+\item \code{\link{vertlocations}}: Function is now defunct, i.e., not available anymore.
+\item \code{\link{vertoccurrence}}: Function is now defunct, i.e., not available anymore.
+\item \code{\link{vertoccurrencecount}}: Function is now defunct, i.e., not available anymore.
+\item \code{\link{vertproviders}}: Function is now defunct, i.e., not available anymore.
+\item \code{\link{verttaxa}}: Function is now defunct, i.e., not available anymore.
 }
 }

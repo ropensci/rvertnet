@@ -10,9 +10,6 @@ rmd2md:
 	cd vignettes;\
 	mv rvertnet_vignette.md rvertnet_vignette.Rmd
 
-all:
-	${RSCRIPT} -e 'library(methods); devtools::compile_dll()'
-
 test:
 	${RSCRIPT} -e 'library(methods); devtools::test()'
 
@@ -20,8 +17,8 @@ doc:
 	@mkdir -p man
 	${RSCRIPT} -e "library(methods); devtools::document()"
 
-install:
-	R CMD INSTALL .
+install: doc build
+	R CMD INSTALL . && rm *.tar.gz
 
 build:
 	R CMD build .

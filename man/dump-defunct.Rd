@@ -17,7 +17,7 @@ dump_links(...)
 These functions are defunct
 }
 \details{
-The Vertnet dumps are too complicated to setup. Please get in 
+The Vertnet dumps are too complicated to setup. Please get in
 touch with Vertnet or maintainers of this package if you want help using
 bulk data.
 }
