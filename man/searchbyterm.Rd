@@ -78,7 +78,7 @@ queries, in a vector. See example below
 \item day (numeric) day or range of days designated by comparison
 operators "<", ">", "<=" or ">=". You can pass in more than one of these
 queries, in a vector. See example below
-\item date Event date associated with this occurrence record; yyyy-mm-dd
+\item eventdate Event date associated with this occurrence record; yyyy-mm-dd
 or the range yyyy-mm-dd/yyyy-mm-dd (character)
 }
 

@@ -51,7 +51,7 @@
 #' - day (numeric) day or range of days designated by comparison
 #'  operators "<", ">", "<=" or ">=". You can pass in more than one of these
 #'  queries, in a vector. See example below
-#' - date Event date associated with this occurrence record; yyyy-mm-dd
+#' - eventdate Event date associated with this occurrence record; yyyy-mm-dd
 #'  or the range yyyy-mm-dd/yyyy-mm-dd (character)
 #'
 #' **record level**
@@ -244,7 +244,7 @@ process_args <- function(x) {
     # boolean
     mtch_b <- boolean_args %in% names(x)[i]
     if (any(mtch_b))
-      args_out[[ boolean_args[which(mtch_b)] ]] <- x[[i]]
+      args_out[[ boolean_args[which(mtch_b)] ]] <- ab(x[[i]])
   }
   if ("stateprovince" %in% names(x))
     args_out$stateprovince <- sp_paren(x$stateprovince)
@@ -260,7 +260,7 @@ process_args <- function(x) {
 asis_args <- c(
   "kingdom", "phylum", "class", "order", "family", "genus", 
   "specificepithet", "infraspecificepithet", "scientificname", 
-  "vernacularname", "date", "institutioncode", "occurrenceid", 
+  "vernacularname", "eventdate", "institutioncode", "occurrenceid", 
   "catalognumber", "collectioncode", "license", "iptlicense", 
   "basisofrecord", "typestatus", "iptrecordid", "recordedby",
   "recordnumber", "fieldnumber", "establishmentmeans", "sex",
@@ -291,7 +291,8 @@ sp_paren <- function(x) {
   }
 }
 
-ab <- function(x){
+ab <- function(x) {
+  assert(x, "logical")
   if (is.null(x)) {
     NULL
   } else {
