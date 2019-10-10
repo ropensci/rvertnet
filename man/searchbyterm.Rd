@@ -205,6 +205,17 @@ comparison operators "<", ">", "<=", or ">="
 }
 }
 
+\section{No results?}{
+
+
+It's possible to get no results with a call to \code{searchbyterm()},
+then run it again 10 seconds later, and you do get a result.
+I'm not sure why this is, something having to do with Vertnet's
+infrastucture that I'm not aware of. Point is, if you are sure
+you haven't made any mistakes with the parameters, etc., then
+simply run the function call again.
+}
+
 \examples{
 \dontrun{
 # Find multiple species

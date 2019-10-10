@@ -166,6 +166,15 @@
 #' - coordinateuncertaintyinmeters (character) Coordinate uncertainty
 #' in meters (numeric) or range of uncertainty values designated by
 #' comparison operators "<", ">", "<=", or ">="
+#' 
+#' @section No results?:
+#' 
+#' It's possible to get no results with a call to `searchbyterm()`,
+#' then run it again 10 seconds later, and you do get a result.
+#' I'm not sure why this is, something having to do with Vertnet's
+#' infrastucture that I'm not aware of. Point is, if you are sure
+#' you haven't made any mistakes with the parameters, etc., then 
+#' simply run the function call again.
 #'
 #' @return A list with two slots:
 #' 
@@ -174,6 +183,7 @@
 #' 
 #' @references
 #' https://github.com/VertNet/webapp/wiki/The-API-search-function
+#' 
 #' @details `searchbyterm()` builds a query from input parameters
 #' based on Darwin Core (dwc) terms (for the full list of terms, see
 #' https://code.google.com/p/darwincore/wiki/DarwinCoreTerms).

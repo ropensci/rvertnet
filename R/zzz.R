@@ -73,7 +73,7 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE,
     res <- get_terms()
     df <- df[ , names(df) %in% res ]
   }
-  mssg(messages, paste("\nLast Query URL: \"", tt$url, "\"", sep = ""))
+  mssg(messages, paste("\nLast Query URL: \"", URLdecode(tt$url), "\"", sep = ""))
   mssg(messages, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))
   list(meta = make_meta(out), data = tbl_df(df))
 }

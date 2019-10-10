@@ -5,7 +5,7 @@ Description: Retrieve, map and summarize data from the 'VertNet.org'
     parameters, including 'taxonomic' names, places, and dates. In addition, 
     there is an interface for conducting spatially delimited searches, and 
     another for requesting large 'datasets' via email.
-Version: 0.7.3.9100
+Version: 0.7.3.9310
 Authors@R: c(
     person("Scott", "Chamberlain",
         role = c("aut", "cre"),

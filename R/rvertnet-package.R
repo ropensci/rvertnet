@@ -32,6 +32,15 @@
 #' 
 #' \code{vertsearch(taxon = "aves", state = "california")}
 #' 
+#' @section No results?:
+#' 
+#' It's possible to get no results when requesting data from VertNet,
+#' then run the same function again 10 seconds later, and you do get a result.
+#' I'm not sure why this is, something having to do with Vertnet's
+#' infrastucture that I'm not aware of. Point is, if you are sure
+#' you haven't made any mistakes with the parameters, etc., then 
+#' simply run the function call again.
+#' 
 #' @importFrom jsonlite fromJSON toJSON
 #' @importFrom dplyr bind_rows tbl_df
 #' @importFrom ggplot2 ggplot position_jitter aes geom_polygon 
