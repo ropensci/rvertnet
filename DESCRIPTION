@@ -16,7 +16,7 @@ Authors@R: c(
     )
 License: MIT + file LICENSE
 LazyData: true
-URL: https://github.com/ropensci/rvertnet
+URL: https://docs.ropensci.org/rvertnet, https://github.com/ropensci/rvertnet
 BugReports: https://github.com/ropensci/rvertnet/issues
 VignetteBuilder: knitr
 Encoding: UTF-8
