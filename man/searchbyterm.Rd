@@ -4,8 +4,14 @@
 \alias{searchbyterm}
 \title{Search by term}
 \usage{
-searchbyterm(..., limit = 1000, compact = TRUE, messages = TRUE,
-  only_dwc = TRUE, callopts = list())
+searchbyterm(
+  ...,
+  limit = 1000,
+  compact = TRUE,
+  messages = TRUE,
+  only_dwc = TRUE,
+  callopts = list()
+)
 }
 \arguments{
 \item{...}{arguments, must be named, see section \code{Parameters} for details.

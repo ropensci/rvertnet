@@ -4,10 +4,21 @@
 \alias{traitsearch}
 \title{Trait focused search}
 \usage{
-traitsearch(taxon = NULL, has_mass = FALSE, has_length = FALSE,
-  has_sex = FALSE, has_lifestage = FALSE, length_type = NULL,
-  length = NULL, mass = NULL, limit = 1000, compact = TRUE,
-  messages = TRUE, callopts = list(), ...)
+traitsearch(
+  taxon = NULL,
+  has_mass = FALSE,
+  has_length = FALSE,
+  has_sex = FALSE,
+  has_lifestage = FALSE,
+  length_type = NULL,
+  length = NULL,
+  mass = NULL,
+  limit = 1000,
+  compact = TRUE,
+  messages = TRUE,
+  callopts = list(),
+  ...
+)
 }
 \arguments{
 \item{taxon}{(character) Taxonomic identifier or other text to search for}

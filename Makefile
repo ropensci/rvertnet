@@ -3,12 +3,12 @@ RSCRIPT = Rscript --no-init-file
 
 move:
 	cd inst/vign;\
-	cp rvertnet_vignette.md ../../vignettes;\
+	cp rvertnet.md ../../vignettes;\
 	cp -rf figure/* ../../vignettes/figure/
 
 rmd2md:
 	cd vignettes;\
-	mv rvertnet_vignette.md rvertnet_vignette.Rmd
+	mv rvertnet.md rvertnet.Rmd
 
 test:
 	${RSCRIPT} -e 'library(methods); devtools::test()'

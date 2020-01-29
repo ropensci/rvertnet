@@ -4,8 +4,15 @@
 \alias{spatialsearch}
 \title{Find records within some distance of a point given latitude and longitude.}
 \usage{
-spatialsearch(lat, long, radius, limit = 1000, compact = TRUE,
-  messages = TRUE, ...)
+spatialsearch(
+  lat,
+  long,
+  radius,
+  limit = 1000,
+  compact = TRUE,
+  messages = TRUE,
+  ...
+)
 }
 \arguments{
 \item{lat}{(numeric) Latitude of the central point, in decimal degrees

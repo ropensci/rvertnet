@@ -5,18 +5,19 @@ Description: Retrieve, map and summarize data from the 'VertNet.org'
     parameters, including 'taxonomic' names, places, and dates. In addition, 
     there is an interface for conducting spatially delimited searches, and 
     another for requesting large 'datasets' via email.
-Version: 0.7.3.9313
+Version: 0.7.4.91
 Authors@R: c(
     person("Scott", "Chamberlain",
         role = c("aut", "cre"),
         email = "myrmecocystus@gmail.com",
-        comment = "http://orcid.org/0000-0003-1444-9135"),
+        comment = c("0000-0003-1444-9135")),
     person("Chris", "Ray", role = "ctb"),
     person("Vijay", "Barve", role = "ctb")
     )
 License: MIT + file LICENSE
 LazyData: true
-URL: https://docs.ropensci.org/rvertnet, https://github.com/ropensci/rvertnet
+URL: https://github.com/ropensci/rvertnet (devel)
+    https://docs.ropensci.org/rvertnet (documentation)
 BugReports: https://github.com/ropensci/rvertnet/issues
 VignetteBuilder: knitr
 Encoding: UTF-8
@@ -30,7 +31,7 @@ Imports:
 Suggests:
     testthat,
     knitr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 X-schema.org-applicationCategory: Data Access
 X-schema.org-keywords: species, occurrences, biodiversity, maps, vertnet, mammals, mammalia, specimens
 X-schema.org-isPartOf: "https://ropensci.org"

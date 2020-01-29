@@ -4,8 +4,15 @@
 \alias{vertsearch}
 \title{Find records using a global full-text search of VertNet archives.}
 \usage{
-vertsearch(taxon = NULL, ..., limit = 1000, compact = TRUE,
-  messages = TRUE, only_dwc = TRUE, callopts = list())
+vertsearch(
+  taxon = NULL,
+  ...,
+  limit = 1000,
+  compact = TRUE,
+  messages = TRUE,
+  only_dwc = TRUE,
+  callopts = list()
+)
 }
 \arguments{
 \item{taxon}{(character) Taxonomic identifier or other text to search for}

@@ -4,8 +4,13 @@
 \alias{vertmap}
 \title{Make a simple map to visualize VertNet data.}
 \usage{
-vertmap(input = NULL, mapdatabase = "world", region = ".",
-  geom = geom_point, jitter = NULL)
+vertmap(
+  input = NULL,
+  mapdatabase = "world",
+  region = ".",
+  geom = geom_point,
+  jitter = NULL
+)
 }
 \arguments{
 \item{input}{Output from \code{\link{vertsearch}},
