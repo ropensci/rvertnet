@@ -1,3 +1,20 @@
+rvertnet 0.8.0
+===============
+
+### NEW FEATURES
+
+* `searchbyterm()` and `bigsearch()` reworked: both functions now have the first parameter as `...`, which accepts any valid query parameter. There were so many query parameters for these functions it was a bit overwhelming. See `?searchbyterm` docs for details  (#66)
+
+### MINOR IMPROVEMENTS
+
+* decode the request URL before printing to the R console so users can more easily see what request they have done (#67)
+* vignette title fix (#68)
+
+### BUG FIXES 
+
+* `searchbyterm()` fix: booleans need to be converted to VertNet's expected `0/1` instead of `true/false` (#66)
+
+
 rvertnet 0.7.0
 ===============
 

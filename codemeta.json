@@ -146,7 +146,7 @@
   "contIntegration": ["https://travis-ci.org/ropensci/rvertnet", "https://ci.appveyor.com/project/sckott/rvertnet", "https://codecov.io/github/ropensci/rvertnet?branch=master"],
   "releaseNotes": "https://github.com/ropensci/rvertnet/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rvertnet/blob/master/README.md",
-  "fileSize": "744.948KB",
+  "fileSize": "745.142KB",
   "contributor": [
     {
       "@type": "Person",
