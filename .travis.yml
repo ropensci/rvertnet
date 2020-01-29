@@ -1,13 +1,18 @@
 language: r
-sudo: false
 cache: packages
-dist: trusty
 
-r_github_packages:
-  - jimhester/covr
+r_binary_packages:
+  - covr
+
+matrix:
+  include:
+    - r: release
+      env: R_CODECOV=true
+    - r: devel
+      env: _R_CHECK_LENGTH_1_LOGIC2_=TRUE
 
 after_success:
-  - Rscript -e 'covr::codecov()'
+  - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
 
 notifications:
   email:
