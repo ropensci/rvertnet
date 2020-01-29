@@ -8,7 +8,7 @@ rvertnet
 [![Build Status](https://travis-ci.org/ropensci/rvertnet.svg?branch=master)](https://travis-ci.org/ropensci/rvertnet)
 [![Build status](https://ci.appveyor.com/api/projects/status/duyrffhdrstu840v?svg=true)](https://ci.appveyor.com/project/sckott/rvertnet)
 [![codecov.io](https://codecov.io/github/ropensci/rvertnet/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rvertnet?branch=master)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/rvertnet?color=2ECC71)](https://github.com/metacran/cranlogs.app)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rvertnet)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rvertnet)](https://cran.r-project.org/package=rvertnet)
 
 
