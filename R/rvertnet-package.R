@@ -45,6 +45,7 @@
 #' @importFrom dplyr bind_rows tbl_df
 #' @importFrom ggplot2 ggplot position_jitter aes geom_polygon 
 #' geom_point labs theme_bw map_data
+#' @importFrom utils URLdecode
 #' @import maps
 #' @name rvertnet-package
 #' @aliases rvertnet

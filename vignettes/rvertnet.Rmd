@@ -301,7 +301,7 @@ out <- vertsearch(tax = "(mustela nivalis OR mustela erminea)")
 vertmap(out)
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)
+![plot of chunk unnamed-chunk-13](../man/figures/unnamed-chunk-13-1.png)
 
 ## Lots of data
 
