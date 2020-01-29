@@ -5,19 +5,19 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "rvertnet",
-  "description": "Retrieve, map and summarize data from the 'VertNet.org' archives.\n    Functions allow searching by many parameters, including 'taxonomic' names,\n    places, and dates. In addition, there is an interface for conducting spatially\n    delimited searches, and another for requesting large 'datasets' via email.",
+  "description": "Retrieve, map and summarize data from the 'VertNet.org' \n    archives (<http://vertnet.org/>).  Functions allow searching by many \n    parameters, including 'taxonomic' names, places, and dates. In addition, \n    there is an interface for conducting spatially delimited searches, and \n    another for requesting large 'datasets' via email.",
   "name": "rvertnet: Search 'Vertnet', a 'Database' of Vertebrate Specimen Records",
   "codeRepository": "https://github.com/ropensci/rvertnet",
   "issueTracker": "https://github.com/ropensci/rvertnet/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.7.0",
+  "version": "0.7.4.91",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.4.4",
+    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.4.4 Patched (2018-03-19 r74426)",
+  "runtimePlatform": "R version 3.6.2 Patched (2020-01-25 r77715)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -29,17 +29,17 @@
       "@type": "Person",
       "givenName": "Scott",
       "familyName": "Chamberlain",
-      "email": "myrmecocystus@gmail.com",
-      "@id": "http://orcid.org/0000-0003-1444-9135"
+      "email": "myrmecocystus@gmail.com"
     }
   ],
-  "maintainer": {
-    "@type": "Person",
-    "givenName": "Scott",
-    "familyName": "Chamberlain",
-    "email": "myrmecocystus@gmail.com",
-    "@id": "http://orcid.org/0000-0003-1444-9135"
-  },
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Scott",
+      "familyName": "Chamberlain",
+      "email": "myrmecocystus@gmail.com"
+    }
+  ],
   "softwareSuggestions": [
     {
       "@type": "SoftwareApplication",
@@ -48,9 +48,10 @@
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
-        "name": "Central R Archive Network (CRAN)",
+        "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
-      }
+      },
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
     },
     {
       "@type": "SoftwareApplication",
@@ -59,9 +60,10 @@
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
-        "name": "Central R Archive Network (CRAN)",
+        "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
-      }
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
     }
   ],
   "softwareRequirements": [
@@ -69,37 +71,40 @@
       "@type": "SoftwareApplication",
       "identifier": "jsonlite",
       "name": "jsonlite",
-      "version": "1.5",
+      "version": ">= 1.5",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
-        "name": "Central R Archive Network (CRAN)",
+        "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
-      }
+      },
+      "sameAs": "https://CRAN.R-project.org/package=jsonlite"
     },
     {
       "@type": "SoftwareApplication",
       "identifier": "crul",
       "name": "crul",
-      "version": "0.5.2",
+      "version": ">= 0.5.2",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
-        "name": "Central R Archive Network (CRAN)",
+        "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
-      }
+      },
+      "sameAs": "https://CRAN.R-project.org/package=crul"
     },
     {
       "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
-      "version": "0.5.0",
+      "version": ">= 0.5.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
-        "name": "Central R Archive Network (CRAN)",
+        "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
-      }
+      },
+      "sameAs": "https://CRAN.R-project.org/package=dplyr"
     },
     {
       "@type": "SoftwareApplication",
@@ -108,9 +113,10 @@
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
-        "name": "Central R Archive Network (CRAN)",
+        "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
-      }
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggplot2"
     },
     {
       "@type": "SoftwareApplication",
@@ -119,15 +125,16 @@
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
-        "name": "Central R Archive Network (CRAN)",
+        "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
-      }
+      },
+      "sameAs": "https://CRAN.R-project.org/package=maps"
     }
   ],
-  "contIntegration": "https://travis-ci.org/ropensci/rvertnet",
+  "contIntegration": ["https://travis-ci.org/ropensci/rvertnet", "https://ci.appveyor.com/project/sckott/rvertnet", "https://codecov.io/github/ropensci/rvertnet?branch=master"],
   "releaseNotes": "https://github.com/ropensci/rvertnet/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rvertnet/blob/master/README.md",
-  "fileSize": "158.741KB",
+  "fileSize": "162.171KB",
   "contributor": [
     {
       "@type": "Person",
@@ -142,5 +149,9 @@
   ],
   "applicationCategory": "DataAccess",
   "isPartOf": "\"https://ropensci.org\"",
-  "keywords": ["species", "occurrences", "biodiversity", "maps", "vertnet", "mammals", "mammalia", "specimens"]
+  "keywords": ["species", "occurrences", "biodiversity", "maps", "vertnet", "mammals", "mammalia", "specimens", "api-wrapper", "specimen", "rstats", "r", "spocc", "r-package"],
+  "relatedLink": "https://docs.ropensci.org/rvertnet",
+  "copyrightHolder": {},
+  "funder": {},
+  "developmentStatus": "http://www.repostatus.org/#active"
 }
