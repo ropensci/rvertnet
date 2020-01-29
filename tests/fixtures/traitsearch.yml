@@ -1,0 +1,442 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22hasmass%3A1%22%2C%22l%22%3A10%7D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: no-cache
+      content-type: application/json
+      charset: utf-8
+      x-cloud-trace-context: c7987c9a3fd206f37a0d1f9105504e50;o=1
+      date: Wed, 29 Jan 2020 16:50:35 GMT
+      server: Google Frontend
+      content-length: '34028'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"request_date": "2020-01-29T16:50:35.762855", "response_records":
+        10, "submitted_query": "hasmass:1", "request_origin": "45.505106,-122.675026",
+        "limit": 10, "cursor": "False:Cu0ECpYDCugC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQl5qNj9CKjZHSnJ6LnpOQmNKcnozSl5qNj9LOyMnKy87_AAD_c3-cnozQl5qNj9CKjZHSnJ6LnpOQmNKcnozSl5qNj9LOyMnKy87_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyejNCXmo2P0IqNkdKcnouek5CY0pyejNKXmo2P0s7IycrLzv8Ac3-cnozQl5qNj9CKjZHSnJ6LnpOQmNKcnozSl5qNj9LOyMnKy87_AP_-EAoh214v0Zsk1Mk5AAAAAOb___9IClAAWgsJjlCpOM0Lkb0QA2DJwsfTBBINRG9jdW1lbnRJbmRleBqgAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChJUyAicmF0b21faGFzbWFzcyIgIjEiKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH",
+        "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
+        "1", "verbatimelevation": "900 m", "higherclassification": "Animalia; Chordata;
+        Reptilia; Sauria; Scincidae", "pubdate": "2019-03-06", "wasinvasive": "0",
+        "stateprovince": "Cape Prov.", "hastypestatus": "0", "lifestage": "Adult",
+        "rank": 12, "month": "9", "decimallongitude": "19.1796666667", "phylum": "Chordata",
+        "references": "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-165711",
+        "haslength": "0", "isarch": "0", "year": "1987", "startdayofyear": "271",
+        "wascaptive": "0", "minimumelevationinmeters": "900.0000000000", "specificepithet":
+        "homalocephala", "networks": "HerpNET,VertNet", "recordedby": "A.M. Bauer",
+        "bibliographiccitation": "California Academy of Sciences. CAS Herpetology
+        (HERP). Record ID: urn:catalog:CAS:HERP:165711. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "vntype": "specimen", "family": "Scincidae",
+        "locality": "Du Toitskloof Pass, Television Tower Rd off of National Hwy 1,
+        10 km NE of Paarl", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "geodeticdatum": "WGS84", "occurrenceremarks": "live wt 5 gm", "coordinateuncertaintyinmeters":
+        "3360", "orgstateprovince": "California", "highergeography": "Africa; South
+        Africa; Cape Prov.", "massing": "5", "contact": "Lauren Scheinberg", "verbatimlocality":
+        "South Africa: Cape Prov.: Du Toitskloof Pass, Television Tower Rd off of
+        National Hwy 1, 10 km NE of Paarl, 900 m", "migrator": "no migrator", "hastissue":
+        "0", "hasmass": "1", "recordnumber": "H-8563", "email": "lscheinberg@calacademy.org",
+        "day": "28", "kingdom": "Animalia", "citation": "California Academy of Sciences.
+        CAS Herpetology (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "massunitsinferred": "0", "verbatimeventdate":
+        "28 Sep 1987", "hassex": "0", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:HERP:165711",
+        "icode": "CAS", "scientificname": "Mabuya homalocephala", "preparations":
+        "Alcohol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "2471", "georeferencesources": "Google Earth, Fuzzy Gazetteer.", "class":
+        "Reptilia", "keyname": "cas/herp/urn-catalog-cas-herp-165711", "isfossil":
+        "0", "decimallatitude": "-33.7398333333", "occurrenceid": "urn:catalog:CAS:HERP:165711",
+        "language": "en", "license": "CC0", "institutionid": "CAS", "country": "South
+        Africa", "mappable": "1", "title": "CAS Herpetology (HERP)", "collectioncode":
+        "HERP", "modified": "2019-03-06 11:47:00.0", "eventdate": "1987-09-28", "identifiedby":
+        "A.M. Bauer", "basisofrecord": "PreservedSpecimen", "haslicense": "1", "underivedlifestage":
+        "Adult", "continent": "Africa", "dateidentified": "1987-11-20", "lastindexed":
+        "2019-08-04", "genus": "Mabuya", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b",
+        "order": "Sauria", "catalognumber": "165711", "enddayofyear": "271"}, {"haslifestage":
+        "1", "month": "9", "decimallongitude": "-122.5286444444", "isarch": "0", "startdayofyear":
+        "257", "minimumelevationinmeters": "1773.9395478791", "continent": "North
+        America", "vntype": "specimen", "title": "CAS Herpetology (HERP)", "massing":
+        "3.0", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:HERP:176514",
+        "day": "14", "occurrenceid": "urn:catalog:CAS:HERP:176514", "collectioncode":
+        "HERP", "verbatimeventdate": "14 Sep 1990", "coordinateuncertaintyinmeters":
+        "2184", "higherclassification": "Animalia; Chordata; Reptilia; Serpentes;
+        Colubridae", "pubdate": "2019-03-06", "lifestage": "Juv", "infraspecificepithet":
+        "fitchi", "year": "1990", "wasinvasive": "0", "specificepithet": "sirtalis",
+        "basisofrecord": "PreservedSpecimen", "geodeticdatum": "NAD27", "occurrenceremarks":
+        "12:20 hrs. SVL = 184 mm + 59 mm tail, mass = 3.0 g.", "highergeography":
+        "North America; USA; California; Trinity Co.", "networks": "HerpNET,VertNet",
+        "email": "lscheinberg@calacademy.org", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp", "scientificname":
+        "Thamnophis sirtalis fitchi", "hashid": "8577", "hassex": "0", "language":
+        "en", "institutionid": "CAS", "country": "USA", "hastissue": "0", "lengthunitsinferred":
+        "0", "genus": "Thamnophis", "family": "Colubridae", "stateprovince": "California",
+        "rank": 12, "county": "Trinity Co.", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-176514",
+        "hasmedia": "0", "verbatimlocality": "Unnamed pond 1 mile north of Picayunc
+        Lake, Shasta-Trinity National Forest, Trinity Co., California (ca. 5820 ft.)",
+        "institutioncode": "CAS", "orgstateprovince": "California", "lengthinmm":
+        "184", "hastypestatus": "0", "underivedlifestage": "Juv", "recordedby": "M.R.
+        Jennings and M.P. Hayes", "isfossil": "0", "license": "CC0", "wascaptive":
+        "0", "modified": "2019-03-06 11:47:00.0", "haslicense": "1", "eventdate":
+        "1990-09-14", "haslength": "1", "verbatimelevation": "ca 5820 ft", "bibliographiccitation":
+        "California Academy of Sciences. CAS Herpetology (HERP). Record ID: urn:catalog:CAS:HERP:176514.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp (source published
+        on 2019-03-06)", "citation": "California Academy of Sciences. CAS Herpetology
+        (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp (source
+        published on 2019-03-06)", "georeferencesources": "Terrain Navigator 1.0,
+        California, Shasta-Trinity/Modoc, Mumbo Basin Quadrangle, 1986.", "lastindexed":
+        "2019-08-04", "dateidentified": "1990-09-14", "catalognumber": "176514", "hasmass":
+        "1", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b", "locality":
+        "Shasta-Trinity National Forest, unnamed pond 1 mi N of Picayune Lake", "orgname":
+        "California Academy of Sciences", "keyname": "cas/herp/urn-catalog-cas-herp-176514",
+        "migrator": "no migrator", "lengthtype": "snout-vent length", "recordnumber":
+        "MRJ-447", "massunitsinferred": "0", "icode": "CAS", "preparations": "Alcohol",
+        "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "class": "Reptilia",
+        "decimallatitude": "41.2369666667", "mappable": "1", "identifiedby": "M.R.
+        Jennings", "contact": "Lauren Scheinberg", "order": "Serpentes", "enddayofyear":
+        "257"}, {"haslifestage": "1", "month": "9", "decimallongitude": "-122.4950000000",
+        "isarch": "0", "startdayofyear": "257", "continent": "North America", "vntype":
+        "specimen", "title": "CAS Herpetology (HERP)", "massing": "7.0", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:HERP:176518",
+        "day": "14", "occurrenceid": "urn:catalog:CAS:HERP:176518", "collectioncode":
+        "HERP", "verbatimeventdate": "14 Sep 1990", "coordinateuncertaintyinmeters":
+        "127", "higherclassification": "Animalia; Chordata; Reptilia; Serpentes; Colubridae",
+        "pubdate": "2019-03-06", "lifestage": "Juv", "infraspecificepithet": "fitchi",
+        "year": "1990", "wasinvasive": "0", "specificepithet": "sirtalis", "basisofrecord":
+        "PreservedSpecimen", "geodeticdatum": "NAD27", "occurrenceremarks": "15:15
+        hrs. SVL = 265 mm + 85 mm tail, mass = 7.0 g.", "highergeography": "North
+        America; USA; California; Siskiyou Co.", "networks": "HerpNET,VertNet", "email":
+        "lscheinberg@calacademy.org", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp", "scientificname":
+        "Thamnophis sirtalis fitchi", "hashid": "8581", "hassex": "0", "language":
+        "en", "institutionid": "CAS", "country": "USA", "hastissue": "0", "lengthunitsinferred":
+        "0", "genus": "Thamnophis", "family": "Colubridae", "stateprovince": "California",
+        "rank": 12, "county": "Siskiyou Co.", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-176518", "hasmedia":
+        "0", "verbatimlocality": "Cedar Lake, Shasta-Trinity National Forest, Siskiyou
+        Co., California (5715 ft.)", "institutioncode": "CAS", "orgstateprovince":
+        "California", "lengthinmm": "265", "hastypestatus": "0", "underivedlifestage":
+        "Juv", "recordedby": "M.R. Jennings and M.P. Hayes", "isfossil": "0", "license":
+        "CC0", "wascaptive": "0", "modified": "2019-03-06 11:47:00.0", "haslicense":
+        "1", "eventdate": "1990-09-14", "haslength": "1", "bibliographiccitation":
+        "California Academy of Sciences. CAS Herpetology (HERP). Record ID: urn:catalog:CAS:HERP:176518.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp (source published
+        on 2019-03-06)", "citation": "California Academy of Sciences. CAS Herpetology
+        (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp (source
+        published on 2019-03-06)", "georeferencesources": "Terrain Navigator 1.0,
+        California, Shasta-Trinity/Modoc, Seven Lakes Basin Quadrangle, 1986.", "lastindexed":
+        "2019-08-04", "dateidentified": "1990-09-14", "catalognumber": "176518", "hasmass":
+        "1", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b", "locality":
+        "Shasta-Trinity National Forest, Cedar Lake", "orgname": "California Academy
+        of Sciences", "keyname": "cas/herp/urn-catalog-cas-herp-176518", "migrator":
+        "no migrator", "lengthtype": "snout-vent length", "recordnumber": "MRJ-455",
+        "massunitsinferred": "0", "icode": "CAS", "preparations": "Alcohol", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "class": "Reptilia", "decimallatitude":
+        "41.2072194444", "mappable": "1", "identifiedby": "M.R. Jennings", "contact":
+        "Lauren Scheinberg", "order": "Serpentes", "enddayofyear": "257"}, {"haslifestage":
+        "1", "month": "9", "decimallongitude": "-122.4950000000", "isarch": "0", "startdayofyear":
+        "257", "continent": "North America", "vntype": "specimen", "title": "CAS Herpetology
+        (HERP)", "massing": "2.8", "kingdom": "Animalia", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:HERP:176520", "day": "14", "occurrenceid":
+        "urn:catalog:CAS:HERP:176520", "collectioncode": "HERP", "verbatimeventdate":
+        "14 Sep 1990", "coordinateuncertaintyinmeters": "127", "higherclassification":
+        "Animalia; Chordata; Reptilia; Serpentes; Colubridae", "pubdate": "2019-03-06",
+        "lifestage": "Juv", "infraspecificepithet": "fitchi", "year": "1990", "wasinvasive":
+        "0", "specificepithet": "sirtalis", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "NAD27", "occurrenceremarks": "15:15 hrs. SVL = 182 mm +
+        56 mm tail, mass = 2.8 g.", "highergeography": "North America; USA; California;
+        Siskiyou Co.", "networks": "HerpNET,VertNet", "email": "lscheinberg@calacademy.org",
+        "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp",
+        "scientificname": "Thamnophis sirtalis fitchi", "hashid": "8882", "hassex":
+        "0", "language": "en", "institutionid": "CAS", "country": "USA", "hastissue":
+        "0", "lengthunitsinferred": "0", "genus": "Thamnophis", "family": "Colubridae",
+        "stateprovince": "California", "rank": 12, "county": "Siskiyou Co.", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-176520",
+        "hasmedia": "0", "verbatimlocality": "Cedar Lake, Shasta-Trinity National
+        Forest, Siskiyou Co., California (5715 ft.)", "institutioncode": "CAS", "orgstateprovince":
+        "California", "lengthinmm": "182", "hastypestatus": "0", "underivedlifestage":
+        "Juv", "recordedby": "M.R. Jennings and M.P. Hayes", "isfossil": "0", "license":
+        "CC0", "wascaptive": "0", "modified": "2019-03-06 11:47:00.0", "haslicense":
+        "1", "eventdate": "1990-09-14", "haslength": "1", "bibliographiccitation":
+        "California Academy of Sciences. CAS Herpetology (HERP). Record ID: urn:catalog:CAS:HERP:176520.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp (source published
+        on 2019-03-06)", "citation": "California Academy of Sciences. CAS Herpetology
+        (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp (source
+        published on 2019-03-06)", "georeferencesources": "Terrain Navigator 1.0,
+        California, Shasta-Trinity/Modoc, Seven Lakes Basin Quadrangle, 1986.", "lastindexed":
+        "2019-08-04", "dateidentified": "1990-09-14", "catalognumber": "176520", "hasmass":
+        "1", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b", "locality":
+        "Shasta-Trinity National Forest, Cedar Lake", "orgname": "California Academy
+        of Sciences", "keyname": "cas/herp/urn-catalog-cas-herp-176520", "migrator":
+        "no migrator", "lengthtype": "snout-vent length", "recordnumber": "MRJ-457",
+        "massunitsinferred": "0", "icode": "CAS", "preparations": "Alcohol", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "class": "Reptilia", "decimallatitude":
+        "41.2072194444", "mappable": "1", "identifiedby": "M.R. Jennings", "contact":
+        "Lauren Scheinberg", "order": "Serpentes", "enddayofyear": "257"}, {"haslifestage":
+        "1", "month": "9", "decimallongitude": "-122.5015916667", "isarch": "0", "startdayofyear":
+        "257", "minimumelevationinmeters": "1786.1315722631", "continent": "North
+        America", "vntype": "specimen", "title": "CAS Herpetology (HERP)", "massing":
+        "32.5", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:CAS:HERP:176521", "day": "14", "occurrenceid": "urn:catalog:CAS:HERP:176521",
+        "collectioncode": "HERP", "verbatimeventdate": "14 Sep 1990", "coordinateuncertaintyinmeters":
+        "1621", "higherclassification": "Animalia; Chordata; Amphibia; Caudata; Dicamptodontidae",
+        "pubdate": "2019-03-06", "lifestage": "Larva", "sex": "female", "year": "1990",
+        "wasinvasive": "0", "specificepithet": "tenebrosus", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "NAD27", "occurrenceremarks": "SVL = 104 mm, mass = 32.5
+        g.", "highergeography": "North America; USA; California; Siskiyou Co.", "networks":
+        "HerpNET,VertNet", "email": "lscheinberg@calacademy.org", "orgcountry": "United
+        States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp",
+        "scientificname": "Dicamptodon tenebrosus", "hashid": "8881", "hassex": "1",
+        "language": "en", "institutionid": "CAS", "country": "USA", "hastissue": "1",
+        "lengthunitsinferred": "0", "underivedsex": "F", "genus": "Dicamptodon", "family":
+        "Dicamptodontidae", "stateprovince": "California", "rank": 12, "county": "Siskiyou
+        Co.", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-176521",
+        "hasmedia": "0", "verbatimlocality": "Gumboot Creek at Road 26, Shasta-Trinity
+        National Forest, Siskiyou Co., California (ca. 5860 ft.)", "institutioncode":
+        "CAS", "orgstateprovince": "California", "lengthinmm": "104", "hastypestatus":
+        "0", "underivedlifestage": "Larva", "recordedby": "M.R. Jennings and M.P.
+        Hayes", "georeferenceremarks": "Extent is length of Gumboot Creek.", "isfossil":
+        "0", "license": "CC0", "wascaptive": "0", "modified": "2019-03-06 11:47:00.0",
+        "haslicense": "1", "eventdate": "1990-09-14", "haslength": "1", "verbatimelevation":
+        "ca 5860 ft", "bibliographiccitation": "California Academy of Sciences. CAS
+        Herpetology (HERP). Record ID: urn:catalog:CAS:HERP:176521. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "citation": "California Academy of Sciences.
+        CAS Herpetology (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "georeferencesources": "Terrain Navigator
+        1.0, California, Shasta-Trinity/Modoc, Seven Lakes Basin Quadrangle, 1986.",
+        "lastindexed": "2019-08-04", "dateidentified": "1994-11-01", "catalognumber":
+        "176521", "hasmass": "1", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b",
+        "locality": "Shasta-Trinity National Forest, Gumboot Creek at Rd 26", "orgname":
+        "California Academy of Sciences", "contact": "Lauren Scheinberg", "migrator":
+        "no migrator", "lengthtype": "snout-vent length", "recordnumber": "MRJ-419",
+        "massunitsinferred": "0", "icode": "CAS", "preparations": "Alcohol; Tissue:
+        Heart (Frozen), Kidney (Frozen), Liver (Frozen), Muscle (Frozen)", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "class": "Amphibia", "decimallatitude":
+        "41.2171472222", "mappable": "1", "identifiedby": "J.V. Vindum", "keyname":
+        "cas/herp/urn-catalog-cas-herp-176521", "order": "Caudata", "enddayofyear":
+        "257"}, {"haslifestage": "1", "month": "9", "decimallongitude": "-122.5015916667",
+        "isarch": "0", "startdayofyear": "257", "minimumelevationinmeters": "1786.1315722631",
+        "continent": "North America", "vntype": "specimen", "title": "CAS Herpetology
+        (HERP)", "massing": "16.8", "kingdom": "Animalia", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:HERP:176531", "day": "14", "occurrenceid":
+        "urn:catalog:CAS:HERP:176531", "collectioncode": "HERP", "verbatimeventdate":
+        "14 Sep 1990", "coordinateuncertaintyinmeters": "1621", "higherclassification":
+        "Animalia; Chordata; Amphibia; Anura; Ranidae", "pubdate": "2019-03-06", "lifestage":
+        "Adult", "sex": "female", "year": "1990", "wasinvasive": "0", "specificepithet":
+        "cascadae", "basisofrecord": "PreservedSpecimen", "geodeticdatum": "NAD27",
+        "occurrenceremarks": "SVL = 61 mm, mass = 16.8 g.", "highergeography": "North
+        America; USA; California; Siskiyou Co.", "networks": "HerpNET,VertNet", "email":
+        "lscheinberg@calacademy.org", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp", "scientificname":
+        "Rana cascadae", "hashid": "8788", "hassex": "1", "language": "en", "institutionid":
+        "CAS", "country": "USA", "hastissue": "1", "lengthunitsinferred": "0", "underivedsex":
+        "F", "genus": "Rana", "family": "Ranidae", "stateprovince": "California",
+        "rank": 12, "county": "Siskiyou Co.", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-176531", "hasmedia":
+        "0", "verbatimlocality": "Gumboot Creek at Road 26, Shasta-Trinity National
+        Forest, Siskiyou Co., California (ca. 5860 ft.)", "institutioncode": "CAS",
+        "orgstateprovince": "California", "lengthinmm": "61", "hastypestatus": "0",
+        "underivedlifestage": "Adult", "recordedby": "M.R. Jennings and M.P. Hayes",
+        "georeferenceremarks": "Extent is length of Gumboot Creek.", "isfossil": "0",
+        "license": "CC0", "wascaptive": "0", "modified": "2019-03-06 11:47:00.0",
+        "haslicense": "1", "eventdate": "1990-09-14", "haslength": "1", "verbatimelevation":
+        "5860 ft", "bibliographiccitation": "California Academy of Sciences. CAS Herpetology
+        (HERP). Record ID: urn:catalog:CAS:HERP:176531. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "citation": "California Academy of Sciences.
+        CAS Herpetology (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "georeferencesources": "Terrain Navigator
+        1.0, California, Shasta-Trinity/Modoc, Seven Lakes Basin Quadrangle, 1986.",
+        "lastindexed": "2019-08-04", "dateidentified": "1990-10-10", "catalognumber":
+        "176531", "hasmass": "1", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b",
+        "locality": "Shasta-Trinity National Forest, Gumboot Creek at Rd 26", "orgname":
+        "California Academy of Sciences", "contact": "Lauren Scheinberg", "migrator":
+        "no migrator", "lengthtype": "snout-vent length", "recordnumber": "MRJ-421",
+        "massunitsinferred": "0", "icode": "CAS", "preparations": "Alcohol; Tissue:
+        Heart (Frozen), Kidney (Frozen), Liver (Frozen), Muscle (Frozen)", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "class": "Amphibia", "decimallatitude":
+        "41.2171472222", "mappable": "1", "identifiedby": "M.R. Jennings", "keyname":
+        "cas/herp/urn-catalog-cas-herp-176531", "order": "Anura", "enddayofyear":
+        "257"}, {"haslifestage": "1", "month": "9", "decimallongitude": "-122.5015916667",
+        "isarch": "0", "startdayofyear": "257", "minimumelevationinmeters": "1786.1315722631",
+        "continent": "North America", "vntype": "specimen", "title": "CAS Herpetology
+        (HERP)", "massing": "18.2", "kingdom": "Animalia", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:HERP:176537", "day": "14", "occurrenceid":
+        "urn:catalog:CAS:HERP:176537", "collectioncode": "HERP", "verbatimeventdate":
+        "14 Sep 1990", "coordinateuncertaintyinmeters": "1621", "higherclassification":
+        "Animalia; Chordata; Amphibia; Anura; Ranidae", "pubdate": "2019-03-06", "lifestage":
+        "Adult", "sex": "male", "year": "1990", "wasinvasive": "0", "specificepithet":
+        "cascadae", "basisofrecord": "PreservedSpecimen", "geodeticdatum": "NAD27",
+        "occurrenceremarks": "SVL = 63 mm, mass = 18.2 g.", "highergeography": "North
+        America; USA; California; Siskiyou Co.", "networks": "HerpNET,VertNet", "email":
+        "lscheinberg@calacademy.org", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp", "scientificname":
+        "Rana cascadae", "hashid": "8782", "hassex": "1", "language": "en", "institutionid":
+        "CAS", "country": "USA", "hastissue": "1", "lengthunitsinferred": "0", "underivedsex":
+        "M", "genus": "Rana", "family": "Ranidae", "stateprovince": "California",
+        "rank": 12, "county": "Siskiyou Co.", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-176537", "hasmedia":
+        "0", "verbatimlocality": "Gumboot Creek at Road 26, Shasta-Trinity National
+        Forest, Siskiyou Co., California (ca. 5860 ft.)", "institutioncode": "CAS",
+        "orgstateprovince": "California", "lengthinmm": "63", "hastypestatus": "0",
+        "underivedlifestage": "Adult", "recordedby": "M.R. Jennings and M.P. Hayes",
+        "georeferenceremarks": "Extent is length of Gumboot Creek.", "isfossil": "0",
+        "license": "CC0", "wascaptive": "0", "modified": "2019-03-06 11:47:00.0",
+        "haslicense": "1", "eventdate": "1990-09-14", "haslength": "1", "verbatimelevation":
+        "5860 ft", "bibliographiccitation": "California Academy of Sciences. CAS Herpetology
+        (HERP). Record ID: urn:catalog:CAS:HERP:176537. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "citation": "California Academy of Sciences.
+        CAS Herpetology (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "georeferencesources": "Terrain Navigator
+        1.0, California, Shasta-Trinity/Modoc, Seven Lakes Basin Quadrangle, 1986.",
+        "lastindexed": "2019-08-04", "dateidentified": "1990-10-10", "catalognumber":
+        "176537", "hasmass": "1", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b",
+        "locality": "Shasta-Trinity National Forest, Gumboot Creek at Rd 26", "orgname":
+        "California Academy of Sciences", "contact": "Lauren Scheinberg", "migrator":
+        "no migrator", "lengthtype": "snout-vent length", "recordnumber": "MRJ-427",
+        "massunitsinferred": "0", "icode": "CAS", "preparations": "Alcohol; Tissue:
+        Heart (Frozen), Kidney (Frozen), Liver (Frozen), Muscle (Frozen)", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "class": "Amphibia", "decimallatitude":
+        "41.2171472222", "mappable": "1", "identifiedby": "M.R. Jennings", "keyname":
+        "cas/herp/urn-catalog-cas-herp-176537", "order": "Anura", "enddayofyear":
+        "257"}, {"haslifestage": "1", "month": "9", "decimallongitude": "-122.5015916667",
+        "isarch": "0", "startdayofyear": "257", "minimumelevationinmeters": "1786.1315722631",
+        "continent": "North America", "vntype": "specimen", "title": "CAS Herpetology
+        (HERP)", "massing": "15.8", "kingdom": "Animalia", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:HERP:176538", "day": "14", "occurrenceid":
+        "urn:catalog:CAS:HERP:176538", "collectioncode": "HERP", "verbatimeventdate":
+        "14 Sep 1990", "coordinateuncertaintyinmeters": "1621", "higherclassification":
+        "Animalia; Chordata; Amphibia; Anura; Ranidae", "pubdate": "2019-03-06", "lifestage":
+        "Adult", "sex": "male", "year": "1990", "wasinvasive": "0", "specificepithet":
+        "cascadae", "basisofrecord": "PreservedSpecimen", "geodeticdatum": "NAD27",
+        "occurrenceremarks": "SVL = 59.5 mm, mass = 15.8 g.", "highergeography": "North
+        America; USA; California; Siskiyou Co.", "networks": "HerpNET,VertNet", "email":
+        "lscheinberg@calacademy.org", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp", "scientificname":
+        "Rana cascadae", "hashid": "8779", "hassex": "1", "language": "en", "institutionid":
+        "CAS", "country": "USA", "hastissue": "1", "lengthunitsinferred": "0", "underivedsex":
+        "M", "genus": "Rana", "family": "Ranidae", "stateprovince": "California",
+        "rank": 12, "county": "Siskiyou Co.", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-176538", "hasmedia":
+        "0", "verbatimlocality": "Gumboot Creek at Road 26, Shasta-Trinity National
+        Forest, Siskiyou Co., California (ca. 5860 ft.)", "institutioncode": "CAS",
+        "orgstateprovince": "California", "lengthinmm": "59.5", "hastypestatus": "0",
+        "underivedlifestage": "Adult", "recordedby": "M.R. Jennings and M.P. Hayes",
+        "georeferenceremarks": "Extent is length of Gumboot Creek.", "isfossil": "0",
+        "license": "CC0", "wascaptive": "0", "modified": "2019-03-06 11:47:00.0",
+        "haslicense": "1", "eventdate": "1990-09-14", "haslength": "1", "verbatimelevation":
+        "5860 ft", "bibliographiccitation": "California Academy of Sciences. CAS Herpetology
+        (HERP). Record ID: urn:catalog:CAS:HERP:176538. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "citation": "California Academy of Sciences.
+        CAS Herpetology (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "georeferencesources": "Terrain Navigator
+        1.0, California, Shasta-Trinity/Modoc, Seven Lakes Basin Quadrangle, 1986.",
+        "lastindexed": "2019-08-04", "dateidentified": "1990-10-10", "catalognumber":
+        "176538", "hasmass": "1", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b",
+        "locality": "Shasta-Trinity National Forest, Gumboot Creek at Rd 26", "orgname":
+        "California Academy of Sciences", "contact": "Lauren Scheinberg", "migrator":
+        "no migrator", "lengthtype": "snout-vent length", "recordnumber": "MRJ-428",
+        "massunitsinferred": "0", "icode": "CAS", "preparations": "Alcohol; Tissue:
+        Heart (Frozen), Kidney (Frozen), Liver (Frozen), Muscle (Frozen)", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "class": "Amphibia", "decimallatitude":
+        "41.2171472222", "mappable": "1", "identifiedby": "M.R. Jennings", "keyname":
+        "cas/herp/urn-catalog-cas-herp-176538", "order": "Anura", "enddayofyear":
+        "257"}, {"haslifestage": "1", "month": "9", "decimallongitude": "-122.5015916667",
+        "isarch": "0", "startdayofyear": "257", "minimumelevationinmeters": "1786.1315722631",
+        "continent": "North America", "vntype": "specimen", "title": "CAS Herpetology
+        (HERP)", "massing": "9.0", "kingdom": "Animalia", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:HERP:176540", "day": "14", "occurrenceid":
+        "urn:catalog:CAS:HERP:176540", "collectioncode": "HERP", "verbatimeventdate":
+        "14 Sep 1990", "coordinateuncertaintyinmeters": "1621", "higherclassification":
+        "Animalia; Chordata; Amphibia; Anura; Ranidae", "pubdate": "2019-03-06", "lifestage":
+        "Adult", "sex": "male", "year": "1990", "wasinvasive": "0", "specificepithet":
+        "cascadae", "basisofrecord": "PreservedSpecimen", "geodeticdatum": "NAD27",
+        "occurrenceremarks": "SVL = 50 mm, mass = 9.0 g.", "highergeography": "North
+        America; USA; California; Siskiyou Co.", "networks": "HerpNET,VertNet", "email":
+        "lscheinberg@calacademy.org", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp", "scientificname":
+        "Rana cascadae", "hashid": "8304", "hassex": "1", "language": "en", "institutionid":
+        "CAS", "country": "USA", "hastissue": "1", "lengthunitsinferred": "0", "underivedsex":
+        "M", "genus": "Rana", "family": "Ranidae", "stateprovince": "California",
+        "rank": 12, "county": "Siskiyou Co.", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-176540", "hasmedia":
+        "0", "verbatimlocality": "Gumboot Creek at Road 26, Shasta-Trinity National
+        Forest, Siskiyou Co., California (ca. 5860 ft.)", "institutioncode": "CAS",
+        "orgstateprovince": "California", "lengthinmm": "50", "hastypestatus": "0",
+        "underivedlifestage": "Adult", "recordedby": "M.R. Jennings and M.P. Hayes",
+        "georeferenceremarks": "Extent is length of Gumboot Creek.", "isfossil": "0",
+        "license": "CC0", "wascaptive": "0", "modified": "2019-03-06 11:47:00.0",
+        "haslicense": "1", "eventdate": "1990-09-14", "haslength": "1", "verbatimelevation":
+        "5860 ft", "bibliographiccitation": "California Academy of Sciences. CAS Herpetology
+        (HERP). Record ID: urn:catalog:CAS:HERP:176540. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "citation": "California Academy of Sciences.
+        CAS Herpetology (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "georeferencesources": "Terrain Navigator
+        1.0, California, Shasta-Trinity/Modoc, Seven Lakes Basin Quadrangle, 1986.",
+        "lastindexed": "2019-08-04", "dateidentified": "1990-10-10", "catalognumber":
+        "176540", "hasmass": "1", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b",
+        "locality": "Shasta-Trinity National Forest, Gumboot Creek at Rd 26", "orgname":
+        "California Academy of Sciences", "contact": "Lauren Scheinberg", "migrator":
+        "no migrator", "lengthtype": "snout-vent length", "recordnumber": "MRJ-430",
+        "massunitsinferred": "0", "icode": "CAS", "preparations": "Alcohol; Tissue:
+        Heart (Frozen), Kidney (Frozen), Liver (Frozen), Muscle (Frozen)", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "class": "Amphibia", "decimallatitude":
+        "41.2171472222", "mappable": "1", "identifiedby": "M.R. Jennings", "keyname":
+        "cas/herp/urn-catalog-cas-herp-176540", "order": "Anura", "enddayofyear":
+        "257"}, {"haslifestage": "1", "month": "9", "decimallongitude": "-122.5015916667",
+        "isarch": "0", "startdayofyear": "257", "minimumelevationinmeters": "1786.1315722631",
+        "continent": "North America", "vntype": "specimen", "title": "CAS Herpetology
+        (HERP)", "massing": "5.6", "kingdom": "Animalia", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:HERP:176541", "day": "14", "occurrenceid":
+        "urn:catalog:CAS:HERP:176541", "collectioncode": "HERP", "verbatimeventdate":
+        "14 Sep 1990", "coordinateuncertaintyinmeters": "1621", "higherclassification":
+        "Animalia; Chordata; Amphibia; Anura; Ranidae", "pubdate": "2019-03-06", "lifestage":
+        "Adult", "sex": "male", "year": "1990", "wasinvasive": "0", "specificepithet":
+        "cascadae", "basisofrecord": "PreservedSpecimen", "geodeticdatum": "NAD27",
+        "occurrenceremarks": "SVL = 44 mm, mass = 5.6 g.", "highergeography": "North
+        America; USA; California; Siskiyou Co.", "networks": "HerpNET,VertNet", "email":
+        "lscheinberg@calacademy.org", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=herp", "scientificname":
+        "Rana cascadae", "hashid": "8303", "hassex": "1", "language": "en", "institutionid":
+        "CAS", "country": "USA", "hastissue": "1", "lengthunitsinferred": "0", "underivedsex":
+        "M", "genus": "Rana", "family": "Ranidae", "stateprovince": "California",
+        "rank": 12, "county": "Siskiyou Co.", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/herp?id=urn-catalog-cas-herp-176541", "hasmedia":
+        "0", "verbatimlocality": "Gumboot Creek at Road 26, Shasta-Trinity National
+        Forest, Siskiyou Co., California (ca. 5860 ft.)", "institutioncode": "CAS",
+        "orgstateprovince": "California", "lengthinmm": "44", "hastypestatus": "0",
+        "underivedlifestage": "Adult", "recordedby": "M.R. Jennings and M.P. Hayes",
+        "georeferenceremarks": "Extent is length of Gumboot Creek.", "isfossil": "0",
+        "license": "CC0", "wascaptive": "0", "modified": "2019-03-06 11:47:00.0",
+        "haslicense": "1", "eventdate": "1990-09-14", "haslength": "1", "verbatimelevation":
+        "5860 ft", "bibliographiccitation": "California Academy of Sciences. CAS Herpetology
+        (HERP). Record ID: urn:catalog:CAS:HERP:176541. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "citation": "California Academy of Sciences.
+        CAS Herpetology (HERP). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=herp
+        (source published on 2019-03-06)", "georeferencesources": "Terrain Navigator
+        1.0, California, Shasta-Trinity/Modoc, Seven Lakes Basin Quadrangle, 1986.",
+        "lastindexed": "2019-08-04", "dateidentified": "1990-10-10", "catalognumber":
+        "176541", "hasmass": "1", "gbifdatasetid": "cece4fc2-1fec-4bb5-a335-7252548e3f0b",
+        "locality": "Shasta-Trinity National Forest, Gumboot Creek at Rd 26", "orgname":
+        "California Academy of Sciences", "contact": "Lauren Scheinberg", "migrator":
+        "no migrator", "lengthtype": "snout-vent length", "recordnumber": "MRJ-431",
+        "massunitsinferred": "0", "icode": "CAS", "preparations": "Alcohol; Tissue:
+        Heart (Frozen), Kidney (Frozen), Liver (Frozen), Muscle (Frozen)", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "class": "Amphibia", "decimallatitude":
+        "41.2171472222", "mappable": "1", "identifiedby": "M.R. Jennings", "keyname":
+        "cas/herp/urn-catalog-cas-herp-176541", "order": "Anura", "enddayofyear":
+        "257"}], "matching_records": ">10000", "api_version": "api.py 2017-11-24T12:16-03:00"}'
+  recorded_at: 2020-01-29 16:50:35 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

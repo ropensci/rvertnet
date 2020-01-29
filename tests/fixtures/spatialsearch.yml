@@ -1,0 +1,612 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22distance%28location%2Cgeopoint%2833.529%2C-105.694%29%29%3C2000%22%2C%22l%22%3A10%7D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: no-cache
+      content-type: application/json
+      charset: utf-8
+      x-cloud-trace-context: d4230fe06d23ee970c9acc1dd612d82e
+      date: Wed, 29 Jan 2020 16:49:28 GMT
+      server: Google Frontend
+      content-length: '48727'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"request_date": "2020-01-29T16:49:28.496456", "response_records":
+        10, "submitted_query": "distance(location,geopoint(33.529,-105.694))<2000",
+        "request_origin": "45.505106,-122.675026", "limit": 10, "cursor": "False:CrEGCsIECpQE9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12Sk4XQkp6Skp6T0oyPmpyWkpqRjNCXi4uP0p6NnIuQjNKbnouenZ6MmtKSioyaipLSmIqWm9KSk4XSkp6SktLOyc3O0oyalpvSy8fGyM_I_wAA_3N_kpOF0JKekpKek9KMj5qclpKakYzQl4uLj9KejZyLkIzSm56Lnp2ejJrSkoqMmoqS0piKlpvSkpOF0pKekpLSzsnNztKMmpab0svHxsjPyP8AAP__AP7__oyBiZqNi5Gai9KPkI2LnpPelpGbmofSzc_OzNLPx9LPx_8AdG2goJmLjKCg_wBdno-PmpGYlpGa_wBzdG2WkZuah_8AXZuInP8Ac3Rtm5CcoJab_wBdkpOF0JKekpKek9KMj5qclpKakYzQl4uLj9KejZyLkIzSm56Lnp2ejJrSkoqMmoqS0piKlpvSkpOF0pKekpLSzsnNztKMmpab0svHxsjPyP8Ac3-Sk4XQkp6Skp6T0oyPmpyWkpqRjNCXi4uP0p6NnIuQjNKbnouenZ6MmtKSioyaipLSmIqWm9KSk4XSkp6SktLOyc3O0oyalpvSy8fGyM_I_wD__hAKIdteL9GbJNTJOQAAAADm____SApQAFoLCXgPEggn02j7EANg19nOlgcSDURvY3VtZW50SW5kZXgauAEoQU5EIChJUyAiY3VzdG9tZXJfbmFtZSIgImFwcGVuZ2luZSIpIChJUyAiZ3JvdXBfbmFtZSIgInN-dmVydG5ldC1wb3J0YWwiKSAoSVMgIm5hbWVzcGFjZSIgImluZGV4LTIwMTMtMDgtMDgiKSAoSVMgImluZGV4X25hbWUiICJkd2MiKSAoSU5fTCAiZ2VvX2xvY2F0aW9uIiAoTE9DIDMzLjUyOSAtMTA1LjY5NCkgMjAwMCkpOhkKDChOIG9yZGVyX2lkKRABGQAAAAAAAPD_SgUIAEDoBw",
+        "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
+        "0", "month": "07", "decimallongitude": "-105.68633", "isarch": "0", "startdayofyear":
+        "193", "minimumelevationinmeters": "2182.368", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "76", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1510?seid=518369",
+        "day": "12", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1510?seid=518369", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "12 JUL 1987",
+        "coordinateuncertaintyinmeters": "4044", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "male", "year": "1987", "wasinvasive": "0", "specificepithet": "bottae", "basisofrecord":
+        "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, TISSUE, ECTO SAVED.  WT 76G", "highergeography": "North America, United
+        States, New Mexico, Lincoln County", "continent": "North America", "email":
+        "mccormack@oxy.edu", "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm",
+        "scientificname": "Thomomys bottae", "hashid": "1059", "hassex": "1", "language":
+        "en", "institutionid": "urn:lsid:biocol.org:col:35295", "country": "United
+        States", "hastissue": "0", "underivedsex": "male", "genus": "Thomomys", "georeferenceprotocol":
+        "GeoLocate", "family": "Geomyidae", "stateprovince": "New Mexico", "rank":
+        12, "county": "Lincoln County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MLZ:Mamm:1510",
+        "georeferencedby": "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality":
+        "NOGAL: 1.3 MI S, 1.2 MI E", "institutioncode": "MLZ", "orgstateprovince":
+        "California", "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1510",
+        "maximumelevationinmeters": "2182.368", "hastypestatus": "0", "preparations":
+        "skin; skeleton", "recordedby": "Collector(s): John C. Hafner", "isfossil":
+        "0", "license": "http://arctosdb.org/home/data/", "wascaptive": "0", "dynamicproperties":
+        "sex=male", "georeferenceverificationstatus": "unverified", "modified": "2019-06-19
+        16:59:37.0", "haslicense": "1", "eventdate": "1987-07-12", "individualcount":
+        "1", "bibliographiccitation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1510?seid=518369.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1510", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.3 mi S, 1.2 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "1978", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.539196", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=1978", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1510-seid-518369",
+        "order": "Rodentia", "enddayofyear": "193"}, {"haslifestage": "0", "month":
+        "07", "decimallongitude": "-105.705479", "isarch": "0", "startdayofyear":
+        "196", "minimumelevationinmeters": "2023.872", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "100", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1603?seid=1080153",
+        "day": "14", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1603?seid=1080153", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "14 JUL 1988",
+        "coordinateuncertaintyinmeters": "3583", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "female", "year": "1988", "wasinvasive": "0", "specificepithet": "bottae",
+        "basisofrecord": "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, CHROMO, TISSUE, ECTO SAVED.  WT 100G", "highergeography": "North America,
+        United States, New Mexico, Lincoln County", "continent": "North America",
+        "email": "mccormack@oxy.edu", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm", "scientificname":
+        "Thomomys bottae", "hashid": "2876", "hassex": "1", "language": "en", "institutionid":
+        "urn:lsid:biocol.org:col:35295", "country": "United States", "hastissue":
+        "0", "underivedsex": "female", "genus": "Thomomys", "georeferenceprotocol":
+        "GeoLocate", "family": "Geomyidae", "stateprovince": "New Mexico", "rank":
+        12, "county": "Lincoln County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MLZ:Mamm:1603",
+        "georeferencedby": "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality":
+        "NOGAL: 1.1 MI S, 0.1 MI E", "institutioncode": "MLZ", "orgstateprovince":
+        "California", "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1603",
+        "maximumelevationinmeters": "2023.872", "hastypestatus": "0", "preparations":
+        "skin; skeleton", "recordedby": "Collector(s): John C. Hafner", "isfossil":
+        "0", "license": "http://arctosdb.org/home/data/", "wascaptive": "0", "dynamicproperties":
+        "sex=female", "georeferenceverificationstatus": "unverified", "modified":
+        "2019-06-20 11:52:55.0", "haslicense": "1", "eventdate": "1988-07-14", "individualcount":
+        "1", "bibliographiccitation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1603?seid=1080153.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1603", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.1 mi S, 0.1 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "2076", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.542099", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=2076", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1603-seid-1080153",
+        "order": "Rodentia", "enddayofyear": "196"}, {"haslifestage": "0", "month":
+        "07", "decimallongitude": "-105.705479", "isarch": "0", "startdayofyear":
+        "196", "minimumelevationinmeters": "2023.872", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "114", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1605?seid=953337",
+        "day": "14", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1605?seid=953337", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "14 JUL 1988",
+        "coordinateuncertaintyinmeters": "3583", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "male", "year": "1988", "wasinvasive": "0", "specificepithet": "bottae", "basisofrecord":
+        "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, CHROMO, TISSUE, ECTO SAVED.  WT 114G", "highergeography": "North America,
+        United States, New Mexico, Lincoln County", "continent": "North America",
+        "email": "mccormack@oxy.edu", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm", "scientificname":
+        "Thomomys bottae", "hashid": "3111", "hassex": "1", "language": "en", "institutionid":
+        "urn:lsid:biocol.org:col:35295", "country": "United States", "hastissue":
+        "0", "underivedsex": "male", "genus": "Thomomys", "georeferenceprotocol":
+        "GeoLocate", "family": "Geomyidae", "stateprovince": "New Mexico", "rank":
+        12, "county": "Lincoln County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MLZ:Mamm:1605",
+        "georeferencedby": "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality":
+        "NOGAL: 1.1 MI S, 0.1 MI E", "institutioncode": "MLZ", "orgstateprovince":
+        "California", "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1605",
+        "maximumelevationinmeters": "2023.872", "hastypestatus": "0", "preparations":
+        "skin; skeleton", "recordedby": "Collector(s): John C. Hafner", "isfossil":
+        "0", "license": "http://arctosdb.org/home/data/", "wascaptive": "0", "dynamicproperties":
+        "sex=male", "georeferenceverificationstatus": "unverified", "modified": "2019-06-20
+        11:52:55.0", "haslicense": "1", "eventdate": "1988-07-14", "individualcount":
+        "1", "bibliographiccitation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1605?seid=953337.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1605", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.1 mi S, 0.1 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "2078", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.542099", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=2078", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1605-seid-953337",
+        "order": "Rodentia", "enddayofyear": "196"}, {"haslifestage": "0", "month":
+        "07", "decimallongitude": "-105.705479", "isarch": "0", "startdayofyear":
+        "196", "minimumelevationinmeters": "2023.872", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "111", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1606?seid=1258713",
+        "day": "14", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1606?seid=1258713", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "14 JUL 1988",
+        "coordinateuncertaintyinmeters": "3583", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "female", "year": "1988", "wasinvasive": "0", "specificepithet": "bottae",
+        "basisofrecord": "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, CHROMO, TISSUE, ECTO SAVED.  WT 111G", "highergeography": "North America,
+        United States, New Mexico, Lincoln County", "continent": "North America",
+        "email": "mccormack@oxy.edu", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm", "scientificname":
+        "Thomomys bottae", "hashid": "7819", "hassex": "1", "language": "en", "institutionid":
+        "urn:lsid:biocol.org:col:35295", "country": "United States", "hastissue":
+        "0", "underivedsex": "female", "genus": "Thomomys", "georeferenceprotocol":
+        "GeoLocate", "family": "Geomyidae", "stateprovince": "New Mexico", "rank":
+        12, "county": "Lincoln County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MLZ:Mamm:1606",
+        "georeferencedby": "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality":
+        "NOGAL: 1.1 MI S, 0.1 MI E", "institutioncode": "MLZ", "orgstateprovince":
+        "California", "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1606",
+        "maximumelevationinmeters": "2023.872", "hastypestatus": "0", "preparations":
+        "skin; skeleton", "recordedby": "Collector(s): John C. Hafner", "isfossil":
+        "0", "license": "http://arctosdb.org/home/data/", "wascaptive": "0", "dynamicproperties":
+        "sex=female", "georeferenceverificationstatus": "unverified", "modified":
+        "2019-06-20 11:52:55.0", "haslicense": "1", "eventdate": "1988-07-14", "individualcount":
+        "1", "bibliographiccitation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1606?seid=1258713.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1606", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.1 mi S, 0.1 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "2079", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.542099", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=2079", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1606-seid-1258713",
+        "order": "Rodentia", "enddayofyear": "196"}, {"haslifestage": "0", "month":
+        "07", "decimallongitude": "-105.705479", "isarch": "0", "startdayofyear":
+        "196", "minimumelevationinmeters": "2023.872", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "67", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1609?seid=1046415",
+        "day": "14", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1609?seid=1046415", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "14 JUL 1988",
+        "coordinateuncertaintyinmeters": "3583", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "female", "year": "1988", "wasinvasive": "0", "specificepithet": "bottae",
+        "basisofrecord": "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, CHROMO, TISSUE, ECTO SAVED.  WT 67G", "highergeography": "North America,
+        United States, New Mexico, Lincoln County", "continent": "North America",
+        "email": "mccormack@oxy.edu", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm", "scientificname":
+        "Thomomys bottae", "hashid": "9652", "hassex": "1", "language": "en", "institutionid":
+        "urn:lsid:biocol.org:col:35295", "country": "United States", "hastissue":
+        "0", "underivedsex": "female", "genus": "Thomomys", "georeferenceprotocol":
+        "GeoLocate", "family": "Geomyidae", "stateprovince": "New Mexico", "rank":
+        12, "county": "Lincoln County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MLZ:Mamm:1609",
+        "georeferencedby": "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality":
+        "NOGAL: 1.1 MI S, 0.1 MI E", "institutioncode": "MLZ", "orgstateprovince":
+        "California", "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1609",
+        "maximumelevationinmeters": "2023.872", "hastypestatus": "0", "preparations":
+        "skin; skeleton", "recordedby": "Collector(s): John C. Hafner", "isfossil":
+        "0", "license": "http://arctosdb.org/home/data/", "wascaptive": "0", "dynamicproperties":
+        "sex=female", "georeferenceverificationstatus": "unverified", "modified":
+        "2019-06-20 11:52:55.0", "haslicense": "1", "eventdate": "1988-07-14", "individualcount":
+        "1", "bibliographiccitation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1609?seid=1046415.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1609", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.1 mi S, 0.1 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "2082", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.542099", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=2082", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1609-seid-1046415",
+        "order": "Rodentia", "enddayofyear": "196"}, {"haslifestage": "0", "month":
+        "07", "decimallongitude": "-105.705479", "isarch": "0", "startdayofyear":
+        "196", "minimumelevationinmeters": "2023.872", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "166", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1613?seid=561271",
+        "day": "14", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1613?seid=561271", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "14 JUL 1988",
+        "coordinateuncertaintyinmeters": "3583", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "male", "year": "1988", "wasinvasive": "0", "specificepithet": "bottae", "basisofrecord":
+        "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, CHROMO, TISSUE, ECTO SAVED.  WT 166G", "highergeography": "North America,
+        United States, New Mexico, Lincoln County", "continent": "North America",
+        "email": "mccormack@oxy.edu", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm", "scientificname":
+        "Thomomys bottae", "hashid": "4342", "hassex": "1", "language": "en", "institutionid":
+        "urn:lsid:biocol.org:col:35295", "country": "United States", "hastissue":
+        "0", "underivedsex": "male", "genus": "Thomomys", "georeferenceprotocol":
+        "GeoLocate", "family": "Geomyidae", "stateprovince": "New Mexico", "rank":
+        12, "county": "Lincoln County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MLZ:Mamm:1613",
+        "georeferencedby": "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality":
+        "NOGAL: 1.1 MI S, 0.1 MI E", "institutioncode": "MLZ", "orgstateprovince":
+        "California", "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1613",
+        "maximumelevationinmeters": "2023.872", "hastypestatus": "0", "preparations":
+        "skin; skeleton", "recordedby": "Collector(s): John C. Hafner", "isfossil":
+        "0", "license": "http://arctosdb.org/home/data/", "wascaptive": "0", "dynamicproperties":
+        "sex=male", "georeferenceverificationstatus": "unverified", "modified": "2019-06-20
+        11:52:55.0", "haslicense": "1", "eventdate": "1988-07-14", "individualcount":
+        "1", "bibliographiccitation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1613?seid=561271.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1613", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.1 mi S, 0.1 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "2086", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.542099", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=2086", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1613-seid-561271",
+        "order": "Rodentia", "enddayofyear": "196"}, {"haslifestage": "0", "month":
+        "07", "decimallongitude": "-105.705479", "isarch": "0", "startdayofyear":
+        "196", "minimumelevationinmeters": "2023.872", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "100", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1614?seid=746297",
+        "day": "14", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1614?seid=746297", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "14 JUL 1988",
+        "coordinateuncertaintyinmeters": "3583", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "female", "year": "1988", "wasinvasive": "0", "specificepithet": "bottae",
+        "basisofrecord": "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, CHROMO, TISSUE, ECTO SAVED.  WT 100G", "highergeography": "North America,
+        United States, New Mexico, Lincoln County", "continent": "North America",
+        "email": "mccormack@oxy.edu", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm", "scientificname":
+        "Thomomys bottae", "hashid": "9867", "hassex": "1", "language": "en", "institutionid":
+        "urn:lsid:biocol.org:col:35295", "country": "United States", "hastissue":
+        "0", "underivedsex": "female", "genus": "Thomomys", "georeferenceprotocol":
+        "GeoLocate", "family": "Geomyidae", "stateprovince": "New Mexico", "rank":
+        12, "county": "Lincoln County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MLZ:Mamm:1614",
+        "georeferencedby": "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality":
+        "NOGAL: 1.1 MI S, 0.1 MI E", "institutioncode": "MLZ", "orgstateprovince":
+        "California", "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1614",
+        "maximumelevationinmeters": "2023.872", "hastypestatus": "0", "preparations":
+        "skin; skeleton", "recordedby": "Collector(s): John C. Hafner", "isfossil":
+        "0", "license": "http://arctosdb.org/home/data/", "wascaptive": "0", "dynamicproperties":
+        "sex=female", "georeferenceverificationstatus": "unverified", "modified":
+        "2019-06-20 11:52:55.0", "haslicense": "1", "eventdate": "1988-07-14", "individualcount":
+        "1", "bibliographiccitation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1614?seid=746297.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1614", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.1 mi S, 0.1 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "2087", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.542099", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=2087", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1614-seid-746297",
+        "order": "Rodentia", "enddayofyear": "196"}, {"haslifestage": "0", "month":
+        "07", "decimallongitude": "-105.705479", "isarch": "0", "startdayofyear":
+        "196", "minimumelevationinmeters": "2023.872", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "79", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1618?seid=137956",
+        "day": "14", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1618?seid=137956", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "14 JUL 1988",
+        "coordinateuncertaintyinmeters": "3583", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "male", "year": "1988", "wasinvasive": "0", "specificepithet": "bottae", "basisofrecord":
+        "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, CHROMO, TISSUE, ECTO SAVED. WT 79G", "highergeography": "North America,
+        United States, New Mexico, Lincoln County", "continent": "North America",
+        "email": "mccormack@oxy.edu", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm", "scientificname":
+        "Thomomys bottae", "hashid": "7514", "hassex": "1", "language": "en", "institutionid":
+        "urn:lsid:biocol.org:col:35295", "country": "United States", "hastissue":
+        "0", "underivedsex": "male", "genus": "Thomomys", "georeferenceprotocol":
+        "GeoLocate", "family": "Geomyidae", "stateprovince": "New Mexico", "rank":
+        12, "county": "Lincoln County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MLZ:Mamm:1618",
+        "georeferencedby": "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality":
+        "NOGAL: 1.1 MI S, 0.1 MI E", "institutioncode": "MLZ", "orgstateprovince":
+        "California", "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1618",
+        "maximumelevationinmeters": "2023.872", "hastypestatus": "0", "preparations":
+        "skin; skeleton", "recordedby": "Collector(s): John C. Hafner", "isfossil":
+        "0", "license": "http://arctosdb.org/home/data/", "wascaptive": "0", "dynamicproperties":
+        "sex=male", "georeferenceverificationstatus": "unverified", "modified": "2019-06-20
+        11:52:55.0", "haslicense": "1", "eventdate": "1988-07-14", "individualcount":
+        "1", "bibliographiccitation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1618?seid=137956.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1618", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.1 mi S, 0.1 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "2091", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.542099", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=2091", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1618-seid-137956",
+        "order": "Rodentia", "enddayofyear": "196"}, {"haslifestage": "0", "month":
+        "07", "decimallongitude": "-105.705479", "isarch": "0", "startdayofyear":
+        "196", "minimumelevationinmeters": "2023.872", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "69", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1619?seid=1258712",
+        "day": "14", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1619?seid=1258712", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "14 JUL 1988",
+        "coordinateuncertaintyinmeters": "3583", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "male", "year": "1988", "wasinvasive": "0", "specificepithet": "bottae", "basisofrecord":
+        "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, TISSUE, ECTO SAVED.  WT 69G", "highergeography": "North America, United
+        States, New Mexico, Lincoln County", "continent": "North America", "email":
+        "mccormack@oxy.edu", "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm",
+        "scientificname": "Thomomys bottae", "hashid": "4155", "hassex": "1", "language":
+        "en", "institutionid": "urn:lsid:biocol.org:col:35295", "country": "United
+        States", "hastissue": "0", "underivedsex": "male", "genus": "Thomomys", "georeferenceprotocol":
+        "GeoLocate", "family": "Geomyidae", "stateprovince": "New Mexico", "rank":
+        12, "county": "Lincoln County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MLZ:Mamm:1619",
+        "georeferencedby": "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality":
+        "NOGAL: 1.1 MI S, 0.1 MI E", "institutioncode": "MLZ", "orgstateprovince":
+        "California", "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1619",
+        "maximumelevationinmeters": "2023.872", "hastypestatus": "0", "preparations":
+        "skin; skeleton", "recordedby": "Collector(s): John C. Hafner", "isfossil":
+        "0", "license": "http://arctosdb.org/home/data/", "wascaptive": "0", "dynamicproperties":
+        "sex=male", "georeferenceverificationstatus": "unverified", "modified": "2019-06-20
+        11:52:55.0", "haslicense": "1", "eventdate": "1988-07-14", "individualcount":
+        "1", "bibliographiccitation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1619?seid=1258712.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1619", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.1 mi S, 0.1 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "2092", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.542099", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=2092", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1619-seid-1258712",
+        "order": "Rodentia", "enddayofyear": "196"}, {"haslifestage": "0", "month":
+        "07", "decimallongitude": "-105.705479", "isarch": "0", "startdayofyear":
+        "196", "minimumelevationinmeters": "2023.872", "networks": "Arctos,MaNIS,VertNet",
+        "vntype": "specimen", "title": "MLZ Mammal Collection (Arctos)", "massing":
+        "96", "accessrights": "http://vertnet.org/resources/norms.html", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MLZ:Mamm:1621?seid=489707",
+        "day": "14", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MLZ:Mamm:1621?seid=489707", "identificationqualifier":
+        "A", "georeferenceddate": "2012-07-08", "verbatimeventdate": "14 JUL 1988",
+        "coordinateuncertaintyinmeters": "3583", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Geomyidae;", "pubdate": "2019-07-06", "sex":
+        "female", "year": "1988", "wasinvasive": "0", "specificepithet": "bottae",
+        "basisofrecord": "PreservedSpecimen", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "SKEL, TISSUE, ECTO SAVED.  WT 96G", "highergeography": "North America, United
+        States, New Mexico, Lincoln County", "continent": "North America", "email":
+        "mccormack@oxy.edu", "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm",
+        "scientificname": "Thomomys bottae", "hashid": "6384", "hassex": "1", "language":
+        "en", "institutionid": "urn:lsid:biocol.org:col:35295", "country": "United
+        States", "hastissue": "0", "underivedsex": "female", "genus": "Thomomys",
+        "georeferenceprotocol": "GeoLocate", "family": "Geomyidae", "stateprovince":
+        "New Mexico", "rank": 12, "county": "Lincoln County", "phylum": "Chordata",
+        "references": "http://arctos.database.museum/guid/MLZ:Mamm:1621", "georeferencedby":
+        "unknown", "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "NOGAL:
+        1.1 MI S, 0.1 MI E", "institutioncode": "MLZ", "orgstateprovince": "California",
+        "organismid": "http://arctos.database.museum/guid/MLZ:Mamm:1621", "maximumelevationinmeters":
+        "2023.872", "hastypestatus": "0", "preparations": "skin; skeleton", "recordedby":
+        "Collector(s): John C. Hafner", "isfossil": "0", "license": "http://arctosdb.org/home/data/",
+        "wascaptive": "0", "dynamicproperties": "sex=female", "georeferenceverificationstatus":
+        "unverified", "modified": "2019-06-20 11:52:55.0", "haslicense": "1", "eventdate":
+        "1988-07-14", "individualcount": "1", "bibliographiccitation": "Moore Laboratory
+        of Zoology. MLZ Mammal Collection (Arctos). Record ID: http://arctos.database.museum/guid/MLZ:Mamm:1621?seid=489707.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source published
+        on 2019-07-06)", "citation": "Moore Laboratory of Zoology. MLZ Mammal Collection
+        (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=mlz_mamm (source
+        published on 2019-07-06)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-07-08", "haslength": "0", "catalognumber": "MLZ:Mamm:1621", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/", "hasmass":
+        "1", "gbifdatasetid": "226b536c-25f9-4f6b-b144-edcbdffa3566", "locality":
+        "1.1 mi S, 0.1 mi E Nogal", "orgname": "Moore Laboratory of Zoology", "contact":
+        "John McCormack", "migrator": "no migrator", "recordnumber": "2094", "collectioncode":
+        "Mammal specimens", "massunitsinferred": "0", "icode": "MLZ", "gbifpublisherid":
+        "247b85e0-4e6b-46d1-b1c8-47b00bb8ced7", "class": "Mammalia", "previousidentifications":
+        "<i>Thomomys bottae</i> (accepted ID) identified by John C. Hafner; method:
+        legacy", "decimallatitude": "33.542099", "mappable": "1", "locationaccordingto":
+        "unknown", "othercatalognumbers": "collector number=2094", "identifiedby":
+        "John C. Hafner", "nomenclaturalcode": "ICZN", "keyname": "mlz/mammal-specimens/http-arctos-database-museum-guid-mlz-mamm-1621-seid-489707",
+        "order": "Rodentia", "enddayofyear": "196"}], "matching_records": 57, "api_version":
+        "api.py 2017-11-24T12:16-03:00"}'
+  recorded_at: 2020-01-29 16:49:28 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

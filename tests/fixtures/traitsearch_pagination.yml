@@ -1,0 +1,240 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22haslifestage%3A1%22%2C%22l%22%3A5%7D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: no-cache
+      content-type: application/json
+      charset: utf-8
+      x-cloud-trace-context: 83ff2bbdd8c245db574dbc2014749bd5;o=1
+      date: Wed, 29 Jan 2020 16:51:05 GMT
+      server: Google Frontend
+      content-length: '17734'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"request_date": "2020-01-29T16:51:05.974927", "response_records":
+        5, "submitted_query": "haslifestage:1", "request_origin": "45.505106,-122.675026",
+        "limit": 5, "cursor": "False:CrIECtYCCqgC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12ekpGX0J2WjZuM0JuQi9LOycfMy_8AAP9zf56SkZfQnZaNm4zQm5CL0s7Jx8zL_wAA__8A_v_-jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wB0baCgmYuMoKD_AF2ej4-akZiWkZr_AHN0bZaRm5qH_wBdm4ic_wBzdG2bkJyglpv_AF2ekpGX0J2WjZuM0JuQi9LOycfMy_8Ac3-ekpGX0J2WjZuM0JuQi9LOycfMy_8A__4QBSEE3QSQHTwbGTkAAAAA5v___0gFUABaCwkgm-lBiVj6dBADYN_15_cDEg1Eb2N1bWVudEluZGV4GqUBKEFORCAoSVMgImN1c3RvbWVyX25hbWUiICJhcHBlbmdpbmUiKSAoSVMgImdyb3VwX25hbWUiICJzfnZlcnRuZXQtcG9ydGFsIikgKElTICJuYW1lc3BhY2UiICJpbmRleC0yMDEzLTA4LTA4IikgKElTICJpbmRleF9uYW1lIiAiZHdjIikgKElTICJyYXRvbV9oYXNsaWZlc3RhZ2UiICIxIikpOhkKDChOIG9yZGVyX2lkKRABGQAAAAAAAPD_SgUIAEDoBw",
+        "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
+        "1", "month": "6", "decimallongitude": "-74.03508", "verbatimlongitude": "074
+        02 06.3 W", "startdayofyear": "175", "minimumelevationinmeters": "103", "networks":
+        "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird Collection", "kingdom":
+        "Animalia", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:AMNH:Birds:DOT-16238",
+        "day": "23", "collectioncode": "Birds", "verbatimeventdate": "2008-06-23",
+        "coordinateuncertaintyinmeters": "1000", "higherclassification": "Animalia;Chordata;Aves;Accipitriformes;Accipitridae;Buteo",
+        "pubdate": "2013-10-30", "lifestage": "nestling", "sex": "male", "year": "2008",
+        "wasinvasive": "0", "specificepithet": "platypterus", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "WGS84", "occurrenceremarks": "Shot out of nest, offspring
+        of JGG 1436 and JGG 1437", "highergeography": "North and Central America;USA;New
+        York;Ulster Co.;;;;", "continent": "North America", "email": "trombone@amnh.org",
+        "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Buteo platypterus", "disposition": "Found", "hashid": "4572",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "male", "genus":
+        "Buteo", "family": "Accipitridae", "stateprovince": "New York", "rank": 12,
+        "county": "Ulster", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-16238",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Ulster Co.; ; ; ; ; ; ; Saugerties, Phillips Road",
+        "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince": "New York",
+        "occurrencestatus": "present", "hastypestatus": "0", "preparations": "Tissue,
+        Skin", "recordedby": "Jeffrey G. Groth", "isfossil": "0", "wascaptive": "0",
+        "georeferenceverificationstatus": "requires verification", "modified": "2013-08-20",
+        "verbatimlatitude": "42 03 49.5 N", "haslicense": "0", "eventdate": "2008-06-23",
+        "individualcount": "1", "verbatimelevation": "103 m", "bibliographiccitation":
+        "American Museum of Natural History. AMNH Bird Collection. Record ID: DOT-16238.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds (source published
+        on 2013-10-30)", "citation": "American Museum of Natural History. AMNH Bird
+        Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-16238",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Saugerties, Phillips Road", "orgname": "American Museum of Natural History",
+        "contact": "Tom Trombone", "migrator": "2013-08-21", "recordnumber": "JGG
+        1438", "collectionid": "urn:lsid:biocol.org:col:34926", "icode": "AMNH", "underivedlifestage":
+        "nestling", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862", "class":
+        "Aves", "decimallatitude": "42.06375", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "keyname": "amnh/birds/dot-16238", "order": "Accipitriformes", "enddayofyear":
+        "175"}, {"haslifestage": "1", "month": "7", "decimallongitude": "-74.686217",
+        "verbatimlongitude": "074 41 10.38 W", "startdayofyear": "193", "minimumelevationinmeters":
+        "638", "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird
+        Collection", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:AMNH:Birds:DOT-16541", "day": "12", "collectioncode": "Birds",
+        "verbatimeventdate": "2009-07-12", "coordinateuncertaintyinmeters": "1000",
+        "higherclassification": "Animalia;Chordata;Aves;Piciformes;Picidae;Picoides",
+        "pubdate": "2013-10-30", "lifestage": "immature", "sex": "female", "year":
+        "2009", "wasinvasive": "0", "specificepithet": "villosus", "basisofrecord":
+        "PreservedSpecimen", "geodeticdatum": "WGS84", "highergeography": "North and
+        Central America;USA;New York;Sullivan Co.;;;;", "continent": "North America",
+        "email": "trombone@amnh.org", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds", "scientificname":
+        "Picoides villosus", "disposition": "Found", "hashid": "4668", "hassex": "1",
+        "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925", "country":
+        "United States", "hastissue": "1", "underivedsex": "female", "genus": "Picoides",
+        "family": "Picidae", "stateprovince": "New York", "rank": 12, "county": "Sullivan",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-16541",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Sullivan Co.; ; ; ; ; ; ; Parksville, Cooley Road",
+        "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince": "New York",
+        "occurrencestatus": "present", "hastypestatus": "0", "preparations": "Tissue,
+        Skeleton", "recordedby": "Jeffrey G. Groth", "isfossil": "0", "wascaptive":
+        "0", "georeferenceverificationstatus": "requires verification", "modified":
+        "2013-08-20", "verbatimlatitude": "41 53 53.44 N", "haslicense": "0", "eventdate":
+        "2009-07-12", "individualcount": "1", "verbatimelevation": "638 m", "bibliographiccitation":
+        "American Museum of Natural History. AMNH Bird Collection. Record ID: DOT-16541.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds (source published
+        on 2013-10-30)", "citation": "American Museum of Natural History. AMNH Bird
+        Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-16541",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Parksville, Cooley Road", "orgname": "American Museum of Natural History",
+        "contact": "Tom Trombone", "migrator": "2013-08-21", "recordnumber": "JGG
+        1646", "collectionid": "urn:lsid:biocol.org:col:34926", "icode": "AMNH", "underivedlifestage":
+        "immature", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862", "class":
+        "Aves", "decimallatitude": "41.898178", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "keyname": "amnh/birds/dot-16541", "order": "Piciformes", "enddayofyear":
+        "193"}, {"haslifestage": "1", "month": "7", "decimallongitude": "-74.686217",
+        "verbatimlongitude": "074 41 10.38 W", "startdayofyear": "192", "minimumelevationinmeters":
+        "638", "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird
+        Collection", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:AMNH:Birds:DOT-16751", "day": "11", "collectioncode": "Birds",
+        "verbatimeventdate": "2009-07-11", "coordinateuncertaintyinmeters": "1000",
+        "higherclassification": "Animalia;Chordata;Aves;Accipitriformes;Accipitridae;Accipiter",
+        "pubdate": "2013-10-30", "lifestage": "immature", "sex": "female", "year":
+        "2009", "wasinvasive": "0", "specificepithet": "striatus", "basisofrecord":
+        "PreservedSpecimen", "geodeticdatum": "WGS84", "occurrenceremarks": "Found
+        dead on the road", "highergeography": "North and Central America;USA;New York;Sullivan
+        Co.;;;;", "continent": "North America", "email": "trombone@amnh.org", "orgcountry":
+        "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Accipiter striatus", "disposition": "Found", "hashid":
+        "6869", "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "female", "genus":
+        "Accipiter", "family": "Accipitridae", "stateprovince": "New York", "rank":
+        12, "county": "Sullivan", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-16751",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Sullivan Co.; ; ; ; ; ; ; Parksville, Cooley Road",
+        "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince": "New York",
+        "occurrencestatus": "present", "hastypestatus": "0", "preparations": "Tissue,
+        Skin", "recordedby": "Jeffrey G. Groth", "isfossil": "0", "wascaptive": "0",
+        "georeferenceverificationstatus": "requires verification", "modified": "2013-08-20",
+        "verbatimlatitude": "41 53 53.44 N", "haslicense": "0", "samplingprotocol":
+        "Found dead", "eventdate": "2009-07-11", "individualcount": "1", "verbatimelevation":
+        "638 m", "bibliographiccitation": "American Museum of Natural History. AMNH
+        Bird Collection. Record ID: DOT-16751. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "citation": "American Museum of Natural
+        History. AMNH Bird Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-16751",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Parksville, Cooley Road", "orgname": "American Museum of Natural History",
+        "contact": "Tom Trombone", "migrator": "2013-08-21", "recordnumber": "JGG
+        1633", "collectionid": "urn:lsid:biocol.org:col:34926", "icode": "AMNH", "underivedlifestage":
+        "immature", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862", "class":
+        "Aves", "decimallatitude": "41.898178", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "keyname": "amnh/birds/dot-16751", "order": "Accipitriformes", "enddayofyear":
+        "192"}, {"haslifestage": "1", "month": "7", "decimallongitude": "-74.686217",
+        "verbatimlongitude": "074 41 10.38 W", "startdayofyear": "192", "minimumelevationinmeters":
+        "638", "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird
+        Collection", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:AMNH:Birds:DOT-16757", "day": "11", "collectioncode": "Birds",
+        "verbatimeventdate": "2009-07-11", "coordinateuncertaintyinmeters": "1000",
+        "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Regulidae;Regulus",
+        "pubdate": "2013-10-30", "lifestage": "juvenile", "sex": "male", "year": "2009",
+        "wasinvasive": "0", "specificepithet": "satrapa", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "WGS84", "highergeography": "North and Central America;USA;New
+        York;Sullivan Co.;;;;", "continent": "North America", "email": "trombone@amnh.org",
+        "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Regulus satrapa", "disposition": "Found", "hashid": "6875",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "male", "genus":
+        "Regulus", "family": "Regulidae", "stateprovince": "New York", "rank": 12,
+        "county": "Sullivan", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-16757",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Sullivan Co.; ; ; ; ; ; ; Parksville, Cooley Road",
+        "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince": "New York",
+        "occurrencestatus": "present", "hastypestatus": "0", "preparations": "Tissue,
+        Skeleton", "recordedby": "Jeffrey G. Groth", "isfossil": "0", "wascaptive":
+        "0", "georeferenceverificationstatus": "requires verification", "modified":
+        "2013-08-20", "verbatimlatitude": "41 53 53.44 N", "haslicense": "0", "eventdate":
+        "2009-07-11", "individualcount": "1", "verbatimelevation": "638 m", "bibliographiccitation":
+        "American Museum of Natural History. AMNH Bird Collection. Record ID: DOT-16757.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds (source published
+        on 2013-10-30)", "citation": "American Museum of Natural History. AMNH Bird
+        Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-16757",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Parksville, Cooley Road", "orgname": "American Museum of Natural History",
+        "contact": "Tom Trombone", "migrator": "2013-08-21", "recordnumber": "JGG
+        1639", "collectionid": "urn:lsid:biocol.org:col:34926", "icode": "AMNH", "underivedlifestage":
+        "juvenile", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862", "class":
+        "Aves", "decimallatitude": "41.898178", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "keyname": "amnh/birds/dot-16757", "order": "Passeriformes", "enddayofyear":
+        "192"}, {"haslifestage": "1", "month": "7", "decimallongitude": "-73.549175",
+        "verbatimlongitude": "073 32 57.03 W", "startdayofyear": "184", "minimumelevationinmeters":
+        "140", "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird
+        Collection", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:AMNH:Birds:DOT-16834", "day": "3", "collectioncode": "Birds",
+        "verbatimeventdate": "2009-07-03", "coordinateuncertaintyinmeters": "150",
+        "higherclassification": "Animalia;Chordata;Aves;Accipitriformes;Cathartidae;Coragyps",
+        "pubdate": "2013-10-30", "lifestage": "young", "sex": "female", "year": "2009",
+        "wasinvasive": "0", "specificepithet": "atratus", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "WGS84", "occurrenceremarks": "Member of a large year-round
+        resident flock that appeared over the last 15 years. Shot by Jeff Groth after
+        feeding two large downy young in abandoned turkey coop.", "highergeography":
+        "North and Central America;USA;New York;Putnam Co.;;;;", "continent": "North
+        America", "email": "trombone@amnh.org", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds", "scientificname":
+        "Coragyps atratus", "disposition": "Found", "hashid": "1527", "hassex": "1",
+        "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925", "country":
+        "United States", "hastissue": "1", "underivedsex": "female", "genus": "Coragyps",
+        "family": "Cathartidae", "stateprovince": "New York", "rank": 12, "county":
+        "Putnam", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-16834",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Putnam Co.; ; ; ; ; ; ; Patterson, Doansburg Road,
+        Green Chimneys Children''s Services", "countrycode": "US", "institutioncode":
+        "AMNH", "orgstateprovince": "New York", "occurrencestatus": "present", "hastypestatus":
+        "0", "preparations": "Tissue, Skin", "recordedby": "Peter A. Capainolo", "isfossil":
+        "0", "wascaptive": "0", "georeferenceverificationstatus": "requires verification",
+        "modified": "2013-08-20", "verbatimlatitude": "41 26 53.06 N", "haslicense":
+        "0", "eventdate": "2009-07-03", "individualcount": "1", "verbatimelevation":
+        "140 m", "bibliographiccitation": "American Museum of Natural History. AMNH
+        Bird Collection. Record ID: DOT-16834. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "citation": "American Museum of Natural
+        History. AMNH Bird Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-16834",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Patterson, Doansburg Road, Green Chimneys Children''s Services", "orgname":
+        "American Museum of Natural History", "contact": "Tom Trombone", "migrator":
+        "2013-08-21", "recordnumber": "PAC 1941", "collectionid": "urn:lsid:biocol.org:col:34926",
+        "icode": "AMNH", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862",
+        "class": "Aves", "decimallatitude": "41.448072", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "keyname": "amnh/birds/dot-16834", "order": "Accipitriformes", "enddayofyear":
+        "184"}], "matching_records": ">10000", "api_version": "api.py 2017-11-24T12:16-03:00"}'
+  recorded_at: 2020-01-29 16:51:06 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

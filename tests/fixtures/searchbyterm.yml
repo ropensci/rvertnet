@@ -1,0 +1,594 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22genus%3Aochotona%20specificepithet%3A%28princeps%20OR%20collaris%29%22%2C%22l%22%3A5%7D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: no-cache
+      content-type: application/json
+      charset: utf-8
+      x-cloud-trace-context: 8fb029ab00b1b3e0b17510f749589d66;o=1
+      date: Wed, 29 Jan 2020 16:47:10 GMT
+      server: Google Frontend
+      content-length: '15523'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"request_date": "2020-01-29T16:47:10.940670", "response_records":
+        5, "submitted_query": "genus:ochotona specificepithet:(princeps OR collaris)",
+        "request_origin": "45.505106,-122.675026", "limit": 5, "cursor": "False:CuQFCooDCtwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQkp6S0IqNkdKcnouek5CY0pyejNKSnpLSzsjLysb_AAD_c3-cnozQkp6S0IqNkdKcnouek5CY0pyejNKSnpLSzsjLysb_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyejNCSnpLQio2R0pyei56TkJjSnJ6M0pKektLOyMvKxv8Ac3-cnozQkp6S0IqNkdKcnouek5CY0pyejNKSnpLSzsjLysb_AP_-EAUhBN0EkB08Gxk5AAAAAOb___9IBVAAWgsJW8z1OBuF2r4QA2C_io3ABhINRG9jdW1lbnRJbmRleBqjAihBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKE9SIChRVCAib2Nob3RvbmEiICJydGV4dF9nZW51cyIpIChJUyAicmF0b21fZ2VudXMiICJvY2hvdG9uYSIpKSAoT1IgKFFUICJwcmluY2VwcyIgInJ0ZXh0X3NwZWNpZmljZXBpdGhldCIpIChRVCAiY29sbGFyaXMiICJydGV4dF9zcGVjaWZpY2VwaXRoZXQiKSkpKToZCgwoTiBvcmRlcl9pZCkQARkAAAAAAADw_0oFCABA6Ac",
+        "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
+        "0", "georeferenceprotocol": "MaNIS georeferencing guidelines", "higherclassification":
+        "Animalia; Chordata; Mammalia; Lagomorpha; Ochotonidae", "pubdate": "2019-07-23",
+        "wasinvasive": "0", "stateprovince": "New Mexico", "hastypestatus": "0", "verbatimelevation":
+        "11000 ft.", "rank": 12, "month": "4", "decimallongitude": "-105.7949900000",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/mam?id=urn-catalog-cas-mam-11105",
+        "haslength": "0", "isarch": "0", "year": "1954", "startdayofyear": "117",
+        "wascaptive": "0", "specificepithet": "princeps", "networks": "MaNIS,VertNet",
+        "recordedby": "R. S. Holdenried", "bibliographiccitation": "California Academy
+        of Sciences. CAS Mammalogy (MAM). Record ID: urn:catalog:CAS:MAM:11105. Source:
+        http://ipt.calacademy.org:8080/ipt/resource.do?r=mam (source published on
+        2019-07-23)", "vntype": "specimen", "family": "Ochotonidae", "locality": "Santa
+        Fe Ski Basin", "orgname": "California Academy of Sciences", "hasmedia": "0",
+        "geodeticdatum": "NAD27", "coordinateuncertaintyinmeters": "1609", "orgstateprovince":
+        "California", "highergeography": "North America; USA; New Mexico; Santa Fe
+        Co.", "continent": "North America", "georeferencedby": "Gabor R. Racz", "contact":
+        "Maureen Flannery", "lastindexed": "2019-08-04", "migrator": "no migrator",
+        "hasmass": "0", "recordnumber": "1067", "email": "mflannery@calacademy.org",
+        "day": "27", "kingdom": "Animalia", "infraspecificepithet": "incana", "citation":
+        "California Academy of Sciences. CAS Mammalogy (MAM). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=mam
+        (source published on 2019-07-23)", "georeferenceddate": "2003-02-14", "georeferencesources":
+        "New Mexico RGIS", "verbatimlongitude": "-105.7949980000", "hassex": "1",
+        "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=mam",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:MAM:11105",
+        "icode": "CAS", "scientificname": "Ochotona princeps incana", "preparations":
+        "mammal", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "4760", "sex": "female", "class": "Mammalia", "keyname": "cas/mam/urn-catalog-cas-mam-11105",
+        "isfossil": "0", "county": "Santa Fe Co.", "decimallatitude": "35.7858300000",
+        "occurrenceid": "urn:catalog:CAS:MAM:11105", "language": "en", "license":
+        "CC0", "basisofrecord": "PreservedSpecimen", "country": "USA", "mappable":
+        "1", "georeferenceverificationstatus": "unverified", "collectioncode": "MAM",
+        "verbatimlatitude": "35.7858310000", "eventdate": "1954-04-27", "haslicense":
+        "1", "hastissue": "0", "verbatimeventdate": "27 Apr 1954", "underivedsex":
+        "F", "title": "CAS Mammalogy (MAM)", "genus": "Ochotona", "gbifdatasetid":
+        "6ce7290f-47f6-4046-8356-371f5b6749df", "order": "Lagomorpha", "catalognumber":
+        "11105", "enddayofyear": "117"}, {"haslifestage": "0", "georeferenceprotocol":
+        "MaNIS georeferencing guidelines", "higherclassification": "Animalia; Chordata;
+        Mammalia; Lagomorpha; Ochotonidae", "pubdate": "2019-07-23", "wasinvasive":
+        "0", "stateprovince": "Washington", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 12, "month": "8", "decimallongitude": "-121.4069400000",
+        "phylum": "Chordata", "verbatimlongitude": "-121.4069400000", "haslength":
+        "0", "isarch": "0", "year": "1907", "startdayofyear": "227", "wascaptive":
+        "0", "specificepithet": "princeps", "networks": "MaNIS,VertNet", "bibliographiccitation":
+        "California Academy of Sciences. CAS Mammalogy (MAM). Record ID: urn:catalog:CAS:MAM:17454.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=mam (source published
+        on 2019-07-23)", "vntype": "specimen", "family": "Ochotonidae", "locality":
+        "Silver Lake near Monte Cristo", "orgname": "California Academy of Sciences",
+        "hasmedia": "0", "geodeticdatum": "NAD27", "coordinateuncertaintyinmeters":
+        "335", "orgstateprovince": "California", "highergeography": "North America;
+        USA; Washington; Snohomish Co.", "continent": "North America", "georeferencedby":
+        "Jasmine Gallaher", "contact": "Maureen Flannery", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "hasmass": "0", "email": "mflannery@calacademy.org",
+        "day": "15", "kingdom": "Animalia", "infraspecificepithet": "brunnescens",
+        "citation": "California Academy of Sciences. CAS Mammalogy (MAM). Source:
+        http://ipt.calacademy.org:8080/ipt/resource.do?r=mam (source published on
+        2019-07-23)", "references": "http://portal.vertnet.org/o/cas/mam?id=urn-catalog-cas-mam-17454",
+        "georeferenceddate": "1999-04-07", "georeferencesources": "GNIS", "hassex":
+        "1", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=mam",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:MAM:17454",
+        "icode": "CAS", "scientificname": "Ochotona princeps brunnescens", "preparations":
+        "SN", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "3961", "sex": "male", "class": "Mammalia", "keyname": "cas/mam/urn-catalog-cas-mam-17454",
+        "isfossil": "0", "county": "Snohomish Co.", "decimallatitude": "47.9736100000",
+        "occurrenceid": "urn:catalog:CAS:MAM:17454", "language": "en", "license":
+        "CC0", "country": "USA", "mappable": "1", "georeferenceverificationstatus":
+        "unverified", "othercatalognumbers": "SU 3681", "collectioncode": "MAM", "verbatimlatitude":
+        "47.9736100000", "eventdate": "1907-08-15", "haslicense": "1", "hastissue":
+        "0", "verbatimeventdate": "15 Aug 1907", "underivedsex": "M", "title": "CAS
+        Mammalogy (MAM)", "genus": "Ochotona", "gbifdatasetid": "6ce7290f-47f6-4046-8356-371f5b6749df",
+        "order": "Lagomorpha", "catalognumber": "17454", "enddayofyear": "227"}, {"haslifestage":
+        "0", "georeferenceprotocol": "MaNIS georeferencing guidelines", "higherclassification":
+        "Animalia; Chordata; Mammalia; Lagomorpha; Ochotonidae", "pubdate": "2019-07-23",
+        "wasinvasive": "0", "stateprovince": "Idaho", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 12, "month": "7", "decimallongitude": "-116.8272000000",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/mam?id=urn-catalog-cas-mam-17455",
+        "haslength": "0", "isarch": "0", "year": "1894", "startdayofyear": "195",
+        "wascaptive": "0", "specificepithet": "princeps", "networks": "MaNIS,VertNet",
+        "recordedby": "J. D. Snyder", "bibliographiccitation": "California Academy
+        of Sciences. CAS Mammalogy (MAM). Record ID: urn:catalog:CAS:MAM:17455. Source:
+        http://ipt.calacademy.org:8080/ipt/resource.do?r=mam (source published on
+        2019-07-23)", "vntype": "specimen", "family": "Ochotonidae", "locality": "Blue
+        Lake", "orgname": "California Academy of Sciences", "hasmedia": "0", "geodeticdatum":
+        "NAD27", "coordinateuncertaintyinmeters": "415", "orgstateprovince": "California",
+        "highergeography": "North America; USA; Idaho; Bonner Co.", "continent": "North
+        America", "georeferencedby": "Gary W. Shugart", "contact": "Maureen Flannery",
+        "lastindexed": "2019-08-04", "migrator": "no migrator", "hasmass": "0", "email":
+        "mflannery@calacademy.org", "day": "14", "kingdom": "Animalia", "infraspecificepithet":
+        "princeps", "citation": "California Academy of Sciences. CAS Mammalogy (MAM).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=mam (source published
+        on 2019-07-23)", "georeferenceddate": "2004-10-02", "georeferencesources":
+        "GNIS downloaded Aug 2002", "verbatimlongitude": "-116.8272000000", "hassex":
+        "1", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=mam",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:MAM:17455",
+        "icode": "CAS", "scientificname": "Ochotona princeps princeps", "preparations":
+        "SK", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "3962", "sex": "male", "class": "Mammalia", "keyname": "cas/mam/urn-catalog-cas-mam-17455",
+        "isfossil": "0", "county": "Bonner Co.", "decimallatitude": "48.2772000000",
+        "occurrenceid": "urn:catalog:CAS:MAM:17455", "language": "en", "license":
+        "CC0", "country": "USA", "mappable": "1", "georeferenceverificationstatus":
+        "unverified", "othercatalognumbers": "SU 4044", "collectioncode": "MAM", "verbatimlatitude":
+        "48.2772000000", "eventdate": "1894-07-14", "haslicense": "1", "hastissue":
+        "0", "verbatimeventdate": "14 Jul 1894", "underivedsex": "M", "title": "CAS
+        Mammalogy (MAM)", "genus": "Ochotona", "gbifdatasetid": "6ce7290f-47f6-4046-8356-371f5b6749df",
+        "order": "Lagomorpha", "catalognumber": "17455", "enddayofyear": "195"}, {"haslifestage":
+        "0", "georeferenceprotocol": "MaNIS georeferencing guidelines", "higherclassification":
+        "Animalia; Chordata; Mammalia; Lagomorpha; Ochotonidae", "pubdate": "2019-07-23",
+        "wasinvasive": "0", "stateprovince": "Idaho", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 12, "month": "7", "decimallongitude": "-116.8272000000",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/mam?id=urn-catalog-cas-mam-17456",
+        "haslength": "0", "isarch": "0", "year": "1894", "startdayofyear": "195",
+        "wascaptive": "0", "specificepithet": "princeps", "networks": "MaNIS,VertNet",
+        "recordedby": "J. D. Snyder", "bibliographiccitation": "California Academy
+        of Sciences. CAS Mammalogy (MAM). Record ID: urn:catalog:CAS:MAM:17456. Source:
+        http://ipt.calacademy.org:8080/ipt/resource.do?r=mam (source published on
+        2019-07-23)", "vntype": "specimen", "family": "Ochotonidae", "locality": "Blue
+        Lake", "orgname": "California Academy of Sciences", "hasmedia": "0", "geodeticdatum":
+        "NAD27", "coordinateuncertaintyinmeters": "415", "orgstateprovince": "California",
+        "highergeography": "North America; USA; Idaho; Bonner Co.", "continent": "North
+        America", "georeferencedby": "Gary W. Shugart", "contact": "Maureen Flannery",
+        "lastindexed": "2019-08-04", "migrator": "no migrator", "hasmass": "0", "email":
+        "mflannery@calacademy.org", "day": "14", "kingdom": "Animalia", "infraspecificepithet":
+        "princeps", "citation": "California Academy of Sciences. CAS Mammalogy (MAM).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=mam (source published
+        on 2019-07-23)", "georeferenceddate": "2004-10-02", "georeferencesources":
+        "GNIS downloaded Aug 2002", "verbatimlongitude": "-116.8272000000", "hassex":
+        "1", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=mam",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:MAM:17456",
+        "icode": "CAS", "scientificname": "Ochotona princeps princeps", "preparations":
+        "SS", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "3959", "sex": "male", "class": "Mammalia", "keyname": "cas/mam/urn-catalog-cas-mam-17456",
+        "isfossil": "0", "county": "Bonner Co.", "decimallatitude": "48.2772000000",
+        "occurrenceid": "urn:catalog:CAS:MAM:17456", "language": "en", "license":
+        "CC0", "country": "USA", "mappable": "1", "georeferenceverificationstatus":
+        "unverified", "othercatalognumbers": "SU 2045", "collectioncode": "MAM", "verbatimlatitude":
+        "48.2772000000", "eventdate": "1894-07-14", "haslicense": "1", "hastissue":
+        "0", "verbatimeventdate": "14 Jul 1894", "underivedsex": "M", "title": "CAS
+        Mammalogy (MAM)", "genus": "Ochotona", "gbifdatasetid": "6ce7290f-47f6-4046-8356-371f5b6749df",
+        "order": "Lagomorpha", "catalognumber": "17456", "enddayofyear": "195"}, {"haslifestage":
+        "0", "georeferenceprotocol": "MaNIS georeferencing guidelines", "higherclassification":
+        "Animalia; Chordata; Mammalia; Lagomorpha; Ochotonidae", "pubdate": "2019-07-23",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 12, "month": "7", "decimallongitude": "-120.0979500000",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/mam?id=urn-catalog-cas-mam-17459",
+        "haslength": "0", "isarch": "0", "year": "1892", "startdayofyear": "210",
+        "wascaptive": "0", "specificepithet": "princeps", "networks": "MaNIS,VertNet",
+        "recordedby": "W. W. Price", "bibliographiccitation": "California Academy
+        of Sciences. CAS Mammalogy (MAM). Record ID: urn:catalog:CAS:MAM:17459. Source:
+        http://ipt.calacademy.org:8080/ipt/resource.do?r=mam (source published on
+        2019-07-23)", "vntype": "specimen", "family": "Ochotonidae", "locality": "Mount
+        Tallac", "orgname": "California Academy of Sciences", "hasmedia": "0", "geodeticdatum":
+        "NAD27", "coordinateuncertaintyinmeters": "1703", "orgstateprovince": "California",
+        "highergeography": "North America; USA; California; El Dorado Co.", "continent":
+        "North America", "georeferencedby": "Christopher J. Hayden", "contact": "Maureen
+        Flannery", "lastindexed": "2019-08-04", "migrator": "no migrator", "hasmass":
+        "0", "email": "mflannery@calacademy.org", "day": "28", "kingdom": "Animalia",
+        "infraspecificepithet": "muiri", "citation": "California Academy of Sciences.
+        CAS Mammalogy (MAM). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=mam
+        (source published on 2019-07-23)", "georeferenceddate": "2002-05-14", "georeferencesources":
+        "Terrain Navigator 3.02 USGS 1:24,000", "verbatimlongitude": "-120.0979588000",
+        "hassex": "1", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=mam",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:MAM:17459",
+        "icode": "CAS", "scientificname": "Ochotona princeps muiri", "preparations":
+        "SN", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "3966", "sex": "male", "class": "Mammalia", "keyname": "cas/mam/urn-catalog-cas-mam-17459",
+        "isfossil": "0", "county": "El Dorado Co.", "decimallatitude": "38.9061700000",
+        "occurrenceid": "urn:catalog:CAS:MAM:17459", "language": "en", "license":
+        "CC0", "country": "USA", "mappable": "1", "georeferenceverificationstatus":
+        "unverified", "othercatalognumbers": "SU 42", "collectioncode": "MAM", "verbatimlatitude":
+        "38.9061735000", "eventdate": "1892-07-28", "haslicense": "1", "hastissue":
+        "0", "verbatimeventdate": "28 Jul 1892", "underivedsex": "M", "title": "CAS
+        Mammalogy (MAM)", "genus": "Ochotona", "gbifdatasetid": "6ce7290f-47f6-4046-8356-371f5b6749df",
+        "order": "Lagomorpha", "catalognumber": "17459", "enddayofyear": "210"}],
+        "matching_records": 9429, "api_version": "api.py 2017-11-24T12:16-03:00"}'
+  recorded_at: 2020-01-29 16:47:42 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0
+- request:
+    method: get
+    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22class%3Aaves%20stateprovince%3Acalifornia%22%2C%22l%22%3A10%7D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: no-cache
+      content-type: application/json
+      charset: utf-8
+      x-cloud-trace-context: dc31d35c240a69d12f8a58ecc2f6430a;o=1
+      date: Wed, 29 Jan 2020 16:47:42 GMT
+      server: Google Frontend
+      content-length: '30862'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"request_date": "2020-01-29T16:47:42.220005", "response_records":
+        10, "submitted_query": "class:aves stateprovince:california", "request_origin":
+        "45.505106,-122.675026", "limit": 10, "cursor": "False:Cq4FCokDCtwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD_c3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyejNCQjZHQio2R0pyei56TkJjSnJ6M0pCNkdLOz8_Ozv8Ac3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AP_-EAoh214v0Zsk1Mk5AAAAAOb___9IClAAWgsJYEbErGSIpMwQA2C8849SEg1Eb2N1bWVudEluZGV4Gu4BKEFORCAoSVMgImN1c3RvbWVyX25hbWUiICJhcHBlbmdpbmUiKSAoSVMgImdyb3VwX25hbWUiICJzfnZlcnRuZXQtcG9ydGFsIikgKElTICJuYW1lc3BhY2UiICJpbmRleC0yMDEzLTA4LTA4IikgKElTICJpbmRleF9uYW1lIiAiZHdjIikgKEFORCAoT1IgKFFUICJhdmVzIiAicnRleHRfY2xhc3MiKSAoSVMgInJhdG9tX2NsYXNzIiAiYXZlcyIpKSAoUVQgImNhbGlmb3JuaWEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKToZCgwoTiBvcmRlcl9pZCkQARkAAAAAAADw_0oFCABA6Ac",
+        "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
+        "0", "higherclassification": "Animalia | Chordata |  |  | Strigidae | Otus",
+        "pubdate": "2015-01-06", "wasinvasive": "0", "stateprovince": "California",
+        "hastypestatus": "0", "basisofrecord": "PreservedSpecimen", "rank": 12, "month":
+        "2", "decimallongitude": "-121.7833", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/anwc/birds?id=7ff396ea-e587-4f67-9ec6-6d666ce81258",
+        "haslength": "0", "year": "1974", "startdayofyear": "54", "wascaptive": "0",
+        "taxonrank": "species", "specificepithet": "kennicotti", "networks": "MaNIS,ORNIS,HerpNET,VertNet,OZCAM",
+        "emlrights": "http://creativecommons.org/licenses/by/3.0/au/", "bibliographiccitation":
+        "Australian National Wildlife Collection. Australian National Wildlife Collection
+        provider for OZCAM. Record ID: 7ff396ea-e587-4f67-9ec6-6d666ce81258. Source:
+        http://collections.ala.org.au/public/show/dr341 (source published on 2015-01-06)",
+        "vntype": "specimen", "family": "Strigidae", "countrycode": "US", "title":
+        "Australian National Wildlife Collection provider for OZCAM", "orgname": "Australian
+        National Wildlife Collection", "hasmedia": "0", "geodeticdatum": "not recorded
+        (forced WGS84)", "coordinateuncertaintyinmeters": "2000", "orgstateprovince":
+        "Victoria", "highergeography": "North America | United States of America |
+        California | Yolo |  |  |  |", "continent": "North America", "hassex": "0",
+        "contact": "OZCAM Webmaster", "verbatimlocality": "North America | United
+        States of America | California | Yolo | WOODLAND, YOLO COUNTY, CALIFORNIA,
+        USA", "migrator": "2015-01-05", "hasmass": "0", "email": "OZCAM.CHAFC@gmail.com",
+        "day": "23", "kingdom": "Animalia", "citation": "Australian National Wildlife
+        Collection. Australian National Wildlife Collection provider for OZCAM. Source:
+        http://collections.ala.org.au/public/show/dr341 (source published on 2015-01-06)",
+        "collectioncode": "Birds", "occurrencestatus": "present", "coordinateprecision":
+        "0.01667", "orgcountry": "Australia", "source_url": "http://collections.ala.org.au/public/show/dr341",
+        "institutioncode": "ANWC", "dctype": "PhysicalObject", "iptrecordid": "7ff396ea-e587-4f67-9ec6-6d666ce81258",
+        "icode": "ANWC", "scientificname": "Otus kennicotti", "locality": "WOODLAND,
+        YOLO COUNTY, CALIFORNIA, USA", "gbifpublisherid": "602f0aa0-1f3e-11da-9ae9-b8a03c50a862",
+        "hashid": "7001", "class": "Aves", "vernacularname": "Western Screech Owl",
+        "keyname": "anwc/birds/7ff396ea-e587-4f67-9ec6-6d666ce81258", "isfossil":
+        "0", "county": "Yolo", "decimallatitude": "38.6667", "occurrenceid": "7ff396ea-e587-4f67-9ec6-6d666ce81258",
+        "language": "en", "license": "CCBY", "country": "United States", "mappable":
+        "1", "georeferenceverificationstatus": "requires verification", "modified":
+        "2015-01-06", "eventdate": "1974-02-23", "nomenclaturalcode": "ICZN", "haslicense":
+        "1", "hastissue": "0", "verbatimeventdate": "1974-02-23", "lastindexed": "2016-07-22",
+        "genus": "Otus", "gbifdatasetid": "0debafd0-6c8a-11de-8225-b8a03c50a862",
+        "order": "Strigiformes", "catalognumber": "B30337", "enddayofyear": "54"},
+        {"haslifestage": "0", "higherclassification": "Animalia | Chordata |  |  |
+        Laridae | Sterna", "pubdate": "2015-01-06", "wasinvasive": "0", "stateprovince":
+        "California", "hastypestatus": "0", "basisofrecord": "PreservedSpecimen",
+        "rank": 12, "month": "6", "decimallongitude": "-122.15", "phylum": "Chordata",
+        "references": "http://portal.vertnet.org/o/anwc/birds?id=ae2af650-0e2b-497c-a7dc-7f1f22af07a4",
+        "haslength": "0", "year": "1973", "startdayofyear": "155", "wascaptive": "0",
+        "taxonrank": "species", "specificepithet": "forsteri", "networks": "MaNIS,ORNIS,HerpNET,VertNet,OZCAM",
+        "emlrights": "http://creativecommons.org/licenses/by/3.0/au/", "bibliographiccitation":
+        "Australian National Wildlife Collection. Australian National Wildlife Collection
+        provider for OZCAM. Record ID: ae2af650-0e2b-497c-a7dc-7f1f22af07a4. Source:
+        http://collections.ala.org.au/public/show/dr341 (source published on 2015-01-06)",
+        "vntype": "specimen", "family": "Laridae", "countrycode": "US", "title": "Australian
+        National Wildlife Collection provider for OZCAM", "orgname": "Australian National
+        Wildlife Collection", "hasmedia": "0", "geodeticdatum": "not recorded (forced
+        WGS84)", "coordinateuncertaintyinmeters": "2000", "orgstateprovince": "Victoria",
+        "highergeography": "North America | United States of America | California
+        | not recorded |  |  |  |", "continent": "North America", "hassex": "0", "contact":
+        "OZCAM Webmaster", "verbatimlocality": "North America | United States of America
+        | California | not recorded | SOUTH SAN FRANCISCO BAY, CALIFORNIA, USA", "migrator":
+        "2015-01-05", "hasmass": "0", "email": "OZCAM.CHAFC@gmail.com", "day": "4",
+        "kingdom": "Animalia", "citation": "Australian National Wildlife Collection.
+        Australian National Wildlife Collection provider for OZCAM. Source: http://collections.ala.org.au/public/show/dr341
+        (source published on 2015-01-06)", "collectioncode": "Birds", "occurrencestatus":
+        "present", "locationremarks": "CO ORDINATES APPROXIMATE", "coordinateprecision":
+        "0.01667", "orgcountry": "Australia", "source_url": "http://collections.ala.org.au/public/show/dr341",
+        "institutioncode": "ANWC", "dctype": "PhysicalObject", "iptrecordid": "ae2af650-0e2b-497c-a7dc-7f1f22af07a4",
+        "icode": "ANWC", "scientificname": "Sterna forsteri", "locality": "SOUTH SAN
+        FRANCISCO BAY, CALIFORNIA, USA", "gbifpublisherid": "602f0aa0-1f3e-11da-9ae9-b8a03c50a862",
+        "hashid": "9704", "haslicense": "1", "class": "Aves", "vernacularname": "Forster''s
+        Tern", "isfossil": "0", "decimallatitude": "37.5333", "occurrenceid": "ae2af650-0e2b-497c-a7dc-7f1f22af07a4",
+        "language": "en", "license": "CCBY", "country": "United States", "mappable":
+        "1", "georeferenceverificationstatus": "requires verification", "modified":
+        "2015-01-06", "eventdate": "1973-06-04", "nomenclaturalcode": "ICZN", "keyname":
+        "anwc/birds/ae2af650-0e2b-497c-a7dc-7f1f22af07a4", "hastissue": "0", "verbatimeventdate":
+        "1973-06-04", "lastindexed": "2016-07-22", "genus": "Sterna", "gbifdatasetid":
+        "0debafd0-6c8a-11de-8225-b8a03c50a862", "order": "Charadriiformes", "catalognumber":
+        "B30338", "enddayofyear": "155"}, {"haslifestage": "0", "higherclassification":
+        "Animalia | Chordata |  |  | Recurvirostridae | Himantopus", "pubdate": "2015-01-06",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 12, "month": "5", "decimallongitude": "-120.9014",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/anwc/eggs?id=52d74002-bd5d-4ca8-ad7f-fa5e8a1213ec",
+        "haslength": "0", "year": "1919", "startdayofyear": "142", "wascaptive": "0",
+        "taxonrank": "subspecies", "specificepithet": "himantopus", "networks": "MaNIS,ORNIS,HerpNET,VertNet,OZCAM",
+        "emlrights": "http://creativecommons.org/licenses/by/3.0/au/", "bibliographiccitation":
+        "Australian National Wildlife Collection. Australian National Wildlife Collection
+        provider for OZCAM. Record ID: 52d74002-bd5d-4ca8-ad7f-fa5e8a1213ec. Source:
+        http://collections.ala.org.au/public/show/dr341 (source published on 2015-01-06)",
+        "vntype": "specimen", "family": "Recurvirostridae", "countrycode": "US", "title":
+        "Australian National Wildlife Collection provider for OZCAM", "orgname": "Australian
+        National Wildlife Collection", "hasmedia": "0", "geodeticdatum": "not recorded
+        (forced WGS84)", "coordinateuncertaintyinmeters": "2000", "orgstateprovince":
+        "Victoria", "highergeography": "North America | United States of America |
+        California | Merced |  |  |  |", "continent": "North America", "hassex": "0",
+        "contact": "OZCAM Webmaster", "verbatimlocality": "North America | United
+        States of America | California | Merced | 3.5 MILES SE OF LOS BANOS, MERCED
+        COUNTY, CAL, USA", "migrator": "2015-01-05", "hasmass": "0", "email": "OZCAM.CHAFC@gmail.com",
+        "day": "22", "kingdom": "Animalia", "citation": "Australian National Wildlife
+        Collection. Australian National Wildlife Collection provider for OZCAM. Source:
+        http://collections.ala.org.au/public/show/dr341 (source published on 2015-01-06)",
+        "collectioncode": "Eggs", "occurrencestatus": "present", "coordinateprecision":
+        "0.00139", "orgcountry": "Australia", "source_url": "http://collections.ala.org.au/public/show/dr341",
+        "institutioncode": "ANWC", "dctype": "PhysicalObject", "iptrecordid": "52d74002-bd5d-4ca8-ad7f-fa5e8a1213ec",
+        "icode": "ANWC", "scientificname": "Himantopus himantopus mexicanus", "locality":
+        "3.5 MILES SE OF LOS BANOS, MERCED COUNTY, CAL, USA", "gbifpublisherid": "602f0aa0-1f3e-11da-9ae9-b8a03c50a862",
+        "hashid": "8112", "class": "Aves", "vernacularname": "Black-winged Stilt subspecies",
+        "keyname": "anwc/eggs/52d74002-bd5d-4ca8-ad7f-fa5e8a1213ec", "isfossil": "0",
+        "county": "Merced", "decimallatitude": "37.0556", "occurrenceid": "52d74002-bd5d-4ca8-ad7f-fa5e8a1213ec",
+        "language": "en", "license": "CCBY", "country": "United States", "mappable":
+        "1", "georeferenceverificationstatus": "requires verification", "infraspecificepithet":
+        "mexicanus", "modified": "2015-01-06", "eventdate": "1919-05-22", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "hastissue": "0", "verbatimeventdate": "1919-05-22",
+        "lastindexed": "2016-07-22", "genus": "Himantopus", "gbifdatasetid": "0debafd0-6c8a-11de-8225-b8a03c50a862",
+        "order": "Charadriiformes", "catalognumber": "E01341", "enddayofyear": "142"},
+        {"haslifestage": "1", "georeferenceprotocol": "MaNIS/HerpNet/ORNIS Georeferencing
+        Guidelines, GBIF Best Practic", "higherclassification": "Animalia; Chordata;
+        Aves; Procellariiformes; Procellariidae", "pubdate": "2019-07-15", "wasinvasive":
+        "0", "stateprovince": "California", "hastypestatus": "0", "lifestage": "U-Ad.",
+        "rank": 12, "month": "1", "decimallongitude": "-121.93300", "phylum": "Chordata",
+        "references": "http://portal.vertnet.org/o/cas/orn?id=urn-catalog-cas-orn-10000",
+        "haslength": "0", "isarch": "0", "year": "1908", "wascaptive": "0", "specificepithet":
+        "glacialis", "networks": "ORNIS,VertNet", "recordedby": "R. H. Beck", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ornithology (ORN). Record ID: urn:catalog:CAS:ORN:10000.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Procellariidae", "locality":
+        "Point Pinos; vicinity of", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "geodeticdatum": "WGS84", "coordinateuncertaintyinmeters": "1541", "orgstateprovince":
+        "California", "highergeography": "North America; USA; California; Monterey
+        Co.", "continent": "North America", "contact": "Maureen Flannery", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "scientificnameauthorship": "Cassin,
+        1862", "hasmass": "0", "email": "mflannery@calacademy.org", "day": "15", "kingdom":
+        "Animalia", "infraspecificepithet": "rodgersii", "citation": "California Academy
+        of Sciences. CAS Ornithology (ORN). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn
+        (source published on 2019-07-15)", "hastissue": "1", "georeferencesources":
+        "BioGeomancer", "verbatimeventdate": "15 January 1908", "hassex": "1", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=orn",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ORN:10000",
+        "icode": "CAS", "scientificname": "Fulmarus glacialis rodgersii", "preparations":
+        "Skin Study; toepad; Feather", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "1038", "sex": "male", "class": "Aves", "keyname": "cas/orn/urn-catalog-cas-orn-10000",
+        "isfossil": "0", "county": "Monterey Co.", "decimallatitude": "36.63140",
+        "occurrenceid": "urn:catalog:CAS:ORN:10000", "language": "en", "license":
+        "CC0", "basisofrecord": "PreservedSpecimen", "dynamicproperties": "Colors=No",
+        "mappable": "1", "title": "CAS Ornithology (ORN)", "modified": "2010-02-12T19:02:02Z",
+        "verbatimlatitude": "36.6314057\u00b0", "eventdate": "15 January 1908", "haslicense":
+        "1", "underivedlifestage": "U-Ad.", "country": "USA", "underivedsex": "M",
+        "verbatimlongitude": "-121.9330072\u00b0", "genus": "Fulmarus", "gbifdatasetid":
+        "4f29b6ab-20c0-4479-8795-4915bedcebd1", "order": "Procellariiformes", "catalognumber":
+        "10000", "collectioncode": "ORN"}, {"haslifestage": "1", "georeferenceprotocol":
+        "MaNIS/HerpNet/ORNIS Georeferencing Guidelines, GBIF Best Practic", "higherclassification":
+        "Animalia; Chordata; Aves; Procellariiformes; Procellariidae", "pubdate":
+        "2019-07-15", "wasinvasive": "0", "stateprovince": "California", "hastypestatus":
+        "0", "lifestage": "U-Ad.", "rank": 12, "month": "1", "decimallongitude": "-121.93300",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/orn?id=urn-catalog-cas-orn-10001",
+        "haslength": "0", "isarch": "0", "year": "1908", "wascaptive": "0", "specificepithet":
+        "glacialis", "networks": "ORNIS,VertNet", "recordedby": "R. H. Beck", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ornithology (ORN). Record ID: urn:catalog:CAS:ORN:10001.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Procellariidae", "locality":
+        "Point Pinos; vicinity of", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "geodeticdatum": "WGS84", "coordinateuncertaintyinmeters": "1541", "orgstateprovince":
+        "California", "highergeography": "North America; USA; California; Monterey
+        Co.", "continent": "North America", "contact": "Maureen Flannery", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "scientificnameauthorship": "Cassin,
+        1862", "hasmass": "0", "email": "mflannery@calacademy.org", "day": "30", "kingdom":
+        "Animalia", "infraspecificepithet": "rodgersii", "citation": "California Academy
+        of Sciences. CAS Ornithology (ORN). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn
+        (source published on 2019-07-15)", "hastissue": "1", "georeferencesources":
+        "BioGeomancer", "verbatimeventdate": "30 January 1908", "hassex": "1", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=orn",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ORN:10001",
+        "icode": "CAS", "scientificname": "Fulmarus glacialis rodgersii", "preparations":
+        "Skin Study; toepad; Feather", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "1039", "sex": "male", "class": "Aves", "keyname": "cas/orn/urn-catalog-cas-orn-10001",
+        "isfossil": "0", "county": "Monterey Co.", "decimallatitude": "36.63140",
+        "occurrenceid": "urn:catalog:CAS:ORN:10001", "language": "en", "license":
+        "CC0", "basisofrecord": "PreservedSpecimen", "dynamicproperties": "Colors=No",
+        "mappable": "1", "title": "CAS Ornithology (ORN)", "modified": "2010-02-12T19:02:02Z",
+        "verbatimlatitude": "36.6314057\u00b0", "eventdate": "30 January 1908", "haslicense":
+        "1", "underivedlifestage": "U-Ad.", "country": "USA", "underivedsex": "M",
+        "verbatimlongitude": "-121.9330072\u00b0", "genus": "Fulmarus", "gbifdatasetid":
+        "4f29b6ab-20c0-4479-8795-4915bedcebd1", "order": "Procellariiformes", "catalognumber":
+        "10001", "collectioncode": "ORN"}, {"haslifestage": "1", "georeferenceprotocol":
+        "MaNIS/HerpNet/ORNIS Georeferencing Guidelines, GBIF Best Practic", "higherclassification":
+        "Animalia; Chordata; Aves; Procellariiformes; Diomedeidae", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "lifestage":
+        "U-Ad.", "rank": 12, "month": "7", "decimallongitude": "-121.85760", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/orn?id=urn-catalog-cas-orn-10003",
+        "haslength": "0", "isarch": "0", "year": "1907", "wascaptive": "0", "specificepithet":
+        "nigripes", "networks": "ORNIS,VertNet", "recordedby": "R. H. Beck", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ornithology (ORN). Record ID: urn:catalog:CAS:ORN:10003.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn (source published
+        on 2019-07-15)", "verbatimlatitude": "36.7658419\u00b0", "vntype": "specimen",
+        "family": "Diomedeidae", "locality": "Monterey Bay", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "geodeticdatum": "WGS84", "coordinateuncertaintyinmeters":
+        "18759", "orgstateprovince": "California", "highergeography": "North America;
+        USA; California; Monterey Co.", "continent": "North America", "contact": "Maureen
+        Flannery", "lastindexed": "2019-08-04", "migrator": "no migrator", "scientificnameauthorship":
+        "(Audubon, 1839)", "hasmass": "0", "email": "mflannery@calacademy.org", "day":
+        "2", "kingdom": "Animalia", "citation": "California Academy of Sciences. CAS
+        Ornithology (ORN). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn
+        (source published on 2019-07-15)", "hastissue": "1", "verbatimeventdate":
+        "2 July 1907", "hassex": "1", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=orn", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ORN:10003",
+        "icode": "CAS", "scientificname": "Phoebastria nigripes", "preparations":
+        "Skin Study; toepad; Feather", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "1041", "georeferenceremarks": "Georeferenced the Monterey Bay within
+        Monterey CO.", "sex": "male", "class": "Aves", "keyname": "cas/orn/urn-catalog-cas-orn-10003",
+        "isfossil": "0", "county": "Monterey Co.", "decimallatitude": "36.76584",
+        "occurrenceid": "urn:catalog:CAS:ORN:10003", "language": "en", "license":
+        "CC0", "basisofrecord": "PreservedSpecimen", "dynamicproperties": "Colors=No",
+        "mappable": "1", "title": "CAS Ornithology (ORN)", "collectioncode": "ORN",
+        "modified": "2010-02-12T19:02:02Z", "eventdate": "2 July 1907", "haslicense":
+        "1", "underivedlifestage": "U-Ad.", "country": "USA", "underivedsex": "M",
+        "verbatimlongitude": "-121.857605\u00b0", "genus": "Phoebastria", "gbifdatasetid":
+        "4f29b6ab-20c0-4479-8795-4915bedcebd1", "order": "Procellariiformes", "catalognumber":
+        "10003", "georeferencesources": "Google Earth"}, {"haslifestage": "1", "georeferenceprotocol":
+        "MaNIS/HerpNet/ORNIS Georeferencing Guidelines, GBIF Best Practic", "higherclassification":
+        "Animalia; Chordata; Aves; Procellariiformes; Diomedeidae", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "lifestage":
+        "U-Ad.", "rank": 12, "month": "7", "decimallongitude": "-121.85760", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/orn?id=urn-catalog-cas-orn-10004",
+        "haslength": "0", "isarch": "0", "year": "1907", "wascaptive": "0", "specificepithet":
+        "nigripes", "networks": "ORNIS,VertNet", "recordedby": "R. H. Beck", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ornithology (ORN). Record ID: urn:catalog:CAS:ORN:10004.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn (source published
+        on 2019-07-15)", "verbatimlatitude": "36.7658419\u00b0", "vntype": "specimen",
+        "family": "Diomedeidae", "locality": "Monterey Bay", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "geodeticdatum": "WGS84", "coordinateuncertaintyinmeters":
+        "18759", "orgstateprovince": "California", "highergeography": "North America;
+        USA; California; Monterey Co.", "continent": "North America", "contact": "Maureen
+        Flannery", "lastindexed": "2019-08-04", "migrator": "no migrator", "scientificnameauthorship":
+        "(Audubon, 1839)", "hasmass": "0", "email": "mflannery@calacademy.org", "day":
+        "18", "kingdom": "Animalia", "citation": "California Academy of Sciences.
+        CAS Ornithology (ORN). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn
+        (source published on 2019-07-15)", "hastissue": "1", "verbatimeventdate":
+        "18 July 1907", "hassex": "1", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=orn", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ORN:10004",
+        "icode": "CAS", "scientificname": "Phoebastria nigripes", "preparations":
+        "Skin Study; toepad; Feather", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "1042", "georeferenceremarks": "Georeferenced the Monterey Bay within
+        Monterey CO.", "sex": "male", "class": "Aves", "keyname": "cas/orn/urn-catalog-cas-orn-10004",
+        "isfossil": "0", "county": "Monterey Co.", "decimallatitude": "36.76584",
+        "occurrenceid": "urn:catalog:CAS:ORN:10004", "language": "en", "license":
+        "CC0", "basisofrecord": "PreservedSpecimen", "dynamicproperties": "Colors=No",
+        "mappable": "1", "title": "CAS Ornithology (ORN)", "collectioncode": "ORN",
+        "modified": "2010-02-12T19:02:02Z", "eventdate": "18 July 1907", "haslicense":
+        "1", "underivedlifestage": "U-Ad.", "country": "USA", "underivedsex": "M",
+        "verbatimlongitude": "-121.857605\u00b0", "genus": "Phoebastria", "gbifdatasetid":
+        "4f29b6ab-20c0-4479-8795-4915bedcebd1", "order": "Procellariiformes", "catalognumber":
+        "10004", "georeferencesources": "Google Earth"}, {"haslifestage": "1", "georeferenceprotocol":
+        "MaNIS/HerpNet/ORNIS Georeferencing Guidelines, GBIF Best Practic", "higherclassification":
+        "Animalia; Chordata; Aves; Procellariiformes; Diomedeidae", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "lifestage":
+        "U-Ad.", "rank": 12, "month": "7", "decimallongitude": "-121.85760", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/orn?id=urn-catalog-cas-orn-10006",
+        "haslength": "0", "isarch": "0", "year": "1907", "wascaptive": "0", "specificepithet":
+        "nigripes", "networks": "ORNIS,VertNet", "recordedby": "R. H. Beck", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ornithology (ORN). Record ID: urn:catalog:CAS:ORN:10006.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn (source published
+        on 2019-07-15)", "verbatimlatitude": "36.7658419\u00b0", "vntype": "specimen",
+        "family": "Diomedeidae", "locality": "Monterey Bay", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "geodeticdatum": "WGS84", "coordinateuncertaintyinmeters":
+        "18759", "orgstateprovince": "California", "highergeography": "North America;
+        USA; California; Monterey Co.", "continent": "North America", "contact": "Maureen
+        Flannery", "lastindexed": "2019-08-04", "migrator": "no migrator", "scientificnameauthorship":
+        "(Audubon, 1839)", "hasmass": "0", "email": "mflannery@calacademy.org", "day":
+        "27", "kingdom": "Animalia", "citation": "California Academy of Sciences.
+        CAS Ornithology (ORN). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn
+        (source published on 2019-07-15)", "hastissue": "1", "verbatimeventdate":
+        "27 July 1907", "hassex": "1", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=orn", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ORN:10006",
+        "icode": "CAS", "scientificname": "Phoebastria nigripes", "preparations":
+        "Skin Study; toepad; Feather", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "1044", "georeferenceremarks": "Georeferenced the Monterey Bay within
+        Monterey CO.", "sex": "male", "class": "Aves", "keyname": "cas/orn/urn-catalog-cas-orn-10006",
+        "isfossil": "0", "county": "Monterey Co.", "decimallatitude": "36.76584",
+        "occurrenceid": "urn:catalog:CAS:ORN:10006", "language": "en", "license":
+        "CC0", "basisofrecord": "PreservedSpecimen", "dynamicproperties": "Colors=No",
+        "mappable": "1", "title": "CAS Ornithology (ORN)", "collectioncode": "ORN",
+        "modified": "2010-02-12T19:02:02Z", "eventdate": "27 July 1907", "haslicense":
+        "1", "underivedlifestage": "U-Ad.", "country": "USA", "underivedsex": "M",
+        "verbatimlongitude": "-121.857605\u00b0", "genus": "Phoebastria", "gbifdatasetid":
+        "4f29b6ab-20c0-4479-8795-4915bedcebd1", "order": "Procellariiformes", "catalognumber":
+        "10006", "georeferencesources": "Google Earth"}, {"haslifestage": "1", "georeferenceprotocol":
+        "MaNIS/HerpNet/ORNIS Georeferencing Guidelines, GBIF Best Practic", "higherclassification":
+        "Animalia; Chordata; Aves; Procellariiformes; Diomedeidae", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "lifestage":
+        "U-Ad.", "rank": 12, "month": "7", "decimallongitude": "-121.85760", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/orn?id=urn-catalog-cas-orn-10010",
+        "haslength": "0", "isarch": "0", "year": "1907", "wascaptive": "0", "specificepithet":
+        "nigripes", "networks": "ORNIS,VertNet", "recordedby": "R. H. Beck", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ornithology (ORN). Record ID: urn:catalog:CAS:ORN:10010.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn (source published
+        on 2019-07-15)", "verbatimlatitude": "36.7658419\u00b0", "vntype": "specimen",
+        "family": "Diomedeidae", "locality": "Monterey Bay", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "geodeticdatum": "WGS84", "coordinateuncertaintyinmeters":
+        "18759", "orgstateprovince": "California", "highergeography": "North America;
+        USA; California; Monterey Co.", "continent": "North America", "contact": "Maureen
+        Flannery", "lastindexed": "2019-08-04", "migrator": "no migrator", "scientificnameauthorship":
+        "(Audubon, 1839)", "hasmass": "0", "email": "mflannery@calacademy.org", "day":
+        "24", "kingdom": "Animalia", "citation": "California Academy of Sciences.
+        CAS Ornithology (ORN). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn
+        (source published on 2019-07-15)", "hastissue": "1", "verbatimeventdate":
+        "24 July 1907", "hassex": "1", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=orn", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ORN:10010",
+        "icode": "CAS", "scientificname": "Phoebastria nigripes", "preparations":
+        "Skin Study; toepad; Feather", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "937", "georeferenceremarks": "Georeferenced the Monterey Bay within
+        Monterey CO.", "sex": "female", "class": "Aves", "keyname": "cas/orn/urn-catalog-cas-orn-10010",
+        "isfossil": "0", "county": "Monterey Co.", "decimallatitude": "36.76584",
+        "occurrenceid": "urn:catalog:CAS:ORN:10010", "language": "en", "license":
+        "CC0", "basisofrecord": "PreservedSpecimen", "dynamicproperties": "Colors=No",
+        "mappable": "1", "title": "CAS Ornithology (ORN)", "collectioncode": "ORN",
+        "modified": "2010-02-12T19:02:02Z", "eventdate": "24 July 1907", "haslicense":
+        "1", "underivedlifestage": "U-Ad.", "country": "USA", "underivedsex": "F",
+        "verbatimlongitude": "-121.857605\u00b0", "genus": "Phoebastria", "gbifdatasetid":
+        "4f29b6ab-20c0-4479-8795-4915bedcebd1", "order": "Procellariiformes", "catalognumber":
+        "10010", "georeferencesources": "Google Earth"}, {"haslifestage": "1", "georeferenceprotocol":
+        "MaNIS/HerpNet/ORNIS Georeferencing Guidelines, GBIF Best Practic", "higherclassification":
+        "Animalia; Chordata; Aves; Procellariiformes; Diomedeidae", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "lifestage":
+        "U-Ad.", "rank": 12, "month": "6", "decimallongitude": "-121.85760", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/orn?id=urn-catalog-cas-orn-10011",
+        "haslength": "0", "isarch": "0", "year": "1907", "wascaptive": "0", "specificepithet":
+        "nigripes", "networks": "ORNIS,VertNet", "recordedby": "R. H. Beck", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ornithology (ORN). Record ID: urn:catalog:CAS:ORN:10011.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn (source published
+        on 2019-07-15)", "verbatimlatitude": "36.7658419\u00b0", "vntype": "specimen",
+        "family": "Diomedeidae", "locality": "Monterey Bay", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "geodeticdatum": "WGS84", "coordinateuncertaintyinmeters":
+        "18759", "orgstateprovince": "California", "highergeography": "North America;
+        USA; California; Monterey Co.", "continent": "North America", "contact": "Maureen
+        Flannery", "lastindexed": "2019-08-04", "migrator": "no migrator", "scientificnameauthorship":
+        "(Audubon, 1839)", "hasmass": "0", "email": "mflannery@calacademy.org", "day":
+        "22", "kingdom": "Animalia", "citation": "California Academy of Sciences.
+        CAS Ornithology (ORN). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=orn
+        (source published on 2019-07-15)", "hastissue": "1", "verbatimeventdate":
+        "22 June 1907", "hassex": "1", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=orn", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ORN:10011",
+        "icode": "CAS", "scientificname": "Phoebastria nigripes", "preparations":
+        "Skin Study; toepad; Feather", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "936", "georeferenceremarks": "Georeferenced the Monterey Bay within
+        Monterey CO.", "sex": "male", "class": "Aves", "keyname": "cas/orn/urn-catalog-cas-orn-10011",
+        "isfossil": "0", "county": "Monterey Co.", "decimallatitude": "36.76584",
+        "occurrenceid": "urn:catalog:CAS:ORN:10011", "language": "en", "license":
+        "CC0", "basisofrecord": "PreservedSpecimen", "dynamicproperties": "Colors=No",
+        "mappable": "1", "title": "CAS Ornithology (ORN)", "collectioncode": "ORN",
+        "modified": "2010-02-12T19:02:02Z", "eventdate": "22 June 1907", "haslicense":
+        "1", "underivedlifestage": "U-Ad.", "country": "USA", "underivedsex": "M",
+        "verbatimlongitude": "-121.857605\u00b0", "genus": "Phoebastria", "gbifdatasetid":
+        "4f29b6ab-20c0-4479-8795-4915bedcebd1", "order": "Procellariiformes", "catalognumber":
+        "10011", "georeferencesources": "Google Earth"}], "matching_records": ">10000",
+        "api_version": "api.py 2017-11-24T12:16-03:00"}'
+  recorded_at: 2020-01-29 16:47:42 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

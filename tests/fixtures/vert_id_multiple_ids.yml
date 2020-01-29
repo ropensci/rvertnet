@@ -1,0 +1,167 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22iptrecordid%3A%5C%22http%3A%2F%2Farctos.database.museum%2Fguid%2FMSB%3AMamm%3A56979%3Fseid%3D1643089%5C%22%20OR%20%5C%22urn%3Acatalog%3ACM%3AHerps%3A116520%5C%22%22%7D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: no-cache
+      content-type: application/json
+      charset: utf-8
+      x-cloud-trace-context: 709f3ec4a0e99fd5d86d49ea7142dabd
+      date: Wed, 29 Jan 2020 16:52:07 GMT
+      server: Google Frontend
+      content-length: '11356'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"request_date": "2020-01-29T16:52:07.908139", "response_records":
+        2, "submitted_query": "iptrecordid:\"http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089\"
+        OR \"urn:catalog:CM:Herps:116520\"", "request_origin": "45.505106,-122.675026",
+        "limit": 400, "cursor": null, "query_version": "search.py 2016-08-15T16:43+02:00",
+        "recs": [{"haslifestage": "0", "month": "8", "decimallongitude": "-104.19",
+        "startdayofyear": "216", "networks": "HerpNET,VertNet", "vntype": "specimen",
+        "title": "CM Herps Collection", "accessrights": "http://vertnet.org/resources/norms.html",
+        "kingdom": "Animalia", "verbatimcoordinatesystem": "decimal degrees", "dctype":
+        "PhysicalObject", "iptrecordid": "urn:catalog:CM:Herps:116520", "day": "4",
+        "occurrenceid": "urn:catalog:CM:Herps:116520", "collectioncode": "Herps",
+        "georeferenceddate": "2006-11-17", "verbatimeventdate": "1965-08-04", "coordinateuncertaintyinmeters":
+        "20308", "higherclassification": "Animalia | Chordata | Amphibia | Anura |
+        BUFONIDAE | BUFO", "pubdate": "2017-09-27", "year": "1965", "wasinvasive":
+        "0", "specificepithet": "debilis", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "WGS84", "occurrenceremarks": "TOWSON STATE UNIVERSITY COLLECTION.", "highergeography":
+        "North America | United States | New Mexico | Eddy |  |  |  |", "continent":
+        "North America", "email": "rogerss@carnegiemnh.org", "orgcountry": "United
+        States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=cm_herps",
+        "scientificname": "BUFO DEBILIS", "hashid": "3327", "hassex": "0", "language":
+        "en", "institutionid": "urn:lsid:biocol.org:col:34702", "country": "United
+        States", "hastissue": "0", "genus": "Bufo", "georeferenceprotocol": "VertNet
+        Georeferencing Guidelines", "family": "Bufonidae", "stateprovince": "New Mexico",
+        "rank": 12, "county": "Eddy", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cm/herps?id=urn-catalog-cm-herps-116520",
+        "georeferencedby": "Stephen R. (MSB)", "taxonrank": "species", "hasmedia":
+        "0", "verbatimlocality": "North America | United States | New Mexico | Eddy
+        | 10 MI S CARLSBAD, BLACK RIVER VILLAGE ROAD", "countrycode": "US", "institutioncode":
+        "CM", "orgstateprovince": "Pennsylvania", "occurrencestatus": "present", "hastypestatus":
+        "0", "preparations": "whole animal in alcohol", "recordedby": "FRANZ, L R",
+        "isfossil": "0", "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "wascaptive": "0", "georeferenceverificationstatus": "requires verification",
+        "modified": "2017-08-15", "haslicense": "1", "fieldnumber": "LRF 1512", "eventdate":
+        "1965-08-04", "individualcount": "1", "bibliographiccitation": "Carnegie Museum
+        of Natural History. CM Herps Collection. Record ID: urn:catalog:CM:Herps:116520.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=cm_herps (source published
+        on 2017-09-27)", "citation": "Carnegie Museum of Natural History. CM Herps
+        Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=cm_herps
+        (source published on 2017-09-27)", "georeferencesources": "ArcGIS software
+        with data from New Mexico Resource Geographic Information System Program (http://rgis.unm.edu)
+        and other inhouse resources (historical maps aiding with name changes)", "lastindexed":
+        "2017-10-19", "haslength": "0", "catalognumber": "116520", "emlrights": "Carnegie
+        Museum of Natural History (CM) data records may be used by individual researchers
+        or research groups, but they may not be repackaged, resold, or redistributed
+        in any form without the express written consent of a curatorial staff member
+        of the CM. If any of these records are used in an analysis or report, the
+        provenance of the original data must be acknowledged and the CM notified.
+        The CM and its staff are not responsible for damages, injury or loss due to
+        the use of these data.", "hasmass": "0", "gbifdatasetid": "76dd8f0d-2daa-4a69-9fcd-55e04230334a",
+        "locality": "10 MI S CARLSBAD, BLACK RIVER VILLAGE ROAD", "orgname": "Carnegie
+        Museum of Natural History", "keyname": "cm/herps/urn-catalog-cm-herps-116520",
+        "migrator": "2015-09-05", "recordnumber": "TSU 26", "icode": "CM", "gbifpublisherid":
+        "c1da06f0-580e-11dc-8a9e-b8a03c50a862", "class": "Amphibia", "decimallatitude":
+        "32.23", "mappable": "1", "nomenclaturalcode": "ICZN", "contact": "Stephen
+        Rogers", "order": "Anura", "enddayofyear": "216"}, {"haslifestage": "0", "month":
+        "08", "decimallongitude": "-106.7154999", "isarch": "0", "startdayofyear":
+        "239", "networks": "Arctos,MaNIS,VertNet", "vntype": "specimen", "title":
+        "MSB Mammal Collection (Arctos)", "accessrights": "http://vertnet.org/resources/norms.html",
+        "kingdom": "Animalia", "verbatimcoordinatesystem": "decimal degrees", "dctype":
+        "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089",
+        "day": "27", "identificationverificationstatus": "legacy", "occurrenceid":
+        "http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089", "identificationqualifier":
+        "A", "georeferenceddate": "1985-08-27", "verbatimeventdate": "27-Aug-1985",
+        "coordinateuncertaintyinmeters": "6824", "higherclassification": "Animalia;
+        Chordata; Mammalia; Rodentia; Dipodidae;  (Zimmermann, 1780)", "pubdate":
+        "2019-07-07", "sex": "female", "year": "1985", "wasinvasive": "0", "specificepithet":
+        "hudsonius", "basisofrecord": "PreservedSpecimen", "geodeticdatum": "North
+        American Datum 1927", "occurrenceremarks": "ET", "highergeography": "North
+        America, United States, New Mexico, Sandoval County", "continent": "North
+        America", "email": "cookjose@unm.edu", "orgcountry": "United States", "source_url":
+        "http://ipt.vertnet.org:8080/ipt/resource.do?r=msb_mamm", "scientificname":
+        "Zapus hudsonius", "hashid": "8749", "hassex": "1", "language": "en", "institutionid":
+        "MSB", "country": "United States", "hastissue": "1", "underivedsex": "female",
+        "genus": "Zapus", "georeferenceprotocol": "not recorded", "family": "Dipodidae",
+        "stateprovince": "New Mexico", "rank": 12, "county": "Sandoval County", "phylum":
+        "Chordata", "references": "http://arctos.database.museum/guid/MSB:Mamm:56979",
+        "georeferencedby": "Joan L. Morrison", "taxonrank": "species", "hasmedia":
+        "0", "verbatimlocality": "FENTON LAKE; T19N, R2E, SEC 10", "institutioncode":
+        "MSB", "orgstateprovince": "New Mexico", "organismid": "http://arctos.database.museum/guid/MSB:Mamm:56979",
+        "typestatus": "\"voucher of <a href=\"http://arctos.database.museum/name/Zapus
+        hudsonius luteus\">Zapus hudsonius luteus</a>, page 4354 in <a href=\"http://arctos.database.museum/publication/10004461\">King
+        et al. 2006</a>; voucher of <a href=\"http://arctos.database.museum/name/Zapus
+        hudsonius luteus\">Zapus hudsonius luteus</a>, page 41 in <a href=\"http://arctos.database.museum/publication/10004785\">Frey
+        and Malaney 2009</a>; voucher of <a href=\"http://arctos.database.museum/name/Zapus
+        hudsonius luteus\">Zapus hudsonius luteus</a>, page 4 in <a href=\"http://arctos.database.museum/publication/10006255\">Malaney
+        et al. 2011</a>; voucher of <a href=\"http://arctos.database.museum/name/Zapus
+        hudsonius\">Zapus hudsonius</a>, page 18 in <a href=\"http://arctos.database.museum/publication/10006705\">Malaney
+        and Cook 2013</a>\"", "hastypestatus": "1", "preparations": "skin; skin sample;
+        skull; skull sample; liver (frozen); skeleton, postcranial; heart, kidney
+        (frozen); liver (frozen) sample; skeleton, postcranial sample", "recordedby":
+        "Collector(s): Joan L. Morrison", "isfossil": "0", "license": "http://arctosdb.org/home/data/",
+        "wascaptive": "0", "dynamicproperties": "sex=female", "georeferenceverificationstatus":
+        "unverified", "modified": "2019-08-22 21:52:37.0", "haslicense": "1", "eventdate":
+        "1985-08-27", "haslength": "0", "individualcount": "1", "bibliographiccitation":
+        "Museum of Southwestern Biology. MSB Mammal Collection (Arctos). Record ID:
+        http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=msb_mamm
+        (source published on 2019-07-07)", "verbatimcoordinates": "35.8919975/-106.7154999",
+        "citation": "Museum of Southwestern Biology. MSB Mammal Collection (Arctos).
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=msb_mamm (source published
+        on 2019-07-07)", "georeferencesources": "unknown", "lastindexed": "2019-09-22",
+        "dateidentified": "2005-02-15", "catalognumber": "MSB:Mamm:56979", "emlrights":
+        "The data and media available through Arctos are the property of the originating
+        institution, with all rights reserved. These records are intended for use
+        in education and research and may not be repackaged, redistributed, or sold
+        in any form without prior written consent from the collection(s) holding such
+        data. Users wishing to include Arctos data or media in publications, reports,
+        websites, or other means of dissemination must acknowledge the provenance
+        of the original data, cite the institutional catalog number(s), and notify
+        the appropriate curator. The date that information was accessed should be
+        cited when downloaded data are used in published analyses. These are secondary
+        data and their accuracy is not guaranteed. Citation of Arctos is no substitute
+        for examination of specimens. The data providers are not responsible for loss
+        or damages due to use of these data. http://arctosdb.org/home/data/ &lt;/br&gt;&lt;/br&gt;",
+        "hasmass": "0", "gbifdatasetid": "b15d4952-7d20-46f1-8a3e-556a512b04c5", "locality":
+        "FENTON LAKE; T19N, R2E, SEC 10", "orgname": "Museum of Southwestern Biology",
+        "contact": "Joseph Cook", "associatedsequences": "http://www.ncbi.nlm.nih.gov/nuccore/DQ664623;
+        http://www.ncbi.nlm.nih.gov/nuccore/DQ664979", "migrator": "no migrator",
+        "collectioncode": "Mammal specimens", "collectionid": "14", "icode": "MSB",
+        "gbifpublisherid": "939ed180-aa7b-11db-8edf-b8a03c50a862", "class": "Mammalia",
+        "previousidentifications": "\"<i>Zapus hudsonius</i> (accepted ID) identified
+        by unknown on 2005-02-15; method: legacy<br><i>Zapus hudsonius</i> identified
+        by not recorded on 2013 <i>sensu</i> <a href=\"http://arctos.database.museum/publication/10006705\">Malaney
+        and Cook 2013</a>; method: molecular data<br><i>Zapus hudsonius luteus</i>
+        identified by Joseph A. Cook, Jennifer K. Frey, Jason L. Malaney <i>sensu</i>
+        <a href=\"http://arctos.database.museum/publication/10006255\">Malaney et
+        al. 2011</a>; method: type specimen Remark: ID from citation in Malaney et.
+        al. 2011.<br><i>Zapus hudsonius luteus</i> identified by Jennifer K. Frey,
+        Jason L. Malaney <i>sensu</i> <a href=\"http://arctos.database.museum/publication/10004785\">Frey
+        and Malaney 2009</a>; method: type specimen Remark: ID from citation in Frey
+        and Malaney 2009.<br><i>Zapus hudsonius luteus</i> identified by Paul M. Cryan,
+        Tim L. King, Michael S. Eackles, John F. Switzer, Colleen C. Young, Cheryl
+        L. Morrison, Barbara A. Lubinski <i>sensu</i> <a href=\"http://arctos.database.museum/publication/10004461\">King
+        et al. 2006</a>; method: type specimen Remark: ID from citation in King et
+        al. 2006.\"", "decimallatitude": "35.8919975", "mappable": "1", "locationaccordingto":
+        "Joan L. Morrison", "othercatalognumbers": "GenBank=DQ664623; GenBank=DQ664979;
+        NK=3832; preparator number=36", "identifiedby": "unknown", "nomenclaturalcode":
+        "ICZN", "keyname": "msb/mammal-specimens/http-arctos-database-museum-guid-msb-mamm-56979-seid-1643089",
+        "order": "Rodentia", "enddayofyear": "239"}], "matching_records": 2, "api_version":
+        "api.py 2017-11-24T12:16-03:00"}'
+  recorded_at: 2020-01-29 16:52:08 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

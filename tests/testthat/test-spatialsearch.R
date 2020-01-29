@@ -3,8 +3,10 @@ context("spatialsearch")
 test_that("spatialsearch works correctly", {
   skip_on_cran()
   
-  a <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, 
-                     limit = 10, messages = FALSE)
+  vcr::use_cassette("spatialsearch", {
+    a <- spatialsearch(lat = 33.529, lon = -105.694, radius = 2000, 
+      limit = 10, messages = FALSE)
+  })
   
   expect_is(a, "list")
   expect_is(a$meta, "list")

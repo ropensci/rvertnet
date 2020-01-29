@@ -3,7 +3,9 @@ context("vert_id")
 test_that("vert_id works", {
   skip_on_cran()
 
-  aa <- vert_id(ids = "urn:catalog:CM:Herps:116520", messages = FALSE)
+  vcr::use_cassette("vert_id", {
+    aa <- vert_id(ids = "urn:catalog:CM:Herps:116520", messages = FALSE)
+  })
 
   expect_is(aa, "list")
   expect_is(aa$meta, "list")
@@ -15,12 +17,14 @@ test_that("vert_id works", {
   expect_true(grepl("bufo debilis", tolower(aa$data$scientificname)))
 })
 
-test_that("vert_id works", {
+test_that("vert_id multiple ids", {
   skip_on_cran()
 
   ids <- c("http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089",
            "urn:catalog:CM:Herps:116520")
-  aa <- vert_id(ids, messages = FALSE)
+  vcr::use_cassette("vert_id_multiple_ids", {
+    aa <- vert_id(ids, messages = FALSE)
+  })
 
   expect_is(aa, "list")
   expect_is(aa$meta, "list")

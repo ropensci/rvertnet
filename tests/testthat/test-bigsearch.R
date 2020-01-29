@@ -3,9 +3,11 @@ context("bigsearch")
 test_that("bigsearch sends email correctly", {
   skip_on_cran()
   
-  a <- bigsearch(specificepithet = "princeps", genus = "ochotona", 
-                 rfile = "test-bigsearch1", email = "stuff@things.com",
-                 messages=FALSE)
+  vcr::use_cassette("bigsearch", {
+    a <- bigsearch(specificepithet = "princeps", genus = "ochotona", 
+      rfile = "test-bigsearch1", email = "stuff@things.com",
+      messages=FALSE)
+  })
   
 	expect_null(a)
 	expect_null(bigsearch(specificepithet = "collaris",

@@ -1,0 +1,30 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://api.vertnet-portal.appspot.com/api/download?q=%7B%22q%22%3A%22specificepithet%3Aprinceps%20genus%3Aochotona%22%2C%22n%22%3A%22test-bigsearch1%22%2C%22e%22%3A%22stuff%40things.com%22%7D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: text/html; charset=utf-8
+      cache-control: no-cache
+      x-cloud-trace-context: 3ea5338098e843d315bc875d83eaca20
+      date: Wed, 29 Jan 2020 16:43:39 GMT
+      server: Google Frontend
+      content-length: '0'
+    body:
+      encoding: UTF-8
+      file: no
+      string: ''
+  recorded_at: 2020-01-29 16:43:39 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

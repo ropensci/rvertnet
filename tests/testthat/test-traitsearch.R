@@ -3,7 +3,9 @@ context("traitsearch")
 test_that("traitsearch basic usage works", {
   skip_on_cran()
   
-  a <- traitsearch(has_mass = TRUE, limit = 10, messages = FALSE)
+  vcr::use_cassette("traitsearch", {
+    a <- traitsearch(has_mass = TRUE, limit = 10, messages = FALSE)
+  })
   
   expect_is(a, "list")
   expect_named(a, c('meta', 'data'))
@@ -16,7 +18,9 @@ test_that("traitsearch basic usage works", {
 test_that("traitsearch pagination works", {
   skip_on_cran()
   
-  a <- traitsearch(has_lifestage = TRUE, limit = 5, messages = FALSE)
+  vcr::use_cassette("traitsearch_pagination", {
+    a <- traitsearch(has_lifestage = TRUE, limit = 5, messages = FALSE)
+  })
   
   expect_is(a, "list")
   expect_named(a, c('meta', 'data'))

@@ -4,12 +4,13 @@ test_that("searchbyterm works correctly", {
   skip_on_cran()
 
   # Find multiple species
-  a <- searchbyterm(genus = "ochotona",
-    specificepithet = "(princeps OR collaris)", limit = 5,
-    messages = FALSE)
-  Sys.sleep(3)
-  b <- searchbyterm(class = "aves", stateprovince = "california",
-    limit = 10, messages = FALSE)
+  vcr::use_cassette("searchbyterm", {
+    a <- searchbyterm(genus = "ochotona",
+      specificepithet = "(princeps OR collaris)", limit = 5,
+      messages = FALSE)
+    b <- searchbyterm(class = "aves", stateprovince = "california",
+      limit = 10, messages = FALSE)
+  })
   ##cc <- searchbyterm(class = "aves", state = "california", year = 1976, limit = 10, messages = FALSE)
 
   expect_is(a, "list")
@@ -34,20 +35,20 @@ test_that("searchbyterm works correctly", {
 test_that("searchbyterm - state param works when using boolean's with > 1 state name", {
   skip_on_cran()
 
-  aa <- searchbyterm(genus = "zapus", specificepithet = "hudsonius",
-                     stateprovince = "minnesota OR new mexico",
-                     messages = FALSE)
+  vcr::use_cassette("searchbyterm_state_param", {
+    aa <- searchbyterm(genus = "zapus", specificepithet = "hudsonius",
+      stateprovince = "minnesota OR new mexico", messages = FALSE)
+    bb <- searchbyterm(genus = "Ursus", stateprovince = "california OR florida",
+      limit = 5, messages = FALSE)
+  })
 
   expect_is(aa, "list")
   expect_is(aa$data, "data.frame")
   expect_equal(unique(tolower(aa$data$stateprovince)), "new mexico")
 
-  aa <- searchbyterm(genus = "Ursus", stateprovince = "california OR florida",
-                     limit = 5, messages = FALSE)
-
-  expect_is(aa, "list")
-  expect_is(aa$data, "data.frame")
-  expect_equal(unique(tolower(aa$data$stateprovince)), "california")
+  expect_is(bb, "list")
+  expect_is(bb$data, "data.frame")
+  expect_equal(unique(tolower(bb$data$stateprovince)), "california")
 })
 
 
@@ -72,12 +73,15 @@ test_that("searchbyterm - state param works when using boolean's with > 1 state 
 test_that("searchbyterm multi-year param input works", {
   skip_on_cran()
 
-  out <- suppressMessages(
-    searchbyterm(genus = "ochotona",
-                 specificepithet = "(princeps OR collaris)",
-                 year = c(">=1916", "<=1920"),
-                 messages = FALSE)
-  )
+  vcr::use_cassette("searchbyterm_multiyear_param", {
+    out <- suppressMessages(
+      searchbyterm(genus = "ochotona",
+                   specificepithet = "(princeps OR collaris)",
+                   year = c(">=1916", "<=1920"),
+                   messages = FALSE)
+    )
+  })
+
   dates <- as.Date(na.omit(out$data$eventdate))
   asnumdates <- as.numeric(format(dates, "%Y"))
   expect_is(dates, "Date")

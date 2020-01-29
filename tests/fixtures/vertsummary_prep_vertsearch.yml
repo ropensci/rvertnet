@@ -1,0 +1,835 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22Junco%20hyemalis%22%2C%22l%22%3A10%7D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: no-cache
+      content-type: application/json
+      charset: utf-8
+      x-cloud-trace-context: a7d7e4968517ecf89d05bc663af1aa31
+      date: Wed, 29 Jan 2020 16:57:16 GMT
+      server: Google Frontend
+      content-length: '33720'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"request_date": "2020-01-29T16:57:16.320635", "response_records":
+        10, "submitted_query": "Junco hyemalis", "request_origin": "45.505106,-122.675026",
+        "limit": 10, "cursor": "False:CqEFCtoCCqwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12ekpGX0J2WjZuM0IyUmpPSzcfHz8b_AAD_c3-ekpGX0J2WjZuM0IyUmpPSzcfHz8b_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZ6SkZfQnZaNm4zQjJSak9LNx8fPxv8Ac3-ekpGX0J2WjZuM0IyUmpPSzcfHz8b_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJ_kIJYM2DecgQA2Db59yMAxINRG9jdW1lbnRJbmRleBqQAihBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChPUiAoQU5EIChPUiAoUVQgIkp1bmNvIikgKElTICJfX2dhdG9tX18iICJqdW5jbyIpKSAoT1IgKFFUICJoeWVtYWxpcyIpIChJUyAiX19nYXRvbV9fIiAiaHllbWFsaXMiKSkpIChJUyAiX19nYXRvbV9fIiAianVuY28gaHllbWFsaXMiKSkpOhkKDChOIG9yZGVyX2lkKRABGQAAAAAAAPD_SgUIAEDoBw",
+        "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
+        "0", "month": "5", "decimallongitude": "-74.159567", "verbatimlongitude":
+        "074 09 34.44 W", "startdayofyear": "150", "minimumelevationinmeters": "276",
+        "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird Collection",
+        "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:AMNH:Birds:DOT-15437",
+        "day": "30", "collectioncode": "Birds", "verbatimeventdate": "2007-05-30",
+        "coordinateuncertaintyinmeters": "2000", "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "sex": "male", "year": "2007", "wasinvasive": "0",
+        "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "WGS84", "highergeography": "North and Central America;USA;New York;Ulster
+        Co.;;;;", "continent": "North America", "email": "trombone@amnh.org", "orgcountry":
+        "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "hashid": "2791", "hassex": "1", "language":
+        "en", "institutionid": "urn:lsid:biocol.org:col:34925", "country": "United
+        States", "hastissue": "1", "underivedsex": "male", "genus": "Junco", "family":
+        "Emberizidae", "stateprovince": "New York", "rank": 12, "county": "Ulster",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-15437",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Ulster Co.; ; ; ; ; ; ; Woodstock, Woodstock Mountains,
+        end of Reynold''s Lane", "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince":
+        "New York", "occurrencestatus": "present", "hastypestatus": "0", "preparations":
+        "Tissue, Skeleton", "recordedby": "Jeffrey G. Groth", "isfossil": "0", "wascaptive":
+        "0", "georeferenceverificationstatus": "requires verification", "modified":
+        "2013-08-20", "verbatimlatitude": "42 03 49.03 N", "haslicense": "0", "eventdate":
+        "2007-05-30", "individualcount": "1", "verbatimelevation": "276 m", "bibliographiccitation":
+        "American Museum of Natural History. AMNH Bird Collection. Record ID: DOT-15437.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds (source published
+        on 2013-10-30)", "citation": "American Museum of Natural History. AMNH Bird
+        Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-15437",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Woodstock, Woodstock Mountains, end of Reynold''s Lane", "orgname": "American
+        Museum of Natural History", "keyname": "amnh/birds/dot-15437", "migrator":
+        "2013-08-21", "recordnumber": "JGG 1348", "collectionid": "urn:lsid:biocol.org:col:34926",
+        "icode": "AMNH", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862",
+        "class": "Aves", "decimallatitude": "42.063619", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "contact": "Tom Trombone", "order": "Passeriformes", "enddayofyear":
+        "150"}, {"haslifestage": "0", "month": "2", "decimallongitude": "-74.0069",
+        "verbatimlongitude": "074 00 25 W", "startdayofyear": "44", "minimumelevationinmeters":
+        "112", "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird
+        Collection", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:AMNH:Birds:DOT-15866", "day": "13", "collectioncode": "Birds",
+        "verbatimeventdate": "2008-02-13", "coordinateuncertaintyinmeters": "500",
+        "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "sex": "male", "year": "2008", "wasinvasive": "0",
+        "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "WGS84", "occurrenceremarks": "Salvaged bird received from Peter A. Capainolo",
+        "highergeography": "North and Central America;USA;New York;Ulster Co.;;;;",
+        "continent": "North America", "email": "trombone@amnh.org", "orgcountry":
+        "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "disposition": "Found", "hashid": "5426",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "male", "genus":
+        "Junco", "family": "Emberizidae", "stateprovince": "New York", "rank": 12,
+        "county": "Ulster", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-15866",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Ulster Co.; ; ; ; ; ; ; Saugerties, Saxton Flats",
+        "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince": "New York",
+        "occurrencestatus": "present", "hastypestatus": "0", "preparations": "Tissue,
+        Skin", "isfossil": "0", "wascaptive": "0", "georeferenceverificationstatus":
+        "requires verification", "modified": "2013-08-20", "verbatimlatitude": "42
+        08 51.7 N", "haslicense": "0", "samplingprotocol": "Salvaged Bird, DOR", "eventdate":
+        "2008-02-13", "individualcount": "1", "verbatimelevation": "112 m", "bibliographiccitation":
+        "American Museum of Natural History. AMNH Bird Collection. Record ID: DOT-15866.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds (source published
+        on 2013-10-30)", "citation": "American Museum of Natural History. AMNH Bird
+        Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-15866",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Saugerties, Saxton Flats", "orgname": "American Museum of Natural History",
+        "keyname": "amnh/birds/dot-15866", "migrator": "2013-08-21", "recordnumber":
+        "PAC 1755", "collectionid": "urn:lsid:biocol.org:col:34926", "icode": "AMNH",
+        "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862", "class": "Aves",
+        "decimallatitude": "42.14769", "mappable": "1", "nomenclaturalcode": "ICZN",
+        "contact": "Tom Trombone", "order": "Passeriformes", "enddayofyear": "44"},
+        {"haslifestage": "0", "month": "2", "decimallongitude": "-73.98122", "verbatimlongitude":
+        "073 58 52.4 W", "startdayofyear": "48", "minimumelevationinmeters": "48",
+        "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird Collection",
+        "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:AMNH:Birds:DOT-15867",
+        "day": "17", "collectioncode": "Birds", "verbatimeventdate": "2008-02-17",
+        "coordinateuncertaintyinmeters": "200", "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "sex": "female", "year": "2008", "wasinvasive": "0",
+        "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "WGS84", "occurrenceremarks": "Salvaged bird received from Peter A. Capainolo",
+        "highergeography": "North and Central America;USA;New York;Ulster Co.;;;;",
+        "continent": "North America", "email": "trombone@amnh.org", "orgcountry":
+        "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "disposition": "Found", "hashid": "5427",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "female", "genus":
+        "Junco", "family": "Emberizidae", "stateprovince": "New York", "rank": 12,
+        "county": "Ulster", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-15867",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Ulster Co.; ; ; ; ; ; ; Bill Parr Farm, approx. 2
+        km W of Saugerties", "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince":
+        "New York", "occurrencestatus": "present", "hastypestatus": "0", "preparations":
+        "Tissue, Skin", "isfossil": "0", "wascaptive": "0", "georeferenceverificationstatus":
+        "requires verification", "modified": "2013-08-20", "verbatimlatitude": "42
+        04 41.3 N", "haslicense": "0", "samplingprotocol": "Salvaged Bird, DOR", "eventdate":
+        "2008-02-17", "individualcount": "1", "verbatimelevation": "48 m", "bibliographiccitation":
+        "American Museum of Natural History. AMNH Bird Collection. Record ID: DOT-15867.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds (source published
+        on 2013-10-30)", "citation": "American Museum of Natural History. AMNH Bird
+        Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-15867",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Bill Parr Farm, approx. 2 km W of Saugerties", "orgname": "American Museum
+        of Natural History", "keyname": "amnh/birds/dot-15867", "migrator": "2013-08-21",
+        "recordnumber": "PAC 1757", "collectionid": "urn:lsid:biocol.org:col:34926",
+        "icode": "AMNH", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862",
+        "class": "Aves", "decimallatitude": "42.07814", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "contact": "Tom Trombone", "order": "Passeriformes", "enddayofyear":
+        "48"}, {"haslifestage": "0", "month": "2", "decimallongitude": "-74.0069",
+        "verbatimlongitude": "074 00 25 W", "startdayofyear": "44", "minimumelevationinmeters":
+        "112", "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird
+        Collection", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:AMNH:Birds:DOT-15947", "day": "13", "collectioncode": "Birds",
+        "verbatimeventdate": "2008-02-13", "coordinateuncertaintyinmeters": "500",
+        "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "sex": "male", "year": "2008", "wasinvasive": "0",
+        "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "WGS84", "highergeography": "North and Central America;USA;New York;Ulster
+        Co.;;;;", "continent": "North America", "email": "trombone@amnh.org", "orgcountry":
+        "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "disposition": "Found", "hashid": "5833",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "male", "genus":
+        "Junco", "family": "Emberizidae", "stateprovince": "New York", "rank": 12,
+        "county": "Ulster", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-15947",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Ulster Co.; ; ; ; ; ; ; Saugerties, Saxton Flats",
+        "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince": "New York",
+        "occurrencestatus": "present", "hastypestatus": "0", "preparations": "Tissue,
+        Skin", "recordedby": "Peter A. Capainolo", "isfossil": "0", "wascaptive":
+        "0", "georeferenceverificationstatus": "requires verification", "modified":
+        "2013-08-20", "verbatimlatitude": "42 08 51.7 N", "haslicense": "0", "samplingprotocol":
+        "Mist Net", "eventdate": "2008-02-13", "individualcount": "1", "verbatimelevation":
+        "112 m", "bibliographiccitation": "American Museum of Natural History. AMNH
+        Bird Collection. Record ID: DOT-15947. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "citation": "American Museum of Natural
+        History. AMNH Bird Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-15947",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Saugerties, Saxton Flats", "orgname": "American Museum of Natural History",
+        "keyname": "amnh/birds/dot-15947", "migrator": "2013-08-21", "recordnumber":
+        "PAC 1752", "collectionid": "urn:lsid:biocol.org:col:34926", "icode": "AMNH",
+        "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862", "class": "Aves",
+        "decimallatitude": "42.14769", "mappable": "1", "nomenclaturalcode": "ICZN",
+        "contact": "Tom Trombone", "order": "Passeriformes", "enddayofyear": "44"},
+        {"haslifestage": "0", "month": "2", "decimallongitude": "-74.0069", "verbatimlongitude":
+        "074 00 25 W", "startdayofyear": "44", "minimumelevationinmeters": "112",
+        "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird Collection",
+        "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:AMNH:Birds:DOT-15950",
+        "day": "13", "collectioncode": "Birds", "verbatimeventdate": "2008-02-13",
+        "coordinateuncertaintyinmeters": "500", "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "sex": "male", "year": "2008", "wasinvasive": "0",
+        "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "WGS84", "highergeography": "North and Central America;USA;New York;Ulster
+        Co.;;;;", "continent": "North America", "email": "trombone@amnh.org", "orgcountry":
+        "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "disposition": "Found", "hashid": "5733",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "male", "genus":
+        "Junco", "family": "Emberizidae", "stateprovince": "New York", "rank": 12,
+        "county": "Ulster", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-15950",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Ulster Co.; ; ; ; ; ; ; Saugerties, Saxton Flats",
+        "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince": "New York",
+        "occurrencestatus": "present", "hastypestatus": "0", "preparations": "Tissue,
+        Skin", "recordedby": "Jeffrey G. Groth", "isfossil": "0", "wascaptive": "0",
+        "georeferenceverificationstatus": "requires verification", "modified": "2013-08-20",
+        "verbatimlatitude": "42 08 51.7 N", "haslicense": "0", "samplingprotocol":
+        "Mist Net", "eventdate": "2008-02-13", "individualcount": "1", "verbatimelevation":
+        "112 m", "bibliographiccitation": "American Museum of Natural History. AMNH
+        Bird Collection. Record ID: DOT-15950. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "citation": "American Museum of Natural
+        History. AMNH Bird Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-15950",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Saugerties, Saxton Flats", "orgname": "American Museum of Natural History",
+        "keyname": "amnh/birds/dot-15950", "migrator": "2013-08-21", "recordnumber":
+        "PAC 1756", "collectionid": "urn:lsid:biocol.org:col:34926", "icode": "AMNH",
+        "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862", "class": "Aves",
+        "decimallatitude": "42.14769", "mappable": "1", "nomenclaturalcode": "ICZN",
+        "contact": "Tom Trombone", "order": "Passeriformes", "enddayofyear": "44"},
+        {"haslifestage": "0", "month": "6", "decimallongitude": "-74.394664", "verbatimlongitude":
+        "074 23 40.79 W", "startdayofyear": "171", "minimumelevationinmeters": "942",
+        "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird Collection",
+        "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:AMNH:Birds:DOT-16205",
+        "day": "19", "collectioncode": "Birds", "verbatimeventdate": "2008-06-19",
+        "coordinateuncertaintyinmeters": "2000", "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "sex": "female", "year": "2008", "wasinvasive": "0",
+        "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "WGS84", "highergeography": "North and Central America;USA;New York;Ulster
+        Co.;;;;", "continent": "North America", "email": "trombone@amnh.org", "orgcountry":
+        "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "disposition": "Found", "hashid": "4464",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "female", "genus":
+        "Junco", "family": "Emberizidae", "stateprovince": "New York", "rank": 12,
+        "county": "Ulster", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-16205",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Ulster Co.; ; ; ; ; ; ; Route 47, Giant Ledge", "countrycode":
+        "US", "institutioncode": "AMNH", "orgstateprovince": "New York", "occurrencestatus":
+        "present", "hastypestatus": "0", "preparations": "Tissue, Skeleton", "recordedby":
+        "Jeffrey G. Groth", "isfossil": "0", "wascaptive": "0", "georeferenceverificationstatus":
+        "requires verification", "modified": "2013-08-20", "verbatimlatitude": "42
+        02 25.26 N", "haslicense": "0", "eventdate": "2008-06-19", "individualcount":
+        "1", "verbatimelevation": "942 m", "bibliographiccitation": "American Museum
+        of Natural History. AMNH Bird Collection. Record ID: DOT-16205. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "citation": "American Museum of Natural
+        History. AMNH Bird Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-16205",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Route 47, Giant Ledge", "orgname": "American Museum of Natural History",
+        "keyname": "amnh/birds/dot-16205", "migrator": "2013-08-21", "recordnumber":
+        "JGG 1406", "collectionid": "urn:lsid:biocol.org:col:34926", "icode": "AMNH",
+        "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862", "class": "Aves",
+        "decimallatitude": "42.04035", "mappable": "1", "nomenclaturalcode": "ICZN",
+        "contact": "Tom Trombone", "order": "Passeriformes", "enddayofyear": "171"},
+        {"haslifestage": "0", "month": "6", "decimallongitude": "-74.702478", "verbatimlongitude":
+        "074 42 08.92 W", "startdayofyear": "163", "minimumelevationinmeters": "539",
+        "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird Collection",
+        "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:AMNH:Birds:DOT-16741",
+        "day": "12", "collectioncode": "Birds", "verbatimeventdate": "2009-06-12",
+        "coordinateuncertaintyinmeters": "500", "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "sex": "female", "year": "2009", "wasinvasive": "0",
+        "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "WGS84", "highergeography": "North and Central America;USA;New York;Hamilton
+        Co.;;;;", "continent": "North America", "email": "trombone@amnh.org", "orgcountry":
+        "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "disposition": "Found", "hashid": "6776",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "female", "genus":
+        "Junco", "family": "Emberizidae", "stateprovince": "New York", "rank": 12,
+        "county": "Hamilton", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-16741",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Hamilton Co.; ; ; ; ; ; ; Raquette Lake, Uncas Rd.,
+        Brown''s Tract Ponds", "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince":
+        "New York", "occurrencestatus": "present", "hastypestatus": "0", "preparations":
+        "Tissue, Skeleton", "recordedby": "Jeffrey G. Groth", "isfossil": "0", "wascaptive":
+        "0", "georeferenceverificationstatus": "requires verification", "modified":
+        "2013-08-20", "verbatimlatitude": "43 48 44.75 N", "haslicense": "0", "eventdate":
+        "2009-06-12", "individualcount": "1", "verbatimelevation": "539 m", "bibliographiccitation":
+        "American Museum of Natural History. AMNH Bird Collection. Record ID: DOT-16741.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds (source published
+        on 2013-10-30)", "citation": "American Museum of Natural History. AMNH Bird
+        Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-16741",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Raquette Lake, Uncas Rd., Brown''s Tract Ponds", "orgname": "American Museum
+        of Natural History", "keyname": "amnh/birds/dot-16741", "migrator": "2013-08-21",
+        "recordnumber": "JGG 1623", "collectionid": "urn:lsid:biocol.org:col:34926",
+        "icode": "AMNH", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862",
+        "class": "Aves", "decimallatitude": "43.812431", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "contact": "Tom Trombone", "order": "Passeriformes", "enddayofyear":
+        "163"}, {"haslifestage": "1", "month": "6", "decimallongitude": "-74.375811",
+        "verbatimlongitude": "074 22 32.92 W", "startdayofyear": "167", "minimumelevationinmeters":
+        "490", "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird
+        Collection", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:AMNH:Birds:DOT-17644", "day": "16", "collectioncode": "Birds",
+        "verbatimeventdate": "2010-06-16", "coordinateuncertaintyinmeters": "3000",
+        "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "lifestage": "adult", "sex": "male", "year": "2010",
+        "wasinvasive": "0", "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "WGS84", "highergeography": "North and Central America;USA;New
+        York;Franklin Co.;;;;", "continent": "North America", "email": "trombone@amnh.org",
+        "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "disposition": "Found", "hashid": "632",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "male", "genus":
+        "Junco", "family": "Emberizidae", "stateprovince": "New York", "rank": 12,
+        "county": "Franklin", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-17644",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Franklin Co.; ; ; ; ; ; ; Santa Clara, Santa Clara
+        Tract, Madawaska Flow", "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince":
+        "New York", "occurrencestatus": "present", "hastypestatus": "0", "preparations":
+        "Tissue, Skeleton", "recordedby": "Peter A. Capainolo", "isfossil": "0", "wascaptive":
+        "0", "georeferenceverificationstatus": "requires verification", "modified":
+        "2013-08-20", "verbatimlatitude": "44 31 18.51 N", "haslicense": "0", "samplingprotocol":
+        "Shot", "eventdate": "2010-06-16", "individualcount": "1", "verbatimelevation":
+        "490 m", "bibliographiccitation": "American Museum of Natural History. AMNH
+        Bird Collection. Record ID: DOT-17644. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "citation": "American Museum of Natural
+        History. AMNH Bird Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-17644",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Santa Clara, Santa Clara Tract, Madawaska Flow", "orgname": "American Museum
+        of Natural History", "contact": "Tom Trombone", "migrator": "2013-08-21",
+        "recordnumber": "PAC 1987", "collectionid": "urn:lsid:biocol.org:col:34926",
+        "icode": "AMNH", "underivedlifestage": "adult", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862",
+        "class": "Aves", "decimallatitude": "44.521808", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "keyname": "amnh/birds/dot-17644", "order": "Passeriformes", "enddayofyear":
+        "167"}, {"haslifestage": "1", "month": "6", "decimallongitude": "-74.375811",
+        "verbatimlongitude": "074 22 32.92 W", "startdayofyear": "168", "minimumelevationinmeters":
+        "490", "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird
+        Collection", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:AMNH:Birds:DOT-17652", "day": "17", "collectioncode": "Birds",
+        "verbatimeventdate": "2010-06-17", "coordinateuncertaintyinmeters": "3000",
+        "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "lifestage": "adult", "sex": "female", "year": "2010",
+        "wasinvasive": "0", "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "WGS84", "highergeography": "North and Central America;USA;New
+        York;Franklin Co.;;;;", "continent": "North America", "email": "trombone@amnh.org",
+        "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "disposition": "Found", "hashid": "729",
+        "hassex": "1", "language": "en", "institutionid": "urn:lsid:biocol.org:col:34925",
+        "country": "United States", "hastissue": "1", "underivedsex": "female", "genus":
+        "Junco", "family": "Emberizidae", "stateprovince": "New York", "rank": 12,
+        "county": "Franklin", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=dot-17652",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Franklin Co.; ; ; ; ; ; ; Santa Clara, Santa Clara
+        Tract, Madawaska Flow", "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince":
+        "New York", "occurrencestatus": "present", "hastypestatus": "0", "preparations":
+        "Tissue, Skeleton", "recordedby": "Peter A. Capainolo", "isfossil": "0", "wascaptive":
+        "0", "georeferenceverificationstatus": "requires verification", "modified":
+        "2013-08-20", "verbatimlatitude": "44 31 18.51 N", "haslicense": "0", "samplingprotocol":
+        "Shot", "eventdate": "2010-06-17", "individualcount": "1", "verbatimelevation":
+        "490 m", "bibliographiccitation": "American Museum of Natural History. AMNH
+        Bird Collection. Record ID: DOT-17652. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "citation": "American Museum of Natural
+        History. AMNH Bird Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "DOT-17652",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Santa Clara, Santa Clara Tract, Madawaska Flow", "orgname": "American Museum
+        of Natural History", "contact": "Tom Trombone", "migrator": "2013-08-21",
+        "recordnumber": "PAC 1995", "collectionid": "urn:lsid:biocol.org:col:34926",
+        "icode": "AMNH", "underivedlifestage": "adult", "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862",
+        "class": "Aves", "decimallatitude": "44.521808", "mappable": "1", "nomenclaturalcode":
+        "ICZN", "keyname": "amnh/birds/dot-17652", "order": "Passeriformes", "enddayofyear":
+        "168"}, {"haslifestage": "0", "month": "2", "decimallongitude": "-74.0069",
+        "verbatimlongitude": "074 00 25 W", "startdayofyear": "44", "minimumelevationinmeters":
+        "112", "networks": "ORNIS,VertNet", "vntype": "specimen", "title": "AMNH Bird
+        Collection", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:AMNH:Birds:SKEL-28809", "day": "13", "collectioncode": "Birds",
+        "verbatimeventdate": "2008-02-13", "coordinateuncertaintyinmeters": "500",
+        "higherclassification": "Animalia;Chordata;Aves;Passeriformes;Emberizidae;Junco",
+        "pubdate": "2013-10-30", "sex": "female", "year": "2008", "wasinvasive": "0",
+        "specificepithet": "hyemalis", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "WGS84", "occurrenceremarks": "Salvaged bird received from Peter A. Capainolo",
+        "highergeography": "North and Central America;USA;New York;Ulster Co.;;;;",
+        "continent": "North America", "email": "trombone@amnh.org", "orgcountry":
+        "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds",
+        "scientificname": "Junco hyemalis", "hashid": "2925", "hassex": "1", "language":
+        "en", "institutionid": "urn:lsid:biocol.org:col:34925", "country": "United
+        States", "hastissue": "1", "underivedsex": "female", "genus": "Junco", "family":
+        "Emberizidae", "stateprovince": "New York", "rank": 12, "county": "Ulster",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/amnh/birds?id=skel-28809",
+        "taxonrank": "species", "hasmedia": "0", "verbatimlocality": "North and Central
+        America; USA; New York; Ulster Co.; ; ; ; ; ; ; Saugerties, Saxton Flats",
+        "countrycode": "US", "institutioncode": "AMNH", "orgstateprovince": "New York",
+        "occurrencestatus": "present", "hastypestatus": "0", "preparations": "skeleton,
+        tissue", "isfossil": "0", "wascaptive": "0", "georeferenceverificationstatus":
+        "requires verification", "modified": "2013-08-20", "verbatimlatitude": "42
+        08 51.7 N", "haslicense": "0", "samplingprotocol": "Salvaged Bird,Window Kill",
+        "eventdate": "2008-02-13", "individualcount": "1", "verbatimelevation": "112
+        m", "bibliographiccitation": "American Museum of Natural History. AMNH Bird
+        Collection. Record ID: SKEL-28809. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "citation": "American Museum of Natural
+        History. AMNH Bird Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=amnh_birds
+        (source published on 2013-10-30)", "georeferencesources": "Google Earth",
+        "lastindexed": "2016-08-10", "haslength": "0", "catalognumber": "SKEL-28809",
+        "emlrights": "The terms and conditions of use of AMNH data are given in the
+        document found at http://research.amnh.org/vertzoo/TandC.pdf", "hasmass":
+        "0", "gbifdatasetid": "96c93a1e-f762-11e1-a439-00145eb45e9a", "locality":
+        "Saugerties, Saxton Flats", "orgname": "American Museum of Natural History",
+        "keyname": "amnh/birds/skel-28809", "migrator": "2013-08-21", "recordnumber":
+        "PAC 1687", "collectionid": "urn:lsid:biocol.org:col:34926", "icode": "AMNH",
+        "gbifpublisherid": "ccd1ddc0-6c21-11de-8224-b8a03c50a862", "class": "Aves",
+        "decimallatitude": "42.14769", "mappable": "1", "nomenclaturalcode": "ICZN",
+        "contact": "Tom Trombone", "order": "Passeriformes", "enddayofyear": "44"}],
+        "matching_records": ">10000", "api_version": "api.py 2017-11-24T12:16-03:00"}'
+  recorded_at: 2020-01-29 16:57:18 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0
+- request:
+    method: get
+    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22Oncorhynchus%20clarki%20henshawi%22%2C%22l%22%3A10%7D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: no-cache
+      content-type: application/json
+      charset: utf-8
+      x-cloud-trace-context: 383300eff652efe77adcccfdbb7ad3b1
+      date: Wed, 29 Jan 2020 16:57:17 GMT
+      server: Google Frontend
+      content-length: '31836'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"request_date": "2020-01-29T16:57:17.817124", "response_records":
+        10, "submitted_query": "Oncorhynchus clarki henshawi", "request_origin": "45.505106,-122.675026",
+        "limit": 10, "cursor": "False:CqIGCpIDCuQC9wAAABP_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQjIrQio2R0pyei56TkJjSnJ6M0oyK0pacl9LMyM_Iz_8AAP9zf5yejNCMitCKjZHSnJ6LnpOQmNKcnozSjIrSlpyX0szIz8jP_wAA__8A_v_-jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wB0baCgmYuMoKD_AF2ej4-akZiWkZr_AHN0bZaRm5qH_wBdm4ic_wBzdG2bkJyglpv_AF2cnozQjIrQio2R0pyei56TkJjSnJ6M0oyK0pacl9LMyM_Iz_8Ac3-cnozQjIrQio2R0pyei56TkJjSnJ6M0oyK0pacl9LMyM_Iz_8A__4QCiHbXi_RmyTUyTkAAAAA7P___0gCUABaCwnHLZprS5CpIxADYNuv0skFEg1Eb2N1bWVudEluZGV4GtkCKEFORCAoSVMgImN1c3RvbWVyX25hbWUiICJhcHBlbmdpbmUiKSAoSVMgImdyb3VwX25hbWUiICJzfnZlcnRuZXQtcG9ydGFsIikgKElTICJuYW1lc3BhY2UiICJpbmRleC0yMDEzLTA4LTA4IikgKElTICJpbmRleF9uYW1lIiAiZHdjIikgKE9SIChBTkQgKE9SIChRVCAiT25jb3JoeW5jaHVzIikgKElTICJfX2dhdG9tX18iICJvbmNvcmh5bmNodXMiKSkgKE9SIChRVCAiY2xhcmtpIikgKElTICJfX2dhdG9tX18iICJjbGFya2kiKSkgKE9SIChRVCAiaGVuc2hhd2kiKSAoSVMgIl9fZ2F0b21fXyIgImhlbnNoYXdpIikpKSAoSVMgIl9fZ2F0b21fXyIgIm9uY29yaHluY2h1cyBjbGFya2kgaGVuc2hhd2kiKSkpOhkKDChOIG9yZGVyX2lkKRABGQAAAAAAAPD_SgUIAEDoBw",
+        "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
+        "1", "month": "10", "decimallongitude": "-121.0484020000", "verbatimlongitude":
+        "-121.048402\u00b0", "isarch": "0", "startdayofyear": "287", "networks": "FishNet,VertNet",
+        "vntype": "specimen", "title": "CAS Ichthyology (ICH)", "kingdom": "Animalia",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:19007", "day":
+        "14", "occurrenceid": "urn:catalog:CAS:ICH:19007", "collectioncode": "ICH",
+        "verbatimeventdate": "1945-10-14", "coordinateuncertaintyinmeters": "418",
+        "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "lifestage": "juvenile", "modified": "1999-11-30 00:00:00.0", "year": "1945",
+        "wasinvasive": "0", "specificepithet": "clarki", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "not recorded", "occurrenceremarks": "Small juvenile.", "highergeography":
+        "North America|United States|California|Lassen County|Lake Almanor Drainage|Clear
+        Cr.", "continent": "North America", "email": "dcatania@calacademy.org", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "scientificname": "Oncorhynchus clarki henshawi", "hashid": "8946", "hassex":
+        "0", "language": "en", "country": "United States", "hastissue": "0", "genus":
+        "Oncorhynchus", "family": "Salmonidae", "stateprovince": "California", "rank":
+        12, "county": "Lassen County", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-19007",
+        "hasmedia": "0", "habitat": "sand, gravel, boulder, rocks", "institutioncode":
+        "CAS", "eventremarks": "Water clear; temp. 49 deg. F; current swift; cabomba,
+        green algae, water mint.", "orgstateprovince": "California", "eventtime":
+        "1100", "hastypestatus": "0", "verbatimdepth": "1 ft", "preparations": "alc-75%
+        EtOH", "recordedby": "Simpson, D. A.; Simpson, H.", "isfossil": "0", "license":
+        "CC0", "wascaptive": "0", "infraspecificepithet": "henshawi", "verbatimlatitude":
+        "40.300875\u00b0", "haslicense": "1", "fieldnumber": "DAS 106", "samplingprotocol":
+        "long-handled dip nets", "lastindexed": "2019-08-04", "eventdate": "1945-10-14",
+        "individualcount": "1", "bibliographiccitation": "California Academy of Sciences.
+        CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:19007. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "citation": "California Academy of Sciences.
+        CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "georeferencesources": "FishNet Collaborative
+        Georeferencing Project", "waterbody": "Clear Cr.", "haslength": "0", "catalognumber":
+        "19007", "hasmass": "0", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "locality": "Clear Creek Camp 2 miles west of Westwood.", "orgname": "California
+        Academy of Sciences", "keyname": "cas/ich/urn-catalog-cas-ich-19007", "migrator":
+        "no migrator", "icode": "CAS", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "class": "Actinopteri", "decimallatitude": "40.3008750000", "mappable": "1",
+        "nomenclaturalcode": "ICZN", "contact": "David Catania", "order": "Salmoniformes",
+        "enddayofyear": "287"}, {"haslifestage": "0", "individualcount": "1", "higherclassification":
+        "Actinopteri | Salmoniformes", "pubdate": "2019-07-15", "wasinvasive": "0",
+        "infraspecificepithet": "henshawi", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 12, "month": "8", "decimallongitude": "-119.7536360000",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-44057",
+        "haslength": "0", "isarch": "0", "year": "1978", "startdayofyear": "232",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Castro, A.", "hasmass": "0", "vntype": "specimen", "habitat":
+        "freshwater", "locality": "Above Wolf Cr.", "orgname": "California Academy
+        of Sciences", "hasmedia": "0", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "Died in Steinhart Aq.", "coordinateuncertaintyinmeters": "171", "orgstateprovince":
+        "California", "highergeography": "North America|United States|California|Alpine
+        County|Bull Lake", "continent": "North America", "contact": "David Catania",
+        "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue": "0",
+        "email": "dcatania@calacademy.org", "day": "20", "kingdom": "Animalia", "family":
+        "Salmonidae", "citation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source
+        published on 2019-07-15)", "collectioncode": "ICH", "verbatimlongitude": "-119.753636\u00b0",
+        "hassex": "0", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:44057",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "alc-75% EtOH", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "405", "georeferencesources": "FishNet Collaborative Georeferencing
+        Project", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-44057",
+        "isfossil": "0", "county": "Alpine County", "decimallatitude": "38.5182320000",
+        "occurrenceid": "urn:catalog:CAS:ICH:44057", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "1", "title": "CAS Ichthyology
+        (ICH)", "modified": "2002-03-22 11:42:57.0", "verbatimlatitude": "38.518232\u00b0",
+        "eventdate": "1978-08-20", "nomenclaturalcode": "ICZN", "haslicense": "1",
+        "fieldnumber": "AC 20-VIII-78", "verbatimeventdate": "1978-08-20", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:44057.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "waterbody": "Bull Lake", "stateprovince": "California",
+        "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "44057", "enddayofyear": "232"},
+        {"haslifestage": "0", "individualcount": "1", "higherclassification": "Actinopteri
+        | Salmoniformes", "pubdate": "2019-07-15", "wasinvasive": "0", "stateprovince":
+        "California", "hastypestatus": "0", "basisofrecord": "PreservedSpecimen",
+        "rank": 12, "month": "6", "decimallongitude": "-119.3486380000", "phylum":
+        "Chordata", "verbatimlongitude": "-119.348638\u00b0", "haslength": "0", "isarch":
+        "0", "year": "1933", "startdayofyear": "164", "wascaptive": "0", "specificepithet":
+        "clarki", "networks": "FishNet,VertNet", "hasmass": "0", "vntype": "specimen",
+        "habitat": "freshwater", "locality": "Twin Lakes", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "=Salmo clarki henshawi. Skull only.  Threatened.", "coordinateuncertaintyinmeters":
+        "2940", "orgstateprovince": "California", "highergeography": "North America|United
+        States|California|Mono County", "continent": "North America", "contact": "David
+        Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue":
+        "0", "email": "dcatania@calacademy.org", "day": "13", "kingdom": "Animalia",
+        "family": "Salmonidae", "citation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source
+        published on 2019-07-15)", "collectioncode": "ICH", "hassex": "0", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:66312",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "skeletal", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "2558", "georeferencesources": "FishNet Collaborative Georeferencing Project",
+        "class": "Actinopteri", "infraspecificepithet": "henshawi", "keyname": "cas/ich/urn-catalog-cas-ich-66312",
+        "isfossil": "0", "county": "Mono County", "decimallatitude": "38.1544600000",
+        "occurrenceid": "urn:catalog:CAS:ICH:66312", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "1", "title": "CAS Ichthyology
+        (ICH)", "modified": "1998-08-14 00:00:00.0", "verbatimlatitude": "38.154460\u00b0",
+        "eventdate": "1933-06-13", "nomenclaturalcode": "ICZN", "haslicense": "1",
+        "fieldnumber": "Z66312", "verbatimeventdate": "1933-06-13", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:66312.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-66312",
+        "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "66312", "enddayofyear": "164"},
+        {"haslifestage": "0", "month": "06", "decimallongitude": "-114.105951", "isarch":
+        "0", "startdayofyear": "152", "networks": "Arctos,FishNet,VertNet", "vntype":
+        "specimen", "title": "MSB Fish Collection (Arctos)", "accessrights": "http://vertnet.org/resources/norms.html",
+        "kingdom": "Animalia", "verbatimcoordinatesystem": "decimal degrees", "dctype":
+        "PhysicalObject", "iptrecordid": "http://arctos.database.museum/guid/MSB:Fish:68342?seid=3405446",
+        "day": "01", "identificationverificationstatus": "field", "occurrenceid":
+        "http://arctos.database.museum/guid/MSB:Fish:68342?seid=3405446", "identificationqualifier":
+        "A", "georeferenceddate": "2015-10-07", "verbatimeventdate": "1977-06-01",
+        "coordinateuncertaintyinmeters": "8530", "higherclassification": "Animalia;
+        Chordata; Actinopterygii; Salmoniformes; Salmonidae; Salmoninae;", "pubdate":
+        "2018-02-21", "collectioncode": "Fish specimens", "year": "1977", "wasinvasive":
+        "0", "specificepithet": "clarkii", "basisofrecord": "PreservedSpecimen", "geodeticdatum":
+        "World Geodetic System 1984", "occurrenceremarks": "Storage: 50% ISOP; Published:
+        1979: The Progressive Fish Culturist 41(3):135-137; collected Jun - Aug 1977;
+        orig Pyramid Lake spp. of Cutthroat Trout (extinct); see . Psog Fish Cult.
+        197[9].41(3)135-137.  Specimens have had guts removed and have individual
+        tags with numbers.", "highergeography": "North America, United States, Nevada,
+        Elko County, Great Basin", "continent": "North America", "email": "Turnert@unm.edu",
+        "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=msb_fish",
+        "scientificname": "Oncorhynchus clarkii", "hashid": "7244", "hassex": "0",
+        "language": "en", "institutionid": "MSB", "country": "United States", "hastissue":
+        "0", "lengthunitsinferred": "0", "genus": "Oncorhynchus", "georeferenceprotocol":
+        "GeoLocate", "family": "Salmonidae", "stateprovince": "Nevada", "rank": 12,
+        "county": "Elko County", "phylum": "Chordata", "references": "http://arctos.database.museum/guid/MSB:Fish:68342",
+        "georeferencedby": "Theresa L. McInnes", "taxonrank": "species", "hasmedia":
+        "0", "verbatimlocality": "Nevada-Utah: Elko-Tooele Cos., Bonneville Drainage.
+        NV-UT.,  Donner Creek, in Morrison Canyon on Pilot Peak. Collector(s): T.J.
+        Hickman, D. Duff", "institutioncode": "MSB", "eventremarks": "USGS Fort Collins
+        CO Biological Survey Collections; verbatim collectors: T. J. Hickman, D. Duff,
+        USGS Biological Survey Fort Collins; collected Jun - Aug 1977", "orgstateprovince":
+        "New Mexico", "lengthinmm": "73", "organismid": "http://arctos.database.museum/guid/MSB:Fish:68342",
+        "hastypestatus": "0", "preparations": "whole organism (formalin-fixed, 55%
+        isopropanol)", "recordedby": "Collector(s): T. J. Hickman, D. Duff, USGS Biological
+        Survey Fort Collins", "isfossil": "0", "license": "CC0", "wascaptive": "0",
+        "dynamicproperties": "minimum standard length=73 mm; maximum standard length=196
+        mm", "georeferenceverificationstatus": "unverified", "modified": "2019-08-25
+        02:42:54.0", "haslicense": "1", "eventdate": "1977-06-01", "haslength": "1",
+        "individualcount": "17", "bibliographiccitation": "Museum of Southwestern
+        Biology. MSB Fish Collection (Arctos). Record ID: http://arctos.database.museum/guid/MSB:Fish:68342?seid=3405446.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=msb_fish (source published
+        on 2018-02-21)", "verbatimcoordinates": "41.023247/-114.105951", "citation":
+        "Museum of Southwestern Biology. MSB Fish Collection (Arctos). Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=msb_fish
+        (source published on 2018-02-21)", "georeferencesources": "GeoLocate", "lastindexed":
+        "2019-09-22", "dateidentified": "1977-06-01", "catalognumber": "MSB:Fish:68342",
+        "hasmass": "0", "gbifdatasetid": "a2254f58-8bbf-41e6-ac4e-03d1683e0ce5", "locality":
+        "Donner Creek, in Morrison Canyon on Pilot Peak.", "orgname": "Museum of Southwestern
+        Biology", "contact": "Thomas Turner", "migrator": "no migrator", "lengthtype":
+        "standard length", "recordnumber": "ZBS/FC 3342", "collectionid": "19", "icode":
+        "MSB", "gbifpublisherid": "939ed180-aa7b-11db-8edf-b8a03c50a862", "class":
+        "Actinopterygii", "previousidentifications": "<i>Oncorhynchus clarkii</i>
+        (accepted ID) identified by T. J. Hickman on 1977-06-01; method: field Remark:
+        verbatim ID: Oncorhynchus clarkii henshawi; taxonomic history: Salmo clarki
+        henshawi", "identificationremarks": "verbatim ID: Oncorhynchus clarkii henshawi;
+        taxonomic history: Salmo clarki henshawi", "decimallatitude": "41.023247",
+        "mappable": "1", "locationaccordingto": "Theresa L. McInnes", "othercatalognumbers":
+        "BSFC: Biological Survey Fort Collins=BS/FC 3342; collector number=ZBS/FC
+        3342", "identifiedby": "T. J. Hickman", "nomenclaturalcode": "ICZN", "keyname":
+        "msb/fish-specimens/http-arctos-database-museum-guid-msb-fish-68342-seid-3405446",
+        "order": "Salmoniformes", "enddayofyear": "152"}, {"haslifestage": "0", "individualcount":
+        "1", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85144",
+        "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 12, "month": "8", "decimallongitude": "-120.2347220000",
+        "phylum": "Chordata", "verbatimlongitude": "-120.234722\u00b0", "haslength":
+        "0", "isarch": "0", "year": "1961", "wascaptive": "0", "specificepithet":
+        "clarki", "networks": "FishNet,VertNet", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85144.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "locality":
+        "Isolate trib. to Truckee R. below Lake Tahoe.", "orgname": "California Academy
+        of Sciences", "hasmedia": "0", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "\"pure strain of Lahontan cutthroat\"", "coordinateuncertaintyinmeters":
+        "2553", "orgstateprovince": "California", "highergeography": "North America|United
+        States|California|El Dorado County|Truckee R. Basin|Pole Cr.", "continent":
+        "North America", "contact": "David Catania", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org",
+        "day": "1", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "hassex": "0", "orgcountry": "United States",
+        "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85144",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "alc-75% EtOH", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "4830", "georeferencesources": "FishNet Collaborative Georeferencing
+        Project", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85144",
+        "isfossil": "0", "county": "El Dorado County", "decimallatitude": "39.2355140000",
+        "occurrenceid": "urn:catalog:CAS:ICH:85144", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "1", "title": "CAS Ichthyology
+        (ICH)", "modified": "2013-06-28 00:00:00.0", "verbatimlatitude": "39.235514\u00b0",
+        "eventdate": "1961-08-00", "identifiedby": "Behnke, R. J.", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "CA VIII-61", "verbatimeventdate":
+        "1961-08-00", "waterbody": "Pole Cr.", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes", "catalognumber":
+        "85144", "collectioncode": "ICH"}, {"haslifestage": "0", "individualcount":
+        "2", "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 12, "month": "9", "decimallongitude": "-119.2060650000",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85149",
+        "haslength": "0", "isarch": "0", "year": "1959", "startdayofyear": "247",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Adams, J.; Behnke, R. J.", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85149.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "locality":
+        "Above Bridgeport Res. near Dunderberg Mine site, above impossible barrier.",
+        "orgname": "California Academy of Sciences", "hasmedia": "0", "geodeticdatum":
+        "not recorded", "coordinateuncertaintyinmeters": "799", "orgstateprovince":
+        "California", "highergeography": "North America|United States|California|Mono
+        County|East Walker R. Basin|Dog Cr.", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue":
+        "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day": "4", "kingdom":
+        "Animalia", "infraspecificepithet": "henshawi", "citation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "collectioncode": "ICH", "verbatimlongitude":
+        "-119.206065\u00b0", "hassex": "0", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85149",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "alc-55% isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "4825", "georeferencesources": "FishNet Collaborative Georeferencing
+        Project", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85149",
+        "isfossil": "0", "county": "Mono County", "decimallatitude": "38.1288370000",
+        "occurrenceid": "urn:catalog:CAS:ICH:85149", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "1", "title": "CAS Ichthyology
+        (ICH)", "modified": "1999-12-01 00:00:00.0", "verbatimlatitude": "38.128837\u00b0",
+        "eventdate": "1959-09-04", "nomenclaturalcode": "ICZN", "haslicense": "1",
+        "fieldnumber": "A&B 4-IX-59", "verbatimeventdate": "1959-09-04", "waterbody":
+        "Dog Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "85149", "enddayofyear": "247"},
+        {"haslifestage": "0", "individualcount": "1", "higherclassification": "Actinopteri
+        | Salmoniformes", "pubdate": "2019-07-15", "wasinvasive": "0", "stateprovince":
+        "California", "hastypestatus": "0", "basisofrecord": "PreservedSpecimen",
+        "rank": 12, "month": "8", "decimallongitude": "-120.2857030000", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85150",
+        "haslength": "0", "isarch": "0", "year": "1959", "startdayofyear": "235",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Roberts, D.", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85150.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "locality":
+        "Approx. 0.5 mile below lake.", "orgname": "California Academy of Sciences",
+        "hasmedia": "0", "geodeticdatum": "not recorded", "occurrenceremarks": "\"Probably
+        a Heenan Lake fish.\"", "coordinateuncertaintyinmeters": "385", "orgstateprovince":
+        "California", "highergeography": "North America|United States|California|Independence
+        Cr.", "continent": "North America", "contact": "David Catania", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "hastissue": "0", "hasmass": "0",
+        "email": "dcatania@calacademy.org", "day": "23", "kingdom": "Animalia", "infraspecificepithet":
+        "henshawi", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "collectioncode": "ICH", "verbatimlongitude": "-120.285703\u00b0",
+        "hassex": "0", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85150",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "alc-55% isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "4903", "georeferencesources": "FishNet Collaborative Georeferencing
+        Project", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85150",
+        "isfossil": "0", "decimallatitude": "39.4580300000", "occurrenceid": "urn:catalog:CAS:ICH:85150",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "1", "title": "CAS Ichthyology (ICH)", "modified": "1999-12-01 00:00:00.0",
+        "verbatimlatitude": "39.458030\u00b0", "eventdate": "1959-08-23", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "DR 23-VIII-59", "verbatimeventdate":
+        "1959-08-23", "waterbody": "Independence Cr.", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes", "catalognumber":
+        "85150", "enddayofyear": "235"}, {"haslifestage": "0", "individualcount":
+        "6", "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 12, "month": "9", "decimallongitude": "-119.7069390000",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85153",
+        "haslength": "0", "isarch": "0", "year": "1959", "startdayofyear": "255",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Behnke, Robert J.", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85153.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "locality":
+        "Murray Canyon.", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "geodeticdatum": "not recorded", "coordinateuncertaintyinmeters": "2713",
+        "orgstateprovince": "California", "highergeography": "North America|United
+        States|California|Alpine County", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue":
+        "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day": "12", "kingdom":
+        "Animalia", "infraspecificepithet": "henshawi", "citation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "collectioncode": "ICH", "hassex": "0",
+        "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85153",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "alc-55% isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "4906", "georeferencesources": "FishNet Collaborative Georeferencing
+        Project", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85153",
+        "isfossil": "0", "county": "Alpine County", "decimallatitude": "38.4868500000",
+        "occurrenceid": "urn:catalog:CAS:ICH:85153", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "1", "title": "CAS Ichthyology
+        (ICH)", "modified": "2013-06-28 00:00:00.0", "verbatimlatitude": "38.486850\u00b0",
+        "eventdate": "1959-09-12", "identifiedby": "Behnke, R. J.", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "RJB 12-IX-59", "verbatimeventdate":
+        "1959-09-12", "verbatimlongitude": "-119.706939\u00b0", "genus": "Oncorhynchus",
+        "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes",
+        "catalognumber": "85153", "enddayofyear": "255"}, {"haslifestage": "0", "individualcount":
+        "9", "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "stateprovince": "California", "hastypestatus": "0", "basisofrecord": "PreservedSpecimen",
+        "rank": 9, "georeferencesources": "FishNet Collaborative Georeferencing Project",
+        "decimallongitude": "-119.5945070000", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/su?id=urn-catalog-cas-su-ich-31536", "haslength":
+        "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "networks": "FishNet,VertNet", "recordedby": "Snyder, John O.",
+        "hasmass": "0", "vntype": "specimen", "habitat": "freshwater", "locality":
+        "Below Llewellyn Falls.", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "geodeticdatum": "not recorded", "coordinateuncertaintyinmeters": "6418",
+        "orgstateprovince": "California", "highergeography": "North America|United
+        States|California|Alpine County|Silver King Cr.", "continent": "North America",
+        "contact": "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator",
+        "hastissue": "0", "email": "dcatania@calacademy.org", "kingdom": "Animalia",
+        "family": "Salmonidae", "citation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source
+        published on 2019-07-15)", "verbatimlongitude": "-119.594507\u00b0", "hassex":
+        "0", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:SU
+        (ICH):31536", "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi",
+        "preparations": "alc-75% EtOH", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "4223", "class": "Actinopteri", "infraspecificepithet": "henshawi",
+        "keyname": "cas/su/urn-catalog-cas-su-ich-31536", "isfossil": "0", "county":
+        "Alpine County", "decimallatitude": "38.5165420000", "occurrenceid": "urn:catalog:CAS:SU
+        (ICH):31536", "language": "en", "license": "CC0", "country": "United States",
+        "mappable": "1", "title": "CAS Ichthyology (ICH)", "modified": "2003-06-26
+        10:58:39.0", "verbatimlatitude": "38.516542\u00b0", "nomenclaturalcode": "ICZN",
+        "haslicense": "1", "fieldnumber": "JOS-SKC", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:SU
+        (ICH):31536. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "waterbody": "Silver King Cr.", "genus":
+        "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order":
+        "Salmoniformes", "catalognumber": "31536", "collectioncode": "SU"}, {"haslifestage":
+        "0", "individualcount": "1", "higherclassification": "Actinopteri | Salmoniformes",
+        "pubdate": "2019-07-15", "stateprovince": "California", "hastypestatus": "0",
+        "basisofrecord": "PreservedSpecimen", "rank": 9, "georeferencesources": "FishNet
+        Collaborative Georeferencing Project", "decimallongitude": "-119.6131320000",
+        "phylum": "Chordata", "verbatimlongitude": "-119.613132\u00b0", "haslength":
+        "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "networks": "FishNet,VertNet", "hasmass": "0", "vntype": "specimen",
+        "family": "Salmonidae", "locality": "From below Llewellyn Falls, Fish Valley.",
+        "orgname": "California Academy of Sciences", "hasmedia": "0", "geodeticdatum":
+        "not recorded", "coordinateuncertaintyinmeters": "1230", "orgstateprovince":
+        "California", "habitat": "freshwater", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue":
+        "0", "email": "dcatania@calacademy.org", "highergeography": "North America|United
+        States|California|Alpine County", "kingdom": "Animalia", "infraspecificepithet":
+        "henshawi", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "hassex": "0", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:SU (ICH):37070",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "alc-75% EtOH", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "4187", "class": "Actinopteri", "keyname": "cas/su/urn-catalog-cas-su-ich-37070",
+        "isfossil": "0", "county": "Alpine County", "decimallatitude": "38.4684080000",
+        "occurrenceid": "urn:catalog:CAS:SU (ICH):37070", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "1", "title": "CAS Ichthyology
+        (ICH)", "modified": "1999-12-01 00:00:00.0", "verbatimlatitude": "38.468408\u00b0",
+        "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber": "CA-FV-2",
+        "bibliographiccitation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Record ID: urn:catalog:CAS:SU (ICH):37070. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "references": "http://portal.vertnet.org/o/cas/su?id=urn-catalog-cas-su-ich-37070",
+        "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "37070", "collectioncode": "SU"}],
+        "matching_records": 60, "api_version": "api.py 2017-11-24T12:16-03:00"}'
+  recorded_at: 2020-01-29 16:57:18 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0
