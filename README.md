@@ -220,9 +220,6 @@ res$data[,1:5]
 * Please [report any issues or bugs](https://github.com/ropensci/rvertnet/issues).
 * License: MIT
 * Get citation information for `rvertnet` in R doing `citation(package = 'rvertnet')`
-* Please note that this project is released with a [Contributor Code of Conduct][coc].
-By participating in this project you agree to abide by its terms.
+* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
 
 [![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
-
-[coc]: https://github.com/ropensci/rvertnet/blob/master/CODE_OF_CONDUCT.md
