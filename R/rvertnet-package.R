@@ -42,7 +42,8 @@
 #' simply run the function call again.
 #' 
 #' @importFrom jsonlite fromJSON toJSON
-#' @importFrom dplyr bind_rows tbl_df
+#' @importFrom dplyr bind_rows
+#' @importFrom tibble as_tibble
 #' @importFrom ggplot2 ggplot position_jitter aes geom_polygon 
 #' geom_point labs theme_bw map_data
 #' @importFrom utils URLdecode

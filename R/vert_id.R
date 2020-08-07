@@ -57,7 +57,7 @@ vert_id <- function(ids, compact = TRUE, messages = TRUE, ...) {
   mssg(messages, paste("\nLast Query URL: \"", tt$url, "\"", sep = ""))
   mssg(messages, paste("\nMatching records:", NROW(df), "returned,", avail, 
                       "available", sep = " "))
-  list(meta = make_meta(out), data = tbl_df(df))
+  list(meta = make_meta(out), data = tibble::as_tibble(df))
 }
 
 make_id_q <- function(x) {

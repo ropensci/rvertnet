@@ -5,7 +5,7 @@ Description: Retrieve, map and summarize data from the 'VertNet.org'
     parameters, including 'taxonomic' names, places, and dates. In addition, 
     there is an interface for conducting spatially delimited searches, and 
     another for requesting large 'datasets' via email.
-Version: 0.8.0
+Version: 0.8.1.91
 Authors@R: c(
     person("Scott", "Chamberlain",
         role = c("aut", "cre"),
@@ -26,13 +26,14 @@ Imports:
     jsonlite (>= 1.5),
     crul (>= 0.5.2),
     dplyr (>= 0.5.0),
+    tibble,
     ggplot2,
     maps
 Suggests:
     testthat,
     knitr,
     vcr
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 X-schema.org-applicationCategory: Data Access
 X-schema.org-keywords: species, occurrences, biodiversity, maps, vertnet, mammals, mammalia, specimens
 X-schema.org-isPartOf: "https://ropensci.org"

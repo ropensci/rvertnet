@@ -75,7 +75,7 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE,
   }
   mssg(messages, paste("\nLast Query URL: \"", URLdecode(tt$url), "\"", sep = ""))
   mssg(messages, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))
-  list(meta = make_meta(out), data = tbl_df(df))
+  list(meta = make_meta(out), data = tibble::as_tibble(df))
 }
 
 make_q <- function(fxn, x, cursor = NULL, limit=1000){
