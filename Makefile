@@ -15,6 +15,9 @@ rmd2md:
 test:
 	${RSCRIPT} -e 'library(methods); devtools::test()'
 
+eg:
+	${RSCRIPT} -e 'library(methods); devtools::run_examples(run=TRUE)'
+
 doc:
 	@mkdir -p man
 	${RSCRIPT} -e "library(methods); devtools::document()"
