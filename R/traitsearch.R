@@ -35,9 +35,6 @@
 #' summary(as.numeric(res$data$massing))
 #'
 #' traitsearch(taxon = "aves", has_mass = TRUE, limit = 100)
-#'
-#' # curl options
-#' traitsearch(has_mass = TRUE, limit = 10, callopts = list(verbose = TRUE))
 #' }
 traitsearch <- function(taxon = NULL, has_mass = FALSE, has_length = FALSE,
   has_sex = FALSE, has_lifestage = FALSE, length_type = NULL, length = NULL,

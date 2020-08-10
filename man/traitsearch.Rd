@@ -82,8 +82,5 @@ res <- traitsearch(has_mass = TRUE, mass = list(">= 20", "<= 500"))
 summary(as.numeric(res$data$massing))
 
 traitsearch(taxon = "aves", has_mass = TRUE, limit = 100)
-
-# curl options
-traitsearch(has_mass = TRUE, limit = 10, callopts = list(verbose = TRUE))
 }
 }
