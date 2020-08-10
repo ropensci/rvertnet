@@ -32,16 +32,16 @@ vertsumwrapper <- function(input = NULL, verbose = TRUE){
       input$coordinateuncertaintyinmeters <- as.numeric(as.character(input$coordinateuncertaintyinmeters))
     }
     mappable <- input[stats::complete.cases(input[,c('decimallatitude','decimallongitude')]),]
-    mappable <- subset(mappable, input$decimallatitude < 90 & input$decimallatitude > -90)
-    mappable <- subset(mappable, input$decimallongitude < 180 & input$decimallongitude > -180)
+    mappable <- subset(mappable, mappable$decimallatitude < 90 & mappable$decimallatitude > -90)
+    mappable <- subset(mappable, mappable$decimallongitude < 180 & mappable$decimallongitude > -180)
     if (nrow(mappable) < coords) {
       bad <- coords - nrow(mappable)
       mssg(verbose, paste(bad, " record(s) with bad coordinates"))
       coords <- coords - bad
     }
     if (is.null(errest)) {
-      mappable <- subset(mappable, input$coordinateuncertaintyinmeters > 0 &
-                           input$coordinateuncertaintyinmeters < 20020000)
+      mappable <- subset(mappable, mappable$coordinateuncertaintyinmeters > 0 &
+                           mappable$coordinateuncertaintyinmeters < 20020000)
       if ((errest <- nrow(mappable)) < coords) {
         bad <- coords - errest
       }

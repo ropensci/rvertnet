@@ -5,8 +5,7 @@ test_that("vertsummary works with vertsearch input", {
 
   vcr::use_cassette("vertsummary_prep_vertsearch", {
     vs1 <- vertsearch("Junco hyemalis", messages = FALSE, limit = 10)
-    vs2 <- vertsearch("Oncorhynchus clarki henshawi", messages = FALSE,
-                      limit = 10)
+    vs2 <- vertsearch("Oncorhynchus clarki henshawi", messages = FALSE)
   })
   vs1_summ <- vertsummary(vs1)
   vs2_summ <- vertsummary(vs2)
@@ -25,7 +24,7 @@ test_that("vertsummary works with vertsearch input", {
   expect_is(vs2_summ, "vertsummary")
   expect_is(vs2_summ$country, "table")
   expect_is(vs2_summ$taxon, "table")
-  expect_equal(vs2_summ$recs, 10)
+  expect_gt(vs2_summ$recs, 10)
 })
 
 test_that("vertsummary works with searchbytem input", {

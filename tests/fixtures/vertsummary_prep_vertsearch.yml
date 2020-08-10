@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -19,16 +19,19 @@ http_interactions:
       cache-control: no-cache
       content-type: application/json
       charset: utf-8
-      x-cloud-trace-context: a7d7e4968517ecf89d05bc663af1aa31
-      date: Wed, 29 Jan 2020 16:57:16 GMT
+      set-cookie: _eauth=eyJ1c2VyX2lkIjpudWxsLCJzZXNzaW9uX2lkIjoiTHJUR1I5SFBLTXpWR1dJVG1MSVZqSSJ9|1597091065|8b8076a193020588ab8837b1bc0c88c35fdbb72b;
+        Path=/
+      x-cloud-trace-context: 3456314303f25de8aefa8c1d2a393d98;o=1
+      date: Mon, 10 Aug 2020 20:24:25 GMT
       server: Google Frontend
       content-length: '33720'
+      expires: Mon, 10 Aug 2020 20:24:25 GMT
     body:
       encoding: UTF-8
       file: no
-      string: '{"request_date": "2020-01-29T16:57:16.320635", "response_records":
+      string: '{"request_date": "2020-08-10T20:24:25.649839", "response_records":
         10, "submitted_query": "Junco hyemalis", "request_origin": "45.505106,-122.675026",
-        "limit": 10, "cursor": "False:CqEFCtoCCqwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12ekpGX0J2WjZuM0IyUmpPSzcfHz8b_AAD_c3-ekpGX0J2WjZuM0IyUmpPSzcfHz8b_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZ6SkZfQnZaNm4zQjJSak9LNx8fPxv8Ac3-ekpGX0J2WjZuM0IyUmpPSzcfHz8b_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJ_kIJYM2DecgQA2Db59yMAxINRG9jdW1lbnRJbmRleBqQAihBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChPUiAoQU5EIChPUiAoUVQgIkp1bmNvIikgKElTICJfX2dhdG9tX18iICJqdW5jbyIpKSAoT1IgKFFUICJoeWVtYWxpcyIpIChJUyAiX19nYXRvbV9fIiAiaHllbWFsaXMiKSkpIChJUyAiX19nYXRvbV9fIiAianVuY28gaHllbWFsaXMiKSkpOhkKDChOIG9yZGVyX2lkKRABGQAAAAAAAPD_SgUIAEDoBw",
+        "limit": 10, "cursor": "False:CqEFCtoCCqwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12ekpGX0J2WjZuM0IyUmpPSzcfHz8b_AAD_c3-ekpGX0J2WjZuM0IyUmpPSzcfHz8b_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZ6SkZfQnZaNm4zQjJSak9LNx8fPxv8Ac3-ekpGX0J2WjZuM0IyUmpPSzcfHz8b_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJ_kIJYM2DecgQA2DUwPjjAxINRG9jdW1lbnRJbmRleBqQAihBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChPUiAoQU5EIChPUiAoUVQgIkp1bmNvIikgKElTICJfX2dhdG9tX18iICJqdW5jbyIpKSAoT1IgKFFUICJoeWVtYWxpcyIpIChJUyAiX19nYXRvbV9fIiAiaHllbWFsaXMiKSkpIChJUyAiX19nYXRvbV9fIiAianVuY28gaHllbWFsaXMiKSkpOhkKDChOIG9yZGVyX2lkKRABGQAAAAAAAPD_SgUIAEDoBw",
         "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
         "0", "month": "5", "decimallongitude": "-74.159567", "verbatimlongitude":
         "074 09 34.44 W", "startdayofyear": "150", "minimumelevationinmeters": "276",
@@ -428,16 +431,16 @@ http_interactions:
         "decimallatitude": "42.14769", "mappable": "1", "nomenclaturalcode": "ICZN",
         "contact": "Tom Trombone", "order": "Passeriformes", "enddayofyear": "44"}],
         "matching_records": ">10000", "api_version": "api.py 2017-11-24T12:16-03:00"}'
-  recorded_at: 2020-01-29 16:57:18 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+  recorded_at: 2020-08-10 20:24:27 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
 - request:
     method: get
-    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22Oncorhynchus%20clarki%20henshawi%22%2C%22l%22%3A10%7D
+    uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22Oncorhynchus%20clarki%20henshawi%22%2C%22l%22%3A1000%7D
     body:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -450,24 +453,26 @@ http_interactions:
       cache-control: no-cache
       content-type: application/json
       charset: utf-8
-      x-cloud-trace-context: 383300eff652efe77adcccfdbb7ad3b1
-      date: Wed, 29 Jan 2020 16:57:17 GMT
+      set-cookie: _eauth=eyJ1c2VyX2lkIjpudWxsLCJzZXNzaW9uX2lkIjoiNVRCaTByWTdOU3FYVWNmempGakV1TiJ9|1597091066|88714a567f22ceee375c66d9db176ef62a776ee0;
+        Path=/
+      x-cloud-trace-context: 56341307bdcf8102e7639f11612c9696
+      date: Mon, 10 Aug 2020 20:24:26 GMT
       server: Google Frontend
-      content-length: '31836'
+      content-length: '169760'
+      expires: Mon, 10 Aug 2020 20:24:26 GMT
     body:
       encoding: UTF-8
       file: no
-      string: '{"request_date": "2020-01-29T16:57:17.817124", "response_records":
-        10, "submitted_query": "Oncorhynchus clarki henshawi", "request_origin": "45.505106,-122.675026",
-        "limit": 10, "cursor": "False:CqIGCpIDCuQC9wAAABP_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQjIrQio2R0pyei56TkJjSnJ6M0oyK0pacl9LMyM_Iz_8AAP9zf5yejNCMitCKjZHSnJ6LnpOQmNKcnozSjIrSlpyX0szIz8jP_wAA__8A_v_-jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wB0baCgmYuMoKD_AF2ej4-akZiWkZr_AHN0bZaRm5qH_wBdm4ic_wBzdG2bkJyglpv_AF2cnozQjIrQio2R0pyei56TkJjSnJ6M0oyK0pacl9LMyM_Iz_8Ac3-cnozQjIrQio2R0pyei56TkJjSnJ6M0oyK0pacl9LMyM_Iz_8A__4QCiHbXi_RmyTUyTkAAAAA7P___0gCUABaCwnHLZprS5CpIxADYNuv0skFEg1Eb2N1bWVudEluZGV4GtkCKEFORCAoSVMgImN1c3RvbWVyX25hbWUiICJhcHBlbmdpbmUiKSAoSVMgImdyb3VwX25hbWUiICJzfnZlcnRuZXQtcG9ydGFsIikgKElTICJuYW1lc3BhY2UiICJpbmRleC0yMDEzLTA4LTA4IikgKElTICJpbmRleF9uYW1lIiAiZHdjIikgKE9SIChBTkQgKE9SIChRVCAiT25jb3JoeW5jaHVzIikgKElTICJfX2dhdG9tX18iICJvbmNvcmh5bmNodXMiKSkgKE9SIChRVCAiY2xhcmtpIikgKElTICJfX2dhdG9tX18iICJjbGFya2kiKSkgKE9SIChRVCAiaGVuc2hhd2kiKSAoSVMgIl9fZ2F0b21fXyIgImhlbnNoYXdpIikpKSAoSVMgIl9fZ2F0b21fXyIgIm9uY29yaHluY2h1cyBjbGFya2kgaGVuc2hhd2kiKSkpOhkKDChOIG9yZGVyX2lkKRABGQAAAAAAAPD_SgUIAEDoBw",
-        "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
-        "1", "month": "10", "decimallongitude": "-121.0484020000", "verbatimlongitude":
-        "-121.048402\u00b0", "isarch": "0", "startdayofyear": "287", "networks": "FishNet,VertNet",
-        "vntype": "specimen", "title": "CAS Ichthyology (ICH)", "kingdom": "Animalia",
-        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:19007", "day":
-        "14", "occurrenceid": "urn:catalog:CAS:ICH:19007", "collectioncode": "ICH",
-        "verbatimeventdate": "1945-10-14", "coordinateuncertaintyinmeters": "418",
-        "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+      string: '{"request_date": "2020-08-10T20:24:26.462716", "response_records":
+        60, "submitted_query": "Oncorhynchus clarki henshawi", "request_origin": "45.505106,-122.675026",
+        "limit": 1000, "cursor": null, "query_version": "search.py 2016-08-15T16:43+02:00",
+        "recs": [{"haslifestage": "1", "month": "10", "decimallongitude": "-121.0484020000",
+        "verbatimlongitude": "-121.048402\u00b0", "isarch": "0", "startdayofyear":
+        "287", "networks": "FishNet,VertNet", "vntype": "specimen", "title": "CAS
+        Ichthyology (ICH)", "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid":
+        "urn:catalog:CAS:ICH:19007", "day": "14", "occurrenceid": "urn:catalog:CAS:ICH:19007",
+        "collectioncode": "ICH", "verbatimeventdate": "1945-10-14", "coordinateuncertaintyinmeters":
+        "418", "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
         "lifestage": "juvenile", "modified": "1999-11-30 00:00:00.0", "year": "1945",
         "wasinvasive": "0", "specificepithet": "clarki", "basisofrecord": "PreservedSpecimen",
         "geodeticdatum": "not recorded", "occurrenceremarks": "Small juvenile.", "highergeography":
@@ -829,7 +834,1687 @@ http_interactions:
         (ICH). Record ID: urn:catalog:CAS:SU (ICH):37070. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
         (source published on 2019-07-15)", "references": "http://portal.vertnet.org/o/cas/su?id=urn-catalog-cas-su-ich-37070",
         "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
-        "order": "Salmoniformes", "catalognumber": "37070", "collectioncode": "SU"}],
-        "matching_records": 60, "api_version": "api.py 2017-11-24T12:16-03:00"}'
-  recorded_at: 2020-01-29 16:57:18 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+        "order": "Salmoniformes", "catalognumber": "37070", "collectioncode": "SU"},
+        {"haslifestage": "0", "individualcount": "1", "higherclassification": "Actinopteri
+        | Salmoniformes", "pubdate": "2019-07-15", "stateprovince": "Nevada", "hastypestatus":
+        "0", "basisofrecord": "PreservedSpecimen", "rank": 9, "georeferencesources":
+        "FishNet Collaborative Georeferencing Project", "decimallongitude": "-117.7396120000",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/su?id=urn-catalog-cas-su-ich-4832",
+        "haslength": "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "networks": "FishNet,VertNet", "recordedby": "Germain, F.", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:SU
+        (ICH):4832. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source
+        published on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "locality":
+        "Winnemucca.", "orgname": "California Academy of Sciences", "hasmedia": "0",
+        "geodeticdatum": "not recorded", "coordinateuncertaintyinmeters": "2675",
+        "orgstateprovince": "California", "highergeography": "North America|United
+        States|Nevada|Humboldt County", "continent": "North America", "contact": "David
+        Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue":
+        "0", "hasmass": "0", "email": "dcatania@calacademy.org", "kingdom": "Animalia",
+        "infraspecificepithet": "henshawi", "citation": "California Academy of Sciences.
+        CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "hassex": "0", "orgcountry": "United States",
+        "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:SU (ICH):4832",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "alc-75% EtOH", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862",
+        "hashid": "6581", "georeferenceremarks": "Assuming locality is Humboldt River
+        at Winnemucca.  Point is place at major river/road (US 80) crossing.  Uncertainty
+        runs halfway to Weso.", "class": "Actinopteri", "keyname": "cas/su/urn-catalog-cas-su-ich-4832",
+        "isfossil": "0", "county": "Humboldt County", "decimallatitude": "40.9755220000",
+        "occurrenceid": "urn:catalog:CAS:SU (ICH):4832", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "1", "title": "CAS Ichthyology
+        (ICH)", "modified": "1999-11-30 00:00:00.0", "verbatimlatitude": "40.975522\u00b0",
+        "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber": "FG-WINNEMUCCA",
+        "verbatimlongitude": "-117.739612\u00b0", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes", "catalognumber":
+        "4832", "collectioncode": "SU"}, {"haslifestage": "1", "decimallongitude":
+        "-120.033202", "isarch": "0", "networks": "FishNet,HerpNET,MaNIS,ORNIS,Paleo,VertNet",
+        "vntype": "specimen", "title": "Museum of Comparative Zoology, Harvard University,
+        Subset of data for VERTNET", "kingdom": "Animalia", "verbatimcoordinatesystem":
+        "decimal degrees", "dctype": "PhysicalObject", "iptrecordid": "MCZ:Ich:26805",
+        "identificationverificationstatus": "unverified", "occurrenceid": "MCZ:Ich:26805",
+        "collectioncode": "Ich", "verbatimeventdate": "[no verbatim date data]", "coordinateuncertaintyinmeters":
+        "18029", "higherclassification": "Animalia Chordata Craniata Gnathostomata
+        Osteichthyes Neopterygii Actinopterygii Salmoniformes Salmonidae Oncorhynchus
+        clarki henshawi", "pubdate": "2017-07-11", "lifestage": "adult", "modified":
+        "2018-01-24 14:23:03.0", "wasinvasive": "0", "specificepithet": "clarki",
+        "basisofrecord": "PreservedSpecimen", "geodeticdatum": "WGS84", "occurrenceremarks":
+        "age class: adult", "highergeography": "North America: United States: California",
+        "continent": "North America", "email": "bhaley@oeb.harvard.edu", "orgcountry":
+        "United States", "source_url": "http://digir.mcz.harvard.edu/ipt/resource.do?r=mcz_subset_for_vertnet",
+        "scientificname": "Oncorhynchus clarki henshawi", "disposition": "in collection",
+        "hashid": "7811", "hassex": "0", "language": "en", "institutionid": "b4640710-8e03-11d8-b956-b8a03c50a862",
+        "country": "United States", "hastissue": "0", "ownerinstitutioncode": "Museum
+        of Comparative Zoology, Harvard University", "genus": "Oncorhynchus", "georeferenceprotocol":
+        "MaNIS/HerpNET/ORNIS Georeferencing Guidelines", "family": "Salmonidae", "stateprovince":
+        "California", "rank": 9, "phylum": "Chordata", "references": "http://mczbase.mcz.harvard.edu/guid/MCZ:Ich:26805",
+        "georeferencedby": "Paul DeSalles", "hasmedia": "0", "verbatimlocality": "Lake
+        Tahoe", "countrycode": "US", "institutioncode": "MCZ", "orgstateprovince":
+        "Massachusetts", "hastypestatus": "0", "preparations": "whole animal (alcohol)",
+        "recordedby": "[no agent data]", "isfossil": "0", "license": "CC-BY-NC", "wascaptive":
+        "0", "dynamicproperties": "{\"age class\":\"adult\"}", "infraspecificepithet":
+        "henshawi", "haslicense": "1", "fieldnumber": "USNM:LAKETAHOE", "eventdate":
+        "[no verbatim date data]", "individualcount": "1", "bibliographiccitation":
+        "Museum of Comparative Zoology, Harvard University. Museum of Comparative
+        Zoology, Harvard University, Subset of data for VERTNET. Record ID: MCZ:Ich:26805.
+        Source: http://digir.mcz.harvard.edu/ipt/resource.do?r=mcz_subset_for_vertnet
+        (source published on 2017-07-11)", "citation": "Museum of Comparative Zoology,
+        Harvard University. Museum of Comparative Zoology, Harvard University, Subset
+        of data for VERTNET. Source: http://digir.mcz.harvard.edu/ipt/resource.do?r=mcz_subset_for_vertnet
+        (source published on 2017-07-11)", "georeferencesources": "unknown", "lastindexed":
+        "2018-09-22", "haslength": "0", "catalognumber": "26805", "emlrights": "Copyright
+        \u00a9 2013 The President and Fellows of Harvard College", "hasmass": "0",
+        "gbifdatasetid": "4bfac3ea-8763-4f4b-a71a-76a6f5f243d3", "locality": "Lake
+        Tahoe", "orgname": "Museum of Comparative Zoology, Harvard University", "keyname":
+        "mcz/ich/mcz-ich-26805", "migrator": "no migrator", "icode": "MCZ", "gbifpublisherid":
+        "b4640710-8e03-11d8-b956-b8a03c50a862", "class": "Osteichthyes", "identificationremarks":
+        "Donor: USNM;Donor Date: 00/00/1881", "decimallatitude": "39.096027", "mappable":
+        "1", "rightsholder": "President and Fellows of Harvard College", "othercatalognumbers":
+        "field number=USNM:LAKETAHOE; group number=129; previous number=USNM 24139",
+        "identifiedby": "Ledger", "nomenclaturalcode": "ICZN", "contact": "Brendan
+        Haley", "order": "Salmoniformes"}, {"haslifestage": "0", "individualcount":
+        "4", "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "stateprovince": "California", "hastypestatus": "0", "basisofrecord": "PreservedSpecimen",
+        "rank": 9, "georeferencesources": "FishNet Collaborative Georeferencing Project",
+        "decimallongitude": "-120.3096660000", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-62375", "haslength":
+        "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "networks": "FishNet,VertNet", "recordedby": "Behnke, Robert J.",
+        "hasmass": "0", "vntype": "specimen", "habitat": "freshwater", "locality":
+        "Independence Lake, Sierra & Nevada Cos., California", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "geodeticdatum": "not recorded", "occurrenceremarks":
+        "=Salmo clarki henshawi.  Threatened.", "coordinateuncertaintyinmeters": "2112",
+        "orgstateprovince": "California", "highergeography": "North America|United
+        States|California|Independence Lake", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue":
+        "0", "email": "dcatania@calacademy.org", "kingdom": "Animalia", "family":
+        "Salmonidae", "citation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source
+        published on 2019-07-15)", "verbatimlongitude": "-120.309666\u00b0", "hassex":
+        "0", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "institutioncode": "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:62375",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "skeletal", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "4168", "class": "Actinopteri", "infraspecificepithet": "henshawi", "keyname":
+        "cas/ich/urn-catalog-cas-ich-62375", "isfossil": "0", "decimallatitude": "39.4422980000",
+        "occurrenceid": "urn:catalog:CAS:ICH:62375", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "1", "title": "CAS Ichthyology
+        (ICH)", "modified": "2012-03-27 17:40:45.0", "verbatimlatitude": "39.442298\u00b0",
+        "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber": "Z62375", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:62375.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "waterbody": "Independence Lake", "genus": "Oncorhynchus",
+        "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes",
+        "catalognumber": "62375", "collectioncode": "ICH"}, {"haslifestage": "0",
+        "individualcount": "2", "higherclassification": "Actinopteri | Salmoniformes",
+        "pubdate": "2019-07-15", "stateprovince": "California", "hastypestatus": "0",
+        "basisofrecord": "PreservedSpecimen", "rank": 9, "georeferencesources": "FishNet
+        Collaborative Georeferencing Project", "decimallongitude": "-120.3095270000",
+        "phylum": "Chordata", "verbatimlongitude": "-120.309527\u00b0", "haslength":
+        "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "networks": "FishNet,VertNet", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:66309.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "locality":
+        "Independence Lake", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "geodeticdatum": "not recorded", "occurrenceremarks": "=Salmo clarki
+        henshawi.  Threatened.", "coordinateuncertaintyinmeters": "2023", "orgstateprovince":
+        "California", "highergeography": "North America|United States|California",
+        "continent": "North America", "contact": "David Catania", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org",
+        "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "hassex": "0", "orgcountry": "United States",
+        "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:66309",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "skeletal", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "2666", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-66309",
+        "isfossil": "0", "decimallatitude": "39.4425650000", "occurrenceid": "urn:catalog:CAS:ICH:66309",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "1", "title": "CAS Ichthyology (ICH)", "modified": "1998-08-14 00:00:00.0",
+        "verbatimlatitude": "39.442565\u00b0", "nomenclaturalcode": "ICZN", "haslicense":
+        "1", "fieldnumber": "Z66309", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-66309",
+        "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "66309", "collectioncode": "ICH"},
+        {"haslifestage": "0", "individualcount": "2", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-66313",
+        "occurrenceremarks": "=Salmo clarki henshawi. In 2 boxes.  Threatened.", "higherclassification":
+        "Actinopteri | Salmoniformes", "pubdate": "2019-07-15", "stateprovince": "Nevada",
+        "hastypestatus": "0", "basisofrecord": "PreservedSpecimen", "rank": 9, "georeferencesources":
+        "FishNet Collaborative Georeferencing Project", "decimallongitude": "-118.7095940000",
+        "phylum": "Chordata", "verbatimlongitude": "-118.709594\u00b0", "haslength":
+        "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "1", "specificepithet":
+        "clarki", "networks": "FishNet,VertNet", "hasmass": "0", "vntype": "specimen",
+        "habitat": "freshwater", "locality": "Walker Lake, south end", "orgname":
+        "California Academy of Sciences", "hasmedia": "0", "geodeticdatum": "not recorded",
+        "eventremarks": "from Steinhart Aquarium", "coordinateuncertaintyinmeters":
+        "6867", "orgstateprovince": "California", "highergeography": "North America|United
+        States|Nevada|Mineral County|Walker Lake", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue":
+        "0", "email": "dcatania@calacademy.org", "kingdom": "Animalia", "family":
+        "Salmonidae", "citation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source
+        published on 2019-07-15)", "hassex": "0", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "institutioncode":
+        "CAS", "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:66313",
+        "icode": "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "skeletal", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "2557", "class": "Actinopteri", "infraspecificepithet": "henshawi", "keyname":
+        "cas/ich/urn-catalog-cas-ich-66313", "isfossil": "0", "county": "Mineral County",
+        "decimallatitude": "38.6573760000", "occurrenceid": "urn:catalog:CAS:ICH:66313",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "1", "title": "CAS Ichthyology (ICH)", "modified": "2013-06-28 00:00:00.0",
+        "verbatimlatitude": "38.657376\u00b0", "establishmentmeans": "managed", "identifiedby":
+        "Follett, W. I.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "Z66313", "bibliographiccitation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Record ID: urn:catalog:CAS:ICH:66313. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "waterbody": "Walker Lake", "genus": "Oncorhynchus",
+        "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes",
+        "catalognumber": "66313", "collectioncode": "ICH"}, {"haslifestage": "0",
+        "month": "12", "decimallongitude": "-119.3377778", "isarch": "0", "startdayofyear":
+        "337", "networks": "FishNet,HerpNET,MaNIS,ORNIS,VertNet", "vntype": "specimen",
+        "title": "LACM Vertebrate Collection", "accessrights": "http://vertnet.org/resources/norms.html",
+        "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid": "EFF067C4-6BE8-4A2E-AB2A-0D5280D5941C",
+        "day": "3", "occurrenceid": "EFF067C4-6BE8-4A2E-AB2A-0D5280D5941C", "collectioncode":
+        "Fish", "verbatimeventdate": "12/3/1975", "gbifdatasetid": "7a25f7aa-03fb-4322-aaeb-66719e1a9527",
+        "pubdate": "2019-10-03", "infraspecificepithet": "henshawi", "year": "1975",
+        "wasinvasive": "0", "specificepithet": "clarki", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "not recorded (forced WGS84)", "highergeography": "North
+        America | USA | California | Mono |  |  |  |", "continent": "North America",
+        "email": "rfeeney@nhm.org", "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts",
+        "scientificname": "Oncorhynchus clarki henshawi", "hashid": "887", "hassex":
+        "0", "language": "en", "institutionid": "http://biocol.org/urn:lsid:biocol:org:34802",
+        "country": "United States", "hastissue": "0", "genus": "Oncorhynchus", "family":
+        "Salmonidae", "stateprovince": "California", "rank": 8, "county": "Mono",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/lacm/fish?id=eff067c4-6be8-4a2e-ab2a-0d5280d5941c",
+        "taxonrank": "subspecies", "hasmedia": "0", "verbatimlocality": "North America
+        | USA | California | Mono | By-day Creek, T5N R24E NW 1/4 S28", "countrycode":
+        "US", "institutioncode": "LACM", "orgstateprovince": "California", "occurrencestatus":
+        "present", "hastypestatus": "0", "preparations": "alcohol", "recordedby":
+        "Wayburn, Patridge", "georeferenceremarks": "Estimated latitude/longitude
+        using Encarta World Atlas 2001. No error or extent calculated.  Needs  better
+        georeferencing.", "isfossil": "0", "license": "https://creativecommons.org/publicdomain/zero/1.0",
+        "wascaptive": "0", "dynamicproperties": "{\"length\":\"72-158\" }", "georeferenceverificationstatus":
+        "requires verification", "modified": "2018-10-08", "haslicense": "1", "fieldnumber":
+        "CF&G Freshwater Fish Collection", "eventdate": "1975-12-03", "individualcount":
+        "7", "bibliographiccitation": "Natural History Museum of Los Angeles County.
+        LACM Vertebrate Collection. Record ID: EFF067C4-6BE8-4A2E-AB2A-0D5280D5941C.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts (source published
+        on 2019-10-03)", "citation": "Natural History Museum of Los Angeles County.
+        LACM Vertebrate Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts
+        (source published on 2019-10-03)", "lastindexed": "2019-10-09", "haslength":
+        "1", "catalognumber": "25038", "emlrights": "http://creativecommons.org/publicdomain/zero/1.0
+        and http://vertnet.org/resources/norms.html", "hasmass": "0", "locality":
+        "By-day Creek, T5N R24E NW 1/4 S28", "orgname": "Natural History Museum of
+        Los Angeles County", "keyname": "lacm/fish/eff067c4-6be8-4a2e-ab2a-0d5280d5941c",
+        "migrator": "2019-10-03", "lengthtype": "total length range", "collectionid":
+        "http://biocol.org/urn:lsid:biocol:org:34804", "icode": "LACM", "gbifpublisherid":
+        "493fe050-055d-11d8-b84f-b8a03c50a862", "class": "Actinopterygii", "previousidentifications":
+        "Salmo clarki henshawi", "decimallatitude": "38.2702778", "mappable": "1",
+        "othercatalognumbers": "CF&G 521", "nomenclaturalcode": "ICZN", "contact":
+        "Rick Feeney", "order": "Salmoniformes", "enddayofyear": "337"}, {"haslifestage":
+        "1", "scientificnameid": "urn:lsid:biosci.ohio-state.edu:osuc_names:297783",
+        "bibliographiccitation": "Ohio State University. Ohio State University Fish
+        Division (OSUM). Record ID: urn:lsid:biosci.ohio-state.edu:osuc_occurrences:OSUM__74577.
+        Source: http://hymfiles.biosci.ohio-state.edu:8080/ipt/resource.do?r=osum-fish
+        (source published on 2015-05-22)", "pubdate": "2015-05-22", "individualcount":
+        "1", "wasinvasive": "0", "stateprovince": "Washington", "hastypestatus": "0",
+        "lifestage": "adult", "rank": 8, "sex": "undetermined", "decimallongitude":
+        "-120.5015", "fieldnotes": "ACC:1988-VII - 4;  det_comments:212 mm", "phylum":
+        "Chordata", "references": "http://osuc.biosci.ohio-state.edu/Fishes/spmInfo.html?id=OSUM%2074577",
+        "dateidentified": "2011", "year": "1988", "startdayofyear": "149", "wascaptive":
+        "0", "specificepithet": "clarkii", "networks": "FishNet,VertNet", "recordedby":
+        "Varney, G. (Gilbert) & LaBrant, J.", "hasmass": "0", "vntype": "specimen",
+        "preparations": "70% ethanol within jar", "family": "Salmonidae", "locality":
+        "Wannacut Lake ~4.6 miles SW of Oroville", "orgname": "Ohio State University",
+        "hasmedia": "0", "geodeticdatum": "not recorded", "orgstateprovince": "Ohio",
+        "accessrights": "http://vertnet.org/resources/norms.html", "contact": "Meg
+        Daly", "migrator": "no migrator", "hastissue": "1", "email": "daly.66@osu.edu",
+        "day": "28", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "Ohio State University. Ohio State University Fish Division (OSUM). Source:
+        http://hymfiles.biosci.ohio-state.edu:8080/ipt/resource.do?r=osum-fish (source
+        published on 2015-05-22)", "georeferencesources": "Unknown", "verbatimeventdate":
+        "28 May 1988", "hassex": "1", "underivedlifestage": "adult", "source_url":
+        "http://hymfiles.biosci.ohio-state.edu:8080/ipt/resource.do?r=osum-fish",
+        "institutioncode": "Ohio State University - Fish Division, Columbus, OH (OSUM)",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:lsid:biosci.ohio-state.edu:osuc_occurrences:OSUM__74577",
+        "icode": "OSUM", "scientificname": "Salmo clarki henshawi", "orgcountry":
+        "United States", "gbifpublisherid": "5ffa575c-fcd4-4583-9611-545f67b04316",
+        "hashid": "2699", "georeferenceremarks": "Locality: Fish", "month": "5", "class":
+        "Actinopterygii", "keyname": "osum/fishes/urn-lsid-biosci-ohio-state-edu-osuc-occurrences-osum-74577",
+        "isfossil": "0", "county": "Okanogan", "decimallatitude": "47.5001", "genus":
+        "Oncorhynchus", "occurrenceid": "urn:lsid:biosci.ohio-state.edu:osuc_occurrences:OSUM__74577",
+        "language": "en", "basisofrecord": "PreservedSpecimen", "country": "United
+        States", "mappable": "1", "title": "Ohio State University Fish Division (OSUM)",
+        "collectioncode": "Fishes", "modified": "2015-02-09T15:43:03Z", "eventdate":
+        "1988-05-28", "identifiedby": "Cavender, T. (Ted)", "haslicense": "0", "fieldnumber":
+        "GEV 88-38", "samplingprotocol": "none specified", "underivedsex": "undetermined",
+        "lastindexed": "2016-08-11", "enddayofyear": "149", "gbifdatasetid": "813b435e-f762-11e1-a439-00145eb45e9a",
+        "order": "Salmoniformes", "catalognumber": "OSUM 74577", "haslength": "0"},
+        {"haslifestage": "0", "datasetname": "University of Alabama Ichthyology Collection",
+        "recordedby": "J.R. Tomelleri, R. Cutter, L. Cutter,", "higherclassification":
+        "::Actinopterygii:Salmoniformes:Salmonidae:Oncorhynchus", "pubdate": "2015-02-16",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 8, "month": "10", "decimallongitude": "-119.6580556",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/ua/uaic?id=bea41d3e-f301-11e3-8701-005056a90e32",
+        "haslength": "0", "year": "1996", "startdayofyear": "288", "wascaptive": "0",
+        "taxonrank": "subspecies", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "emlrights": "http://creativecommons.org/publicdomain/zero/1.0", "bibliographiccitation":
+        "University of Alabama Biodiversity and Systematics. UAIC Ichthyological Collection.
+        Record ID: bea41d3e-f301-11e3-8701-005056a90e32. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=uaic_fish
+        (source published on 2015-02-16)", "vntype": "specimen", "family": "Salmonidae",
+        "countrycode": "US", "locality": "Heenan Lake along CA Hwy 89, just E of Markleeville
+        (Lahonton River)", "orgname": "University of Alabama Biodiversity and Systematics",
+        "hasmedia": "0", "geodeticdatum": "not recorded (forced WGS84)", "orgstateprovince":
+        "Alabama", "highergeography": "USA, California, Alpine", "continent": "North
+        America", "contact": "Randal Singer", "verbatimlocality": "N. America; USA;
+        California; Alpine; Heenan Lake along CA Hwy 89, just E of Markleeville (Lahonton
+        River)", "migrator": "2014-04-14", "hasmass": "0", "email": "randal.a.singer@ua.edu",
+        "day": "14", "kingdom": "Animalia", "citation": "University of Alabama Biodiversity
+        and Systematics. UAIC Ichthyological Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=uaic_fish
+        (source published on 2015-02-16)", "collectioncode": "UAIC", "occurrencestatus":
+        "present", "hassex": "0", "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=uaic_fish",
+        "institutioncode": "UA", "dctype": "PhysicalObject", "iptrecordid": "bea41d3e-f301-11e3-8701-005056a90e32",
+        "icode": "UA", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "70% EtOH - 2", "gbifpublisherid": "79324e30-d4c7-11d8-bf69-b8a03c50a862",
+        "hashid": "7521", "class": "Actinopterygii", "keyname": "ua/uaic/bea41d3e-f301-11e3-8701-005056a90e32",
+        "isfossil": "0", "county": "Alpine", "decimallatitude": "38.6513889", "occurrenceid":
+        "bea41d3e-f301-11e3-8701-005056a90e32", "language": "en", "license": "CC0",
+        "institutionid": "http://grbio.org/cool/8eci-0a0e", "country": "United States",
+        "mappable": "1", "georeferenceverificationstatus": "requires verification",
+        "infraspecificepithet": "henshawi", "modified": "2014-07-15", "eventdate":
+        "1996-10-14", "identifiedby": "J.R. Tomelleri/1996", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "hastissue": "1", "verbatimeventdate": "1996-10-14",
+        "title": "UAIC Ichthyological Collection", "lastindexed": "2016-07-23", "genus":
+        "Oncorhynchus", "gbifdatasetid": "e90a588b-0eed-4077-8a4f-7e61da35b3f8", "order":
+        "Salmoniformes", "catalognumber": "11545.01", "enddayofyear": "288"}, {"haslifestage":
+        "0", "datasetname": "University of Alabama Ichthyology Collection", "recordedby":
+        "A.L. George, D.A. Neely", "higherclassification": "::Actinopterygii:Salmoniformes:Salmonidae:Oncorhynchus",
+        "pubdate": "2015-02-16", "wasinvasive": "0", "stateprovince": "Nevada", "hastypestatus":
+        "0", "basisofrecord": "PreservedSpecimen", "rank": 8, "month": "8", "decimallongitude":
+        "-115.3966667", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/ua/uaic?id=bf34d77e-f301-11e3-8701-005056a90e32",
+        "haslength": "0", "year": "2001", "startdayofyear": "228", "wascaptive": "0",
+        "taxonrank": "subspecies", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "emlrights": "http://creativecommons.org/publicdomain/zero/1.0", "bibliographiccitation":
+        "University of Alabama Biodiversity and Systematics. UAIC Ichthyological Collection.
+        Record ID: bf34d77e-f301-11e3-8701-005056a90e32. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=uaic_fish
+        (source published on 2015-02-16)", "vntype": "specimen", "family": "Salmonidae",
+        "countrycode": "US", "locality": "Marys River at head of Chalk Basin, on Jeep
+        trail, ca. 5 mi ESE of Charleston", "orgname": "University of Alabama Biodiversity
+        and Systematics", "hasmedia": "0", "geodeticdatum": "not recorded (forced
+        WGS84)", "orgstateprovince": "Alabama", "highergeography": "USA, Nevada, Elko",
+        "continent": "North America", "contact": "Randal Singer", "verbatimlocality":
+        "N. America; USA; Nevada; Elko; Marys River at head of Chalk Basin, on Jeep
+        trail, ca. 5 mi ESE of Charleston", "migrator": "2014-04-14", "hasmass": "0",
+        "email": "randal.a.singer@ua.edu", "day": "16", "kingdom": "Animalia", "citation":
+        "University of Alabama Biodiversity and Systematics. UAIC Ichthyological Collection.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=uaic_fish (source published
+        on 2015-02-16)", "collectioncode": "UAIC", "occurrencestatus": "present",
+        "hassex": "0", "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=uaic_fish",
+        "institutioncode": "UA", "dctype": "PhysicalObject", "iptrecordid": "bf34d77e-f301-11e3-8701-005056a90e32",
+        "icode": "UA", "scientificname": "Oncorhynchus clarki henshawi", "preparations":
+        "70% EtOH - 5", "gbifpublisherid": "79324e30-d4c7-11d8-bf69-b8a03c50a862",
+        "hashid": "3246", "class": "Actinopterygii", "keyname": "ua/uaic/bf34d77e-f301-11e3-8701-005056a90e32",
+        "isfossil": "0", "county": "Elko", "decimallatitude": "41.6397222", "occurrenceid":
+        "bf34d77e-f301-11e3-8701-005056a90e32", "language": "en", "license": "CC0",
+        "institutionid": "http://grbio.org/cool/8eci-0a0e", "country": "United States",
+        "mappable": "1", "georeferenceverificationstatus": "requires verification",
+        "infraspecificepithet": "henshawi", "modified": "2014-07-15", "eventdate":
+        "2001-08-16", "identifiedby": "D.A. Neely/2001", "nomenclaturalcode": "ICZN",
+        "haslicense": "1", "hastissue": "1", "verbatimeventdate": "2001-8-16", "title":
+        "UAIC Ichthyological Collection", "lastindexed": "2016-07-23", "genus": "Oncorhynchus",
+        "gbifdatasetid": "e90a588b-0eed-4077-8a4f-7e61da35b3f8", "order": "Salmoniformes",
+        "catalognumber": "13434.04", "enddayofyear": "228"}, {"haslifestage": "0",
+        "month": "8", "decimallongitude": "-119.3297222", "isarch": "0", "startdayofyear":
+        "222", "networks": "FishNet,HerpNET,MaNIS,ORNIS,VertNet", "vntype": "specimen",
+        "title": "LACM Vertebrate Collection", "accessrights": "http://vertnet.org/resources/norms.html",
+        "kingdom": "Animalia", "dctype": "PhysicalObject", "iptrecordid": "03E9A023-4A8B-4EFF-95D3-2345962F0880",
+        "day": "10", "occurrenceid": "03E9A023-4A8B-4EFF-95D3-2345962F0880", "collectioncode":
+        "Fish", "verbatimeventdate": "8/10/1978", "gbifdatasetid": "7a25f7aa-03fb-4322-aaeb-66719e1a9527",
+        "pubdate": "2019-10-03", "infraspecificepithet": "henshawi", "year": "1978",
+        "wasinvasive": "0", "specificepithet": "clarki", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "not recorded (forced WGS84)", "occurrenceremarks": "electroshocker,
+        2 jars", "highergeography": "North America | USA | California | Mono |  |  |  |",
+        "continent": "North America", "email": "rfeeney@nhm.org", "orgcountry": "United
+        States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts",
+        "scientificname": "Oncorhynchus clarki henshawi", "hashid": "695", "hassex":
+        "0", "language": "en", "institutionid": "http://biocol.org/urn:lsid:biocol:org:34802",
+        "country": "United States", "hastissue": "0", "genus": "Oncorhynchus", "family":
+        "Salmonidae", "stateprovince": "California", "rank": 8, "county": "Mono",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/lacm/fish?id=03e9a023-4a8b-4eff-95d3-2345962f0880",
+        "taxonrank": "subspecies", "hasmedia": "0", "verbatimlocality": "North America
+        | USA | California | Mono | East fork Desert Creek trib. to W. Walker River,
+        below barrier falls", "countrycode": "US", "institutioncode": "LACM", "orgstateprovince":
+        "California", "occurrencestatus": "present", "hastypestatus": "0", "preparations":
+        "alcohol", "recordedby": "Eric Gerstong", "georeferenceremarks": "Estimated
+        latitude/longitude using Encarta World Atlas 2001. No error or extent calculated.  Needs  better
+        georeferencing.", "isfossil": "0", "license": "https://creativecommons.org/publicdomain/zero/1.0",
+        "wascaptive": "0", "dynamicproperties": "{\"length\":\"131.5-197\" }", "georeferenceverificationstatus":
+        "requires verification", "modified": "2018-10-08", "haslicense": "1", "fieldnumber":
+        "CF&G Freshwater Fish Collection", "eventdate": "1978-08-10", "individualcount":
+        "4", "bibliographiccitation": "Natural History Museum of Los Angeles County.
+        LACM Vertebrate Collection. Record ID: 03E9A023-4A8B-4EFF-95D3-2345962F0880.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts (source published
+        on 2019-10-03)", "citation": "Natural History Museum of Los Angeles County.
+        LACM Vertebrate Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts
+        (source published on 2019-10-03)", "lastindexed": "2019-10-09", "haslength":
+        "1", "catalognumber": "25128", "emlrights": "http://creativecommons.org/publicdomain/zero/1.0
+        and http://vertnet.org/resources/norms.html", "hasmass": "0", "locality":
+        "East fork Desert Creek trib. to W. Walker River, below barrier falls", "orgname":
+        "Natural History Museum of Los Angeles County", "keyname": "lacm/fish/03e9a023-4a8b-4eff-95d3-2345962f0880",
+        "migrator": "2019-10-03", "lengthtype": "total length range", "collectionid":
+        "http://biocol.org/urn:lsid:biocol:org:34804", "icode": "LACM", "gbifpublisherid":
+        "493fe050-055d-11d8-b84f-b8a03c50a862", "class": "Actinopterygii", "previousidentifications":
+        "Salmo clarki henshawi", "decimallatitude": "38.4519444", "mappable": "1",
+        "othercatalognumbers": "CF&G 610", "nomenclaturalcode": "ICZN", "contact":
+        "Rick Feeney", "order": "Salmoniformes", "enddayofyear": "222"}, {"haslifestage":
+        "0", "individualcount": "6", "recordedby": "Wong, Shumway, Pauli, Reid", "bibliographiccitation":
+        "Natural History Museum of Los Angeles County. LACM Vertebrate Collection.
+        Record ID: 13CC7991-8A2C-432D-A7BF-FD66CAAC020E. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts
+        (source published on 2019-10-03)", "pubdate": "2019-10-03", "wasinvasive":
+        "0", "accessrights": "http://vertnet.org/resources/norms.html", "stateprovince":
+        "California", "hastypestatus": "0", "basisofrecord": "PreservedSpecimen",
+        "rank": 8, "month": "9", "decimallongitude": "-118.7413889", "phylum": "Chordata",
+        "references": "http://portal.vertnet.org/o/lacm/fish?id=13cc7991-8a2c-432d-a7bf-fd66caac020e",
+        "haslength": "1", "isarch": "0", "year": "1978", "startdayofyear": "272",
+        "wascaptive": "0", "taxonrank": "subspecies", "specificepithet": "clarki",
+        "networks": "FishNet,HerpNET,MaNIS,ORNIS,VertNet", "emlrights": "http://creativecommons.org/publicdomain/zero/1.0
+        and http://vertnet.org/resources/norms.html", "hasmass": "0", "vntype": "specimen",
+        "family": "Salmonidae", "countrycode": "US", "title": "LACM Vertebrate Collection",
+        "orgname": "Natural History Museum of Los Angeles County", "hasmedia": "0",
+        "geodeticdatum": "not recorded (forced WGS84)", "occurrenceremarks": "O. clarki
+        henshawi?", "orgstateprovince": "California", "highergeography": "North America
+        | USA | California | Mono |  |  |  |", "continent": "North America", "contact":
+        "Rick Feeney", "verbatimlocality": "North America | USA | California | Mono
+        | O''Harrel Canyon", "migrator": "2019-10-03", "lengthtype": "total length
+        range", "email": "rfeeney@nhm.org", "day": "29", "kingdom": "Animalia", "citation":
+        "Natural History Museum of Los Angeles County. LACM Vertebrate Collection.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts (source published
+        on 2019-10-03)", "collectioncode": "Fish", "collectionid": "http://biocol.org/urn:lsid:biocol:org:34804",
+        "occurrencestatus": "present", "verbatimeventdate": "9/29/1978", "hassex":
+        "0", "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts",
+        "institutioncode": "LACM", "dctype": "PhysicalObject", "iptrecordid": "13CC7991-8A2C-432D-A7BF-FD66CAAC020E",
+        "icode": "LACM", "scientificname": "Oncorhynchus clarki henshawi", "locality":
+        "O''Harrel Canyon", "gbifpublisherid": "493fe050-055d-11d8-b84f-b8a03c50a862",
+        "hashid": "4766", "georeferenceremarks": "Estimated latitude/longitude using
+        Encarta World Atlas 2001. No error or extent calculated.  Needs  better georeferencing.",
+        "class": "Actinopterygii", "keyname": "lacm/fish/13cc7991-8a2c-432d-a7bf-fd66caac020e",
+        "isfossil": "0", "county": "Mono", "decimallatitude": "37.7619444", "occurrenceid":
+        "13CC7991-8A2C-432D-A7BF-FD66CAAC020E", "language": "en", "license": "https://creativecommons.org/publicdomain/zero/1.0",
+        "institutionid": "http://biocol.org/urn:lsid:biocol:org:34802", "dynamicproperties":
+        "{\"length\":\"55-147.5\" }", "mappable": "1", "georeferenceverificationstatus":
+        "requires verification", "infraspecificepithet": "henshawi", "modified": "2018-10-08",
+        "eventdate": "1978-09-29", "nomenclaturalcode": "ICZN", "haslicense": "1",
+        "hastissue": "0", "country": "United States", "lastindexed": "2019-10-09",
+        "genus": "Oncorhynchus", "gbifdatasetid": "7a25f7aa-03fb-4322-aaeb-66719e1a9527",
+        "order": "Salmoniformes", "catalognumber": "45788-1", "enddayofyear": "272"},
+        {"haslifestage": "0", "month": "10", "decimallongitude": "-119.3377778", "isarch":
+        "0", "startdayofyear": "289", "networks": "FishNet,HerpNET,MaNIS,ORNIS,VertNet",
+        "vntype": "specimen", "title": "LACM Vertebrate Collection", "accessrights":
+        "http://vertnet.org/resources/norms.html", "kingdom": "Animalia", "dctype":
+        "PhysicalObject", "iptrecordid": "CBFFB7A5-81F8-48D1-AC9E-BEE944BE03D2", "day":
+        "16", "occurrenceid": "CBFFB7A5-81F8-48D1-AC9E-BEE944BE03D2", "collectioncode":
+        "Fish", "verbatimeventdate": "10/16/1974", "gbifdatasetid": "7a25f7aa-03fb-4322-aaeb-66719e1a9527",
+        "pubdate": "2019-10-03", "infraspecificepithet": "henshawi", "year": "1974",
+        "wasinvasive": "0", "specificepithet": "clarki", "basisofrecord": "PreservedSpecimen",
+        "geodeticdatum": "not recorded (forced WGS84)", "highergeography": "North
+        America | USA | California | Mono |  |  |  |", "continent": "North America",
+        "email": "rfeeney@nhm.org", "orgcountry": "United States", "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts",
+        "scientificname": "Oncorhynchus clarki henshawi", "hashid": "677", "hassex":
+        "0", "language": "en", "institutionid": "http://biocol.org/urn:lsid:biocol:org:34802",
+        "country": "United States", "hastissue": "0", "genus": "Oncorhynchus", "family":
+        "Salmonidae", "stateprovince": "California", "rank": 8, "county": "Mono",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/lacm/fish?id=cbffb7a5-81f8-48d1-ac9e-bee944be03d2",
+        "taxonrank": "subspecies", "hasmedia": "0", "verbatimlocality": "North America
+        | USA | California | Mono | By-day Creek, 2.0 miles upstream from Buckeye
+        Rd.", "countrycode": "US", "institutioncode": "LACM", "orgstateprovince":
+        "California", "occurrencestatus": "present", "hastypestatus": "0", "preparations":
+        "alcohol", "recordedby": "J. Deinstadt", "georeferenceremarks": "Estimated
+        latitude/longitude using Encarta World Atlas 2001. No error or extent calculated.  Needs  better
+        georeferencing.", "isfossil": "0", "license": "https://creativecommons.org/publicdomain/zero/1.0",
+        "wascaptive": "0", "dynamicproperties": "{\"length\":\"84.5-141\" }", "georeferenceverificationstatus":
+        "requires verification", "modified": "2018-10-08", "haslicense": "1", "fieldnumber":
+        "CF&G Freshwater Fish Collection", "eventdate": "1974-10-16", "individualcount":
+        "11", "bibliographiccitation": "Natural History Museum of Los Angeles County.
+        LACM Vertebrate Collection. Record ID: CBFFB7A5-81F8-48D1-AC9E-BEE944BE03D2.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts (source published
+        on 2019-10-03)", "citation": "Natural History Museum of Los Angeles County.
+        LACM Vertebrate Collection. Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts
+        (source published on 2019-10-03)", "lastindexed": "2019-10-09", "haslength":
+        "1", "catalognumber": "24997", "emlrights": "http://creativecommons.org/publicdomain/zero/1.0
+        and http://vertnet.org/resources/norms.html", "hasmass": "0", "locality":
+        "By-day Creek, 2.0 miles upstream from Buckeye Rd.", "orgname": "Natural History
+        Museum of Los Angeles County", "keyname": "lacm/fish/cbffb7a5-81f8-48d1-ac9e-bee944be03d2",
+        "migrator": "2019-10-03", "lengthtype": "total length range", "collectionid":
+        "http://biocol.org/urn:lsid:biocol:org:34804", "icode": "LACM", "gbifpublisherid":
+        "493fe050-055d-11d8-b84f-b8a03c50a862", "class": "Actinopterygii", "previousidentifications":
+        "Salmo clarki henshawi", "decimallatitude": "38.2702778", "mappable": "1",
+        "othercatalognumbers": "CF&G 466", "nomenclaturalcode": "ICZN", "contact":
+        "Rick Feeney", "order": "Salmoniformes", "enddayofyear": "289"}, {"haslifestage":
+        "1", "scientificnameid": "urn:lsid:biosci.ohio-state.edu:osuc_names:297783",
+        "bibliographiccitation": "Ohio State University. Ohio State University Fish
+        Division (OSUM). Record ID: urn:lsid:biosci.ohio-state.edu:osuc_occurrences:OSUM__74567.
+        Source: http://hymfiles.biosci.ohio-state.edu:8080/ipt/resource.do?r=osum-fish
+        (source published on 2015-05-22)", "pubdate": "2015-05-22", "individualcount":
+        "1", "wasinvasive": "0", "stateprovince": "Washington", "hastypestatus": "0",
+        "lifestage": "adult", "rank": 8, "sex": "undetermined", "decimallongitude":
+        "-120.5015", "fieldnotes": "ACC:1988-VII - 4; preparation:Skeleton; length:1;
+        det_comments:~298 mm", "phylum": "Chordata", "references": "http://osuc.biosci.ohio-state.edu/Fishes/spmInfo.html?id=OSUM%2074567",
+        "dateidentified": "2011", "year": "1988", "startdayofyear": "151", "wascaptive":
+        "0", "specificepithet": "clarkii", "networks": "FishNet,VertNet", "recordedby":
+        "Varney, G. (Gilbert), McAllister, B. (Bob) & Beezley, C. (Cliff)", "hasmass":
+        "0", "vntype": "specimen", "preparations": "skeleton within unspecified",
+        "family": "Salmonidae", "locality": "Wannacut Lake ~4.6 miles SW of Oroville",
+        "orgname": "Ohio State University", "hasmedia": "0", "geodeticdatum": "not
+        recorded", "orgstateprovince": "Ohio", "lengthinmm": "1", "accessrights":
+        "http://vertnet.org/resources/norms.html", "contact": "Meg Daly", "migrator":
+        "no migrator", "lengthtype": "total length", "hastissue": "0", "verbatimeventdate":
+        "30 May 1988", "email": "daly.66@osu.edu", "day": "30", "kingdom": "Animalia",
+        "infraspecificepithet": "henshawi", "citation": "Ohio State University. Ohio
+        State University Fish Division (OSUM). Source: http://hymfiles.biosci.ohio-state.edu:8080/ipt/resource.do?r=osum-fish
+        (source published on 2015-05-22)", "georeferencesources": "Unknown", "samplingprotocol":
+        "none specified", "hassex": "1", "underivedlifestage": "adult", "source_url":
+        "http://hymfiles.biosci.ohio-state.edu:8080/ipt/resource.do?r=osum-fish",
+        "institutioncode": "Ohio State University - Fish Division, Columbus, OH (OSUM)",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:lsid:biosci.ohio-state.edu:osuc_occurrences:OSUM__74567",
+        "icode": "OSUM", "scientificname": "Salmo clarki henshawi", "orgcountry":
+        "United States", "gbifpublisherid": "5ffa575c-fcd4-4583-9611-545f67b04316",
+        "hashid": "2928", "georeferenceremarks": "Locality: Fish", "month": "5", "class":
+        "Actinopterygii", "keyname": "osum/fishes/urn-lsid-biosci-ohio-state-edu-osuc-occurrences-osum-74567",
+        "isfossil": "0", "county": "Okanogan", "decimallatitude": "47.5001", "genus":
+        "Oncorhynchus", "occurrenceid": "urn:lsid:biosci.ohio-state.edu:osuc_occurrences:OSUM__74567",
+        "language": "en", "basisofrecord": "PreservedSpecimen", "country": "United
+        States", "mappable": "1", "title": "Ohio State University Fish Division (OSUM)",
+        "collectioncode": "Fishes", "modified": "2015-02-09T15:43:03Z", "eventdate":
+        "1988-05-30", "identifiedby": "Cavender, T. (Ted)", "haslicense": "0", "fieldnumber":
+        "GEV 88-40", "lengthunitsinferred": "1", "underivedsex": "undetermined", "lastindexed":
+        "2016-08-11", "enddayofyear": "151", "gbifdatasetid": "813b435e-f762-11e1-a439-00145eb45e9a",
+        "order": "Salmoniformes", "catalognumber": "OSUM 74567", "haslength": "1"},
+        {"haslifestage": "0", "individualcount": "6", "recordedby": "Russell Wickwire,
+        California Dept. of Fish and Gam", "bibliographiccitation": "Natural History
+        Museum of Los Angeles County. LACM Vertebrate Collection. Record ID: B680B656-13B6-48BD-AC09-D63484013461.
+        Source: http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts (source published
+        on 2019-10-03)", "pubdate": "2019-10-03", "accessrights": "http://vertnet.org/resources/norms.html",
+        "stateprovince": "California", "hastypestatus": "0", "basisofrecord": "PreservedSpecimen",
+        "rank": 5, "infraspecificepithet": "henshawi x o. mykiss", "decimallongitude":
+        "-120.0919444", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/lacm/fish?id=b680b656-13b6-48bd-ac09-d63484013461",
+        "haslength": "1", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "taxonrank":
+        "subspecies", "specificepithet": "clarki", "continent": "North America", "emlrights":
+        "http://creativecommons.org/publicdomain/zero/1.0 and http://vertnet.org/resources/norms.html",
+        "hasmass": "0", "vntype": "specimen", "preparations": "alcohol", "family":
+        "Salmonidae", "countrycode": "US", "title": "LACM Vertebrate Collection",
+        "orgname": "Natural History Museum of Los Angeles County", "hasmedia": "0",
+        "geodeticdatum": "not recorded (forced WGS84)", "orgstateprovince": "California",
+        "highergeography": "North America | USA | California | El Dorado |  |  |  |",
+        "networks": "FishNet,HerpNET,MaNIS,ORNIS,VertNet", "contact": "Rick Feeney",
+        "verbatimlocality": "North America | USA | California | El Dorado | Cascade
+        Lake", "migrator": "2019-10-03", "lengthtype": "total length range", "hastissue":
+        "0", "email": "rfeeney@nhm.org", "kingdom": "Animalia", "citation": "Natural
+        History Museum of Los Angeles County. LACM Vertebrate Collection. Source:
+        http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts (source published
+        on 2019-10-03)", "collectionid": "http://biocol.org/urn:lsid:biocol:org:34804",
+        "occurrencestatus": "present", "hassex": "0", "orgcountry": "United States",
+        "source_url": "http://ipt.vertnet.org:8080/ipt/resource.do?r=lacm_verts",
+        "institutioncode": "LACM", "dctype": "PhysicalObject", "iptrecordid": "B680B656-13B6-48BD-AC09-D63484013461",
+        "icode": "LACM", "scientificname": "Oncorhynchus clarki henshawi x o. mykiss",
+        "locality": "Cascade Lake", "gbifpublisherid": "493fe050-055d-11d8-b84f-b8a03c50a862",
+        "hashid": "2101", "georeferenceremarks": "Estimated latitude/longitude using
+        Encarta World Atlas 2001. No error or extent calculated.  Needs  better georeferencing.",
+        "class": "Actinopterygii", "previousidentifications": "Salmo clarki henshawi
+        x S. gairdneri", "isfossil": "0", "county": "El Dorado", "decimallatitude":
+        "38.9408333", "occurrenceid": "B680B656-13B6-48BD-AC09-D63484013461", "language":
+        "en", "license": "https://creativecommons.org/publicdomain/zero/1.0", "institutionid":
+        "http://biocol.org/urn:lsid:biocol:org:34802", "dynamicproperties": "{\"length\":\"112-244\"
+        }", "mappable": "1", "georeferenceverificationstatus": "requires verification",
+        "othercatalognumbers": "CF&G 527", "modified": "2018-10-08", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "CF&G Freshwater Fish Collection",
+        "country": "United States", "lastindexed": "2019-10-09", "keyname": "lacm/fish/b680b656-13b6-48bd-ac09-d63484013461",
+        "genus": "Oncorhynchus", "gbifdatasetid": "7a25f7aa-03fb-4322-aaeb-66719e1a9527",
+        "order": "Salmoniformes", "catalognumber": "25044", "collectioncode": "Fish"},
+        {"haslifestage": "0", "individualcount": "1", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "California", "hastypestatus": "0", "rank": 4, "month": "6", "county": "El
+        Dorado County", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-209452",
+        "haslength": "1", "isarch": "0", "year": "1966", "startdayofyear": "165",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Baker, Lea, Hopkirk, & Evans", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:209452.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "orgstateprovince": "California", "highergeography":
+        "North America|United States|California|El Dorado County|Cascade Lake", "continent":
+        "North America", "contact": "David Catania", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "lengthtype": "standard length", "hastissue": "0",
+        "hasmass": "0", "email": "dcatania@calacademy.org", "day": "14", "kingdom":
+        "Animalia", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "collectioncode": "ICH", "verbatimeventdate": "1966-06-14",
+        "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:209452", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-75%
+        EtOH", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "eventdate":
+        "1966-06-14", "hashid": "7078", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-209452",
+        "isfossil": "0", "hassex": "0", "genus": "Oncorhynchus", "occurrenceid": "urn:catalog:CAS:ICH:209452",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=248mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "infraspecificepithet":
+        "henshawi", "modified": "2002-03-22 12:16:32.0", "order": "Salmoniformes",
+        "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber": "EHL 66-5",
+        "lengthunitsinferred": "0", "waterbody": "Cascade Lake", "country": "United
+        States", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "lengthinmm":
+        "248", "catalognumber": "209452", "enddayofyear": "165"}, {"haslifestage":
+        "0", "individualcount": "12", "dateidentified": "1964-01-01", "higherclassification":
+        "Actinopteri | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0",
+        "stateprovince": "Nevada", "hastypestatus": "0", "rank": 4, "month": "7",
+        "county": "Elko County", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22562",
+        "haslength": "0", "isarch": "0", "year": "1961", "startdayofyear": "197",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, W. A.; Behnke, R. J.", "hasmass": "0", "vntype": "specimen",
+        "pubdate": "2019-07-15", "title": "CAS Ichthyology (ICH)", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "institutioncode": "CAS", "occurrenceremarks":
+        "Listed in catalog as S. c. humboldtensis, unpublished name (paratypes).",
+        "orgstateprovince": "California", "habitat": "freshwater", "continent": "North
+        America", "contact": "David Catania", "lastindexed": "2019-08-04", "migrator":
+        "no migrator", "hastissue": "0", "email": "dcatania@calacademy.org", "day":
+        "16", "highergeography": "North America|United States|Nevada|Elko County|Humboldt
+        R. Basin|South Fork Little Humboldt R.", "kingdom": "Animalia", "infraspecificepithet":
+        "henshawi", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22562", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "852", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22562",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22562",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH", "modified":
+        "2013-06-28 00:00:00.0", "eventdate": "1961-07-16", "identifiedby": "Behnke,
+        R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber": "WAN
+        16-VII-61", "verbatimeventdate": "1961-07-16", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22562.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "waterbody": "South Fork Little Humboldt R.", "genus": "Oncorhynchus",
+        "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes",
+        "catalognumber": "22562", "enddayofyear": "197"}, {"haslifestage": "0", "individualcount":
+        "5", "dateidentified": "1964-01-01", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "7", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22563",
+        "haslength": "1", "isarch": "0", "year": "1961", "startdayofyear": "197",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, W. A.; Behnke, R. J.", "hasmass": "0", "vntype": "specimen",
+        "pubdate": "2019-07-15", "title": "CAS Ichthyology (ICH)", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "institutioncode": "CAS", "occurrenceremarks":
+        "Listed in catalog as Salmo c. humboldtensis, unpublished name.", "orgstateprovince":
+        "California", "habitat": "freshwater", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "lengthtype":
+        "standard length range", "hastissue": "0", "email": "dcatania@calacademy.org",
+        "day": "16", "highergeography": "North America|United States|Nevada|Elko County|Nelson
+        Cr.", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1961-07-16", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22563", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "853", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22563",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22563",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=133-202mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1961-07-16", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "WAN 16-VII-61B", "country": "United States", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22563.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "waterbody": "Nelson Cr.", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes", "catalognumber":
+        "22563", "enddayofyear": "197"}, {"haslifestage": "0", "individualcount":
+        "2", "higherclassification": "Actinopteri | Salmoniformes", "family": "Salmonidae",
+        "wasinvasive": "0", "stateprovince": "Nevada", "hastypestatus": "0", "rank":
+        4, "month": "7", "county": "Elko County", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22564", "haslength":
+        "1", "isarch": "0", "year": "1961", "startdayofyear": "197", "wascaptive":
+        "0", "specificepithet": "clarki", "networks": "FishNet,VertNet", "recordedby":
+        "Nisbet, W. A.; Behnke, R. J.", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22564.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|Rock R.
+        Basin|Lewis (Willow) Cr.", "continent": "North America", "contact": "David
+        Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "lengthtype":
+        "standard length range", "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org",
+        "day": "16", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1961-07-16", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22564", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "858", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22564",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22564",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=137-198mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1961-07-16", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "WAN 16-VII-61C", "country": "United States", "dateidentified": "1964-01-01",
+        "waterbody": "Lewis (Willow) Cr.", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes", "catalognumber":
+        "22564", "enddayofyear": "197"}, {"haslifestage": "0", "individualcount":
+        "3", "higherclassification": "Actinopteri | Salmoniformes", "family": "Salmonidae",
+        "wasinvasive": "0", "stateprovince": "Nevada", "hastypestatus": "0", "rank":
+        4, "month": "7", "county": "Elko County", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22565", "haslength":
+        "1", "isarch": "0", "year": "1961", "startdayofyear": "197", "wascaptive":
+        "0", "specificepithet": "clarki", "networks": "FishNet,VertNet", "recordedby":
+        "Nisbet, W. A.; Behnke, R. J.", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22565.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|Rock Cr.",
+        "continent": "North America", "contact": "David Catania", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "lengthtype": "standard length range", "hastissue":
+        "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day": "16", "kingdom":
+        "Animalia", "infraspecificepithet": "henshawi", "citation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1961-07-16", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22565", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "859", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22565",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22565",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=107-140mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1961-07-16", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "WAN 16-VII-61D", "country": "United States", "dateidentified": "1964-01-01",
+        "waterbody": "Rock Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "22565", "enddayofyear": "197"},
+        {"haslifestage": "0", "individualcount": "17", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "7", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22566",
+        "haslength": "1", "isarch": "0", "year": "1961", "startdayofyear": "198",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, Schlechtweg & Behnke", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22566.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|South Fork
+        Rock Cr.", "continent": "North America", "contact": "David Catania", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "lengthtype": "standard length range",
+        "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day":
+        "17", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1961-07-17", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22566", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "856", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22566",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22566",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=96-216mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1961-07-17", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "NSB 17-VII-61", "country": "United States", "dateidentified": "1964-01-01",
+        "waterbody": "South Fork Rock Cr.", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes", "catalognumber":
+        "22566", "enddayofyear": "198"}, {"haslifestage": "0", "individualcount":
+        "2", "dateidentified": "1964-01-01", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "7", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22568",
+        "haslength": "1", "isarch": "0", "year": "1961", "startdayofyear": "198",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, W. A.; Behnke, R. J.", "hasmass": "0", "vntype": "specimen",
+        "pubdate": "2019-07-15", "title": "CAS Ichthyology (ICH)", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "institutioncode": "CAS", "occurrenceremarks":
+        "Listed in catalog as Salmo c. humboldtensis, unpublished name.", "orgstateprovince":
+        "California", "habitat": "freshwater", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "lengthtype":
+        "standard length range", "hastissue": "0", "email": "dcatania@calacademy.org",
+        "day": "17", "highergeography": "North America|United States|Nevada|Elko County|Green
+        Mountain Cr.", "kingdom": "Animalia", "infraspecificepithet": "henshawi",
+        "citation": "California Academy of Sciences. CAS Ichthyology (ICH). Source:
+        http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published on
+        2019-07-15)", "verbatimeventdate": "1961-07-17", "orgcountry": "United States",
+        "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype":
+        "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22568", "icode": "CAS",
+        "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "862", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22568",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22568",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=104-182mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1961-07-17", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "N&B 17-VII-61", "country": "United States", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22568.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "waterbody": "Green Mountain Cr.", "genus": "Oncorhynchus",
+        "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes",
+        "catalognumber": "22568", "enddayofyear": "198"}, {"haslifestage": "0", "individualcount":
+        "6", "dateidentified": "1964-01-01", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "7", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22572",
+        "haslength": "1", "isarch": "0", "year": "1962", "startdayofyear": "187",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, Seegrist & Behnke", "hasmass": "0", "vntype": "specimen",
+        "pubdate": "2019-07-15", "title": "CAS Ichthyology (ICH)", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "institutioncode": "CAS", "occurrenceremarks":
+        "Listed in catalog as Salmo c. humboldtensis, unpublished name.", "orgstateprovince":
+        "California", "habitat": "freshwater", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "lengthtype":
+        "standard length range", "hastissue": "0", "email": "dcatania@calacademy.org",
+        "day": "6", "highergeography": "North America|United States|Nevada|Elko County|Humboldt
+        R. Basin|North Fork Humboldt R.", "kingdom": "Animalia", "infraspecificepithet":
+        "henshawi", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "verbatimeventdate": "1962-07-06", "orgcountry": "United
+        States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22572", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "755", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22572",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22572",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=86-164mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1962-07-06", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "NSB 6-VII-62", "country": "United States", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22572.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "waterbody": "North Fork Humboldt R.", "genus": "Oncorhynchus",
+        "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes",
+        "catalognumber": "22572", "enddayofyear": "187"}, {"haslifestage": "0", "individualcount":
+        "2", "higherclassification": "Actinopteri | Salmoniformes", "family": "Salmonidae",
+        "wasinvasive": "0", "stateprovince": "Nevada", "hastypestatus": "0", "rank":
+        4, "month": "8", "county": "Elko County", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22574", "haslength":
+        "1", "isarch": "0", "year": "1962", "startdayofyear": "243", "wascaptive":
+        "0", "specificepithet": "clarki", "networks": "FishNet,VertNet", "recordedby":
+        "Nisbet, W. A.", "bibliographiccitation": "California Academy of Sciences.
+        CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22574. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15",
+        "title": "CAS Ichthyology (ICH)", "orgname": "California Academy of Sciences",
+        "hasmedia": "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in
+        catalog as Salmo c. humboldtensis, unpublished name.", "orgstateprovince":
+        "California", "highergeography": "North America|United States|Nevada|Elko
+        County|Foreman Cr.", "continent": "North America", "contact": "David Catania",
+        "lastindexed": "2019-08-04", "migrator": "no migrator", "lengthtype": "standard
+        length range", "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org",
+        "day": "31", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1962-08-31", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22574", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "757", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22574",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22574",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=140-161mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1962-08-31", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "WAN 31-VIII-62", "country": "United States", "dateidentified": "1964-01-01",
+        "waterbody": "Foreman Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "22574", "enddayofyear": "243"},
+        {"haslifestage": "0", "individualcount": "4", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "7", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22576",
+        "haslength": "1", "isarch": "0", "year": "1962", "startdayofyear": "187",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, Seegrist & Behnke", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22576.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|Tea Cr.",
+        "continent": "North America", "contact": "David Catania", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "lengthtype": "standard length range", "hastissue":
+        "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day": "6", "kingdom":
+        "Animalia", "infraspecificepithet": "henshawi", "citation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1962-07-06", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22576", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "759", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22576",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22576",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=88-155mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1962-07-06", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "NSB 6-VII-62B", "country": "United States", "dateidentified": "1964-01-01",
+        "waterbody": "Tea Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "22576", "enddayofyear": "187"},
+        {"haslifestage": "0", "individualcount": "2", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "7", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22577",
+        "haslength": "0", "isarch": "0", "year": "1963", "startdayofyear": "211",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet; Coffin", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22577.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|Coyote
+        Cr.", "continent": "North America", "contact": "David Catania", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "hastissue": "0", "hasmass": "0",
+        "email": "dcatania@calacademy.org", "day": "30", "kingdom": "Animalia", "infraspecificepithet":
+        "henshawi", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22577", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "758", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22577",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22577",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH", "modified":
+        "2013-06-28 00:00:00.0", "eventdate": "1963-07-30", "identifiedby": "Behnke,
+        R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber": "N&C
+        30-VII-63", "verbatimeventdate": "1963-07-30", "dateidentified": "1964-01-01",
+        "waterbody": "Coyote Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "22577", "enddayofyear": "211"},
+        {"haslifestage": "0", "individualcount": "27", "dateidentified": "1964-01-01",
+        "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "infraspecificepithet": "henshawi", "hastypestatus": "0",
+        "basisofrecord": "PreservedSpecimen", "rank": 4, "month": "7", "county": "Elko
+        County", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22583",
+        "haslength": "0", "isarch": "0", "year": "1957", "startdayofyear": "189",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "King, D.", "hasmass": "0", "vntype": "specimen", "habitat":
+        "freshwater", "locality": "Elev. 6000 ft.", "orgname": "California Academy
+        of Sciences", "hasmedia": "0", "institutioncode": "CAS", "occurrenceremarks":
+        "Listed in catalog as Salmo c. humboldtensis, unpublished name.", "orgstateprovince":
+        "California", "highergeography": "North America|United States|Nevada|Elko
+        County|Maggie Cr. Drainage|Beaver R.", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue":
+        "0", "email": "dcatania@calacademy.org", "day": "8", "kingdom": "Animalia",
+        "family": "Salmonidae", "citation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source
+        published on 2019-07-15)", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22583", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "2299", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22583",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22583",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "0", "title": "CAS Ichthyology (ICH)", "collectioncode": "ICH", "modified":
+        "2013-06-28 00:00:00.0", "eventdate": "1957-07-08", "identifiedby": "Behnke,
+        R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber": "DK
+        8-VII-57", "verbatimeventdate": "1957-07-08", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22583.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "waterbody": "Beaver R.", "stateprovince": "Nevada", "genus":
+        "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order":
+        "Salmoniformes", "catalognumber": "22583", "enddayofyear": "189"}, {"haslifestage":
+        "0", "individualcount": "1", "higherclassification": "Actinopteri | Salmoniformes",
+        "family": "Salmonidae", "wasinvasive": "0", "stateprovince": "Nevada", "hastypestatus":
+        "0", "basisofrecord": "PreservedSpecimen", "rank": 4, "month": "10", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-66311",
+        "haslength": "0", "isarch": "0", "year": "1957", "startdayofyear": "297",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Needham, Paul R.", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:66311.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "locality":
+        "Verdi State Fish Hatchery. First generation from Walker Lake Stock", "orgname":
+        "California Academy of Sciences", "hasmedia": "0", "institutioncode": "CAS",
+        "occurrenceremarks": "\"=Salmo clarki henshawi. S.L. ca.250mm, T.L. ca. 11.5\".
+        Threatened.\"", "orgstateprovince": "California", "highergeography": "North
+        America|United States|Nevada", "continent": "North America", "contact": "David
+        Catania", "migrator": "no migrator", "hastissue": "0", "hasmass": "0", "email":
+        "dcatania@calacademy.org", "day": "24", "kingdom": "Animalia", "infraspecificepithet":
+        "henshawi", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:66311", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "skeletal",
+        "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "2555",
+        "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-66311", "isfossil":
+        "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:66311", "language":
+        "en", "license": "CC0", "country": "United States", "mappable": "0", "title":
+        "CAS Ichthyology (ICH)", "collectioncode": "ICH", "modified": "2013-06-28
+        00:00:00.0", "eventdate": "1957-10-24", "identifiedby": "Needham, P. R.",
+        "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber": "Z66311", "verbatimeventdate":
+        "1957-10-24", "dateidentified": "1957-01-01", "lastindexed": "2019-08-04",
+        "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "66311", "enddayofyear": "297"},
+        {"haslifestage": "0", "individualcount": "3", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "6", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85145",
+        "haslength": "0", "isarch": "0", "year": "1964", "startdayofyear": "181",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet; Behnke", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85145.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "orgstateprovince": "California", "highergeography":
+        "North America|United States|Nevada|Elko County|Humboldt R. Basin|Frazer Cr.",
+        "continent": "North America", "contact": "David Catania", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org",
+        "day": "29", "kingdom": "Animalia", "citation": "California Academy of Sciences.
+        CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "collectioncode": "ICH", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85145", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "4829", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85145",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:85145",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "0", "basisofrecord": "PreservedSpecimen", "infraspecificepithet": "henshawi",
+        "modified": "1999-12-01 00:00:00.0", "eventdate": "1964-06-29", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "N&B 29-VI-64", "verbatimeventdate":
+        "1964-06-29", "waterbody": "Frazer Cr.", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes", "catalognumber":
+        "85145", "enddayofyear": "181"}, {"haslifestage": "0", "individualcount":
+        "12", "higherclassification": "Actinopteri | Salmoniformes", "family": "Salmonidae",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "rank":
+        4, "month": "7", "county": "Nevada County", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85147", "haslength":
+        "0", "isarch": "0", "year": "1962", "startdayofyear": "195", "wascaptive":
+        "0", "specificepithet": "clarki", "networks": "FishNet,VertNet", "recordedby":
+        "Seegrist; Behnke", "bibliographiccitation": "California Academy of Sciences.
+        CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85147. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15",
+        "title": "CAS Ichthyology (ICH)", "orgname": "California Academy of Sciences",
+        "hasmedia": "0", "institutioncode": "CAS", "orgstateprovince": "California",
+        "highergeography": "North America|United States|California|Nevada County|Truckee
+        R. Basin|Pole Cr.", "continent": "North America", "contact": "David Catania",
+        "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue": "0",
+        "hasmass": "0", "email": "dcatania@calacademy.org", "day": "14", "kingdom":
+        "Animalia", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "collectioncode": "ICH", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:ICH:85147", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-55% isopropanol", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "4827", "class": "Actinopteri",
+        "keyname": "cas/ich/urn-catalog-cas-ich-85147", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:ICH:85147", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "0", "basisofrecord": "PreservedSpecimen",
+        "infraspecificepithet": "henshawi", "modified": "2013-06-28 00:00:00.0", "eventdate":
+        "1962-07-14", "identifiedby": "Behnke, R. J.", "nomenclaturalcode": "ICZN",
+        "haslicense": "1", "fieldnumber": "S&B 14-VII-62", "verbatimeventdate": "1962-07-14",
+        "waterbody": "Pole Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "85147", "enddayofyear": "195"},
+        {"haslifestage": "0", "individualcount": "1", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "California", "hastypestatus": "0", "rank": 4, "month": "8", "county": "Trinity
+        County", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85151",
+        "haslength": "1", "isarch": "0", "year": "1939", "startdayofyear": "219",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Hansen, H. P.", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85151.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Introduced from Lake
+        Tahoe.", "orgstateprovince": "California", "highergeography": "North America|United
+        States|California|Trinity County|Granite Lake", "continent": "North America",
+        "contact": "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator",
+        "lengthtype": "standard length", "hastissue": "0", "hasmass": "0", "email":
+        "dcatania@calacademy.org", "day": "7", "kingdom": "Animalia", "infraspecificepithet":
+        "henshawi", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "verbatimeventdate": "1939-08-07", "orgcountry": "United
+        States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85151", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "eventdate":
+        "1939-08-07", "hashid": "4904", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85151",
+        "isfossil": "0", "hassex": "0", "genus": "Oncorhynchus", "occurrenceid": "urn:catalog:CAS:ICH:85151",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=246mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "order": "Salmoniformes", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "HPH 7-VIII-39", "lengthunitsinferred": "0", "dateidentified": "1959-11-01",
+        "waterbody": "Granite Lake", "country": "United States", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "lengthinmm": "246", "catalognumber":
+        "85151", "enddayofyear": "219"}, {"haslifestage": "0", "individualcount":
+        "4", "higherclassification": "Actinopteri | Salmoniformes", "family": "Salmonidae",
+        "wasinvasive": "0", "stateprovince": "California", "hastypestatus": "0", "rank":
+        4, "month": "9", "county": "Alpine County", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85152", "haslength":
+        "0", "isarch": "0", "year": "1959", "startdayofyear": "256", "wascaptive":
+        "0", "specificepithet": "clarki", "networks": "FishNet,VertNet", "recordedby":
+        "Behnke, Robert J.", "bibliographiccitation": "California Academy of Sciences.
+        CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85152. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15",
+        "title": "CAS Ichthyology (ICH)", "orgname": "California Academy of Sciences",
+        "hasmedia": "0", "institutioncode": "CAS", "orgstateprovince": "California",
+        "highergeography": "North America|United States|California|Alpine County|East
+        Carson R.", "continent": "North America", "contact": "David Catania", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "hastissue": "0", "hasmass": "0",
+        "email": "dcatania@calacademy.org", "day": "13", "kingdom": "Animalia", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "collectioncode": "ICH", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85152", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "4905", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85152",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:85152",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "0", "basisofrecord": "PreservedSpecimen", "infraspecificepithet": "henshawi",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1959-09-13", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "RJB 13-IX-59", "verbatimeventdate": "1959-09-13", "waterbody": "East Carson
+        R.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "85152", "enddayofyear": "256"},
+        {"haslifestage": "0", "individualcount": "3", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "basisofrecord": "PreservedSpecimen", "rank":
+        4, "month": "11", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/su?id=urn-catalog-cas-su-ich-52612",
+        "haslength": "0", "isarch": "0", "year": "1952", "startdayofyear": "322",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Trelease, T.; Needham, P. R.", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:SU
+        (ICH):52612. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15",
+        "locality": "Verdi State Fish Hatchery.", "orgname": "California Academy of
+        Sciences", "hasmedia": "0", "institutioncode": "CAS", "orgstateprovince":
+        "California", "highergeography": "North America|United States|Nevada", "continent":
+        "North America", "contact": "David Catania", "migrator": "no migrator", "hastissue":
+        "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day": "17", "kingdom":
+        "Animalia", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "collectioncode": "SU", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:SU (ICH):52612", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-75% EtOH", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "4315", "class": "Actinopteri",
+        "keyname": "cas/su/urn-catalog-cas-su-ich-52612", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:SU (ICH):52612", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "0", "title": "CAS Ichthyology
+        (ICH)", "infraspecificepithet": "henshawi", "modified": "1999-12-01 00:00:00.0",
+        "eventdate": "1952-11-17", "nomenclaturalcode": "ICZN", "haslicense": "1",
+        "fieldnumber": "T&N 17-XI-52", "verbatimeventdate": "1952-11-17", "lastindexed":
+        "2019-08-04", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "52612", "enddayofyear": "322"},
+        {"haslifestage": "0", "individualcount": "1", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "7", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22561",
+        "haslength": "0", "isarch": "0", "year": "1961", "startdayofyear": "197",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, Schlechtweg & Behnke", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22561.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        S.c. humboldtensis, unpublished name (holotype).", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|South Fork
+        Little Humboldt R.", "continent": "North America", "contact": "David Catania",
+        "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue": "0",
+        "hasmass": "0", "email": "dcatania@calacademy.org", "day": "16", "kingdom":
+        "Animalia", "infraspecificepithet": "henshawi", "citation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:ICH:22561", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-55% isopropanol", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "855", "class": "Actinopteri",
+        "keyname": "cas/ich/urn-catalog-cas-ich-22561", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:ICH:22561", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "0", "basisofrecord": "PreservedSpecimen",
+        "collectioncode": "ICH", "modified": "2013-06-28 00:00:00.0", "eventdate":
+        "1961-07-16", "identifiedby": "Behnke, R. J.", "nomenclaturalcode": "ICZN",
+        "haslicense": "1", "fieldnumber": "NSB 16-VII-61", "verbatimeventdate": "1961-07-16",
+        "dateidentified": "1964-01-01", "waterbody": "South Fork Little Humboldt R.",
+        "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "22561", "enddayofyear": "197"},
+        {"haslifestage": "0", "individualcount": "17", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "7", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22573",
+        "haslength": "1", "isarch": "0", "year": "1962", "startdayofyear": "186",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, Seegrist & Behnke", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22573.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|Ganz Cr.",
+        "continent": "North America", "contact": "David Catania", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "lengthtype": "standard length range", "hastissue":
+        "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day": "5", "kingdom":
+        "Animalia", "infraspecificepithet": "henshawi", "citation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1962-07-05", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22573", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "754", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22573",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22573",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=102-218mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1962-07-05", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "NSB 5-VII-62", "country": "United States", "dateidentified": "1964-01-01",
+        "waterbody": "Ganz Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "22573", "enddayofyear": "186"},
+        {"haslifestage": "0", "individualcount": "2", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "7", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22575",
+        "haslength": "1", "isarch": "0", "year": "1962", "startdayofyear": "186",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, Seegrist & Behnke", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22575.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|Mahala
+        Cr.", "continent": "North America", "contact": "David Catania", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "lengthtype": "standard length range",
+        "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day":
+        "5", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1962-07-05", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22575", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "756", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22575",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22575",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=111-139mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1962-07-05", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "NSB 5-VII-62B", "country": "United States", "dateidentified": "1964-01-01",
+        "waterbody": "Mahala Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "22575", "enddayofyear": "186"},
+        {"haslifestage": "0", "individualcount": "4", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "8", "county": "Elko County",
+        "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22579",
+        "haslength": "1", "isarch": "0", "year": "1963", "startdayofyear": "213",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Coffin; et al", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22579.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|Gennette
+        Cr.", "continent": "North America", "contact": "David Catania", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "lengthtype": "standard length",
+        "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day":
+        "1", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1963-08-01", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22579", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-75%
+        EtOH", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "eventdate":
+        "1963-08-01", "hashid": "760", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22579",
+        "isfossil": "0", "hassex": "0", "genus": "Oncorhynchus", "occurrenceid": "urn:catalog:CAS:ICH:22579",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=to 138mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "order": "Salmoniformes", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "C 1-VIII-63", "lengthunitsinferred": "0", "dateidentified": "1964-01-01",
+        "waterbody": "Gennette Cr.", "country": "United States", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "lengthinmm": "138", "catalognumber":
+        "22579", "enddayofyear": "213"}, {"haslifestage": "0", "individualcount":
+        "9", "higherclassification": "Actinopteri | Salmoniformes", "family": "Salmonidae",
+        "wasinvasive": "0", "stateprovince": "Nevada", "hastypestatus": "0", "rank":
+        4, "month": "10", "county": "Elko County", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22580", "haslength":
+        "1", "isarch": "0", "year": "1963", "startdayofyear": "288", "wascaptive":
+        "0", "specificepithet": "clarki", "networks": "FishNet,VertNet", "recordedby":
+        "Nisbet, Coffin & Hoskins", "bibliographiccitation": "California Academy of
+        Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22580. Source:
+        http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published on
+        2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|Frazier
+        Cr.", "continent": "North America", "contact": "David Catania", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "lengthtype": "standard length",
+        "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day":
+        "15", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1963-10-15", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22580", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "eventdate":
+        "1963-10-15", "hashid": "2296", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22580",
+        "isfossil": "0", "hassex": "0", "genus": "Oncorhynchus", "occurrenceid": "urn:catalog:CAS:ICH:22580",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=to 168mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "order": "Salmoniformes", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "NCH 15-X-63", "lengthunitsinferred": "0", "dateidentified": "1964-01-01",
+        "waterbody": "Frazier Cr.", "country": "United States", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "lengthinmm": "168", "catalognumber": "22580", "enddayofyear": "288"}, {"haslifestage":
+        "0", "individualcount": "2", "higherclassification": "Actinopteri | Salmoniformes",
+        "family": "Salmonidae", "wasinvasive": "0", "stateprovince": "Nevada", "hastypestatus":
+        "0", "rank": 4, "month": "8", "county": "Elko County", "phylum": "Chordata",
+        "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22581",
+        "haslength": "1", "isarch": "0", "year": "1963", "startdayofyear": "220",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Nisbet, W. A.", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22581.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name. 1 spec. used for color illust. of
+        subsp.", "orgstateprovince": "California", "highergeography": "North America|United
+        States|Nevada|Elko County|Conrad Cr.", "continent": "North America", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "lengthtype":
+        "standard length range", "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org",
+        "day": "8", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "verbatimeventdate": "1963-08-08", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22581", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "2297", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22581",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22581",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=127-137mm SL",
+        "mappable": "0", "basisofrecord": "PreservedSpecimen", "collectioncode": "ICH",
+        "modified": "2013-06-28 00:00:00.0", "eventdate": "1963-08-08", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "WAN 8-VIII-63", "country": "United States", "dateidentified": "1964-01-01",
+        "waterbody": "Conrad Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "22581", "enddayofyear": "220"},
+        {"haslifestage": "0", "individualcount": "2", "higherclassification": "Actinopteri
+        | Salmoniformes", "family": "Salmonidae", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "rank": 4, "month": "12", "phylum": "Chordata",
+        "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85146",
+        "haslength": "0", "isarch": "0", "year": "1957", "startdayofyear": "354",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Hitts, B.; Young, I.", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85146.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "pubdate": "2019-07-15", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "orgstateprovince": "California", "highergeography":
+        "North America|United States|Nevada|Summit Lake", "continent": "North America",
+        "contact": "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator",
+        "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day":
+        "20", "kingdom": "Animalia", "citation": "California Academy of Sciences.
+        CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "collectioncode": "ICH", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85146", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "4828", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85146",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:85146",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "0", "basisofrecord": "PreservedSpecimen", "infraspecificepithet": "henshawi",
+        "modified": "1999-12-01 00:00:00.0", "eventdate": "1957-12-20", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "H&Y 20-XII-57", "verbatimeventdate":
+        "1957-12-20", "waterbody": "Summit Lake", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes", "catalognumber":
+        "85146", "enddayofyear": "354"}, {"haslifestage": "0", "individualcount":
+        "2", "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "wasinvasive": "0", "stateprovince": "Nevada", "hastypestatus": "0", "basisofrecord":
+        "PreservedSpecimen", "rank": 4, "month": "10", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85148", "haslength":
+        "1", "isarch": "0", "year": "1950", "startdayofyear": "285", "wascaptive":
+        "0", "specificepithet": "clarki", "networks": "FishNet,VertNet", "recordedby":
+        "Needham, P. R.; Trelease, T.", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85148.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "locality":
+        "Tonopah.", "orgname": "California Academy of Sciences", "hasmedia": "0",
+        "institutioncode": "CAS", "orgstateprovince": "California", "highergeography":
+        "North America|United States|Nevada|Peavine Cr.", "continent": "North America",
+        "contact": "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator",
+        "lengthtype": "standard length range", "hastissue": "0", "hasmass": "0", "email":
+        "dcatania@calacademy.org", "day": "12", "kingdom": "Animalia", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "collectioncode": "ICH", "verbatimeventdate":
+        "1950-10-12", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85148", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "4826", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85148",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:85148",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "0", "title": "CAS Ichthyology (ICH)", "othercatalognumbers": "UCB 38-10-3-h",
+        "infraspecificepithet": "henshawi", "modified": "1999-12-01 00:00:00.0", "eventdate":
+        "1950-10-12", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "N&T 12-X-50", "dynamicproperties": "Size=107-145mm SL", "waterbody": "Peavine
+        Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "85148", "enddayofyear": "285"},
+        {"haslifestage": "0", "individualcount": "51", "higherclassification": "Actinopteri
+        | Salmoniformes", "pubdate": "2019-07-15", "wasinvasive": "0", "stateprovince":
+        "Nevada", "hastypestatus": "0", "basisofrecord": "PreservedSpecimen", "rank":
+        4, "month": "11", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-85154",
+        "haslength": "0", "isarch": "0", "year": "1952", "startdayofyear": "322",
+        "wascaptive": "0", "specificepithet": "clarki", "networks": "FishNet,VertNet",
+        "recordedby": "Trelease, T.; Needham, P. R.", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:85154.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "locality":
+        "Verdi State Fish Hatchery.", "orgname": "California Academy of Sciences",
+        "hasmedia": "0", "institutioncode": "CAS", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada", "continent": "North
+        America", "contact": "David Catania", "migrator": "no migrator", "hastissue":
+        "0", "hasmass": "0", "email": "dcatania@calacademy.org", "day": "17", "kingdom":
+        "Animalia", "citation": "California Academy of Sciences. CAS Ichthyology (ICH).
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "collectioncode": "ICH", "verbatimeventdate": "1952-11-17",
+        "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:85154", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "4907", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-85154",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:85154",
+        "language": "en", "license": "CC0", "country": "United States", "mappable":
+        "0", "title": "CAS Ichthyology (ICH)", "othercatalognumbers": "UCB 38-10-3-d&e",
+        "infraspecificepithet": "henshawi", "modified": "2013-06-28 00:00:00.0", "eventdate":
+        "1952-11-17", "identifiedby": "Trelease, T.", "nomenclaturalcode": "ICZN",
+        "haslicense": "1", "fieldnumber": "T&N 17-XI-52", "dynamicproperties": "Size=7.5-15cm",
+        "lastindexed": "2019-08-04", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "85154", "enddayofyear": "322"},
+        {"haslifestage": "0", "individualcount": "2", "higherclassification": "Actinopteri
+        | Salmoniformes", "pubdate": "2019-07-15", "stateprovince": "Nevada", "hastypestatus":
+        "0", "rank": 1, "collectioncode": "ICH", "county": "Elko County", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22570",
+        "haslength": "1", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "continent": "North America", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22570.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name.", "orgstateprovince": "California",
+        "highergeography": "North America|United States|Nevada|Elko County|Cold Cr.",
+        "networks": "FishNet,VertNet", "contact": "David Catania", "lastindexed":
+        "2019-08-04", "migrator": "no migrator", "lengthtype": "standard length range",
+        "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org", "kingdom":
+        "Animalia", "infraspecificepithet": "henshawi", "citation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:ICH:22570", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-55% isopropanol", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "753", "class": "Actinopteri",
+        "keyname": "cas/ich/urn-catalog-cas-ich-22570", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:ICH:22570", "language": "en", "license":
+        "CC0", "dynamicproperties": "Size=122-136mm SL", "mappable": "0", "basisofrecord":
+        "PreservedSpecimen", "modified": "2013-06-28 00:00:00.0", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "NV 1956-COLD", "country": "United States", "waterbody": "Cold Cr.", "genus":
+        "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order":
+        "Salmoniformes", "catalognumber": "22570", "dateidentified": "1964-01-01"},
+        {"haslifestage": "0", "individualcount": "6", "higherclassification": "Actinopteri
+        | Salmoniformes", "pubdate": "2019-07-15", "stateprovince": "Nevada", "hastypestatus":
+        "0", "rank": 1, "collectioncode": "ICH", "county": "Elko County", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22578",
+        "haslength": "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "continent": "North America", "recordedby": "Layton", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22578.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "5 of 11 specs. to R.J.
+        Behnke.  Listed in catalog as S. c. humboldtensis, unpublished name.", "orgstateprovince":
+        "California", "highergeography": "North America|United States|Nevada|Elko
+        County|Carville Cr.", "networks": "FishNet,VertNet", "contact": "David Catania",
+        "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue": "0",
+        "hasmass": "0", "email": "dcatania@calacademy.org", "kingdom": "Animalia",
+        "infraspecificepithet": "henshawi", "citation": "California Academy of Sciences.
+        CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:ICH:22578", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-55% isopropanol", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "761", "class": "Actinopteri",
+        "keyname": "cas/ich/urn-catalog-cas-ich-22578", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:ICH:22578", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "0", "basisofrecord": "PreservedSpecimen",
+        "modified": "2013-06-28 00:00:00.0", "identifiedby": "Behnke, R. J.", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "LAYTON-CARV", "waterbody": "Carville
+        Cr.", "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "22578", "dateidentified": "1964-01-01"},
+        {"haslifestage": "0", "individualcount": "12", "higherclassification": "Actinopteri
+        | Salmoniformes", "pubdate": "2019-07-15", "stateprovince": "California",
+        "hastypestatus": "0", "rank": 1, "collectioncode": "ICH", "county": "Alpine
+        County", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-60554",
+        "haslength": "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "continent": "North America", "recordedby": "Tralease, T.", "hasmass":
+        "0", "vntype": "specimen", "family": "Salmonidae", "title": "CAS Ichthyology
+        (ICH)", "orgname": "California Academy of Sciences", "hasmedia": "0", "institutioncode":
+        "CAS", "orgstateprovince": "California", "habitat": "freshwater", "networks":
+        "FishNet,VertNet", "contact": "David Catania", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "hastissue": "0", "email": "dcatania@calacademy.org",
+        "highergeography": "North America|United States|California|Alpine County|Heenan
+        Lake", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:ICH:60554", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-55% isopropanol", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "7567", "class": "Actinopteri",
+        "keyname": "cas/ich/urn-catalog-cas-ich-60554", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:ICH:60554", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "0", "basisofrecord": "PreservedSpecimen",
+        "othercatalognumbers": "UCB 83", "modified": "2013-06-28 00:00:00.0", "identifiedby":
+        "Needham, P. R.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "TT 1948", "bibliographiccitation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Record ID: urn:catalog:CAS:ICH:60554. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "waterbody": "Heenan Lake", "genus": "Oncorhynchus",
+        "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes",
+        "catalognumber": "60554", "dateidentified": "1950-01-01"}, {"haslifestage":
+        "0", "individualcount": "3", "higherclassification": "Actinopteri | Salmoniformes",
+        "pubdate": "2019-07-15", "stateprovince": "Nevada", "hastypestatus": "0",
+        "rank": 1, "collectioncode": "ICH", "county": "Elko County", "phylum": "Chordata",
+        "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22567",
+        "haslength": "1", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "continent": "North America", "recordedby": "Nisbet, Schlechtweg
+        & Behnke", "bibliographiccitation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Record ID: urn:catalog:CAS:ICH:22567. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae",
+        "title": "CAS Ichthyology (ICH)", "orgname": "California Academy of Sciences",
+        "hasmedia": "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in
+        catalog as Salmo c. humboldtensis, unpublished name; rec''d 17 Jul 1961.",
+        "orgstateprovince": "California", "highergeography": "North America|United
+        States|Nevada|Elko County|Kleckner Cr.", "networks": "FishNet,VertNet", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "lengthtype":
+        "standard length range", "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org",
+        "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:ICH:22567", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-55% isopropanol", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "857", "class": "Actinopteri",
+        "keyname": "cas/ich/urn-catalog-cas-ich-22567", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:ICH:22567", "language": "en", "license":
+        "CC0", "dynamicproperties": "Size=144-185mm SL", "mappable": "0", "basisofrecord":
+        "PreservedSpecimen", "modified": "2013-06-28 00:00:00.0", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "NV-KLECKNER", "country": "United States", "waterbody": "Kleckner Cr.", "genus":
+        "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order":
+        "Salmoniformes", "catalognumber": "22567", "dateidentified": "1964-01-01"},
+        {"haslifestage": "0", "individualcount": "2", "higherclassification": "Actinopteri
+        | Salmoniformes", "pubdate": "2019-07-15", "stateprovince": "Nevada", "hastypestatus":
+        "0", "rank": 1, "collectioncode": "ICH", "county": "Pershing County", "phylum":
+        "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22569",
+        "haslength": "1", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "continent": "North America", "hasmass": "0", "vntype": "specimen",
+        "family": "Salmonidae", "title": "CAS Ichthyology (ICH)", "orgname": "California
+        Academy of Sciences", "hasmedia": "0", "institutioncode": "CAS", "occurrenceremarks":
+        "Listed in catalog as Salmo c. humboldtensis, unpublished name.", "orgstateprovince":
+        "California", "habitat": "freshwater", "networks": "FishNet,VertNet", "contact":
+        "David Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "lengthtype":
+        "standard length range", "hastissue": "0", "email": "dcatania@calacademy.org",
+        "highergeography": "North America|United States|Nevada|Pershing County|Big
+        Cr.", "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:ICH:22569", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-55% isopropanol", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "863", "class": "Actinopteri",
+        "keyname": "cas/ich/urn-catalog-cas-ich-22569", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:ICH:22569", "language": "en", "license":
+        "CC0", "dynamicproperties": "Size=188-209mm SL", "mappable": "0", "basisofrecord":
+        "PreservedSpecimen", "modified": "2013-06-28 00:00:00.0", "identifiedby":
+        "Behnke, R. J.", "nomenclaturalcode": "ICZN", "haslicense": "1", "fieldnumber":
+        "NV-BIG", "country": "United States", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22569.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "waterbody": "Big Cr.", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes", "catalognumber":
+        "22569", "dateidentified": "1964-01-01"}, {"haslifestage": "0", "individualcount":
+        "1", "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "stateprovince": "Nevada", "hastypestatus": "0", "rank": 1, "collectioncode":
+        "ICH", "county": "Elko County", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-22571",
+        "haslength": "1", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "continent": "North America", "bibliographiccitation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:22571.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "title": "CAS
+        Ichthyology (ICH)", "orgname": "California Academy of Sciences", "hasmedia":
+        "0", "institutioncode": "CAS", "occurrenceremarks": "Listed in catalog as
+        Salmo c. humboldtensis, unpublished name; rec''d. Jul 1961.", "orgstateprovince":
+        "California", "highergeography": "North America|United States|Nevada|Elko
+        County|Talbot Cr.", "networks": "FishNet,VertNet", "contact": "David Catania",
+        "lastindexed": "2019-08-04", "migrator": "no migrator", "lengthtype": "standard
+        length", "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org",
+        "kingdom": "Animalia", "infraspecificepithet": "henshawi", "citation": "California
+        Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "lengthunitsinferred": "0", "orgcountry":
+        "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:22571", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "alc-55%
+        isopropanol", "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid":
+        "752", "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-22571",
+        "isfossil": "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:22571",
+        "language": "en", "license": "CC0", "dynamicproperties": "Size=132mm SL",
+        "lengthinmm": "132", "basisofrecord": "PreservedSpecimen", "modified": "2013-06-28
+        00:00:00.0", "order": "Salmoniformes", "identifiedby": "Behnke, R. J.", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "NV-TALBOT", "country": "United
+        States", "waterbody": "Talbot Cr.", "genus": "Oncorhynchus", "gbifdatasetid":
+        "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "mappable": "0", "catalognumber":
+        "22571", "dateidentified": "1964-01-01"}, {"haslifestage": "0", "individualcount":
+        "8", "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "hastypestatus": "0", "basisofrecord": "PreservedSpecimen", "rank": 1, "infraspecificepithet":
+        "henshawi", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/ich?id=urn-catalog-cas-ich-66310",
+        "haslength": "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "hasmedia":
+        "0", "continent": "North America", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:ICH:66310.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "vntype": "specimen", "family": "Salmonidae", "locality":
+        "Hennan Lake", "orgname": "California Academy of Sciences", "specificepithet":
+        "clarki", "institutioncode": "CAS", "occurrenceremarks": "=Salmo clarki henshawi.  Threatened.",
+        "orgstateprovince": "California", "highergeography": "North America|United
+        States", "networks": "FishNet,VertNet", "contact": "David Catania", "migrator":
+        "no migrator", "hastissue": "0", "hasmass": "0", "email": "dcatania@calacademy.org",
+        "kingdom": "Animalia", "citation": "California Academy of Sciences. CAS Ichthyology
+        (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source
+        published on 2019-07-15)", "orgcountry": "United States", "source_url": "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich",
+        "dctype": "PhysicalObject", "iptrecordid": "urn:catalog:CAS:ICH:66310", "icode":
+        "CAS", "scientificname": "Oncorhynchus clarki henshawi", "preparations": "skeletal",
+        "gbifpublisherid": "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "2556",
+        "class": "Actinopteri", "keyname": "cas/ich/urn-catalog-cas-ich-66310", "isfossil":
+        "0", "hassex": "0", "occurrenceid": "urn:catalog:CAS:ICH:66310", "language":
+        "en", "license": "CC0", "country": "United States", "mappable": "0", "title":
+        "CAS Ichthyology (ICH)", "modified": "1998-08-14 00:00:00.0", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "Z66310", "lastindexed": "2019-08-04",
+        "genus": "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "order": "Salmoniformes", "catalognumber": "66310", "collectioncode": "ICH"},
+        {"haslifestage": "0", "individualcount": "5", "higherclassification": "Actinopteri
+        | Salmoniformes", "pubdate": "2019-07-15", "stateprovince": "California",
+        "hastypestatus": "0", "rank": 1, "infraspecificepithet": "henshawi", "county":
+        "Alpine County", "phylum": "Chordata", "references": "http://portal.vertnet.org/o/cas/su?id=urn-catalog-cas-su-ich-3342",
+        "haslength": "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "continent": "North America", "recordedby": "Christ, E. B.", "hasmass":
+        "0", "vntype": "specimen", "family": "Salmonidae", "title": "CAS Ichthyology
+        (ICH)", "orgname": "California Academy of Sciences", "hasmedia": "0", "institutioncode":
+        "CAS", "orgstateprovince": "California", "habitat": "freshwater", "networks":
+        "FishNet,VertNet", "contact": "David Catania", "lastindexed": "2019-08-04",
+        "migrator": "no migrator", "hastissue": "0", "email": "dcatania@calacademy.org",
+        "highergeography": "North America|United States|California|Alpine County|Highland
+        & Deer Creeks", "kingdom": "Animalia", "citation": "California Academy of
+        Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:SU (ICH):3342", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-75% EtOH", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "5386", "class": "Actinopteri",
+        "keyname": "cas/su/urn-catalog-cas-su-ich-3342", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:SU (ICH):3342", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "0", "basisofrecord": "PreservedSpecimen",
+        "modified": "1999-11-30 00:00:00.0", "nomenclaturalcode": "ICZN", "haslicense":
+        "1", "fieldnumber": "EBC-H&D", "bibliographiccitation": "California Academy
+        of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:SU (ICH):3342.
+        Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich (source published
+        on 2019-07-15)", "waterbody": "Highland & Deer Creeks", "genus": "Oncorhynchus",
+        "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order": "Salmoniformes",
+        "catalognumber": "3342", "collectioncode": "SU"}, {"haslifestage": "0", "individualcount":
+        "30", "higherclassification": "Actinopteri | Salmoniformes", "pubdate": "2019-07-15",
+        "stateprovince": "California", "hastypestatus": "0", "rank": 1, "infraspecificepithet":
+        "henshawi", "county": "Alpine County", "phylum": "Chordata", "references":
+        "http://portal.vertnet.org/o/cas/su?id=urn-catalog-cas-su-ich-37970", "haslength":
+        "0", "isarch": "0", "wasinvasive": "0", "wascaptive": "0", "specificepithet":
+        "clarki", "continent": "North America", "recordedby": "Calhoun, A. J.", "hasmass":
+        "0", "vntype": "specimen", "family": "Salmonidae", "title": "CAS Ichthyology
+        (ICH)", "orgname": "California Academy of Sciences", "hasmedia": "0", "institutioncode":
+        "CAS", "eventremarks": "Summer of 1940.", "orgstateprovince": "California",
+        "habitat": "freshwater", "networks": "FishNet,VertNet", "contact": "David
+        Catania", "lastindexed": "2019-08-04", "migrator": "no migrator", "hastissue":
+        "0", "email": "dcatania@calacademy.org", "highergeography": "North America|United
+        States|California|Alpine County|Upper Blue Lake", "kingdom": "Animalia", "citation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "orgcountry": "United States", "source_url":
+        "http://ipt.calacademy.org:8080/ipt/resource.do?r=ich", "dctype": "PhysicalObject",
+        "iptrecordid": "urn:catalog:CAS:SU (ICH):37970", "icode": "CAS", "scientificname":
+        "Oncorhynchus clarki henshawi", "preparations": "alc-75% EtOH", "gbifpublisherid":
+        "66522820-055c-11d8-b84e-b8a03c50a862", "hashid": "5745", "class": "Actinopteri",
+        "keyname": "cas/su/urn-catalog-cas-su-ich-37970", "isfossil": "0", "hassex":
+        "0", "occurrenceid": "urn:catalog:CAS:SU (ICH):37970", "language": "en", "license":
+        "CC0", "country": "United States", "mappable": "0", "basisofrecord": "PreservedSpecimen",
+        "modified": "2013-06-28 00:00:00.0", "identifiedby": "Calhoun, A. J.", "nomenclaturalcode":
+        "ICZN", "haslicense": "1", "fieldnumber": "AJC 1940", "bibliographiccitation":
+        "California Academy of Sciences. CAS Ichthyology (ICH). Record ID: urn:catalog:CAS:SU
+        (ICH):37970. Source: http://ipt.calacademy.org:8080/ipt/resource.do?r=ich
+        (source published on 2019-07-15)", "waterbody": "Upper Blue Lake", "genus":
+        "Oncorhynchus", "gbifdatasetid": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "order":
+        "Salmoniformes", "catalognumber": "37970", "collectioncode": "SU"}], "matching_records":
+        60, "api_version": "api.py 2017-11-24T12:16-03:00"}'
+  recorded_at: 2020-08-10 20:24:27 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
