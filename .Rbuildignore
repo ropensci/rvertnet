@@ -18,3 +18,4 @@ appveyor.yml
 revdep/checks.noindex
 revdep/data.sqlite
 revdep/library.noindex
+^LICENSE\.md$
