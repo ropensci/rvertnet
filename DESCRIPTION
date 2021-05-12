@@ -5,7 +5,7 @@ Description: Retrieve, map and summarize data from the 'VertNet.org'
     parameters, including 'taxonomic' names, places, and dates. In addition, 
     there is an interface for conducting spatially delimited searches, and 
     another for requesting large 'datasets' via email.
-Version: 0.8.1.91
+Version: 0.8.2
 Authors@R: c(
     person("Scott", "Chamberlain",
         role = c("aut", "cre"),
@@ -17,9 +17,8 @@ Authors@R: c(
 License: MIT + file LICENSE
 LazyData: true
 URL: https://github.com/ropensci/rvertnet (devel)
-    https://docs.ropensci.org/rvertnet (documentation)
+    https://docs.ropensci.org/rvertnet/ (documentation)
 BugReports: https://github.com/ropensci/rvertnet/issues
-VignetteBuilder: knitr
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Imports:
@@ -31,7 +30,6 @@ Imports:
     maps
 Suggests:
     testthat,
-    knitr,
     vcr
 RoxygenNote: 7.1.1
 X-schema.org-applicationCategory: Data Access
