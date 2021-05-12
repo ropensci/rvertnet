@@ -1,3 +1,10 @@
+rvernet 0.8.2
+===============
+
+### MINOR IMPROVEMENTS
+
+* vignette fix
+
 rvertnet 0.8.0
 ===============
 

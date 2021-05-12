@@ -10,14 +10,13 @@
   "codeRepository": "https://github.com/ropensci/rvertnet",
   "issueTracker": "https://github.com/ropensci/rvertnet/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.2 Patched (2020-01-25 r77715)",
+  "runtimePlatform": "R version 4.0.5 Patched (2021-03-31 r80136)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -52,18 +51,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=testthat"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "knitr",
-      "name": "knitr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=knitr"
     },
     {
       "@type": "SoftwareApplication",
@@ -120,6 +107,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "identifier": "tibble",
+      "name": "tibble",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=tibble"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "ggplot2",
       "name": "ggplot2",
       "provider": {
@@ -143,10 +142,10 @@
       "sameAs": "https://CRAN.R-project.org/package=maps"
     }
   ],
-  "contIntegration": ["https://travis-ci.org/ropensci/rvertnet", "https://ci.appveyor.com/project/sckott/rvertnet", "https://codecov.io/github/ropensci/rvertnet?branch=master"],
+  "contIntegration": "https://codecov.io/github/ropensci/rvertnet?branch=master",
   "releaseNotes": "https://github.com/ropensci/rvertnet/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rvertnet/blob/master/README.md",
-  "fileSize": "745.142KB",
+  "fileSize": "6686.76KB",
   "contributor": [
     {
       "@type": "Person",
@@ -162,7 +161,7 @@
   "applicationCategory": "DataAccess",
   "isPartOf": "\"https://ropensci.org\"",
   "keywords": ["species", "occurrences", "biodiversity", "maps", "vertnet", "mammals", "mammalia", "specimens", "api-wrapper", "specimen", "rstats", "r", "spocc", "r-package"],
-  "relatedLink": "https://docs.ropensci.org/rvertnet",
+  "relatedLink": ["https://docs.ropensci.org/rvertnet", "https://docs.ropensci.org/rvertnet/"],
   "copyrightHolder": {},
   "funder": {},
   "developmentStatus": "https://www.repostatus.org/#active"
