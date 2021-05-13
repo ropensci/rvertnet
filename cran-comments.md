@@ -14,7 +14,7 @@
 
 --------
 
-This version fixes a vignette issue.
+This version fixes a vignette issue, and remove LazyData in DESCRIPTION.
 
 Sincerely,
 Scott Chamberlain

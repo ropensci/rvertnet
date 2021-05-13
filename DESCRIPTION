@@ -15,7 +15,6 @@ Authors@R: c(
     person("Vijay", "Barve", role = "ctb")
     )
 License: MIT + file LICENSE
-LazyData: true
 URL: https://github.com/ropensci/rvertnet (devel)
     https://docs.ropensci.org/rvertnet/ (documentation)
 BugReports: https://github.com/ropensci/rvertnet/issues
