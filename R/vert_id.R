@@ -3,15 +3,14 @@
 #' @export
 #' @param ids (character) VertNet IDs, one or more. Required.
 #' @param compact (logical) Return a compact data frame. That is, remove
-#' empty columns. Default: \code{TRUE}
+#' empty columns. Default: `TRUE`
 #' @param messages (logical) Print progress and information messages. 
-#' Default: \code{TRUE}
-#' @param ... Curl arguments passed on to \code{\link[crul]{HttpClient}}
+#' Default: `TRUE`
+#' @param ... Curl arguments passed on to [crul::HttpClient]
 #'
 #' @return A list, with data frame of search results, and list of metadata
-#' @references \url{http://bit.ly/vertnet-wiki}
 #' @details VertNet IDs can be a variety of things, some URIs 
-#' (i.e., with http://...), while others start with \code{urn}.
+#' (i.e., with http://...), while others start with `urn`.
 #' 
 #' Internally in this function we filter data to darwin core terms only. To 
 #' see what terms we use, do 

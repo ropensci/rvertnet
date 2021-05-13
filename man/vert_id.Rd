@@ -15,7 +15,7 @@ empty columns. Default: \code{TRUE}}
 \item{messages}{(logical) Print progress and information messages.
 Default: \code{TRUE}}
 
-\item{...}{Curl arguments passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl arguments passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \value{
 A list, with data frame of search results, and list of metadata
@@ -49,7 +49,4 @@ out <- vertsearch(taxon = "aves", state = "california", limit = 5)
 res <- vert_id(ids)
 identical(sort(res$data$occurrenceid), sort(ids))
 }
-}
-\references{
-\url{http://bit.ly/vertnet-wiki}
 }
