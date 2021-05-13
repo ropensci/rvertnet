@@ -145,7 +145,7 @@
   "contIntegration": "https://codecov.io/github/ropensci/rvertnet?branch=master",
   "releaseNotes": "https://github.com/ropensci/rvertnet/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rvertnet/blob/master/README.md",
-  "fileSize": "6686.76KB",
+  "fileSize": "6686.632KB",
   "contributor": [
     {
       "@type": "Person",
@@ -161,7 +161,10 @@
   "applicationCategory": "DataAccess",
   "isPartOf": "\"https://ropensci.org\"",
   "keywords": ["species", "occurrences", "biodiversity", "maps", "vertnet", "mammals", "mammalia", "specimens", "api-wrapper", "specimen", "rstats", "r", "spocc", "r-package"],
-  "relatedLink": ["https://docs.ropensci.org/rvertnet", "https://docs.ropensci.org/rvertnet/"],
+  "relatedLink": [
+    "https://docs.ropensci.org/rvertnet",
+    "https://docs.ropensci.org/rvertnet/"
+  ],
   "copyrightHolder": {},
   "funder": {},
   "developmentStatus": "https://www.repostatus.org/#active"
