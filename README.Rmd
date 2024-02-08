@@ -139,6 +139,7 @@ res$data[,1:5]
 
 ## Contributors
 
+* Dave Slager [@slager](https://github.com/slager)
 * Scott Chamberlain [@sckott](https://github.com/sckott)
 * Chris Ray [@Pika8tona](https://github.com/Pika8tona)
 * Vijay Barve [@vijaybarve](https://github.com/vijaybarve)
