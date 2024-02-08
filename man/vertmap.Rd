@@ -64,8 +64,7 @@ vertmap(input = spec, mapdatabase = "state", region = "california")
 splist <- c("Accipiter erythronemius", "Aix sponsa", "Haliaeetus leucocephalus",
 		"Corvus corone", "Threskiornis molucca", "Merops malimbicus")
 out <- lapply(splist, function(x) vertsearch(t=x, lim=100))
-library("plyr")
-out <- ldply(lapply(out, "[[", "data"))
+out <- dplyr::bind_rows(lapply(out, "[[", "data"))
 vertmap(out)
 ## jitter points
 library("ggplot2")
