@@ -16,7 +16,7 @@ test:
 	${RSCRIPT} -e 'library(methods); devtools::test()'
 
 eg:
-	${RSCRIPT} -e 'library(methods); devtools::run_examples(run=TRUE)'
+	${RSCRIPT} -e 'library(methods); devtools::run_examples(run_dontrun=TRUE)'
 
 doc:
 	@mkdir -p man
