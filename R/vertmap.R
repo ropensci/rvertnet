@@ -52,7 +52,7 @@
 vertmap <- function(input = NULL, mapdatabase = "world", region = ".", 
                     geom = geom_point, jitter = NULL) {
 
-  if (!class(input) %in% c("list", "data.frame")) {
+  if (!inherits(input, c("list", "data.frame"))) {
     stop("Input must be of class list or data.frame", call. = FALSE)
   }
 	

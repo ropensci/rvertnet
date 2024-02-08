@@ -3,7 +3,7 @@ sw <- function(x) suppressWarnings(x)
 
 vertsumwrapper <- function(input = NULL, verbose = TRUE){
   
-  if (!class(input) %in% c("list", "data.frame")) {
+  if (!inherits(input, c("list", "data.frame"))) {
     stop("Input must be of class list or data.frame", call. = FALSE)
   }
   if (inherits(input, "list"))  input <- input$data
