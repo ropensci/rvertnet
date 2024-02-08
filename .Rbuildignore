@@ -21,3 +21,4 @@ revdep/library.noindex
 ^LICENSE\.md$
 ^\.github$
 ^README\.Rmd$
+^codecov\.yml$
