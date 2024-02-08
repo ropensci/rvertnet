@@ -1,58 +1,60 @@
-rvertnet
-=======
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# rvertnet
 
-[![cran checks](https://cranchecks.info/badges/worst/rvertnet)](https://cranchecks.info/pkgs/rvertnet)
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![R-check](https://github.com/ropensci/rvertnet/workflows/R-check/badge.svg)](https://github.com/ropensci/rvertnet/actions?query=workflow%3AR-check)
+<!-- badges: start -->
+
+[![Project Status: Active – The project has reached a stable, usable
+state and is being actively
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![R-CMD-check](https://github.com/ropensci/rvertnet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/rvertnet/actions/workflows/R-CMD-check.yaml)
 [![codecov.io](https://codecov.io/github/ropensci/rvertnet/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rvertnet?branch=master)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rvertnet)](https://github.com/r-hub/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/rvertnet)](https://cran.r-project.org/package=rvertnet)
+[![rstudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/rvertnet)](https://github.com/r-hub/cranlogs.app)
+[![cran
+version](https://www.r-pkg.org/badges/version/rvertnet)](https://cran.r-project.org/package=rvertnet)
+<!-- badges: end -->
 
+`rvertnet` is a client for interacting with
+[VertNet.org](http://vertnet.org/).
 
-`rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
-
-VertNet.org API docs: <https://github.com/VertNet/webapp/wiki/The-API-search-function>
+VertNet.org API docs:
+<https://github.com/VertNet/webapp/wiki/The-API-search-function>
 
 ## Installation
 
 Stable CRAN version
 
-
-```r
+``` r
 install.packages("rvertnet")
 ```
 
 Or development version from GitHub
 
-
-```r
+``` r
 remotes::install_github("ropensci/rvertnet")
 ```
 
-
-```r
+``` r
 library('rvertnet')
 ```
 
 ## Search by term
 
-Search for _Aves_ in the state of _California_, limit to 10 records
+Search for *Aves* in the state of *California*, limit to 10 records
 
-
-```r
+``` r
 res <- searchbyterm(class = "Aves", stateprovince = "California",
     limit = 10, messages = FALSE)
 ```
 
 Inspect metadata
 
-
-```r
+``` r
 res$meta
 #> $request_date
-#> [1] "2021-05-12T23:08:19.676358"
+#> [1] "2024-02-08T07:10:28.052374"
 #> 
 #> $response_records
 #> [1] 10
@@ -61,13 +63,13 @@ res$meta
 #> [1] "class:Aves stateprovince:California"
 #> 
 #> $request_origin
-#> [1] "45.505106,-122.675026"
+#> [1] "47.606139,-122.332848"
 #> 
 #> $limit
 #> [1] 10
 #> 
 #> $last_cursor
-#> [1] "False:Cq8FCooDCtwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD_c3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyejNCQjZHQio2R0pyei56TkJjSnJ6M0pCNkdLOz8_Ozv8Ac3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJqvR3VAbTv8MQA2Cl4NG4AhINRG9jdW1lbnRJbmRleBruAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKE9SIChRVCAiQXZlcyIgInJ0ZXh0X2NsYXNzIikgKElTICJyYXRvbV9jbGFzcyIgImF2ZXMiKSkgKFFUICJDYWxpZm9ybmlhIiAicnRleHRfc3RhdGVwcm92aW5jZSIpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH"
+#> [1] "False:Cq8FCooDCtwC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD_c3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AAD__wD-__6MgYmajYuRmovSj5CNi56T3paRm5qH0s3PzszSz8fSz8f_AHRtoKCZi4ygoP8AXZ6Pj5qRmJaRmv8Ac3RtlpGbmof_AF2biJz_AHN0bZuQnKCWm_8AXZyejNCQjZHQio2R0pyei56TkJjSnJ6M0pCNkdLOz8_Ozv8Ac3-cnozQkI2R0IqNkdKcnouek5CY0pyejNKQjZHSzs_Pzs7_AP_-EAohBN0EkB08Gxk5AAAAAOb___9IClAAWgsJqfRpY40nh9IQA2CyhJ7UBRINRG9jdW1lbnRJbmRleBruAShBTkQgKElTICJjdXN0b21lcl9uYW1lIiAiYXBwZW5naW5lIikgKElTICJncm91cF9uYW1lIiAic352ZXJ0bmV0LXBvcnRhbCIpIChJUyAibmFtZXNwYWNlIiAiaW5kZXgtMjAxMy0wOC0wOCIpIChJUyAiaW5kZXhfbmFtZSIgImR3YyIpIChBTkQgKE9SIChRVCAiQXZlcyIgInJ0ZXh0X2NsYXNzIikgKElTICJyYXRvbV9jbGFzcyIgImF2ZXMiKSkgKFFUICJDYWxpZm9ybmlhIiAicnRleHRfc3RhdGVwcm92aW5jZSIpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH"
 #> 
 #> $query_version
 #> [1] "search.py 2016-08-15T16:43+02:00"
@@ -79,12 +81,12 @@ res$meta
 #> [1] "api.py 2017-11-24T12:16-03:00"
 ```
 
-Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data summary:
+Inspect data. A `dplyr` data.frame is given back, so you get a nice
+brief data summary:
 
-
-```r
+``` r
 res$data[,1:5]
-#> # A tibble: 10 x 5
+#> # A tibble: 10 × 5
 #>    higherclassification       stateprovince basisofrecord month decimallongitude
 #>    <chr>                      <chr>         <chr>         <chr> <chr>           
 #>  1 Animalia | Chordata |  | … California    PreservedSpe… 2     -121.7833       
@@ -99,15 +101,15 @@ res$data[,1:5]
 #> 10 Animalia; Chordata; Aves;… California    PreservedSpe… 6     -121.85760
 ```
 
-Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
+Search for *Mustela nigripes* in the states of *Wyoming* or *South
+Dakota*, limit to 20 records
 
-
-```r
+``` r
 res <- searchbyterm(specificepithet = "nigripes",
     stateprovince = "(wyoming OR south dakota)", 
     limit = 20, messages = FALSE)
 res$data[,1:5]
-#> # A tibble: 20 x 5
+#> # A tibble: 20 × 5
 #>    month decimallongitude startdayofyear accessrights                    kingdom
 #>    <chr> <chr>            <chr>          <chr>                           <chr>  
 #>  1 12    -100.8276541162  336            http://vertnet.org/resources/n… Animal…
@@ -134,10 +136,10 @@ res$data[,1:5]
 
 ### dplyr downstream
 
-You can pass the data object directly on to `dplyr` functions. Here, we get a table of record counts by species in descending order.
+You can pass the data object directly on to `dplyr` functions. Here, we
+get a table of record counts by species in descending order.
 
-
-```r
+``` r
 library("dplyr")
 out <- searchbyterm(genus = "Ochotona", limit = 800)
 out$data %>%
@@ -169,13 +171,13 @@ out$data %>%
 #> 20 Ochotona princeps ventorum          1
 ```
 
-
 ## Big data
 
-Specifies a termwise search (like `searchbyterm()`), but requests that all available records be made available for download as a tab-delimited text file.
+Specifies a termwise search (like `searchbyterm()`), but requests that
+all available records be made available for download as a tab-delimited
+text file.
 
-
-```r
+``` r
 bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
 #> Processing request...
 #>
@@ -188,35 +190,38 @@ bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
 
 ## Spatial search
 
-
-```r
+``` r
 res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000,
     limit = 10, messages = FALSE)
 res$data[,1:5]
-#> # A tibble: 10 x 5
-#>    month decimallongitude startdayofyear minimumelevationin… accessrights       
-#>    <chr> <chr>            <chr>          <chr>               <chr>              
-#>  1 07    -105.68633       193            2182.368            http://vertnet.org…
-#>  2 07    -105.705479      196            2023.872            http://vertnet.org…
-#>  3 07    -105.705479      196            2023.872            http://vertnet.org…
-#>  4 07    -105.705479      196            2023.872            http://vertnet.org…
-#>  5 07    -105.705479      196            2023.872            http://vertnet.org…
-#>  6 07    -105.705479      196            2023.872            http://vertnet.org…
-#>  7 07    -105.705479      196            2023.872            http://vertnet.org…
-#>  8 07    -105.705479      196            2023.872            http://vertnet.org…
-#>  9 07    -105.705479      196            2023.872            http://vertnet.org…
-#> 10 07    -105.705479      196            2023.872            http://vertnet.org…
+#> # A tibble: 10 × 5
+#>    month decimallongitude startdayofyear minimumelevationinmeters accessrights  
+#>    <chr> <chr>            <chr>          <chr>                    <chr>         
+#>  1 07    -105.68633       193            2182.368                 http://vertne…
+#>  2 07    -105.705479      196            2023.872                 http://vertne…
+#>  3 07    -105.705479      196            2023.872                 http://vertne…
+#>  4 07    -105.705479      196            2023.872                 http://vertne…
+#>  5 07    -105.705479      196            2023.872                 http://vertne…
+#>  6 07    -105.705479      196            2023.872                 http://vertne…
+#>  7 07    -105.705479      196            2023.872                 http://vertne…
+#>  8 07    -105.705479      196            2023.872                 http://vertne…
+#>  9 07    -105.705479      196            2023.872                 http://vertne…
+#> 10 07    -105.705479      196            2023.872                 http://vertne…
 ```
 
 ## Contributors
 
-* Scott Chamberlain [@sckott](https://github.com/sckott)
-* Chris Ray [@Pika8tona](https://github.com/Pika8tona)
-* Vijay Barve [@vijaybarve](https://github.com/vijaybarve)
+- Scott Chamberlain [@sckott](https://github.com/sckott)
+- Chris Ray [@Pika8tona](https://github.com/Pika8tona)
+- Vijay Barve [@vijaybarve](https://github.com/vijaybarve)
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropensci/rvertnet/issues).
-* License: MIT
-* Get citation information for `rvertnet` in R doing `citation(package = 'rvertnet')`
-* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
+- Please [report any issues or
+  bugs](https://github.com/ropensci/rvertnet/issues).
+- License: MIT
+- Get citation information for `rvertnet` in R doing
+  `citation(package = 'rvertnet')`
+- Please note that this package is released with a [Contributor Code of
+  Conduct](https://ropensci.org/code-of-conduct/). By contributing to
+  this project, you agree to abide by its terms.

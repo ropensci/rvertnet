@@ -1,22 +1,29 @@
-rvertnet
-=======
+---
+output: github_document
+---
 
-```{r echo=FALSE}
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   warning = FALSE,
   message = FALSE,
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
 )
 ```
 
-[![cran checks](https://cranchecks.info/badges/worst/rvertnet)](https://cranchecks.info/pkgs/rvertnet)
+# rvertnet
+
+<!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![R-check](https://github.com/ropensci/rvertnet/workflows/R-check/badge.svg)](https://github.com/ropensci/rvertnet/actions?query=workflow%3AR-check)
+[![R-CMD-check](https://github.com/ropensci/rvertnet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/rvertnet/actions/workflows/R-CMD-check.yaml)
 [![codecov.io](https://codecov.io/github/ropensci/rvertnet/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rvertnet?branch=master)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rvertnet)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rvertnet)](https://cran.r-project.org/package=rvertnet)
-
+<!-- badges: end -->
 
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
