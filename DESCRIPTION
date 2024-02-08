@@ -7,13 +7,13 @@ Description: Retrieve, map and summarize data from the 'VertNet.org'
     another for requesting large 'datasets' via email.
 Version: 0.8.2.9000
 Authors@R: c(
-    person("Scott", "Chamberlain",
-        role = c("aut", "cre"),
-        email = "myrmecocystus@gmail.com",
-        comment = c("0000-0003-1444-9135")),
+    person("Scott", "Chamberlain", email = "myrmecocystus@gmail.com",
+      role = "aut", comment = "0000-0003-1444-9135"),
     person("Chris", "Ray", role = "ctb"),
-    person("Vijay", "Barve", role = "ctb")
-    )
+    person("Vijay", "Barve", role = "ctb"),
+    person("Dave", "Slager", email = "slager@users.noreply.github.com",
+      role = c("aut", "cre"))
+  )
 License: MIT + file LICENSE
 URL: https://github.com/ropensci/rvertnet (devel)
     https://docs.ropensci.org/rvertnet/ (documentation)
