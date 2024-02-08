@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      User-Agent: libcurl/7.81.0 r-curl/5.2.0 crul/1.4.0
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -19,16 +19,19 @@ http_interactions:
       cache-control: no-cache
       content-type: application/json
       charset: utf-8
-      x-cloud-trace-context: 709f3ec4a0e99fd5d86d49ea7142dabd
-      date: Wed, 29 Jan 2020 16:52:07 GMT
+      set-cookie: _eauth=eyJ1c2VyX2lkIjpudWxsLCJzZXNzaW9uX2lkIjoiZXliR01tZkoxRWdMTFFWODlpQVhwTCJ9|1707379040|00813683ef3146e853e669ae36a51c2ec6da4244;
+        Path=/
+      x-cloud-trace-context: cf7fc693092ef29ce03b9af2d7a35dd6
+      date: Thu, 08 Feb 2024 07:57:20 GMT
       server: Google Frontend
       content-length: '11356'
+      expires: Thu, 08 Feb 2024 07:57:20 GMT
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"request_date": "2020-01-29T16:52:07.908139", "response_records":
+      string: '{"request_date": "2024-02-08T07:57:20.658986", "response_records":
         2, "submitted_query": "iptrecordid:\"http://arctos.database.museum/guid/MSB:Mamm:56979?seid=1643089\"
-        OR \"urn:catalog:CM:Herps:116520\"", "request_origin": "45.505106,-122.675026",
+        OR \"urn:catalog:CM:Herps:116520\"", "request_origin": "47.606139,-122.332848",
         "limit": 400, "cursor": null, "query_version": "search.py 2016-08-15T16:43+02:00",
         "recs": [{"haslifestage": "0", "month": "8", "decimallongitude": "-104.19",
         "startdayofyear": "216", "networks": "HerpNET,VertNet", "vntype": "specimen",
@@ -163,5 +166,5 @@ http_interactions:
         "ICZN", "keyname": "msb/mammal-specimens/http-arctos-database-museum-guid-msb-mamm-56979-seid-1643089",
         "order": "Rodentia", "enddayofyear": "239"}], "matching_records": 2, "api_version":
         "api.py 2017-11-24T12:16-03:00"}'
-  recorded_at: 2020-01-29 16:52:08 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+  recorded_at: 2024-02-08 07:58:51 GMT
+  recorded_with: vcr/1.2.2, webmockr/0.9.0

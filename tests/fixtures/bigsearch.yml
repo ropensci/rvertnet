@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      User-Agent: libcurl/7.81.0 r-curl/5.2.0 crul/1.4.0
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -18,13 +18,16 @@ http_interactions:
       status: HTTP/1.1 200 OK
       content-type: text/html; charset=utf-8
       cache-control: no-cache
-      x-cloud-trace-context: 3ea5338098e843d315bc875d83eaca20
-      date: Wed, 29 Jan 2020 16:43:39 GMT
+      set-cookie: _eauth=eyJ1c2VyX2lkIjpudWxsLCJzZXNzaW9uX2lkIjoiQ0FqTXYzYml2NVBUQ1NqdWFrNmoxUiJ9|1707378996|81466e235588da863fac28f0985b001bf4bb6f34;
+        Path=/
+      x-cloud-trace-context: 81a9a7bfc80e099a0976cee1ead630b1;o=1
+      date: Thu, 08 Feb 2024 07:56:36 GMT
       server: Google Frontend
       content-length: '0'
+      expires: Thu, 08 Feb 2024 07:56:36 GMT
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: ''
-  recorded_at: 2020-01-29 16:43:39 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+  recorded_at: 2024-02-08 07:58:06 GMT
+  recorded_with: vcr/1.2.2, webmockr/0.9.0

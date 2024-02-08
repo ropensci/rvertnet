@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      User-Agent: libcurl/7.81.0 r-curl/5.2.0 crul/1.4.0
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -19,16 +19,19 @@ http_interactions:
       cache-control: no-cache
       content-type: application/json
       charset: utf-8
-      x-cloud-trace-context: 052d6d9a994e63b087def9de2e579cdc;o=1
-      date: Wed, 29 Jan 2020 16:47:48 GMT
+      set-cookie: _eauth=eyJ1c2VyX2lkIjpudWxsLCJzZXNzaW9uX2lkIjoiY21Jdmo2a2pnVnJGS2pEam42YndXQSJ9|1707379009|8447d7cbf3c5347a0b8b0c30d693f1ad5c98b032;
+        Path=/
+      x-cloud-trace-context: f166e8822bdff9c27411931548d56ed3;o=1
+      date: Thu, 08 Feb 2024 07:56:50 GMT
       server: Google Frontend
       content-length: '787561'
+      expires: Thu, 08 Feb 2024 07:56:50 GMT
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"request_date": "2020-01-29T16:47:48.493871", "response_records":
+      string: '{"request_date": "2024-02-08T07:56:49.809244", "response_records":
         149, "submitted_query": "genus:zapus specificepithet:hudsonius stateprovince:(minnesota
-        OR new mexico)", "request_origin": "45.505106,-122.675026", "limit": 1000,
+        OR new mexico)", "request_origin": "47.606139,-122.332848", "limit": 1000,
         "cursor": null, "query_version": "search.py 2016-08-15T16:43+02:00", "recs":
         [{"haslifestage": "0", "month": "07", "decimallongitude": "-104.3910598",
         "isarch": "0", "startdayofyear": "193", "minimumelevationinmeters": "2404",
@@ -9372,8 +9375,8 @@ http_interactions:
         "5df38344-b821-49c2-8174-cf0f29f4df0d-Mammals", "order": "Rodentia", "catalognumber":
         "59732", "collectioncode": "Mammals"}], "matching_records": 149, "api_version":
         "api.py 2017-11-24T12:16-03:00"}'
-  recorded_at: 2020-01-29 16:48:02 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+  recorded_at: 2024-02-08 07:58:25 GMT
+  recorded_with: vcr/1.2.2, webmockr/0.9.0
 - request:
     method: get
     uri: http://api.vertnet-portal.appspot.com/api/search?q=%7B%22q%22%3A%22genus%3AUrsus%20stateprovince%3A%28california%20OR%20florida%29%22%2C%22l%22%3A5%7D
@@ -9381,7 +9384,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      User-Agent: libcurl/7.81.0 r-curl/5.2.0 crul/1.4.0
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -9394,16 +9397,19 @@ http_interactions:
       cache-control: no-cache
       content-type: application/json
       charset: utf-8
-      x-cloud-trace-context: 7010c02c12c65f916ed4c59c69e724f5;o=1
-      date: Wed, 29 Jan 2020 16:48:02 GMT
+      set-cookie: _eauth=eyJ1c2VyX2lkIjpudWxsLCJzZXNzaW9uX2lkIjoiSVJzeFdTRkY0NzN4c0dsRnlyOTI2UyJ9|1707379015|240e8b6b4f09b2e72997c105ef734d56700b98ab;
+        Path=/
+      x-cloud-trace-context: 515e32a02da2b7faaa2492df141327e5
+      date: Thu, 08 Feb 2024 07:56:55 GMT
       server: Google Frontend
       content-length: '15922'
+      expires: Thu, 08 Feb 2024 07:56:55 GMT
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"request_date": "2020-01-29T16:48:02.657872", "response_records":
+      string: '{"request_date": "2024-02-08T07:56:55.134691", "response_records":
         5, "submitted_query": "genus:Ursus stateprovince:(california OR florida)",
-        "request_origin": "45.505106,-122.675026", "limit": 5, "cursor": "False:CtMFCoIDCtQC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQkp6S0IqNkdKcnouek5CY0pyejNKSnpLSzcrI_wAA_3N_nJ6M0JKektCKjZHSnJ6LnpOQmNKcnozSkp6S0s3KyP8AAP__AP7__oyBiZqNi5Gai9KPkI2LnpPelpGbmofSzc_OzNLPx9LPx_8AdG2goJmLjKCg_wBdno-PmpGYlpGa_wBzdG2WkZuah_8AXZuInP8Ac3Rtm5CcoJab_wBdnJ6M0JKektCKjZHSnJ6LnpOQmNKcnozSkp6S0s3KyP8Ac3-cnozQkp6S0IqNkdKcnouek5CY0pyejNKSnpLSzcrI_wD__hAFIdteL9GbJNTJOQAAAADm____SAVQAFoLCdjIok2KXe7SEANg9sTFhAQSDURvY3VtZW50SW5kZXgamgIoQU5EIChJUyAiY3VzdG9tZXJfbmFtZSIgImFwcGVuZ2luZSIpIChJUyAiZ3JvdXBfbmFtZSIgInN-dmVydG5ldC1wb3J0YWwiKSAoSVMgIm5hbWVzcGFjZSIgImluZGV4LTIwMTMtMDgtMDgiKSAoSVMgImluZGV4X25hbWUiICJkd2MiKSAoQU5EIChPUiAoUVQgIlVyc3VzIiAicnRleHRfZ2VudXMiKSAoSVMgInJhdG9tX2dlbnVzIiAidXJzdXMiKSkgKE9SIChRVCAiY2FsaWZvcm5pYSIgInJ0ZXh0X3N0YXRlcHJvdmluY2UiKSAoUVQgImZsb3JpZGEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH",
+        "request_origin": "47.606139,-122.332848", "limit": 5, "cursor": "False:CtMFCoIDCtQC9wAAABn_____jIGJmo2LkZqL0o-QjYuek96WkZuah9LNz87M0s_H0s_H_wAA_3RtoKCZi4ygoP8AAP9dno-PmpGYlpGa_wAA_3N0bZaRm5qH_wAA_12biJz_AAD_c3Rtm5CcoJab_wAA_12cnozQkp6S0IqNkdKcnouek5CY0pyejNKSnpLSzcrI_wAA_3N_nJ6M0JKektCKjZHSnJ6LnpOQmNKcnozSkp6S0s3KyP8AAP__AP7__oyBiZqNi5Gai9KPkI2LnpPelpGbmofSzc_OzNLPx9LPx_8AdG2goJmLjKCg_wBdno-PmpGYlpGa_wBzdG2WkZuah_8AXZuInP8Ac3Rtm5CcoJab_wBdnJ6M0JKektCKjZHSnJ6LnpOQmNKcnozSkp6S0s3KyP8Ac3-cnozQkp6S0IqNkdKcnouek5CY0pyejNKSnpLSzcrI_wD__hAFIQTdBJAdPBsZOQAAAADm____SAVQAFoLCdfIlFwRsrXhEANg5ubxxAQSDURvY3VtZW50SW5kZXgamgIoQU5EIChJUyAiY3VzdG9tZXJfbmFtZSIgImFwcGVuZ2luZSIpIChJUyAiZ3JvdXBfbmFtZSIgInN-dmVydG5ldC1wb3J0YWwiKSAoSVMgIm5hbWVzcGFjZSIgImluZGV4LTIwMTMtMDgtMDgiKSAoSVMgImluZGV4X25hbWUiICJkd2MiKSAoQU5EIChPUiAoUVQgIlVyc3VzIiAicnRleHRfZ2VudXMiKSAoSVMgInJhdG9tX2dlbnVzIiAidXJzdXMiKSkgKE9SIChRVCAiY2FsaWZvcm5pYSIgInJ0ZXh0X3N0YXRlcHJvdmluY2UiKSAoUVQgImZsb3JpZGEiICJydGV4dF9zdGF0ZXByb3ZpbmNlIikpKSk6GQoMKE4gb3JkZXJfaWQpEAEZAAAAAAAA8P9KBQgAQOgH",
         "query_version": "search.py 2016-08-15T16:43+02:00", "recs": [{"haslifestage":
         "1", "georeferenceprotocol": "MaNIS georeferencing guidelines", "higherclassification":
         "Animalia; Chordata; Mammalia; Carnivora; Ursidae", "pubdate": "2019-07-23",
@@ -9580,5 +9586,5 @@ http_interactions:
         "genus": "Ursus", "gbifdatasetid": "6ce7290f-47f6-4046-8356-371f5b6749df",
         "order": "Carnivora", "catalognumber": "257", "enddayofyear": "191"}], "matching_records":
         1060, "api_version": "api.py 2017-11-24T12:16-03:00"}'
-  recorded_at: 2020-01-29 16:48:02 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+  recorded_at: 2024-02-08 07:58:25 GMT
+  recorded_with: vcr/1.2.2, webmockr/0.9.0

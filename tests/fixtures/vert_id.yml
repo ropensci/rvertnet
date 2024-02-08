@@ -6,7 +6,7 @@ http_interactions:
       encoding: ''
       string: ''
     headers:
-      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      User-Agent: libcurl/7.81.0 r-curl/5.2.0 crul/1.4.0
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
   response:
@@ -19,16 +19,19 @@ http_interactions:
       cache-control: no-cache
       content-type: application/json
       charset: utf-8
-      x-cloud-trace-context: a90fdc3654cda9f6c7ad2262da20766b
-      date: Wed, 29 Jan 2020 16:51:58 GMT
+      set-cookie: _eauth=eyJ1c2VyX2lkIjpudWxsLCJzZXNzaW9uX2lkIjoiSU9oVlpKeE9Keml0c2RvcDUxRXp5ViJ9|1707379031|9236e8e569c2817fa0b98171256ea05ba4ea74e1;
+        Path=/
+      x-cloud-trace-context: b33f18d640d4279a3bbf1114f675bbe7;o=1
+      date: Thu, 08 Feb 2024 07:57:11 GMT
       server: Google Frontend
       content-length: '4311'
+      expires: Thu, 08 Feb 2024 07:57:11 GMT
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"request_date": "2020-01-29T16:51:58.788949", "response_records":
+      string: '{"request_date": "2024-02-08T07:57:11.793390", "response_records":
         1, "submitted_query": "iptrecordid:\"urn:catalog:CM:Herps:116520\"", "request_origin":
-        "45.505106,-122.675026", "limit": 400, "cursor": null, "query_version": "search.py
+        "47.606139,-122.332848", "limit": 400, "cursor": null, "query_version": "search.py
         2016-08-15T16:43+02:00", "recs": [{"haslifestage": "0", "month": "8", "decimallongitude":
         "-104.19", "startdayofyear": "216", "networks": "HerpNET,VertNet", "vntype":
         "specimen", "title": "CM Herps Collection", "accessrights": "http://vertnet.org/resources/norms.html",
@@ -79,5 +82,5 @@ http_interactions:
         "32.23", "mappable": "1", "nomenclaturalcode": "ICZN", "contact": "Stephen
         Rogers", "order": "Anura", "enddayofyear": "216"}], "matching_records": 1,
         "api_version": "api.py 2017-11-24T12:16-03:00"}'
-  recorded_at: 2020-01-29 16:51:58 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+  recorded_at: 2024-02-08 07:58:42 GMT
+  recorded_with: vcr/1.2.2, webmockr/0.9.0
