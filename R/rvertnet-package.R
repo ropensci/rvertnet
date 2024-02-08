@@ -48,8 +48,6 @@
 #' geom_point labs theme_bw map_data
 #' @importFrom utils URLdecode
 #' @import maps
-#' @name rvertnet-package
 #' @aliases rvertnet
-#' @docType package
 #' @keywords package
-NULL
+'_PACKAGE'
