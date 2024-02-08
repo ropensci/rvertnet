@@ -90,7 +90,7 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".",
   if (name) { 
     # Color record locations by scientificname
     ggplot(basemap, aes(long, lat)) + # Plot using lat/long of base map
-      geom_polygon(aes(group = group), fill = "white", color = "gray40", size = 0.2) +
+      geom_polygon(aes(group = group), fill = "white", color = "gray40", linewidth = 0.2) +
 	    geom(data = tomap, aes(decimallongitude, decimallatitude, colour = scientificname),
         alpha = 0.4, size = 3, position = jitter) +
       labs(x = "Longitude (decimal degrees)", y = "Latitude") +
@@ -98,7 +98,7 @@ vertmap <- function(input = NULL, mapdatabase = "world", region = ".",
   } else { 
     # Do not distinguish record locations by color
     ggplot(basemap, aes(long, lat)) +
-      geom_polygon(aes(group = group), fill = "white", color = "gray40", size = 0.2) +
+      geom_polygon(aes(group = group), fill = "white", color = "gray40", linewidth = 0.2) +
       geom(data = tomap, aes(decimallongitude, decimallatitude),
          alpha = 0.4, size = 3, position = jitter) +
       labs(x = "Longitude (decimal degrees)", y = "Latitude") +
