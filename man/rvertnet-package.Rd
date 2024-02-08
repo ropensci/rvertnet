@@ -57,4 +57,27 @@ you haven't made any mistakes with the parameters, etc., then
 simply run the function call again.
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/ropensci/rvertnet (devel) https://docs.ropensci.org/rvertnet/ (documentation)}
+  \item Report bugs at \url{https://github.com/ropensci/rvertnet/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Dave Slager \email{slager@users.noreply.github.com}
+
+Authors:
+\itemize{
+  \item Scott Chamberlain \email{myrmecocystus@gmail.com} (0000-0003-1444-9135)
+}
+
+Other contributors:
+\itemize{
+  \item Chris Ray [contributor]
+  \item Vijay Barve [contributor]
+}
+
+}
 \keyword{package}
