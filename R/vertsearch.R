@@ -42,8 +42,7 @@
 #' # c) returns a non-specific result
 #' splist <- c("mustela nivalis", "mustela erminea")
 #' out <- lapply(splist, function(x) vertsearch(taxon = x, lim = 500))
-#' library("plyr")
-#' out <- ldply(lapply(out, "[[", "data"))
+#' out <- dplyr::bind_rows(lapply(out, "[[", "data"))
 #' vertmap(out)
 #' 
 #' # curl options
