@@ -1,8 +1,13 @@
-<!--
-%\VignetteEngine{knitr::knitr}
-%\VignetteIndexEntry{rvertnet introduction}
-%\VignetteEncoding{UTF-8}
--->
+---
+title: Introduction to rvertnet
+author: Scott Chamberlain
+date: "2020-01-28"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Introduction to rvertnet}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+---
 
 ```{r, eval=TRUE, echo=FALSE}
 knitr::opts_chunk$set(
@@ -12,9 +17,6 @@ knitr::opts_chunk$set(
   message = FALSE
 )
 ```
-
-rvertnet introduction
-=====================
 
 `rvertnet` is a client for interacting with [VertNet.org](http://vertnet.org/).
 
@@ -98,7 +100,7 @@ res$data
 
 Pass output of `vertsearch()` to a map
 
-```{r fig.width=8, fig.height=4}
+```{r, vertmap, fig.width=8, fig.height=4, fig.cap = ""}
 out <- vertsearch(tax = "(mustela nivalis OR mustela erminea)")
 vertmap(out)
 ```

@@ -1,16 +1,8 @@
 PACKAGE := $(shell grep '^Package:' DESCRIPTION | sed -E 's/^Package:[[:space:]]+//')
 RSCRIPT = Rscript --no-init-file
 
-all: move rmd2md
-
-move:
-	cd inst/vign;\
-	cp rvertnet.md ../../vignettes;\
-	cp -rf figure/* ../../vignettes/figure/
-
-rmd2md:
-	cd vignettes;\
-	mv rvertnet.md rvertnet.Rmd
+vignette:
+	${RSCRIPT} vignettes/precompile.R
 
 test:
 	${RSCRIPT} -e 'library(methods); devtools::test()'

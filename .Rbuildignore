@@ -8,7 +8,6 @@ README.Rmd
 travis-tool.sh
 cran-comments.md
 Makefile
-vignettes/
 appveyor.yml
 ^cran-comments\.md$
 ^revdep$
@@ -22,3 +21,6 @@ revdep/library.noindex
 ^\.github$
 ^README\.Rmd$
 ^codecov\.yml$
+^doc$
+^Meta$
+^vignettes/figure$

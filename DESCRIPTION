@@ -28,9 +28,13 @@ Imports:
     ggplot2,
     maps
 Suggests:
+    knitr,
+    rmarkdown,
     testthat,
-    vcr
+    vcr,
+    withr
 RoxygenNote: 7.3.1
 X-schema.org-applicationCategory: Data Access
 X-schema.org-keywords: species, occurrences, biodiversity, maps, vertnet, mammals, mammalia, specimens
 X-schema.org-isPartOf: "https://ropensci.org"
+VignetteBuilder: knitr
