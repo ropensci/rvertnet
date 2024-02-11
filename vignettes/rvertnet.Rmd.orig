@@ -1,7 +1,5 @@
 ---
 title: Introduction to rvertnet
-author: Scott Chamberlain
-date: "2020-01-28"
 output: rmarkdown::html_vignette
 vignette: >
     %\VignetteIndexEntry{Introduction to rvertnet}
@@ -22,18 +20,19 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-You can install the stable version from CRAN:
+Stable CRAN version
 
 ```{r eval=FALSE}
 install.packages("rvertnet")
 ```
 
-Or the development version from GitHub using the `devtools` package:
+Development version from GitHub
 
 ```{r eval=FALSE}
-install.packages("devtools")
-devtools::install_github("ropensci/rvertnet")
+remotes::install_github("ropensci/rvertnet", build_vignettes = TRUE)
 ```
+
+## Loading the package
 
 ```{r}
 library('rvertnet')
@@ -53,7 +52,7 @@ All major functions (`searchbyterm()`, `spatialsearch()`, `vertsearch()`) give b
 res$meta
 ```
 
-The data
+Inspect data. A `tibble` is returned, so you get a nice brief data summary:
 
 ```{r}
 res$data
@@ -71,6 +70,19 @@ Search for class _Aves_, in the state of _Nevada_, with a coordinate uncertainty
 ```{r}
 res <- searchbyterm(class = "Aves", stateprovince = "Nevada", error = "<25", messages = FALSE)
 res$data
+```
+
+### dplyr downstream
+
+You can pass the data object directly on to `dplyr` functions. Here, we get a table of record counts by species in descending order.
+
+```{r}
+library("dplyr")
+out <- searchbyterm(genus = "Ochotona", limit = 800)
+out$data %>%
+  group_by(scientificname) %>%
+  summarise(count = length(scientificname)) %>%
+  arrange(desc(count))
 ```
 
 ## Spatial search

@@ -26,7 +26,7 @@ check: build
 	@rm -rf ${PACKAGE}.Rcheck
 
 readme:
-	${RSCRIPT} -e "knitr::knit('README.Rmd')"
+	${RSCRIPT} -e "devtools::build_readme()"
 
 check_windows:
 	${RSCRIPT} -e "devtools::check_win_devel(); devtools::check_win_release()"

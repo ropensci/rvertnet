@@ -16,11 +16,9 @@ knitr::opts_chunk$set(
 ```
 
 <!-- badges: start -->
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![R-CMD-check](https://github.com/ropensci/rvertnet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/rvertnet/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/ropensci/rvertnet/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ropensci/rvertnet?branch=master)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rvertnet)](https://github.com/r-hub/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/rvertnet)](https://cran.r-project.org/package=rvertnet)
+
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![R-CMD-check](https://github.com/ropensci/rvertnet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/rvertnet/actions/workflows/R-CMD-check.yaml) [![Codecov test coverage](https://codecov.io/gh/ropensci/rvertnet/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ropensci/rvertnet?branch=master) [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rvertnet)](https://github.com/r-hub/cranlogs.app) [![cran version](https://www.r-pkg.org/badges/version/rvertnet)](https://cran.r-project.org/package=rvertnet)
+
 <!-- badges: end -->
 
 # rvertnet
@@ -29,138 +27,32 @@ knitr::opts_chunk$set(
 
 VertNet.org API docs: <https://github.com/VertNet/webapp/wiki/The-API-search-function>
 
-## Installation
+## Get started
 
-Stable CRAN version
+### [View vignette on ropensci](https://docs.ropensci.org/rvertnet/articles/rvertnet.html)
 
-```{r eval=FALSE}
-install.packages("rvertnet")
-```
-
-Or development version from GitHub
-
-```{r eval=FALSE}
-remotes::install_github("ropensci/rvertnet")
-```
-
-```{r}
-library('rvertnet')
-```
-
-## Vignette
-
-View the vignette in your web browser
+### View vignette locally in your web browser
 
 ```{r eval=FALSE}
 browseVignettes("rvertnet")
 ```
 
-Or view the vignette in Rstudio
+### View vignette in Rstudio
 
 ```{r eval=FALSE}
 vignette("rvertnet")
 ```
 
-## Search by term
-
-Search for _Aves_ in the state of _California_, limit to 10 records
-
-```{r}
-res <- searchbyterm(class = "Aves", stateprovince = "California",
-    limit = 10, messages = FALSE)
-```
-
-Inspect metadata
-
-```{r}
-res$meta
-```
-
-Inspect data. A `dplyr` data.frame is given back, so you get a nice brief data summary:
-
-```{r}
-res$data[,1:5]
-```
-
-Search for _Mustela nigripes_ in the states of _Wyoming_ or _South Dakota_, limit to 20 records
-
-```{r}
-res <- searchbyterm(specificepithet = "nigripes",
-    stateprovince = "(wyoming OR south dakota)", 
-    limit = 20, messages = FALSE)
-res$data[,1:5]
-```
-
-### dplyr downstream
-
-You can pass the data object directly on to `dplyr` functions. Here, we get a table of record counts by species in descending order.
-
-```{r eval=FALSE}
-library("dplyr")
-out <- searchbyterm(genus = "Ochotona", limit = 800)
-out$data %>%
-  group_by(scientificname) %>%
-  summarise(count = length(scientificname)) %>%
-  arrange(desc(count))
-#> # A tibble: 20 x 2
-#>    scientificname                  count
-#>    <chr>                           <int>
-#>  1 Ochotona princeps                 450
-#>  2 Ochotona pallasi                  129
-#>  3 Ochotona princeps saxatilis       103
-#>  4 Ochotona hyperborea                30
-#>  5 Ochotona dauurica                  21
-#>  6 Ochotona collaris                  15
-#>  7 Ochotona princeps figginsi         14
-#>  8 Ochotona princeps taylori           8
-#>  9 Ochotona princeps schisticeps       6
-#> 10 Ochotona alpina                     4
-#> 11 Ochotona princeps muiri             4
-#> 12 Ochotona hyperborea mantchurica     3
-#> 13 Ochotona princeps incana            3
-#> 14 Ochotona princeps princeps          3
-#> 15 Ochotona princeps murri             2
-#> 16 Ochotona princeps brunnescens       1
-#> 17 Ochotona princeps jewetti           1
-#> 18 Ochotona princeps tutelata          1
-#> 19 Ochotona princeps uinta             1
-#> 20 Ochotona princeps ventorum          1
-```
-
-
-## Big data
-
-Specifies a termwise search (like `searchbyterm()`), but requests that all available records be made available for download as a tab-delimited text file.
-
-```{r eval=FALSE}
-bigsearch(genus = "ochotona", rfile = "pikaRecords", email = "big@@search.luv")
-#> Processing request...
-#>
-#> Download of records file 'mydata' requested for 'you@gmail.com'
-#>
-#> Query/URL: "http://api.vertnet-portal.appspot.com/api/download?q=%7B%22q%22:%22genus:ochotona%22,%22n%22:%22mydata%22,%22e%22:%22you@gmail.com%22%7D"
-#>
-#> Thank you! Download instructions will be sent by email.
-```
-
-## Spatial search
-
-```{r}
-res <- spatialsearch(lat = 33.529, long = -105.694, radius = 2000,
-    limit = 10, messages = FALSE)
-res$data[,1:5]
-```
-
 ## Contributors
 
-* Dave Slager [@slager](https://github.com/slager)
-* Scott Chamberlain [@sckott](https://github.com/sckott)
-* Chris Ray [@Pika8tona](https://github.com/Pika8tona)
-* Vijay Barve [@vijaybarve](https://github.com/vijaybarve)
+-   Dave Slager [\@slager](https://github.com/slager)
+-   Scott Chamberlain [\@sckott](https://github.com/sckott)
+-   Chris Ray [\@Pika8tona](https://github.com/Pika8tona)
+-   Vijay Barve [\@vijaybarve](https://github.com/vijaybarve)
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropensci/rvertnet/issues).
-* License: MIT
-* Get citation information for `rvertnet` in R doing `citation(package = 'rvertnet')`
-* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
+-   Please [report any issues or bugs](https://github.com/ropensci/rvertnet/issues).
+-   License: MIT
+-   Get citation information for `rvertnet` in R doing `citation(package = 'rvertnet')`
+-   Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
