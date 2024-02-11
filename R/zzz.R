@@ -33,12 +33,6 @@ vertwrapper <- function(fxn = "", args = NULL, lim = NULL, rfile = NULL,
 
 mssg <- function(v, ...) if (v) message(...)
 
-get_terms <- function() {
-  readLines(
-    system.file("extdata", "simple_dwc_terms.txt", package = "rvertnet")
-  )
-}
-
 vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE,
                      only_dwc = TRUE, callopts = list(), ...) {
   cursor <- NULL
@@ -70,8 +64,7 @@ vert_GET <- function(fxn="searchbyterm", args, limit = 1000, messages = TRUE,
   }
   names(df) <- tolower(names(df))
   if (only_dwc) {
-    res <- get_terms()
-    df <- df[ , names(df) %in% res ]
+    df <- df[ , names(df) %in% rvertnet::simple_dwc_terms]
   }
   mssg(messages, paste("\nLast Query URL: \"", URLdecode(tt$url), "\"", sep = ""))
   mssg(messages, paste("\nMatching records:", NROW(df), "returned,", avail, "available", sep = " "))

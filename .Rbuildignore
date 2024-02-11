@@ -24,3 +24,4 @@ revdep/library.noindex
 ^doc$
 ^Meta$
 ^vignettes/figure$
+^data-raw$

@@ -20,6 +20,8 @@ URL: https://github.com/ropensci/rvertnet (devel)
 BugReports: https://github.com/ropensci/rvertnet/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 2.10)
 Imports:
     jsonlite (>= 1.5),
     crul (>= 0.5.2),
@@ -38,3 +40,4 @@ X-schema.org-applicationCategory: Data Access
 X-schema.org-keywords: species, occurrences, biodiversity, maps, vertnet, mammals, mammalia, specimens
 X-schema.org-isPartOf: "https://ropensci.org"
 VignetteBuilder: knitr
+LazyData: true

@@ -13,12 +13,11 @@
 #' (i.e., with http://...), while others start with `urn`.
 #' 
 #' Internally in this function we filter data to darwin core terms only. To 
-#' see what terms we use, do 
-#' \code{readLines(
-#' system.file("extdata", "simple_dwc_terms.txt", package = "rvertnet"))}. 
-#' Get in touch with us if these terms need correcting/are out of date. The
-#' terms are from 
-#' https://github.com/tdwg/dwc/blob/master/dist/simple_dwc_horizontal.csv
+#' see what terms we use, see:
+#' \code{print(simple_dwc_terms)}.
+#'
+#' See documentation for more information:
+#' \code{?simple_dwc_terms}
 #'
 #' @examples \dontrun{
 #' vert_id(ids = "urn:catalog:CM:Herps:116520")
@@ -48,8 +47,7 @@ vert_id <- function(ids, compact = TRUE, messages = TRUE, ...) {
     result
   }
   names(df) <- tolower(names(df))
-  res <- get_terms()
-  df <- df[ , names(df) %in% res ]
+  df <- df[ , names(df) %in% rvertnet::simple_dwc_terms]
   if (compact) { 
     df <- df[ , !sapply(df, function(x) all(is.na(x))) ]
   }
