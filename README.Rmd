@@ -47,6 +47,20 @@ remotes::install_github("ropensci/rvertnet")
 library('rvertnet')
 ```
 
+## Vignette
+
+View the vignette in your web browser
+
+```{r eval=FALSE}
+browseVignettes("rvertnet")
+```
+
+Or view the vignette in Rstudio
+
+```{r eval=FALSE}
+vignette("rvertnet")
+```
+
 ## Search by term
 
 Search for _Aves_ in the state of _California_, limit to 10 records
