@@ -4,11 +4,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 README.Rmd
-.travis.yml
-travis-tool.sh
 cran-comments.md
 Makefile
-appveyor.yml
 ^cran-comments\.md$
 ^revdep$
 .github
