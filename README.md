@@ -24,17 +24,32 @@ version](https://www.r-pkg.org/badges/version/rvertnet)](https://cran.r-project.
 VertNet.org API docs:
 <https://github.com/VertNet/webapp/wiki/The-API-search-function>
 
-## Get started
+## Installation
 
-### [View vignette on ropensci](https://docs.ropensci.org/rvertnet/articles/rvertnet.html)
+Stable CRAN version
 
-### View vignette locally in your web browser
+``` r
+install.packages("rvertnet")
+```
+
+Development version from GitHub
+
+``` r
+remotes::install_github("ropensci/rvertnet", build_vignettes = TRUE)
+```
+
+## [Get started](https://docs.ropensci.org/rvertnet/articles/rvertnet.html)
+
+[View vignette on ropensci
+website](https://docs.ropensci.org/rvertnet/articles/rvertnet.html)
+
+Or, view vignette locally in your web browser
 
 ``` r
 browseVignettes("rvertnet")
 ```
 
-### View vignette in Rstudio
+Or, view vignette in the Rstudio help pane
 
 ``` r
 vignette("rvertnet")
