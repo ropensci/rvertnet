@@ -11,8 +11,8 @@ Authors@R: c(
       role = "aut", comment = "0000-0003-1444-9135"),
     person("Chris", "Ray", role = "ctb"),
     person("Vijay", "Barve", role = "ctb"),
-    person("Dave", "Slager", email = "slager@users.noreply.github.com",
-      role = c("aut", "cre"))
+    person("Dave", "Slager", email = "slager@uw.edu",
+      role = c("aut", "cre"), comment = "0000-0003-2525-2039")
   )
 License: MIT + file LICENSE
 URL:

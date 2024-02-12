@@ -67,7 +67,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Dave Slager \email{slager@users.noreply.github.com}
+\strong{Maintainer}: Dave Slager \email{slager@uw.edu} (0000-0003-2525-2039)
 
 Authors:
 \itemize{
