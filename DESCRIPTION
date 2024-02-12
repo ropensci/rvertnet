@@ -15,8 +15,9 @@ Authors@R: c(
       role = c("aut", "cre"))
   )
 License: MIT + file LICENSE
-URL: https://github.com/ropensci/rvertnet (devel)
-    https://docs.ropensci.org/rvertnet/ (documentation)
+URL:
+    https://github.com/ropensci/rvertnet,
+    https://docs.ropensci.org/rvertnet/
 BugReports: https://github.com/ropensci/rvertnet/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

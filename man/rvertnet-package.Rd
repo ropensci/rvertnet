@@ -60,7 +60,8 @@ simply run the function call again.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ropensci/rvertnet (devel) https://docs.ropensci.org/rvertnet/ (documentation)}
+  \item \url{https://github.com/ropensci/rvertnet}
+  \item \url{https://docs.ropensci.org/rvertnet/}
   \item Report bugs at \url{https://github.com/ropensci/rvertnet/issues}
 }
 
