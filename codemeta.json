@@ -1,26 +1,24 @@
 {
-  "@context": [
-    "http://purl.org/codemeta/2.0",
-    "http://schema.org"
-  ],
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rvertnet",
-  "description": "Retrieve, map and summarize data from the 'VertNet.org' \n    archives (<http://vertnet.org/>).  Functions allow searching by many \n    parameters, including 'taxonomic' names, places, and dates. In addition, \n    there is an interface for conducting spatially delimited searches, and \n    another for requesting large 'datasets' via email.",
+  "description": "Retrieve, map and summarize data from the 'VertNet.org' archives (<https://vertnet.org/>). Functions allow searching by many parameters, including 'taxonomic' names, places, and dates. In addition, there is an interface for conducting spatially delimited searches, and another for requesting large 'datasets' via email.",
   "name": "rvertnet: Search 'Vertnet', a 'Database' of Vertebrate Specimen Records",
+  "relatedLink": "https://docs.ropensci.org/rvertnet/",
   "codeRepository": "https://github.com/ropensci/rvertnet",
   "issueTracker": "https://github.com/ropensci/rvertnet/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.0.5 Patched (2021-03-31 r80136)",
+  "runtimePlatform": "R version 4.3.2 (2023-10-31)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
-    "name": "Central R Archive Network (CRAN)",
+    "name": "Comprehensive R Archive Network (CRAN)",
     "url": "https://cran.r-project.org"
   },
   "author": [
@@ -29,17 +27,73 @@
       "givenName": "Scott",
       "familyName": "Chamberlain",
       "email": "myrmecocystus@gmail.com"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Dave",
+      "familyName": "Slager",
+      "email": "slager@uw.edu"
     }
   ],
-  "maintainer": [
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Chris",
+      "familyName": "Ray"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Vijay",
+      "familyName": "Barve"
+    }
+  ],
+  "copyrightHolder": [
     {
       "@type": "Person",
       "givenName": "Scott",
       "familyName": "Chamberlain",
       "email": "myrmecocystus@gmail.com"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Dave",
+      "familyName": "Slager",
+      "email": "slager@uw.edu"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Dave",
+      "familyName": "Slager",
+      "email": "slager@uw.edu"
     }
   ],
   "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    },
     {
       "@type": "SoftwareApplication",
       "identifier": "testthat",
@@ -63,10 +117,28 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=vcr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "withr",
+      "name": "withr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=withr"
     }
   ],
-  "softwareRequirements": [
-    {
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 2.10"
+    },
+    "2": {
       "@type": "SoftwareApplication",
       "identifier": "jsonlite",
       "name": "jsonlite",
@@ -79,7 +151,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=jsonlite"
     },
-    {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "crul",
       "name": "crul",
@@ -92,7 +164,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=crul"
     },
-    {
+    "4": {
       "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
@@ -105,7 +177,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=dplyr"
     },
-    {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "tibble",
       "name": "tibble",
@@ -117,7 +189,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=tibble"
     },
-    {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "ggplot2",
       "name": "ggplot2",
@@ -129,7 +201,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=ggplot2"
     },
-    {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "maps",
       "name": "maps",
@@ -140,32 +212,15 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=maps"
-    }
-  ],
-  "contIntegration": "https://codecov.io/github/ropensci/rvertnet?branch=master",
-  "releaseNotes": "https://github.com/ropensci/rvertnet/blob/master/NEWS.md",
-  "readme": "https://github.com/ropensci/rvertnet/blob/master/README.md",
-  "fileSize": "6686.632KB",
-  "contributor": [
-    {
-      "@type": "Person",
-      "givenName": "Chris",
-      "familyName": "Ray"
     },
-    {
-      "@type": "Person",
-      "givenName": "Vijay",
-      "familyName": "Barve"
-    }
-  ],
+    "SystemRequirements": null
+  },
   "applicationCategory": "DataAccess",
   "isPartOf": "\"https://ropensci.org\"",
   "keywords": ["species", "occurrences", "biodiversity", "maps", "vertnet", "mammals", "mammalia", "specimens", "api-wrapper", "specimen", "rstats", "r", "spocc", "r-package"],
-  "relatedLink": [
-    "https://docs.ropensci.org/rvertnet",
-    "https://docs.ropensci.org/rvertnet/"
-  ],
-  "copyrightHolder": {},
-  "funder": {},
+  "fileSize": "6433.492KB",
+  "releaseNotes": "https://github.com/ropensci/rvertnet/blob/master/NEWS.md",
+  "readme": "https://github.com/ropensci/rvertnet/blob/master/README.md",
+  "contIntegration": ["https://github.com/ropensci/rvertnet/actions/workflows/R-CMD-check.yaml", "https://app.codecov.io/gh/ropensci/rvertnet?branch=master"],
   "developmentStatus": "https://www.repostatus.org/#active"
 }
