@@ -1,4 +1,25 @@
-rvernet 0.8.2
+rvertnet 0.8.3
+===============
+
+### MINOR IMPROVEMENTS
+
+* new maintainer (#71)
+* fix CI
+* refresh test fixtures (#71)
+* remove plyr from examples
+* refresh Darwin core terms and move to data object
+* refresh vignette and its pre-compilation
+* update Makefile
+* update roxygen2 and documentation fixes
+* remove outdated files
+
+### BUG FIXES
+
+* fix class handling in vertmap to allow tibble input
+* allow vignette to build
+* fix ggplot2 deprecation warning (#71)
+
+rvertnet 0.8.2
 ===============
 
 ### MINOR IMPROVEMENTS
