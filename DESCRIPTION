@@ -8,11 +8,11 @@ Description: Retrieve, map and summarize data from the 'VertNet.org'
 Version: 0.8.2.9000
 Authors@R: c(
     person("Scott", "Chamberlain", email = "myrmecocystus@gmail.com",
-      role = "aut", comment = "0000-0003-1444-9135"),
+      role = c("aut", "cph"), comment = "0000-0003-1444-9135"),
     person("Chris", "Ray", role = "ctb"),
     person("Vijay", "Barve", role = "ctb"),
     person("Dave", "Slager", email = "slager@uw.edu",
-      role = c("aut", "cre"), comment = "0000-0003-2525-2039")
+      role = c("aut", "cre", "cph"), comment = "0000-0003-2525-2039")
   )
 License: MIT + file LICENSE
 URL:

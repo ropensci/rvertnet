@@ -67,11 +67,11 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Dave Slager \email{slager@uw.edu} (0000-0003-2525-2039)
+\strong{Maintainer}: Dave Slager \email{slager@uw.edu} (0000-0003-2525-2039) [copyright holder]
 
 Authors:
 \itemize{
-  \item Scott Chamberlain \email{myrmecocystus@gmail.com} (0000-0003-1444-9135)
+  \item Scott Chamberlain \email{myrmecocystus@gmail.com} (0000-0003-1444-9135) [copyright holder]
 }
 
 Other contributors:
