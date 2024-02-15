@@ -110,13 +110,6 @@ res <- vertsearch("(kansas state OR KSU)", limit = 200)
 res$data
 ```
 
-Pass output of `vertsearch()` to a map
-
-```{r, vertmap, fig.width=8, fig.height=4, fig.cap = ""}
-out <- vertsearch(tax = "(mustela nivalis OR mustela erminea)")
-vertmap(out)
-```
-
 ## Lots of data
 
 For `searchbyterm()`, `spatialsearch()`, and `vertsearch()`, you can request more than 1000 records. VertNet limits each request to 1000 records, but internally in this package, if you request more than 1000 records, we'll continue to send requests to get all the records you want. See the [VertNet docs](https://github.com/VertNet/webapp/wiki/The-API-search-function#retrieving-large-result-sets) for more information on this.

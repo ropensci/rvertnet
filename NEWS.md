@@ -1,5 +1,7 @@
 # rvertnet (development version)
 
+* remove hardcoded figure that caused failed vignette build on 2 CRAN check runners with old pandoc versions
+
 # rvertnet 0.8.3
 
 
