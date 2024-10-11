@@ -12,7 +12,7 @@ Authors@R: c(
     person("Chris", "Ray", role = "ctb"),
     person("Vijay", "Barve", role = "ctb"),
     person("Dave", "Slager", email = "slager@uw.edu",
-      role = c("aut", "cre"), comment = c(ORCID = "0000-0003-2525-2039"))
+      role = c("ctb", "cre"), comment = c(ORCID = "0000-0003-2525-2039"))
   )
 License: MIT + file LICENSE
 URL:
